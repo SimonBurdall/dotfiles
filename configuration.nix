@@ -70,17 +70,22 @@
   # XDG portals and system packages
   xdg.portal.enable = true;
 
+  virtualisation.docker.enable = true;
+
   environment.systemPackages = with pkgs; [
    neovim
    git
+   lazygit
    kitty
    zsh
    fzf
    thefuck
    gh
-   clang-tools_9
+   clang
+   docker-compose
    nodePackages.pyright 
    python311Packages.black 
+   python311Packages.virtualenv
    python311Packages.ruff-lsp
    nil
    rnix-lsp

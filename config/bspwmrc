@@ -2,13 +2,15 @@
 
 #autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
+xsetroot -cursor_name left_ptr
 pkill picom
 picom &
 dropbox &
-bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/theme.jpeg
-~/.config/polybar/launch.sh --colorblocks 
+
+#Only use with higher screen res.
 xrandr --output DP-2 --mode 5120x1440 --rate 120.00
-feh --bg-fill ~/1-vault/2-media/1-wallpapers/bk1.jpeg
+bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/bk1.jpeg
+~/.config/polybar/launch.sh --colorblocks 
 
 #monitor
 bspc monitor -d 1 2 3 4

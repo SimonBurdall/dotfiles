@@ -1,23 +1,29 @@
 # Programs
-super +  {5,6,7,8,9}
-	{firefox, keepassxc, discord, obsidian}
-
+super +  {7,8,9,0}
+	{firefox, discord, spotify, keepassxc}
 super + Return 
 	kitty
-
 Print 
 	flameshot gui
-
 super + @space 
 	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/colorblocks/scripts/rofi/launcher.rasi
-
 super + shift + {r, s}
   prompt {"Are you sure you would like to reboot?" "sudo reboot", "Are you sure you would like to shutdown" "sudo shutdown"}
-
 # Reload sxhkd configuration
 super + Escape
 	pkill -USR1 -x sxhkd
+# Volume hotkeys
+# Volume up
+super + equal
+  amixer -q sset Master 5%+
 
+# Volume down
+super + minus
+  amixer -q sset Master 5%-
+
+# Mute
+super + shift + m
+	amixer -q sset Master toggle
 
 # BSPWM hotkeys
 # Quit/Restart BSPWM

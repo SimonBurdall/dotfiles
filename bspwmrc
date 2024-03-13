@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#autostart
+pgrep -x sxhkd > /dev/null || sxhkd &
+xsetroot -cursor_name left_ptr
+pkill picom
+picom &
+dropbox &
+
+#Only use with higher screen res.
+xrandr --output DP-2 --mode 5120x1440 --rate 120.00
+bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/bk1.jpeg
+~/.config/polybar/launch.sh --colorblocks 
+
+#monitor
+bspc monitor -d 1 2 3 4
+
+#window information
+bspc config border_width 0 
+bspc config window_gap 9
+bspc config pointer_follows_monitor true
+bspc config focus_follows_pointer true
+

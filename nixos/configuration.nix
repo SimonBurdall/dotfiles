@@ -20,7 +20,6 @@
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_GB.UTF-8";
     LC_IDENTIFICATION = "en_GB.UTF-8";
-    # Add more settings here
   };
 
   fonts.fonts = with pkgs; [
@@ -45,8 +44,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # Uncomment if using JACK
-    # jack.enable = true;
   };
 
   # User account
@@ -61,24 +58,24 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  system.autoUpgrade = {
-    enable = true;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L"
-    ];
-    dates = "09:00";
-    randomizedDelaySec = "45min";
-  };
-
   # Hardware settings
   hardware.opengl.enable = true;
   hardware.nvidia.modesetting.enable = true;
 
+  # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 
+  # Steam settings
+  # Not used on Desktop
+  #programs.steam = {
+  #   enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  #};
+
+  # XDG portals and system packages
   xdg.portal.enable = true;
+
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -90,22 +87,25 @@
     fzf
     thefuck
     gh
+    awscli
     clang
     docker-compose
     nodePackages.pyright
     python311Packages.black
     python311Packages.virtualenv
     python311Packages.ruff-lsp
+    python3Packages.django
     nil
     rnix-lsp
     ripgrep
-    firefox
+    #floorp
     discord
-    obsidian
     vscode
     spotify
     dropbox
     keepassxc
+    #steam
+    #steam-run
     rofi
     flameshot
     neofetch
@@ -116,6 +116,7 @@
     networkmanager_dmenu
     bspwm
     sxhkd
+    betterlockscreen
     feh
     picom
     killall
@@ -126,10 +127,6 @@
     stylua
     lua-language-server
     gdu
-  ];
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-24.8.6"
   ];
 
   # NixOS services (enable only what you need)

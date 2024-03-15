@@ -1,6 +1,6 @@
 # Programs
 super +  {7,8,9,0}
-	{firefox, discord, spotify, keepassxc}
+	{floorp, discord, spotify, keepassxc}
 super + Return 
 	kitty
 Print 

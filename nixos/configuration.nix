@@ -22,7 +22,7 @@
     LC_IDENTIFICATION = "en_GB.UTF-8";
   };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack"];})
   ];
 
@@ -96,9 +96,8 @@
     python311Packages.ruff-lsp
     python3Packages.django
     nil
-    rnix-lsp
     ripgrep
-    #floorp
+    floorp
     discord
     vscode
     spotify
@@ -136,5 +135,5 @@
   # networking.firewall.enable = false;
 
   # System state version
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

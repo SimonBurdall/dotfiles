@@ -136,5 +136,5 @@
   # networking.firewall.enable = false;
 
   # System state version
-  system.stateVersion = "23.11";
+  system.stateVersion = "23.05";
 }

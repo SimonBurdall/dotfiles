@@ -130,6 +130,23 @@
     gdu
   ];
 
+  environment.gnome.excludePackages = with pkgs.gnome; [
+    gnome-calculator
+    gnome-calendar
+    gnome-characters
+    gnome-clocks
+    gnome-contacts
+    gnome-font-viewer
+    gnome-logs
+    gnome-maps
+    gnome-music
+    gnome-screenshot
+    gnome-system-monitor
+    gnome-weather
+    gnome-disk-utility
+    pkgs.gnome-connections
+  ];
+
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
   ];

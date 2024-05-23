@@ -61,17 +61,17 @@
   # Hardware settings
   hardware.opengl.enable = true;
   hardware.nvidia.modesetting.enable = true;
+  services.xserver.videoDrivers = ["nvidia"];
 
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 
   # Steam settings
-  # Not used on Desktop
-  #programs.steam = {
-  #   enable = true;
-  #   remotePlay.openFirewall = true;
-  #   dedicatedServer.openFirewall = true;
-  #};
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
 
   # XDG portals and system packages
   xdg.portal.enable = true;
@@ -103,8 +103,8 @@
     spotify
     dropbox
     keepassxc
-    #steam
-    #steam-run
+    steam
+    steam-run
     rofi
     flameshot
     neofetch

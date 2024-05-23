@@ -99,6 +99,7 @@
     ripgrep
     floorp
     discord
+    obsidian
     vscode
     spotify
     dropbox
@@ -126,6 +127,10 @@
     stylua
     lua-language-server
     gdu
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
   ];
 
   # NixOS services (enable only what you need)

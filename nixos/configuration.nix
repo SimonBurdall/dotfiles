@@ -98,6 +98,7 @@
     nil
     ripgrep
     floorp
+    brave
     discord
     obsidian
     vscode

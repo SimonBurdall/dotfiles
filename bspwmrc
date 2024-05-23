@@ -8,7 +8,7 @@ picom &
 dropbox &
 
 #Only use with higher screen res.
-xrandr --output DP-2 --mode 5120x1440 --rate 120.00
+xrandr --output DP-0 --mode 5120x1440 --rate 120.00
 bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/bk1.jpeg
 ~/.config/polybar/launch.sh --colorblocks 
 

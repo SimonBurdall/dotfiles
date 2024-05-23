@@ -6,235 +6,39 @@ setting up tmpfiles
 reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
-ix/store/xv8d9x3hwv5dqx1j260zgvzabxa9d6dx-obsidian.desktop.drv
-  /nix/store/11b4yfllxvlv03g02cnm6yy6f7bgw7rj-obsidian-1.4.16.drv
-  /nix/store/qs10yq3c6r1hh7dgr89b6sqcnx98yc9z-system-path.drv
-  /nix/store/5x5xkflds0ba54smfxg8xdd86x5pf3ks-unit-accounts-daemon.service.drv
-  /nix/store/fw1l69zcq1alddky6964zlza4rgnjgdn-dbus-1.drv
-  /nix/store/c09l3qb2xndivv7lil4430ajw0rkifgw-X-Restart-Triggers-dbus.drv
-  /nix/store/6dxwwh5nwa81kqhi5dbkqji2mffaa0w6-unit-dbus.service.drv
-  /nix/store/wbiva9n9xh1h2f490rkdx3zk5m6hyd0p-set-environment.drv
-  /nix/store/c0fs82ki1jvks09p9fd58x8xy0bls8k3-etc-profile.drv
-  /nix/store/dah7kmcagqcgk732ksqxljpxcbxk9yg4-X-Restart-Triggers-polkit.drv
-  /nix/store/8bn1lm1v01s1q6gi14ivrk8hqbx9ny3c-unit-polkit.service.drv
-  /nix/store/pp0hsfy7fv6cf9c4yby81i6vch6d9jy7-unit-dbus.service.drv
-  /nix/store/gdb3lrdwvcgbry59davwf9l59z3sv7a7-system-units.drv
-  /nix/store/xhrrarmzmqcmxhjikrs9paxz68rnyycj-user-units.drv
-  /nix/store/xp00knaksr2h63i2c35f11v3wsbkqssh-etc-pam-environment.drv
-  /nix/store/m1ndxkcigcv6sd2vdn6cf3v3p05cfzl0-etc.drv
-  /nix/store/7yx4hrikbjhpnxhrm7r6x68y43cfjfg6-nixos-system-mori-23.11.5353.878ef7d9721b.drv
-these 25 paths will be fetched (97.95 MiB download, 118.05 MiB unpacked):
-  /nix/store/9czqhk9hnfn2f91c7ckhxra1hjq1p1nn-curl-8.4.0-dev
-  /nix/store/bqbgbmzjq668i4ss8jfz2l205karvgcy-djvulibre-3.5.28-bin
-  /nix/store/95vrxv7i6hp5svd20raixiwzbnl3mlr5-djvulibre-3.5.28-dev
-  /nix/store/lxzdw32i560ipjy2x2fg32dbpgpyq53a-electron-v25.9.0-linux-x64.zip
-  /nix/store/gfrd96n6gi0q55f6yr5cwxhjcw3ps2v2-file-5.45-dev
-  /nix/store/h34nr05sxcbfapl1h8kmpilz3xwfkhnh-ilmbase-2.5.8-dev
-  /nix/store/blv8rwvzwipyxsa7r2ym5w78h66hm2xy-imagemagick-7.1.1-29-dev
-  /nix/store/i37gsghrf7wh6icr5d2my9cz8r9jdayi-imagemagick-7.1.1-29-doc
-  /nix/store/xjnm1zby6nhc75gajnnzw1sk31n2pbv8-lcms2-2.15-bin
-  /nix/store/1gr6pxn300ixcc7mv7irpg52390m5knl-lcms2-2.15-dev
-  /nix/store/fl3h93kahnivz54qqxrd24p3chc5fv7b-libXt-1.3.0-dev
-  /nix/store/bdb3k5fanaym2g83a3ri4cs4cbxzr53x-libheif-1.15.2-bin
-  /nix/store/4270qxly69dq40dmbss31r533w1l5crv-libheif-1.15.2-dev
-  /nix/store/l7mnb0340z2w22b14iws7hzc95yxlnqh-libhwy-1.0.7
-  /nix/store/42647fx1dvn29xk2hz79g7bvffiq7f02-libjxl-0.8.2-dev
-  /nix/store/bx2yfvhcc9wwgmgk712fl1cq4p4pbkch-libkrb5-1.20.2-dev
-  /nix/store/phhvc47r47yva2wpc2v3wf603gshhycp-liblqr-1-0.4.2-dev
-  /nix/store/vjdn7bsd8gx3656h6g8khjg27bdcz3xf-libraw-0.21.1
-  /nix/store/2l7ksc9x8mhnsiydr8ij17f9y292xrcw-libraw-0.21.1-dev
-  /nix/store/77xx23apcq5zbj9k0a3cws7nyv2cv5kk-libssh2-1.11.0-dev
-  /nix/store/bfxa3ky52sx8l9w5cv0z14g09xhlxf9w-libxml2-2.11.7-dev
-  /nix/store/bk7vhcnk3zd9m5p2923s982dq9vyxh7j-nghttp2-1.57.0-dev
-  /nix/store/wr7hf13d47bq4qk4b36gxx601a8126f1-openexr-2.5.8-bin
-  /nix/store/2j9b8zzr8z421319fjrbjg72gxiyxhz1-openexr-2.5.8-dev
-  /nix/store/kkvbhx6vlz2q3yk3w412qb45flnc8490-openjpeg-2.5.2-dev
-copying path '/nix/store/i37gsghrf7wh6icr5d2my9cz8r9jdayi-imagemagick-7.1.1-29-doc' from 'https://cache.nixos.org'...
-copying path '/nix/store/l7mnb0340z2w22b14iws7hzc95yxlnqh-libhwy-1.0.7' from 'https://cache.nixos.org'...
-building '/nix/store/xv8d9x3hwv5dqx1j260zgvzabxa9d6dx-obsidian.desktop.drv'...
-copying path '/nix/store/lxzdw32i560ipjy2x2fg32dbpgpyq53a-electron-v25.9.0-linux-x64.zip' from 'https://cache.nixos.org'...
-copying path '/nix/store/gfrd96n6gi0q55f6yr5cwxhjcw3ps2v2-file-5.45-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/h34nr05sxcbfapl1h8kmpilz3xwfkhnh-ilmbase-2.5.8-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/fl3h93kahnivz54qqxrd24p3chc5fv7b-libXt-1.3.0-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/77xx23apcq5zbj9k0a3cws7nyv2cv5kk-libssh2-1.11.0-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/bk7vhcnk3zd9m5p2923s982dq9vyxh7j-nghttp2-1.57.0-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/bfxa3ky52sx8l9w5cv0z14g09xhlxf9w-libxml2-2.11.7-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/phhvc47r47yva2wpc2v3wf603gshhycp-liblqr-1-0.4.2-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/bx2yfvhcc9wwgmgk712fl1cq4p4pbkch-libkrb5-1.20.2-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/kkvbhx6vlz2q3yk3w412qb45flnc8490-openjpeg-2.5.2-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/bdb3k5fanaym2g83a3ri4cs4cbxzr53x-libheif-1.15.2-bin' from 'https://cache.nixos.org'...
-copying path '/nix/store/bqbgbmzjq668i4ss8jfz2l205karvgcy-djvulibre-3.5.28-bin' from 'https://cache.nixos.org'...
-copying path '/nix/store/xjnm1zby6nhc75gajnnzw1sk31n2pbv8-lcms2-2.15-bin' from 'https://cache.nixos.org'...
-copying path '/nix/store/vjdn7bsd8gx3656h6g8khjg27bdcz3xf-libraw-0.21.1' from 'https://cache.nixos.org'...
-building '/nix/store/616lw5hnwvp3nfnq6c72a4a4fhm8z5wz-obsidian-1.4.16.tar.gz.drv'...
-building '/nix/store/rhnri3majpjd8nwzkjglpgsdhf6al5s1-obsidian-logo-gradient.svg.drv'...
-copying path '/nix/store/wr7hf13d47bq4qk4b36gxx601a8126f1-openexr-2.5.8-bin' from 'https://cache.nixos.org'...
-copying path '/nix/store/1gr6pxn300ixcc7mv7irpg52390m5knl-lcms2-2.15-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/4270qxly69dq40dmbss31r533w1l5crv-libheif-1.15.2-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/9czqhk9hnfn2f91c7ckhxra1hjq1p1nn-curl-8.4.0-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/95vrxv7i6hp5svd20raixiwzbnl3mlr5-djvulibre-3.5.28-dev' from 'https://cache.nixos.org'...
-copying path '/nix/store/42647fx1dvn29xk2hz79g7bvffiq7f02-libjxl-0.8.2-dev' from 'https://cache.nixos.org'...
-
-trying https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/obsidian-1.4.16.tar.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-
-trying https://obsidian.md/images/obsidian-logo-gradient.svg
-copying path '/nix/store/2l7ksc9x8mhnsiydr8ij17f9y292xrcw-libraw-0.21.1-dev' from 'https://cache.nixos.org'...
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-copying path '/nix/store/2j9b8zzr8z421319fjrbjg72gxiyxhz1-openexr-2.5.8-dev' from 'https://cache.nixos.org'...
-100  4872    0  4872    0     0  63984      0 --:--:-- --:--:-- --:--:-- 64105
-copying path '/nix/store/blv8rwvzwipyxsa7r2ym5w78h66hm2xy-imagemagick-7.1.1-29-dev' from 'https://cache.nixos.org'...
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 95.0M  100 95.0M    0     0  17.4M      0  0:00:05  0:00:05 --:--:-- 20.0M
-building '/nix/store/fzdq8jqkmvm66j0z0igbpy63j1nhhqbm-electron-25.9.0.drv'...
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-no configure script, doing nothing
-Running phase: glibPreInstallPhase
-Running phase: glibPreInstallPhase
-Running phase: glibPreInstallPhase
-Running phase: glibPreInstallPhase
-Running phase: installPhase
-Archive:  /nix/store/lxzdw32i560ipjy2x2fg32dbpgpyq53a-electron-v25.9.0-linux-x64.zip
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ar.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/zh-CN.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/da.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/kn.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/pl.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/icudtl.dat  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/v8_context_snapshot.bin  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libffmpeg.so  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/mr.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/et.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/version  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/gu.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/nl.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/sw.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/hi.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/lt.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/zh-TW.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/bn.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ms.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/fi.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/uk.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ro.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/sv.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome_crashpad_handler  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/tr.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/fr.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/resources.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/snapshot_blob.bin  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/LICENSES.chromium.html  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/pt-PT.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome-sandbox  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/hr.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/am.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/cs.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/es.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/it.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/th.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ur.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/es-419.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/lv.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/vi.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/id.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/te.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/vk_swiftshader_icd.json  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libvulkan.so.1  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/hu.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/pt-BR.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome_100_percent.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ja.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libGLESv2.so  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ml.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/bg.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/en-US.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/nb.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/LICENSE  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libEGL.so  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ko.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ru.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/sk.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ta.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome_200_percent.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/fa.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/fil.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/sl.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/en-GB.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/he.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libvk_swiftshader.so  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/el.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/sr.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/electron  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/ca.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/de.pak  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/resources/default_app.asar  
-  inflating: /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/locales/af.pak  
-Running phase: glibPreFixupPhase
-Running phase: glibPreFixupPhase
-Running phase: glibPreFixupPhase
-Running phase: glibPreFixupPhase
-Running phase: gappsWrapperArgsHook
-Running phase: dropIconThemeCache
-Running phase: dropIconThemeCache
-Running phase: dropIconThemeCache
-Running phase: fixupPhase
-Wrapping program '/nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome-sandbox'
-Wrapping program '/nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome_crashpad_handler'
-Wrapping program '/nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/electron'
-Not wrapping link: '/nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/bin/electron' (already wrapped)
-shrinking RPATHs of ELF executables and libraries in /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libvulkan.so.1
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libffmpeg.so
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome-sandbox
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/.electron-wrapped
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/chrome_crashpad_handler
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libGLESv2.so
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/.chrome-sandbox-wrapped
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/.chrome_crashpad_handler-wrapped
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libvk_swiftshader.so
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/electron
-shrinking /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec/electron/libEGL.so
-checking for references to /build/ in /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0...
-patching script interpreter paths in /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0
-stripping (with command strip and flags -S -p) in  /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/libexec /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/bin
-rewriting symlink /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0/bin/electron to be relative to /nix/store/l9plryc9yghfcrg9rp0xzdxg5khpzvqz-electron-25.9.0
-building '/nix/store/11b4yfllxvlv03g02cnm6yy6f7bgw7rj-obsidian-1.4.16.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/nbj00f7f2jv56bcj18jq0ssza5lfagvd-obsidian-1.4.16.tar.gz
-source root is obsidian-1.4.16
-setting SOURCE_DATE_EPOCH to timestamp 1697212403 of file obsidian-1.4.16/resources/obsidian.asar
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-no configure script, doing nothing
-Running phase: buildPhase
-no Makefile or custom buildPhase, doing nothing
-Running phase: installPhase
-Running phase: fixupPhase
-shrinking RPATHs of ELF executables and libraries in /nix/store/gmkdvz48bpgjmmzzlj5apx6b7ysqvqdd-obsidian-1.4.16
-checking for references to /build/ in /nix/store/gmkdvz48bpgjmmzzlj5apx6b7ysqvqdd-obsidian-1.4.16...
-patching script interpreter paths in /nix/store/gmkdvz48bpgjmmzzlj5apx6b7ysqvqdd-obsidian-1.4.16
-stripping (with command strip and flags -S -p) in  /nix/store/gmkdvz48bpgjmmzzlj5apx6b7ysqvqdd-obsidian-1.4.16/bin
-building '/nix/store/qs10yq3c6r1hh7dgr89b6sqcnx98yc9z-system-path.drv'...
+0m2xkb8p4ph40p-X-Restart-Triggers-dbus.drv
+  /nix/store/5r4kzm1n8yia4gdhs9mybjlm24maafzm-unit-dbus.service.drv
+  /nix/store/5xvf8mscpsr8iq3l4p3yi77rkarry3gg-unit-dbus.service.drv
+  /nix/store/6jdqh6fphwj6rlkdlldd66br7wr9z8rm-unit-accounts-daemon.service.drv
+  /nix/store/7d700xw7cq2k24brgf84d6my15d827zf-X-Restart-Triggers-polkit.drv
+  /nix/store/ryh0mzyfdp4s00di51344w27f8and1r1-unit-polkit.service.drv
+  /nix/store/dyk3rdm00b2clwbcbjw77g44qd6nry6q-system-units.drv
+  /nix/store/jl2d5znsm5dxjlf2n3263l1v6vi26yy8-user-units.drv
+  /nix/store/k7cwqwnfldq66pddcn4cvydcbw8xw0s0-set-environment.drv
+  /nix/store/wdawin5i2lxqa7f1dsh8sk4dh96029w4-etc-profile.drv
+  /nix/store/qzm2lcklxwjgpj23vk6m6l6f7qn655pw-etc.drv
+  /nix/store/d9gb7kfcjc3qqghmqh5mh6bi3vn2r13y-nixos-system-mori-23.11.5353.878ef7d9721b.drv
+these 2 paths will be fetched (115.09 MiB download, 345.72 MiB unpacked):
+  /nix/store/7lspvb4irig36qajwz51sx5s3w0kl5rq-brave-1.63.169
+  /nix/store/fy204d7h4lyh7j41wxvr76il8v1i0lmj-snappy-1.1.10
+copying path '/nix/store/fy204d7h4lyh7j41wxvr76il8v1i0lmj-snappy-1.1.10' from 'https://cache.nixos.org'...
+copying path '/nix/store/7lspvb4irig36qajwz51sx5s3w0kl5rq-brave-1.63.169' from 'https://cache.nixos.org'...
+building '/nix/store/rdw32wzqixbgdqzaxn7rw4692r1rjy5a-system-path.drv'...
 warning: collision between `/nix/store/ykpddar18dcwbypnbzqq6f0w1mpfbag1-steam/bin/steam' and `/nix/store/99njwj25v1fcd7vvdc35pfjzy61rb94n-steam/bin/steam'
 warning: collision between `/nix/store/rnln30vpv53ds55lf3x4ig00hi7ss85w-steam-run/bin/steam-run' and `/nix/store/8gg2b0r5n4a80vwwa1ppm0j7y50f0q9z-steam-run/bin/steam-run'
-created 22093 symlinks in user environment
+created 22109 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/dah7kmcagqcgk732ksqxljpxcbxk9yg4-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/fw1l69zcq1alddky6964zlza4rgnjgdn-dbus-1.drv'...
-building '/nix/store/xp00knaksr2h63i2c35f11v3wsbkqssh-etc-pam-environment.drv'...
-building '/nix/store/wbiva9n9xh1h2f490rkdx3zk5m6hyd0p-set-environment.drv'...
-building '/nix/store/5x5xkflds0ba54smfxg8xdd86x5pf3ks-unit-accounts-daemon.service.drv'...
-building '/nix/store/c09l3qb2xndivv7lil4430ajw0rkifgw-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/8bn1lm1v01s1q6gi14ivrk8hqbx9ny3c-unit-polkit.service.drv'...
-building '/nix/store/c0fs82ki1jvks09p9fd58x8xy0bls8k3-etc-profile.drv'...
-building '/nix/store/6dxwwh5nwa81kqhi5dbkqji2mffaa0w6-unit-dbus.service.drv'...
-building '/nix/store/pp0hsfy7fv6cf9c4yby81i6vch6d9jy7-unit-dbus.service.drv'...
-building '/nix/store/xhrrarmzmqcmxhjikrs9paxz68rnyycj-user-units.drv'...
-building '/nix/store/gdb3lrdwvcgbry59davwf9l59z3sv7a7-system-units.drv'...
-building '/nix/store/m1ndxkcigcv6sd2vdn6cf3v3p05cfzl0-etc.drv'...
-building '/nix/store/7yx4hrikbjhpnxhrm7r6x68y43cfjfg6-nixos-system-mori-23.11.5353.878ef7d9721b.drv'...
+building '/nix/store/7d700xw7cq2k24brgf84d6my15d827zf-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/4c8ic6za85jda84xm88dhrlvkmrsnm1x-dbus-1.drv'...
+building '/nix/store/5hkgmz6w79xpcz8wzjirgry24cfrpwq1-etc-pam-environment.drv'...
+building '/nix/store/k7cwqwnfldq66pddcn4cvydcbw8xw0s0-set-environment.drv'...
+building '/nix/store/6jdqh6fphwj6rlkdlldd66br7wr9z8rm-unit-accounts-daemon.service.drv'...
+building '/nix/store/gri9023fqmvbp0qbj10m2xkb8p4ph40p-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/ryh0mzyfdp4s00di51344w27f8and1r1-unit-polkit.service.drv'...
+building '/nix/store/wdawin5i2lxqa7f1dsh8sk4dh96029w4-etc-profile.drv'...
+building '/nix/store/5r4kzm1n8yia4gdhs9mybjlm24maafzm-unit-dbus.service.drv'...
+building '/nix/store/5xvf8mscpsr8iq3l4p3yi77rkarry3gg-unit-dbus.service.drv'...
+building '/nix/store/dyk3rdm00b2clwbcbjw77g44qd6nry6q-system-units.drv'...
+building '/nix/store/jl2d5znsm5dxjlf2n3263l1v6vi26yy8-user-units.drv'...
+building '/nix/store/qzm2lcklxwjgpj23vk6m6l6f7qn655pw-etc.drv'...
+building '/nix/store/d9gb7kfcjc3qqghmqh5mh6bi3vn2r13y-nixos-system-mori-23.11.5353.878ef7d9721b.drv'...

@@ -131,6 +131,17 @@
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
+    cheese
+    eog
+    epiphany
+    gedit
+    simple-scan
+    totem
+    yelp
+    evince
+    file-roller
+    geary
+    seahorse
     gnome-calculator
     gnome-calendar
     gnome-characters

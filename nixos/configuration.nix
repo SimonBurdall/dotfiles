@@ -11,7 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname and networking
-  networking.hostName = "mori";
+  networking.hostName = "rits";
   networking.networkmanager.enable = true;
 
   # Time zone and internationalization
@@ -23,15 +23,25 @@
   };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack"];})
+    (nerdfonts.override {fonts = ["Hack" "Iosevka"];})
+    inconsolata-nerdfont
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
   ];
 
   # X11 and desktop environment
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.layout = "gb";
-  services.xserver.xkbVariant = "";
+  services.xserver.xkb.layout = "gb";
+  services.xserver.xkb.variant = "";
   console.keyMap = "uk";
 
   # Printing and sound
@@ -60,8 +70,13 @@
 
   # Hardware settings
   hardware.opengl.enable = true;
-  hardware.nvidia.modesetting.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
@@ -79,15 +94,10 @@
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
+    # Programming Languages and Dev Tools
     neovim
     git
     lazygit
-    kitty
-    zsh
-    fzf
-    thefuck
-    gh
-    awscli
     clang
     docker-compose
     nodePackages.pyright
@@ -95,21 +105,24 @@
     python311Packages.virtualenv
     python311Packages.ruff-lsp
     python3Packages.django
-    nil
+    gh
+    awscli
+    nodejs
+    statix
+    deadnix
+    alejandra
+    stylua
+    lua-language-server
+
+    # System Utilities
+    zsh
+    fzf
+    thefuck
     ripgrep
-    floorp
-    brave
-    discord
-    obsidian
-    vscode
-    spotify
-    dropbox
-    keepassxc
-    steam
-    steam-run
     rofi
+    fastfetch
     flameshot
-    neofetch
+    bash
     openssl
     polybar
     pywal
@@ -121,42 +134,31 @@
     feh
     picom
     killall
-    nodejs
-    statix
-    deadnix
-    alejandra
-    stylua
-    lua-language-server
     gdu
+    xclip
+
+    # Software
+    kitty
+    floorp
+    thunderbird
+    discord
+    obsidian
+    vscode
+    spotify
+    maestral
+    blockbench
+    keepassxc
+    steam
+    steam-run
+    heroic
+    gimp
+    godot_4
+    obs-studio
+    strawberry
+    vlc
   ];
 
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    cheese
-    eog
-    epiphany
-    gedit
-    simple-scan
-    totem
-    yelp
-    evince
-    file-roller
-    geary
-    seahorse
-    gnome-calculator
-    gnome-calendar
-    gnome-characters
-    gnome-clocks
-    gnome-contacts
-    gnome-font-viewer
-    gnome-logs
-    gnome-maps
-    gnome-music
-    gnome-screenshot
-    gnome-system-monitor
-    gnome-weather
-    gnome-disk-utility
-    pkgs.gnome-connections
-  ];
+  services.gnome.core-utilities.enable = false;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"
@@ -169,5 +171,5 @@
   # networking.firewall.enable = false;
 
   # System state version
-  system.stateVersion = "23.11";
+  system.stateVersion = "24.05";
 }

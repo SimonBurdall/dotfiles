@@ -12,7 +12,7 @@ bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpape
 ~/.config/polybar/launch.sh --colorblocks 
 
 #monitor
-bspc monitor -d 1 2 3 4 5
+bspc monitor -d 1 2 3 4
 
 #window information
 bspc config border_width 0 

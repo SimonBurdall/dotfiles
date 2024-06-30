@@ -24,8 +24,7 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka"];})
-    inconsolata-nerdfont
-    noto-fonts
+    material-design-icons
     noto-fonts-cjk
     noto-fonts-emoji
     liberation_ttf

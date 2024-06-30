@@ -134,6 +134,7 @@
     killall
     gdu
     xclip
+    mangohud
 
     # Software
     kitty
@@ -154,6 +155,7 @@
     obs-studio
     strawberry
     vlc
+    handbrake
   ];
 
   services.gnome.core-utilities.enable = false;

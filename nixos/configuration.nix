@@ -136,7 +136,6 @@
     gdu
     xclip
     mangohud
-    pulseaudio
 
     # Software
     kitty

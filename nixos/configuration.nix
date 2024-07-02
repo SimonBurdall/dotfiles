@@ -12,6 +12,7 @@
 
   # Hostname and networking
   networking.hostName = "rits";
+  #networking.hostName = "mori";
   networking.networkmanager.enable = true;
 
   # Time zone and internationalization

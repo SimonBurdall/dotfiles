@@ -141,6 +141,7 @@
     kitty
     floorp
     thunderbird
+    brave
     discord
     obsidian
     vscode

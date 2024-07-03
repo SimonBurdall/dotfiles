@@ -136,6 +136,7 @@
     gdu
     xclip
     mangohud
+    playerctl
 
     # Software
     kitty

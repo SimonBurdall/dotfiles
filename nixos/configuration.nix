@@ -23,7 +23,7 @@
     LC_IDENTIFICATION = "en_GB.UTF-8";
   };
 
-  environment.shellInit = "export PS1='[󰾡:\w]\\$ '";
+  environment.shellInit = ''export PS1='[󰾡:\w]\\$ ' '';
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})

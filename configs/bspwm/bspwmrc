@@ -8,7 +8,7 @@ picom &
 
 #Only use with higher screen res.
 xrandr --output DP-4 --mode 5120x1440 --rate 120.00
-bash ~/.config/polybar/colorblocks/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/bk1.jpeg
+bash ~/.config/polybar/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/bk1.jpeg
 ~/.config/polybar/launch.sh 
 
 #monitor

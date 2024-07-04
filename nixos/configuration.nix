@@ -156,6 +156,7 @@
     gimp
     godot_4
     obs-studio
+    gpu-screen-recorder
     strawberry
     vlc
     handbrake

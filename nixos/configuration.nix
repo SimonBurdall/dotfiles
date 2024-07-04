@@ -137,6 +137,7 @@
     xclip
     mangohud
     playerctl
+    libmpdclient
 
     # Software
     kitty

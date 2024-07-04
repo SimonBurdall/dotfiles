@@ -80,6 +80,21 @@
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/path/to/music";
+    extraConfig = ''
+      audio_output {
+        type "pulse"
+        name "Pulseaudio"
+      }
+    '';
+
+    # Optional:
+    network.listenAddress = "any"; # if you want to allow non-localhost connections
+    startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+  };
+
   # Steam settings
   programs.steam = {
     enable = true;
@@ -124,6 +139,7 @@
     bash
     openssl
     polybar
+    #(pkgs.polybar.override {enableMPD = true;})
     pywal
     calc
     networkmanager_dmenu

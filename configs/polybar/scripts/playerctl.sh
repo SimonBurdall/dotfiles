@@ -4,18 +4,7 @@ BROWSER_ICON="󰖟"
 SPOTIFY_ICON="󰓇"
 MUSIC_ICON="󰝚"
 PAUSE_ICON="󰏤"
-
-MAX_LENGTH=30
-
-truncate_string() {
-    local string="$1"
-    local max_length="$2"
-    if [ ${#string} -gt "$max_length" ]; then
-        echo "$(echo "$string" | cut -b 1-$((max_length-3)))..."
-    else
-        echo "$string"
-    fi
-}
+KON_ICON=""
 
 status=$(playerctl status 2> /dev/null)
 
@@ -39,17 +28,10 @@ if [ "$status" == "Playing" ]; then
     esac
 
     OUTPUT="$ARTIST - $TITLE"
-
-    if [ ${#OUTPUT} -gt $MAX_LENGTH ]; then
-        AVAILABLE_LENGTH=$((MAX_LENGTH - ${#ICON} - 3))
-        TRUNCATED_OUTPUT=$(truncate_string "$OUTPUT" $AVAILABLE_LENGTH)
-        echo "$ICON $TRUNCATED_OUTPUT"
-    else
-        echo "$ICON $OUTPUT"
-    fi
+    echo "$ICON $OUTPUT"
 elif [ "$status" == "Paused" ]; then
     echo "$PAUSE_ICON Paused"
 else
-    echo "$MUSIC_ICON Fun things are fun."
+    echo "$KON_ICON \"Fun things are fun.\" - Yui"
 fi
 

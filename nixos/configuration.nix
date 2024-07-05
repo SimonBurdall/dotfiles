@@ -92,6 +92,11 @@
 
   virtualisation.docker.enable = true;
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["si"];
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.guest.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Programming Languages and Dev Tools
     neovim

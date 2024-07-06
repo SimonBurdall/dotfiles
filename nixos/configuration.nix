@@ -93,9 +93,9 @@
   virtualisation.docker.enable = true;
 
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = ["si"];
-  virtualisation.virtualbox.host.enableExtensionPack = true;
   virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  users.extraGroups.vboxusers.members = ["si"];
 
   environment.systemPackages = with pkgs; [
     # Programming Languages and Dev Tools

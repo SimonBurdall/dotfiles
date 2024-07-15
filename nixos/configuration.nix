@@ -165,6 +165,7 @@
     strawberry
     vlc
     handbrake
+    pocket-casts
   ];
 
   services.gnome.core-utilities.enable = false;

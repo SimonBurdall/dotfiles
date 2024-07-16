@@ -3,6 +3,7 @@ VLC_ICON="󰕼"
 BROWSER_ICON="󰖟" 
 SPOTIFY_ICON="󰓇"
 MUSIC_ICON="󰝚"
+PODCAST_ICON="󰦔"
 PAUSE_ICON="󰏤"
 KON_ICON=""
 
@@ -13,8 +14,11 @@ if [ "$status" == "Playing" ]; then
     ARTIST=$(playerctl metadata artist)
     TITLE=$(playerctl metadata title)
     case "$PLAYER" in
-        "chromium" | "firefox")
+       "firefox")
             ICON=$BROWSER_ICON
+            ;;
+        "chromium")
+            ICON=$PODCAST_ICON
             ;;
         "vlc")
             ICON=$VLC_ICON

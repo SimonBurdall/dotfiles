@@ -152,7 +152,7 @@
     obsidian
     vscode
     spotify
-    ardour
+    reaper
     maestral
     blockbench
     keepassxc

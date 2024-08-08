@@ -26,8 +26,10 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
     noto-fonts
+    noto-fonts-extra
     #noto-fonts-cjk
     noto-fonts-emoji
+    babelstone-han
     liberation_ttf
     fira-code
     fira-code-symbols

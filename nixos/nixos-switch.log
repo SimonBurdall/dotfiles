@@ -1,26 +1,27 @@
 building Nix...
 building the system configuration...
 these 9 derivations will be built:
-  /nix/store/mgvijgwkwfz7fqimkdrsr7rycr5rzm36-xserver.conf.drv
-  /nix/store/wlykv1kydv7bsjjg81bkybq9rs5fspdd-unit-display-manager.service.drv
-  /nix/store/6bvnnm84kh9gwl853mswp88xmjn15f0a-system-units.drv
-  /nix/store/dyygm697w7q630z150b53kdp9mpv5dzv-fc-cache.drv
-  /nix/store/ismp6lliyh7nhb50fyd86c06y4ahdnkr-fc-00-nixos-cache.conf.drv
-  /nix/store/zyy458hwsc8gf5q7395lfkqbwn6iv361-fontconfig-conf.drv
-  /nix/store/c3i5syjjv9xl434xjwvq7cxklzczlymb-fontconfig-etc.drv
-  /nix/store/p37yzvfqxnaacaifybhlc67ds0l2ag1n-etc.drv
-  /nix/store/cy5fajjc518146l778y23f4cp2b4wy2d-nixos-system-rits-24.05.2062.fc07dc3bdf29.drv
-this path will be fetched (20.35 MiB download, 51.68 MiB unpacked):
-  /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1
-copying path '/nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1' from 'https://cache.nixos.org'...
-building '/nix/store/dyygm697w7q630z150b53kdp9mpv5dzv-fc-cache.drv'...
-building '/nix/store/mgvijgwkwfz7fqimkdrsr7rycr5rzm36-xserver.conf.drv'...
-building '/nix/store/wlykv1kydv7bsjjg81bkybq9rs5fspdd-unit-display-manager.service.drv'...
-building '/nix/store/6bvnnm84kh9gwl853mswp88xmjn15f0a-system-units.drv'...
+  /nix/store/l5drz5kb1frgdclqr8jjy8ridcpvqf84-fc-cache.drv
+  /nix/store/3dk3sy7y4rrl5j40icclldmb52g6d7xz-fc-00-nixos-cache.conf.drv
+  /nix/store/3kqii4njqylhnv5zjdvpy1x39x1dxjyw-fontconfig-conf.drv
+  /nix/store/zvi2hvark8kf5b3mzxhf03ba9v7yix8q-xserver.conf.drv
+  /nix/store/44vny2573lmvgg5f5l1342slzf7rw9si-unit-display-manager.service.drv
+  /nix/store/l33mzr8bwvzdgr9m47dlpxwn9ic33hiq-system-units.drv
+  /nix/store/zfzz2w5k3j9556ka9ivdawsdzhfkyy5z-fontconfig-etc.drv
+  /nix/store/5ng3pc3rlgyjq34a211xnizmnb5f7frk-etc.drv
+  /nix/store/z4sx2chm01hx7z5yh4kmxzhf157ljk2c-nixos-system-rits-24.05.2062.fc07dc3bdf29.drv
+this path will be fetched (8.41 MiB download, 39.37 MiB unpacked):
+  /nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3
+copying path '/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3' from 'https://cache.nixos.org'...
+building '/nix/store/l5drz5kb1frgdclqr8jjy8ridcpvqf84-fc-cache.drv'...
+building '/nix/store/zvi2hvark8kf5b3mzxhf03ba9v7yix8q-xserver.conf.drv'...
+building '/nix/store/44vny2573lmvgg5f5l1342slzf7rw9si-unit-display-manager.service.drv'...
+building '/nix/store/l33mzr8bwvzdgr9m47dlpxwn9ic33hiq-system-units.drv'...
 Font directories:
         /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37
         /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1
         /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1
+        /nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3
         /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2
         /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811
         /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19
@@ -40,6 +41,7 @@ Font directories:
         /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share
         /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share
         /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share
+        /nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share
         /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share
         /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share
         /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share
@@ -59,6 +61,7 @@ Font directories:
         /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share/fonts
         /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share/fonts
         /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts
+        /nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts
         /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share/fonts
         /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share/fonts
         /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts
@@ -81,6 +84,7 @@ Font directories:
         /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share/fonts/truetype
         /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share/fonts/truetype
         /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts/noto
+        /nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts/truetype
         /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share/fonts/truetype
         /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share/fonts/opentype
         /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype
@@ -121,6 +125,10 @@ Font directories:
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts/noto: skipping, existing cache is valid: 894 fonts, 0 dirs
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts/truetype: skipping, existing cache is valid: 1 fonts, 0 dirs
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
@@ -201,6 +209,7 @@ Font directories:
 /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share: skipping, looped directory detected
 /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share: skipping, looped directory detected
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share: skipping, looped directory detected
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share: skipping, looped directory detected
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share: skipping, looped directory detected
 /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share: skipping, looped directory detected
 /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, looped directory detected
@@ -220,6 +229,7 @@ Font directories:
 /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share/fonts: skipping, looped directory detected
 /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share/fonts: skipping, looped directory detected
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts: skipping, looped directory detected
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts: skipping, looped directory detected
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share/fonts: skipping, looped directory detected
 /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share/fonts: skipping, looped directory detected
 /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts: skipping, looped directory detected
@@ -242,6 +252,7 @@ Font directories:
 /nix/store/p0h9m97lizc2gdaan2xv0ammicr9fiay-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, looped directory detected
 /nix/store/knsrlmpdzpwa02cba03527q6k4ik494i-nerdfonts-3.2.1/share/fonts/truetype: skipping, looped directory detected
 /nix/store/si9skjinjp6yzsj0bvwr7lp89gil67lr-noto-fonts-24.3.1/share/fonts/noto: skipping, looped directory detected
+/nix/store/37fdfpcaxhkba3j8r9x6lga5p06dqy7z-babelstone-han-13.0.3/share/fonts/truetype: skipping, looped directory detected
 /nix/store/p0iggwhybn1n8jwdbk1z7skydc4gz34b-fira-code-6.2/share/fonts/truetype: skipping, looped directory detected
 /nix/store/4jmadhb2h1czf2lm4wwrrpnsj62rrqrf-fira-code-symbols-20160811/share/fonts/opentype: skipping, looped directory detected
 /nix/store/8hxpigmba0nj9qhzb1045j8fwnrbk1zk-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype: skipping, looped directory detected
@@ -270,17 +281,16 @@ Font directories:
 /nix/store/8hii3i23c153yfmq8jx5p26687v3rqad-font-cursor-misc-1.0.4/lib/X11/fonts/misc: skipping, looped directory detected
 /nix/store/kidygc3b8vd7rkr5ldn5czh9220si0b6-font-misc-misc-1.1.3/lib/X11/fonts/misc: skipping, looped directory detected
 /var/cache/fontconfig: not cleaning non-existent cache directory
-/nix/store/vrj5z0ihs3z1m780wvi11napd6i9hqq3-fc-cache: cleaning cache directory
+/nix/store/1cmns9qyflw0zn87bhiwkkgms4sf58ir-fc-cache: cleaning cache directory
 fc-cache: succeeded
-building '/nix/store/ismp6lliyh7nhb50fyd86c06y4ahdnkr-fc-00-nixos-cache.conf.drv'...
-building '/nix/store/zyy458hwsc8gf5q7395lfkqbwn6iv361-fontconfig-conf.drv'...
-building '/nix/store/c3i5syjjv9xl434xjwvq7cxklzczlymb-fontconfig-etc.drv'...
+building '/nix/store/3dk3sy7y4rrl5j40icclldmb52g6d7xz-fc-00-nixos-cache.conf.drv'...
+building '/nix/store/3kqii4njqylhnv5zjdvpy1x39x1dxjyw-fontconfig-conf.drv'...
+building '/nix/store/zfzz2w5k3j9556ka9ivdawsdzhfkyy5z-fontconfig-etc.drv'...
 created 1 symlinks in user environment
-building '/nix/store/p37yzvfqxnaacaifybhlc67ds0l2ag1n-etc.drv'...
-building '/nix/store/cy5fajjc518146l778y23f4cp2b4wy2d-nixos-system-rits-24.05.2062.fc07dc3bdf29.drv'...
+building '/nix/store/5ng3pc3rlgyjq34a211xnizmnb5f7frk-etc.drv'...
+building '/nix/store/z4sx2chm01hx7z5yh4kmxzhf157ljk2c-nixos-system-rits-24.05.2062.fc07dc3bdf29.drv'...
 NOT restarting the following changed units: display-manager.service
 activating the configuration...
 setting up /etc...
 reloading user units for si...
 restarting sysinit-reactivation.target
-the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service

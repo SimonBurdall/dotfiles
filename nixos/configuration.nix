@@ -26,8 +26,7 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
     noto-fonts
-    noto-fonts-extra
-    #noto-fonts-cjk
+    noto-fonts-cjk
     noto-fonts-emoji
     babelstone-han
     liberation_ttf
@@ -36,6 +35,7 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+    wqy_zenhei
   ];
 
   # X11 and desktop environment

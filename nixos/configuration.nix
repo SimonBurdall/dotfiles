@@ -27,7 +27,6 @@
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
     noto-fonts-cjk
     noto-fonts-emoji
-    ark-pixel-font
     liberation_ttf
     fira-code
     fira-code-symbols

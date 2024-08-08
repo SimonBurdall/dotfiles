@@ -25,17 +25,15 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
-    noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    babelstone-han
+    ark-pixel-font
     liberation_ttf
     fira-code
     fira-code-symbols
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
-    wqy_zenhei
   ];
 
   # X11 and desktop environment

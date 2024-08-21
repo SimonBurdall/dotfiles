@@ -97,6 +97,8 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
   users.extraGroups.vboxusers.members = ["si"];
 
+  services.nfs.server.enable = true;
+
   environment.systemPackages = with pkgs; [
     # Programming Languages and Dev Tools
     neovim

@@ -91,90 +91,85 @@
   xdg.portal.enable = true;
 
   virtualisation.docker.enable = true;
-
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.guest.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  users.extraGroups.vboxusers.members = ["si"];
-
   services.nfs.server.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Programming Languages and Dev Tools
-    neovim
+    alejandra
+    awscli
+    clang
+    deadnix
+    docker-compose
+    gh
     git
     lazygit
-    clang
-    docker-compose
-    nodePackages.pyright
-    python311Packages.black
-    python311Packages.virtualenv
-    python311Packages.ruff-lsp
-    python3Packages.django
-    gh
-    awscli
-    nodejs
-    statix
-    deadnix
-    alejandra
-    stylua
     lua-language-server
-
-    # System Utilities
-    zsh
-    fzf
-    thefuck
-    ripgrep
-    rofi
-    fastfetch
-    flameshot
-    bash
-    openssl
-    polybar
-    pywal
-    calc
-    networkmanager_dmenu
-    bspwm
-    sxhkd
-    betterlockscreen
-    feh
-    picom
-    killall
-    gdu
-    xclip
-    mangohud
-    playerctl
+    neovim
+    nodePackages.pyright
+    nodejs
+    python311Packages.black
+    python311Packages.ruff-lsp
+    python311Packages.virtualenv
+    python3Packages.django
+    statix
+    stylua
 
     # Software
-    kitty
-    floorp
-    thunderbird
+    ardour
+    blender
     brave
     discord
-    obsidian
-    vscode
-    spotify
-    ardour
-    maestral
-    blockbench
-    keepassxc
-    steam
-    steam-run
-    heroic
+    floorp
     gimp
     godot_4
-    obs-studio
     gpu-screen-recorder
-    strawberry
-    vlc
     handbrake
+    heroic
+    keepassxc
+    kitty
+    maestral
+    obs-studio
+    obsidian
     pocket-casts
+    spotify
+    steam
+    steam-run
+    strawberry
+    thunderbird
+    vlc
+    vscode
+
+    # System Utilities
+    bash
+    betterlockscreen
+    bspwm
+    calc
+    feh
+    fastfetch
+    flameshot
+    fzf
+    gdu
+    killall
+    mangohud
+    networkmanager_dmenu
+    nmap
+    openssl
+    picom
+    playerctl
+    polybar
+    pywal
+    ripgrep
+    rofi
+    sxhkd
+    thefuck
+    xclip
+    zsh
   ];
 
   services.gnome.core-utilities.enable = false;
 
   nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
+    "electron-27.3.11"
   ];
 
   # NixOS services (enable only what you need)

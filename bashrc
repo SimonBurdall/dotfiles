@@ -11,7 +11,7 @@ alias v="nvim"
 alias sv="sudo -E nvim"
 alias p="python3"
 
-alias reb="cd ~/1-vault/1-code/2-snippets/dotfiles/scripts/ ; ./rebuild.ksh"
+alias reb="cd ~/1-vault/1-code/2-snippets/dotfiles/scripts/rebuild.ksh"
 alias dot="cd ~/1-vault/1-code/2-snippets/dotfiles/"
 alias nix="cd /etc/nixos"
 alias con="cd ~/.config"

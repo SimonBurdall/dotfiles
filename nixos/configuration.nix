@@ -125,6 +125,7 @@
     gpu-screen-recorder
     handbrake
     heroic
+    inkscape
     keepassxc
     kitty
     maestral

@@ -132,6 +132,7 @@
     obs-studio
     obsidian
     pocket-casts
+    scribus
     spotify
     steam
     steam-run

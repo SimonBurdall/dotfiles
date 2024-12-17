@@ -28,7 +28,7 @@
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
     fira-code
@@ -48,7 +48,6 @@
 
   # Printing and sound
   services.printing.enable = true;
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -108,11 +107,11 @@
     lazygit
     lua-language-server
     neovim
-    nodePackages.pyright
+    pyright
     nodejs
-    python311Packages.black
-    python311Packages.ruff-lsp
-    python311Packages.virtualenv
+    python312Packages.black
+    ruff-lsp
+    python312Packages.virtualenv
     python3Packages.django
     statix
     stylua

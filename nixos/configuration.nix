@@ -15,6 +15,9 @@
   #networking.hostName = "mori";
   networking.networkmanager.enable = true;
 
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+
   # Time zone and internationalization
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";

@@ -7,7 +7,7 @@ pkill picom
 picom &
 
 #Only use with higher screen res.
-xrandr --output DP-4 --mode 5120x1440 --rate 120.00
+xrandr --output DP-4 --primary --mode 5120x1440 --rate 120.00 --output DP-2 --mode 2560x1440 --above DP-4
 bash ~/.config/polybar/scripts/pywal.sh ~/1-vault/2-media/1-wallpapers/wpa.png
 ~/.config/polybar/launch.sh 
 

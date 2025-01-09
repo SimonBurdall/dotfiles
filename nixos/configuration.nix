@@ -165,6 +165,7 @@
     pywal
     ripgrep
     rofi
+    solaar
     sxhkd
     thefuck
     xclip

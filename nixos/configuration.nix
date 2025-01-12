@@ -168,6 +168,7 @@
     solaar
     sxhkd
     thefuck
+    unzip
     xclip
     zip
     zsh

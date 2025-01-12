@@ -169,6 +169,7 @@
     sxhkd
     thefuck
     xclip
+    zip
     zsh
   ];
 

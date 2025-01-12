@@ -109,19 +109,19 @@
     neovim
     pyright
     nodejs
-    #python312Packages.black
+    python312Packages.black
     ruff-lsp
     rustc
-    #python312Packages.virtualenv
-    #python3Packages.django
+    python312Packages.virtualenv
+    python3Packages.django
     statix
     stylua
 
     # Software
     ardour
     blender
+    curaengine_stable
     brave
-    #cura
     discord
     floorp
     gimp

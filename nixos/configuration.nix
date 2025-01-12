@@ -120,7 +120,6 @@
     # Software
     ardour
     blender
-    curaengine_stable
     brave
     discord
     floorp

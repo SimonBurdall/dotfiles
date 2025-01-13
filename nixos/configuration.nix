@@ -123,6 +123,7 @@
     brave
     discord
     floorp
+    freecad
     gimp
     godot_4
     gpu-screen-recorder

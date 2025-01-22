@@ -136,6 +136,7 @@
     obs-studio
     obsidian
     pocket-casts
+    rpi-imager
     scribus
     spotify
     steam

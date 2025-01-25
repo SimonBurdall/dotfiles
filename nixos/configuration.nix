@@ -121,6 +121,7 @@
     ardour
     blender
     brave
+    curaengine_stable
     discord
     floorp
     freecad

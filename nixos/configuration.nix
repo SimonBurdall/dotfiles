@@ -121,7 +121,6 @@
     ardour
     blender
     brave
-    curaengine_stable
     discord
     floorp
     freecad
@@ -136,6 +135,7 @@
     maestral
     obs-studio
     obsidian
+    orca-slicer
     pocket-casts
     rpi-imager
     scribus

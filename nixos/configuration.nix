@@ -175,6 +175,7 @@
     xclip
     zip
     zsh
+    immich-go
   ];
 
   services.gnome.core-utilities.enable = false;

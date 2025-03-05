@@ -57,6 +57,18 @@
     pulse.enable = true;
   };
 
+  fileSystems."/home/si/3-minilla" = {
+    device = "truenas.local:/mnt/minilla";
+    fsType = "nfs";
+    options = [
+      "defaults"
+      "rw"
+      "nolock"
+    ];
+  };
+
+  services.rpcbind.enable = true;
+
   # User account
   users.users.si = {
     isNormalUser = true;

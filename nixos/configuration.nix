@@ -112,6 +112,7 @@
     alejandra
     awscli
     clang
+    cargo
     deadnix
     docker-compose
     gh

@@ -123,10 +123,10 @@
     pyright
     nodejs
     python312Packages.black
+    python312Packages.django
     ruff-lsp
     rustc
     python312Packages.virtualenv
-    python3Packages.django
     statix
     stylua
 

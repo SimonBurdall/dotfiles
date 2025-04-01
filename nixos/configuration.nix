@@ -197,16 +197,6 @@
     "electron-27.3.11"
   ];
 
-  services.monado = {
-    enable = true;
-    defaultRuntime = true; # Register as default OpenXR runtime
-  };
-
-  systemd.user.services.monado.environment = {
-    STEAMVR_LH_ENABLE = "1";
-    XRT_COMPOSITOR_COMPUTE = "1";
-  };
-
   # NixOS services (enable only what you need)
   services.openssh.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];

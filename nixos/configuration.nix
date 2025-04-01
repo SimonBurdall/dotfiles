@@ -130,6 +130,8 @@
     statix
     stylua
 
+    alvr
+
     # Software
     ardour
     blender

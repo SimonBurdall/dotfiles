@@ -240,6 +240,8 @@
   # Open ports for Oculus Link
   networking.firewall.allowedTCPPorts = [9943 9944];
   networking.firewall.allowedUDPPorts = [9943 9944];
+  # For SteamVR
+  security.polkit.enable = true;
   # networking.firewall.enable = false;
 
   # System state version

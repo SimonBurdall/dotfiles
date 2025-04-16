@@ -73,7 +73,7 @@
   users.users.si = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "video"]; # Added video group for VR access
     packages = with pkgs; [
     ];
   };
@@ -81,28 +81,56 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enhanced graphics support for VR
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true; # Important for Steam
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+
   # Hardware settings
-  hardware.opengl.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # Add VR-specific settings
+    powerManagement.enable = true;
+    forceFullCompositionPipeline = true;
   };
+
+  # Add USB rules for Oculus/Meta Quest devices
+  services.udev.extraRules = ''
+    # Oculus/Meta Quest USB detection
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0666"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0082", MODE="0666"
+    # Meta Quest 3 may have different IDs, these are common ones
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0187", MODE="0666"
+  '';
 
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 
-  # Steam settings
+  # Enhanced Steam configuration
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    # Remove extraCompatPackages as proton-ge-custom isn't available
   };
 
   # XDG portals and system packages
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   virtualisation.docker.enable = true;
   services.nfs.server.enable = true;
@@ -130,7 +158,15 @@
     statix
     stylua
 
+    # VR-related packages
     alvr
+    # xrdesktop - package not available
+    # steamvr-utils - package may not be available
+    vulkan-tools
+    vulkan-loader
+    vulkan-validation-layers
+    libva
+    vkBasalt
 
     # Software
     ardour
@@ -201,8 +237,9 @@
 
   # NixOS services (enable only what you need)
   services.openssh.enable = true;
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Open ports for Oculus Link
+  networking.firewall.allowedTCPPorts = [9943 9944];
+  networking.firewall.allowedUDPPorts = [9943 9944];
   # networking.firewall.enable = false;
 
   # System state version

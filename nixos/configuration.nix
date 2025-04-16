@@ -209,6 +209,7 @@
     fzf
     gdu
     killall
+    usbutils
     mangohud
     networkmanager_dmenu
     nmap

@@ -172,6 +172,7 @@
     ardour
     blender
     brave
+    calibre
     discord
     floorp
     freecad

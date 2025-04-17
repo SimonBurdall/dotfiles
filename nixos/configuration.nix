@@ -67,6 +67,16 @@
     ];
   };
 
+  fileSystems."/home/si/4-spacezilla" = {
+    device = "truenas.local:/mnt/spacezilla";
+    fsType = "nfs";
+    options = [
+      "defaults"
+      "rw"
+      "nolock"
+    ];
+  };
+
   services.rpcbind.enable = true;
 
   # User account

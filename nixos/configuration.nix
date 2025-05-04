@@ -141,6 +141,12 @@
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
   '';
 
+  environment.sessionVariables = {
+    "LD_LIBRARY_PATH" = "${pkgs.libGL}/lib:${pkgs.libpulseaudio}/lib";
+    "STEAM_RUNTIME_LIBRARY_PATH" = "${pkgs.libGL}/lib:${pkgs.libpulseaudio}/lib";
+    "VK_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json";
+  };
+
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 
@@ -269,12 +275,6 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
   ];
-
-  environment.sessionVariables = {
-    # VR-specific environment variables
-    "STEAM_EXTRA_COMPAT_TOOLS_PATHS" = "\${HOME}/.steam/root/compatibilitytools.d";
-    "VK_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json";
-  };
 
   # NixOS services (enable only what you need)
   services.openssh.enable = true;

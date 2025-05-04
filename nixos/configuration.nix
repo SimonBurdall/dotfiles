@@ -108,12 +108,22 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     powerManagement.enable = true;
     forceFullCompositionPipeline = true;
+    nvidiaPersistenced = true;
   };
 
-  # Enable OpenXR support
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true; # Needed for Steam
-
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true; # Important for Steam
+    extraPackages = with pkgs; [
+      vulkan-loader
+      vulkan-validation-layers
+      libvdpau
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      vulkan-loader
+      libvdpau
+    ];
+  };
   # Enable Monado OpenXR runtime
   services.monado.enable = true;
 

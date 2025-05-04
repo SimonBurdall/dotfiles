@@ -124,6 +124,7 @@
       libvdpau
     ];
   };
+
   # Enable Monado OpenXR runtime
   services.monado.enable = true;
 

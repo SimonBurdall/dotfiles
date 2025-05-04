@@ -175,6 +175,7 @@
     stylua
 
     # VR-related packages
+    android-tools
     alvr
     scrcpy
     monado

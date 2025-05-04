@@ -3,14 +3,11 @@
   pkgs,
   ...
 }: {
-  # Include hardware configuration
   imports = [./hardware-configuration.nix];
 
-  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Hostname and networking
   networking.hostName = "rits";
   #networking.hostName = "mori";
   networking.networkmanager.enable = true;
@@ -83,7 +80,7 @@
   users.users.si = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = ["networkmanager" "wheel" "video"]; # Added video group for VR access
+    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input"];
     packages = with pkgs; [
     ];
   };
@@ -109,18 +106,28 @@
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    # Add VR-specific settings
     powerManagement.enable = true;
     forceFullCompositionPipeline = true;
   };
 
-  # Add USB rules for Oculus/Meta Quest devices
+  # Enable OpenXR support
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true; # Needed for Steam
+
+  # Enable Monado OpenXR runtime
+  services.monado.enable = true;
+
+  # USB rules
   services.udev.extraRules = ''
-    # Oculus/Meta Quest USB detection
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0666"
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0082", MODE="0666"
-    # Meta Quest 3 may have different IDs, these are common ones
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0187", MODE="0666"
+    # Meta Quest USB detection
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0082", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0187", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
+    # For the Quest 3 specifically
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0137", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
+
+    # Add rules for Android debugging (useful for ADB)
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
   '';
 
   # BSPWM settings
@@ -131,7 +138,6 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-    # Remove extraCompatPackages as proton-ge-custom isn't available
   };
 
   # XDG portals and system packages
@@ -170,8 +176,10 @@
 
     # VR-related packages
     alvr
-    # xrdesktop - package not available
-    # steamvr-utils - package may not be available
+    scrcpy
+    monado
+    opencomposite
+    wivrn
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers
@@ -239,6 +247,9 @@
     zip
     zsh
     immich-go
+
+    nvtop
+    pciutils
   ];
 
   services.gnome.core-utilities.enable = false;
@@ -246,6 +257,12 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
   ];
+
+  environment.sessionVariables = {
+    # VR-specific environment variables
+    "STEAM_EXTRA_COMPAT_TOOLS_PATHS" = "\${HOME}/.steam/root/compatibilitytools.d";
+    "VK_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json";
+  };
 
   # NixOS services (enable only what you need)
   services.openssh.enable = true;

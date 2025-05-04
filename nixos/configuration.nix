@@ -141,12 +141,6 @@
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
   '';
 
-  environment.sessionVariables = {
-    "LD_LIBRARY_PATH" = "${pkgs.libGL}/lib:${pkgs.libpulseaudio}/lib";
-    "STEAM_RUNTIME_LIBRARY_PATH" = "${pkgs.libGL}/lib:${pkgs.libpulseaudio}/lib";
-    "VK_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.json";
-  };
-
   # BSPWM settings
   services.xserver.windowManager.bspwm.enable = true;
 

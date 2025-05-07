@@ -5,6 +5,8 @@
 }: {
   imports = [./hardware-configuration.nix];
 
+  #---------------------------------------------------------------------
+  # Boot and System
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -14,15 +16,56 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
+  system.stateVersion = "24.05"; # Do not change unless you know what you're doing
 
-  # Time zone and internationalization
+  networking.firewall.allowedTCPPorts = [9943 9944];
+  networking.firewall.allowedUDPPorts = [9943 9944];
+  # networking.firewall.enable = false;
+
+  #---------------------------------------------------------------------
+  # Localization
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_GB.UTF-8";
     LC_IDENTIFICATION = "en_GB.UTF-8";
   };
+  console.keyMap = "uk";
 
+  #---------------------------------------------------------------------
+  # User Management
+  users.users.si = {
+    isNormalUser = true;
+    description = "Simon";
+    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input"];
+    packages = with pkgs; [
+      # User-specific packages can be added here
+    ];
+  };
+
+  #---------------------------------------------------------------------
+  # Display, Desktop Environment, and Window Manager
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    windowManager.bspwm.enable = true;
+    xkb.layout = "gb";
+    xkb.variant = "";
+    videoDrivers = ["nvidia"];
+  };
+
+  services.gnome.core-utilities.enable = false;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
+
+  #---------------------------------------------------------------------
+  # Fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
     noto-fonts-cjk-sans
@@ -35,16 +78,48 @@
     proggyfonts
   ];
 
-  # X11 and desktop environment
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  services.xserver.xkb.layout = "gb";
-  services.xserver.xkb.variant = "";
-  console.keyMap = "uk";
+  #---------------------------------------------------------------------
+  # Hardware and Graphics
+  hardware.nvidia = {
+    modesetting.enable = true;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    powerManagement.enable = true;
+    forceFullCompositionPipeline = true;
+    nvidiaPersistenced = true;
+  };
 
-  # Printing and sound
-  services.printing.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      vulkan-loader
+      vulkan-validation-layers
+      libvdpau
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      vulkan-loader
+      libvdpau
+    ];
+  };
+
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true;
+  services.monado.enable = true;
+
+  #---------------------------------------------------------------------
+  # Audio
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -54,27 +129,31 @@
     pulse.enable = true;
   };
 
+  #---------------------------------------------------------------------
+  # Printing
+  services.printing.enable = true;
+
+  #---------------------------------------------------------------------
+  # File Systems and Network Shares
   fileSystems."/home/si/3-minilla" = {
     device = "truenas.local:/mnt/minilla";
     fsType = "nfs";
-    options = [
-      "defaults"
-      "rw"
-      "nolock"
-    ];
+    options = ["defaults" "rw" "nolock"];
   };
 
   fileSystems."/home/si/4-spacezilla" = {
     device = "truenas.local:/mnt/spacezilla";
     fsType = "nfs";
-    options = [
-      "defaults"
-      "rw"
-      "nolock"
-    ];
+    options = ["defaults" "rw" "nolock"];
   };
 
   services.rpcbind.enable = true;
+  services.nfs.server.enable = true;
+
+  #---------------------------------------------------------------------
+  # System Services
+  services.openssh.enable = true;
+  security.polkit.enable = true;
 
   systemd.user.services.solaar = {
     enable = true;
@@ -87,62 +166,6 @@
     };
   };
 
-  # User account
-  users.users.si = {
-    isNormalUser = true;
-    description = "Simon";
-    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input"];
-    packages = with pkgs; [
-    ];
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Enhanced graphics support for VR
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true; # Important for Steam
-    extraPackages = with pkgs; [
-      intel-media-driver
-      vaapiVdpau
-      libvdpau-va-gl
-    ];
-  };
-
-  # Hardware settings
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    powerManagement.enable = true;
-    forceFullCompositionPipeline = true;
-    nvidiaPersistenced = true;
-  };
-
-  hardware.logitech.wireless.enable = true;
-  hardware.logitech.wireless.enableGraphical = true;
-
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true; # Important for Steam
-    extraPackages = with pkgs; [
-      vulkan-loader
-      vulkan-validation-layers
-      libvdpau
-    ];
-    extraPackages32 = with pkgs.pkgsi686Linux; [
-      vulkan-loader
-      libvdpau
-    ];
-  };
-
-  # Enable Monado OpenXR runtime
-  services.monado.enable = true;
-
-  # USB rules
   services.udev.extraRules = ''
     # Meta Quest USB detection
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
@@ -155,33 +178,35 @@
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
   '';
 
-  # BSPWM settings
-  services.xserver.windowManager.bspwm.enable = true;
+  #---------------------------------------------------------------------
+  # Virtualization and Containerization
+  virtualisation.docker.enable = true;
 
-  # Enhanced Steam configuration
+  #---------------------------------------------------------------------
+  # Gaming and Steam
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
   };
 
-  # XDG portals and system packages
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
-  };
+  #---------------------------------------------------------------------
+  # Package Management
+  nixpkgs.config.allowUnfree = true;
 
-  virtualisation.docker.enable = true;
-  services.nfs.server.enable = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
 
+  #---------------------------------------------------------------------
+  # System Packages
   environment.systemPackages = with pkgs; [
-    # Programming Languages and Dev Tools
+    # Development Tools
     alejandra
     awscli
     clang
     cargo
+    rustc
     deadnix
     docker-compose
     gh
@@ -189,17 +214,16 @@
     lazygit
     lua-language-server
     neovim
-    pyright
     nodejs
+    pyright
     python312Packages.black
     python312Packages.django
-    ruff-lsp
-    rustc
     python312Packages.virtualenv
+    ruff-lsp
     statix
     stylua
 
-    # VR-related packages
+    # VR and Graphics
     android-tools
     alvr
     scrcpy
@@ -212,87 +236,72 @@
     libva
     vkBasalt
 
-    # Software
+    # Creative Software
     ardour
     blender
-    brave
-    calibre
-    discord
-    floorp
     freecad
     gimp
     godot_4
-    gpu-screen-recorder
-    handbrake
-    heroic
     inkscape
-    keepassxc
-    kitty
-    maestral
     obs-studio
-    obsidian
-    orca-slicer
-    pocket-casts
-    rpi-imager
-    scribus
-    spotify
+    orca-slicer # 3D printer slicer
+    scribus # Desktop publishing
+
+    # Media and Entertainment
+    brave
+    floorp # Web browsers
+    calibre # E-book management
+    discord # Chat
+    gpu-screen-recorder # Screen recording
+    handbrake # Video transcoder
+    heroic # Game launcher
+    keepassxc # Password manager
+    kitty # Terminal emulator
+    maestral # Dropbox client
+    obsidian # Note-taking
+    pocket-casts # Podcast player
+    rpi-imager # Raspberry Pi imager
+    spotify # Music streaming
     steam
-    steam-run
-    strawberry
-    thunderbird
-    vlc
-    vscode
+    steam-run # Gaming
+    strawberry # Music player
+    thunderbird # Email client
+    vlc # Media player
+    vscode # Code editor
+    immich-go # Photo library
 
-    # System Utilities
+    # System and Window Manager Utilities
     bash
-    betterlockscreen
-    bspwm
-    calc
-    feh
-    fastfetch
-    flameshot
-    fzf
-    gdu
-    killall
-    usbutils
-    mangohud
-    networkmanager_dmenu
-    nmap
-    openssl
-    picom
-    playerctl
-    polybar
-    pywal
-    ripgrep
-    rofi
-    solaar
-    sxhkd
-    thefuck
+    zsh # Shells
+    betterlockscreen # Screen locker
+    bspwm # Window manager
+    calc # Calculator
+    feh # Image viewer
+    fastfetch # System info
+    flameshot # Screenshot tool
+    fzf # Fuzzy finder
+    gdu # Disk usage analyzer
+    killall # Process killer
+    usbutils # USB utilities
+    mangohud # Performance overlay
+    networkmanager_dmenu # NetworkManager frontend
+    nmap # Network scanner
+    openssl # Cryptography toolkit
+    picom # Compositor
+    playerctl # Media player controller
+    polybar # Status bar
+    pywal # Color scheme generator
+    ripgrep # Grep replacement
+    rofi # Application launcher
+    solaar # Logitech device manager
+    sxhkd # Hotkey daemon
+    thefuck # Command corrector
     unzip
-    xclip
-    zip
-    zsh
-    immich-go
+    zip # Archive utilities
+    xclip # Clipboard manager
 
-    nvtop
-    pciutils
+    # Monitoring Tools
+    nvtop # NVIDIA process monitor
+    pciutils # PCI utilities
   ];
-
-  services.gnome.core-utilities.enable = false;
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-27.3.11"
-  ];
-
-  # NixOS services (enable only what you need)
-  services.openssh.enable = true;
-  # Open ports for Oculus Link
-  networking.firewall.allowedTCPPorts = [9943 9944];
-  networking.firewall.allowedUDPPorts = [9943 9944];
-  # For SteamVR
-  security.polkit.enable = true;
-  # networking.firewall.enable = false;
-
-  # System state version
-  system.stateVersion = "24.05";
 }

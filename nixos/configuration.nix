@@ -287,6 +287,7 @@
     networkmanager_dmenu
     nmap
     openssl
+    pamixer
     picom
     playerctl
     polybar

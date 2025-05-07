@@ -287,7 +287,6 @@
     networkmanager_dmenu
     nmap
     openssl
-    pamixer
     picom
     playerctl
     polybar
@@ -298,6 +297,7 @@
     sxhkd
     thefuck
     unzip
+    wireplumber
     zip
     xclip
 

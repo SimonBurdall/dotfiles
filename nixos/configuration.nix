@@ -111,6 +111,9 @@
     nvidiaPersistenced = true;
   };
 
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true;
+
   hardware.opengl = {
     enable = true;
     driSupport32Bit = true; # Important for Steam

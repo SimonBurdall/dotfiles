@@ -11,8 +11,8 @@ super + Return
 	kitty
 
 # browser and common applications
-super + {7,8,9,0}
-	{floorp, discord, spotify, keepassxc}
+super + {7,8,9,0,minus,equal}
+	{floorp, discord, steam, obsidian, spotify, keepassxc}
 
 # application launcher
 super + @space 
@@ -31,11 +31,11 @@ super + ctrl + Escape
 #---------------------------------------------------------------
 # AUDIO CONTROLS
 # increase volume
-{XF86AudioRaiseVolume, super + equal}
+{XF86AudioRaiseVolume, super + shift + equal}
     wpctl set-volume @DEFAULT_SINK@ 5%+
 
 # decrease volume
-{XF86AudioLowerVolume, super + minus}
+{XF86AudioLowerVolume, super + shift + minus}
     wpctl set-volume @DEFAULT_SINK@ 5%-
 
 # mute volume

@@ -1,59 +1,68 @@
-### config ######
+#---------------------------------------------------------------
+# CONFIGURATION
 # reload sxhkd configuration
 super + Escape
 	pkill -USR1 -x sxhkd
 
-### main hotkeys ######
-super +  {7,8,9,0}
-	{floorp, discord, spotify, keepassxc}
-
+#---------------------------------------------------------------
+# APPLICATIONS
+# terminal
 super + Return 
 	kitty
 
-Print 
-	flameshot gui
+# browser and common applications
+super + {7,8,9,0}
+	{floorp, discord, spotify, keepassxc}
 
+# application launcher
 super + @space 
 	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/scripts/rofi/launcher.rasi
 
-### System hotkeys ######
+# screenshot
+Print 
+	flameshot gui
+
+#---------------------------------------------------------------
+# SYSTEM CONTROLS
 # powermenu
 super + ctrl + Escape
 	~/.config/polybar/scripts/powermenu.sh
 
+#---------------------------------------------------------------
+# AUDIO CONTROLS
 # increase volume
 {XF86AudioRaiseVolume, super + equal}
-    amixer -q sset Master 5%+
+    wpctl set-volume @DEFAULT_SINK@ 5%+
 
 # decrease volume
 {XF86AudioLowerVolume, super + minus}
-    amixer -q sset Master 5%-
+    wpctl set-volume @DEFAULT_SINK@ 5%-
 
 # mute volume
 {XF86AudioMute, super + shift + m}
-    amixer -q sset Master toggle
+    wpctl set-mute @DEFAULT_SINK@ toggle
 
-# play/pause
+# media player controls
 XF86AudioPlay
     playerctl play-pause
 
-# force stop
 super + XF86AudioPlay
-		playerctl -a stop
+	playerctl -a stop
 
-# rewind
 XF86AudioPrev
     playerctl previous
 
-# forward
 XF86AudioNext
     playerctl next
 
-### BSPWM hotkeys ######
+#---------------------------------------------------------------
+# BSPWM SESSION MANAGEMENT
 # quit/restart bspwm
 super + shift + {Escape,r}
 	bspc {quit,wm -r}
 
+#---------------------------------------------------------------
+# WINDOW MANAGEMENT
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
@@ -66,12 +75,14 @@ super + m
 super + g
 	bspc node -s biggest.local
 
-## State/Flags
+#---------------------------------------------------------------
+# WINDOW STATE/FLAGS
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-## Focus/Swap
+#---------------------------------------------------------------
+# FOCUS AND NAVIGATION
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -97,7 +108,8 @@ super + {o,i}
 super + {_,shift + }{1-4,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-## Preselected
+#---------------------------------------------------------------
+# PRESELECTION
 # preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
@@ -110,7 +122,8 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-## Move/Resize
+#---------------------------------------------------------------
+# MOVE AND RESIZE
 # expand a window by moving one of its side outward
 ctrl + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}

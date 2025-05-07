@@ -76,6 +76,17 @@
 
   services.rpcbind.enable = true;
 
+  systemd.user.services.solaar = {
+    enable = true;
+    description = "Solaar Logitech Device Manager";
+    wantedBy = ["default.target"];
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.solaar}/bin/solaar --window=hide";
+      Restart = "on-failure";
+    };
+  };
+
   # User account
   users.users.si = {
     isNormalUser = true;

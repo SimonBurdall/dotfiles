@@ -16,7 +16,7 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
-  system.stateVersion = "24.05"; # Do not change unless you know what you're doing
+  system.stateVersion = "24.05";
 
   networking.firewall.allowedTCPPorts = [9943 9944];
   networking.firewall.allowedUDPPorts = [9943 9944];
@@ -244,64 +244,64 @@
     godot_4
     inkscape
     obs-studio
-    orca-slicer # 3D printer slicer
-    scribus # Desktop publishing
+    orca-slicer
+    scribus
 
     # Media and Entertainment
     brave
-    floorp # Web browsers
-    calibre # E-book management
-    discord # Chat
-    gpu-screen-recorder # Screen recording
-    handbrake # Video transcoder
-    heroic # Game launcher
-    keepassxc # Password manager
-    kitty # Terminal emulator
-    maestral # Dropbox client
-    obsidian # Note-taking
-    pocket-casts # Podcast player
-    rpi-imager # Raspberry Pi imager
-    spotify # Music streaming
+    floorp
+    calibre
+    discord
+    gpu-screen-recorder
+    handbrake
+    heroic
+    keepassxc
+    kitty
+    maestral
+    obsidian
+    pocket-casts
+    rpi-imager
+    spotify
     steam
-    steam-run # Gaming
-    strawberry # Music player
-    thunderbird # Email client
-    vlc # Media player
-    vscode # Code editor
-    immich-go # Photo library
+    steam-run
+    strawberry
+    thunderbird
+    vlc
+    vscode
+    immich-go
 
     # System and Window Manager Utilities
     bash
-    zsh # Shells
-    betterlockscreen # Screen locker
-    bspwm # Window manager
-    calc # Calculator
-    feh # Image viewer
-    fastfetch # System info
-    flameshot # Screenshot tool
-    fzf # Fuzzy finder
-    gdu # Disk usage analyzer
-    killall # Process killer
-    usbutils # USB utilities
-    mangohud # Performance overlay
-    networkmanager_dmenu # NetworkManager frontend
-    nmap # Network scanner
-    openssl # Cryptography toolkit
-    picom # Compositor
-    playerctl # Media player controller
-    polybar # Status bar
-    pywal # Color scheme generator
-    ripgrep # Grep replacement
-    rofi # Application launcher
-    solaar # Logitech device manager
-    sxhkd # Hotkey daemon
-    thefuck # Command corrector
+    zsh
+    betterlockscreen
+    bspwm
+    calc
+    feh
+    fastfetch
+    flameshot
+    fzf
+    gdu
+    killall
+    usbutils
+    mangohud
+    networkmanager_dmenu
+    nmap
+    openssl
+    picom
+    playerctl
+    polybar
+    pywal
+    ripgrep
+    rofi
+    solaar
+    sxhkd
+    thefuck
     unzip
-    zip # Archive utilities
-    xclip # Clipboard manager
+    zip
+    xclip
 
     # Monitoring Tools
-    nvtop # NVIDIA process monitor
-    pciutils # PCI utilities
+    nvtop
+    pciutils
   ];
 }

@@ -204,6 +204,7 @@
   environment.systemPackages = with pkgs; [
     # Development Tools
     alejandra
+    android-studio
     awscli
     clang
     cargo

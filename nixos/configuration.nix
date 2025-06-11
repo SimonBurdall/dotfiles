@@ -16,7 +16,7 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 
   networking.firewall.allowedTCPPorts = [9943 9944];
   networking.firewall.allowedUDPPorts = [9943 9944];

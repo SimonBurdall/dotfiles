@@ -220,6 +220,7 @@
     neovim
     nodejs
     pyright
+    python312
     python312Packages.black
     python312Packages.django
     python312Packages.virtualenv

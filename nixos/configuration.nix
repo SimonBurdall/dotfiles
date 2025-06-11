@@ -213,6 +213,7 @@
     rustc
     deadnix
     docker-compose
+    gcc
     gh
     git
     lazygit

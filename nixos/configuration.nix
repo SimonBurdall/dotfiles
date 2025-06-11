@@ -258,7 +258,7 @@
     calibre
     discord
     gpu-screen-recorder
-    #grayjay
+    grayjay
     handbrake
     heroic
     keepassxc

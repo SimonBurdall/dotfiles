@@ -15,4 +15,4 @@ reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/5h2n81sv44bnr3gxzakk3w5njs8nzc7r-nixos-system-rits-25.05.803751.88331c17ba43
+Done. The new configuration is /nix/store/kk0pay402djf876qgz773ij91y3p7vkn-nixos-system-rits-25.05.803751.88331c17ba43

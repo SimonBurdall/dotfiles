@@ -223,6 +223,7 @@
     python312
     python312Packages.black
     python312Packages.django
+    python312Packages.pip
     python312Packages.virtualenv
     ruff
     statix

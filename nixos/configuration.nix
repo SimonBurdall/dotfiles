@@ -11,7 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "rits";
-  #networking.hostName = "mori";
+  # networking.hostName = "mori";
   networking.networkmanager.enable = true;
 
   system.autoUpgrade.enable = true;
@@ -275,6 +275,9 @@
     vlc
     vscode
     immich-go
+
+    # Games
+    clonehero
 
     # System and Window Manager Utilities
     bash

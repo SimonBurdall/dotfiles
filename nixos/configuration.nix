@@ -67,7 +67,9 @@
   #---------------------------------------------------------------------
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["Hack" "Iosevka" "NerdFontsSymbolsOnly"];})
+    nerd-fonts.hack
+    nerd-fonts.iosevka
+    nerd-fonts.symbols-only
     noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
@@ -221,7 +223,7 @@
     python312Packages.black
     python312Packages.django
     python312Packages.virtualenv
-    ruff-lsp
+    ruff
     statix
     stylua
 
@@ -256,6 +258,7 @@
     calibre
     discord
     gpu-screen-recorder
+    grayjay
     handbrake
     heroic
     keepassxc
@@ -305,7 +308,6 @@
     xclip
 
     # Monitoring Tools
-    nvtop
     pciutils
   ];
 }

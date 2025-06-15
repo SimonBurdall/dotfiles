@@ -247,6 +247,7 @@
     # Creative Software
     ardour
     blender
+    blockbench
     freecad
     gimp
     godot_4

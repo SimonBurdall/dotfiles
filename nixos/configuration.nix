@@ -252,7 +252,6 @@
     sidequest
 
     # Creative Software
-    ardour
     blender
     blockbench
     freecad
@@ -261,6 +260,7 @@
     inkscape
     obs-studio
     orca-slicer
+    reaper
     scribus
 
     # Media and Entertainment

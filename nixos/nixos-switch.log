@@ -6,9 +6,49 @@ evaluation warning: The option `hardware.opengl.extraPackages32' defined in `/et
 evaluation warning: The option `hardware.opengl.extraPackages' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.extraPackages'.
 evaluation warning: The option `hardware.opengl.driSupport32Bit' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.enable32Bit'.
 evaluation warning: The option `hardware.opengl.enable' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
+these 12 derivations will be built:
+  /nix/store/3jrd5qjjbm112mid8xyb44axbisc7jpb-system-path.drv
+  /nix/store/ldkj6n24w3w007fh9db72z6m1lkpnb92-dbus-1.drv
+  /nix/store/jgyrgwijz4442k0wrhw4x2p2nxjhr74s-X-Restart-Triggers-dbus.drv
+  /nix/store/4wv7balps3fmy1r3anrnai9x8db1drk4-unit-dbus.service.drv
+  /nix/store/9wdb687n1iw7x43jijc7dl5hmchmqawg-unit-accounts-daemon.service.drv
+  /nix/store/hi21ry3hbx89ck9i2maq9byiy5rpvjxy-X-Restart-Triggers-polkit.drv
+  /nix/store/cmw1c3q6rsikmc4wgadbwc5f3pyxww0b-unit-polkit.service.drv
+  /nix/store/17xa5lyh8nq0pcxhn1fkrp1xn66384d3-system-units.drv
+  /nix/store/r824ycipzf213bdzj2qzi6xqxpgmp9h5-unit-dbus.service.drv
+  /nix/store/nzzdx32kka30hrhn5299zzmj1xhw9ss3-user-units.drv
+  /nix/store/ajk37x5cf90rlqlvjzja22a3qnd5836a-etc.drv
+  /nix/store/ggydzkxlfzpkm3kg7rqs5mcna8ysg5kp-nixos-system-rits-25.05.805252.b43c397f6c21.drv
+building '/nix/store/3jrd5qjjbm112mid8xyb44axbisc7jpb-system-path.drv'...
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/cc' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/cc'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/cpp' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/cpp'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/ld.bfd' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/ld.bfd'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/ld' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/ld'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/c++' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/c++'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/strip' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/strip'
+warning: collision between `/nix/store/0fsnicvfpf55nkza12cjnad0w84d6ba7-gcc-wrapper-14.2.1.20250322/bin/ld.gold' and `/nix/store/fmysfy9gl5d59yir4fksi29wz10maljg-clang-wrapper-19.1.7/bin/ld.gold'
+warning: collision between `/nix/store/wqgp05ivb477krihlwd8jgcnwxgwjhpm-steam/bin/steam' and `/nix/store/pxbz37y5506zf4hnwdcvmb9fx2281p6w-steam/bin/steam'
+warning: collision between `/nix/store/03p49m6bjd3rvh0sr4vq7ljwb0623n1c-steam-run/bin/steam-run' and `/nix/store/raa28d66dg187k7cf6v0gvzysfvm6rn0-steam-run/bin/steam-run'
+created 23125 symlinks in user environment
+gtk-update-icon-cache: Cache file created successfully.
+building '/nix/store/hi21ry3hbx89ck9i2maq9byiy5rpvjxy-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/ldkj6n24w3w007fh9db72z6m1lkpnb92-dbus-1.drv'...
+building '/nix/store/9wdb687n1iw7x43jijc7dl5hmchmqawg-unit-accounts-daemon.service.drv'...
+building '/nix/store/jgyrgwijz4442k0wrhw4x2p2nxjhr74s-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/cmw1c3q6rsikmc4wgadbwc5f3pyxww0b-unit-polkit.service.drv'...
+building '/nix/store/4wv7balps3fmy1r3anrnai9x8db1drk4-unit-dbus.service.drv'...
+building '/nix/store/r824ycipzf213bdzj2qzi6xqxpgmp9h5-unit-dbus.service.drv'...
+building '/nix/store/17xa5lyh8nq0pcxhn1fkrp1xn66384d3-system-units.drv'...
+building '/nix/store/nzzdx32kka30hrhn5299zzmj1xhw9ss3-user-units.drv'...
+building '/nix/store/ajk37x5cf90rlqlvjzja22a3qnd5836a-etc.drv'...
+building '/nix/store/ggydzkxlfzpkm3kg7rqs5mcna8ysg5kp-nixos-system-rits-25.05.805252.b43c397f6c21.drv'...
+stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
 reloading user units for si...
 restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/b5sdnc9dls7ibrhkcpf2s25k2kxpizpa-nixos-system-rits-25.05.805252.b43c397f6c21
+Done. The new configuration is /nix/store/ypwy3rz0y37s7n807hk0d6zqaanqn8ws-nixos-system-rits-25.05.805252.b43c397f6c21

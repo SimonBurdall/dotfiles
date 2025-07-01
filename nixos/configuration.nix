@@ -18,8 +18,9 @@
   system.autoUpgrade.allowReboot = true;
   system.stateVersion = "25.05";
 
-  networking.firewall.allowedTCPPorts = [9943 9944];
-  networking.firewall.allowedUDPPorts = [9943 9944];
+  # ALVR will handle these ports automatically with the module
+  # networking.firewall.allowedTCPPorts = [9943 9944];
+  # networking.firewall.allowedUDPPorts = [9943 9944];
   # networking.firewall.enable = false;
 
   #---------------------------------------------------------------------
@@ -192,6 +193,13 @@
   virtualisation.docker.enable = true;
 
   #---------------------------------------------------------------------
+  # VR Configuration - ALVR Module
+  programs.alvr = {
+    enable = true;
+    openFirewall = true; # This automatically handles ports 9943-9944 TCP/UDP
+  };
+
+  #---------------------------------------------------------------------
   # Gaming and Steam
   programs.steam = {
     enable = true;
@@ -239,7 +247,7 @@
 
     # VR and Graphics
     android-tools
-    alvr
+    # alvr is now handled by the programs.alvr module
     scrcpy
     monado
     opencomposite

@@ -6,13 +6,9 @@ evaluation warning: The option `hardware.opengl.extraPackages32' defined in `/et
 evaluation warning: The option `hardware.opengl.extraPackages' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.extraPackages'.
 evaluation warning: The option `hardware.opengl.driSupport32Bit' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.enable32Bit'.
 evaluation warning: The option `hardware.opengl.enable' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
-stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
 reloading user units for si...
 restarting sysinit-reactivation.target
-reloading the following units: dbus.service
-restarting the following units: polkit.service
-starting the following units: accounts-daemon.service
-the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-Done. The new configuration is /nix/store/bfpl2fjimmbrrx04621kv39s1m7kklrk-nixos-system-rits-25.05.804391.b2485d569675
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/b5sdnc9dls7ibrhkcpf2s25k2kxpizpa-nixos-system-rits-25.05.805252.b43c397f6c21

@@ -19,9 +19,9 @@
   system.stateVersion = "25.05";
 
   # ALVR will handle these ports automatically with the module
-  # networking.firewall.allowedTCPPorts = [9943 9944];
-  # networking.firewall.allowedUDPPorts = [9943 9944];
-  # networking.firewall.enable = false;
+  networking.firewall.allowedTCPPorts = [9943 9944];
+  networking.firewall.allowedUDPPorts = [9943 9944];
+  networking.firewall.enable = true;
 
   #---------------------------------------------------------------------
   # Localization

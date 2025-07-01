@@ -38,11 +38,26 @@
   users.users.si = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input"];
+    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input" "usb"];
     packages = with pkgs; [
       # User-specific packages can be added here
     ];
   };
+
+  # OpenComposite configuration to bypass SteamVR
+  system.userActivationScripts.opencomposite = ''
+    mkdir -p ~/.config/openvr
+    cat > ~/.config/openvr/openvrpaths.vrpath << EOF
+    {
+      "runtime" : [ "${pkgs.opencomposite}/lib/opencomposite" ],
+      "version" : 1
+    }
+    EOF
+  '';
+
+  # Create groups if they don't exist
+  users.groups.plugdev = {};
+  users.groups.usb = {};
 
   #---------------------------------------------------------------------
   # Display, Desktop Environment, and Window Manager
@@ -186,6 +201,30 @@
 
     # Add rules for Android debugging (useful for ADB)
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
+
+    # SteamVR/OpenVR udev rules
+    # Valve HMD
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="2c87", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="0306", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="0309", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030a", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030b", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030c", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030e", MODE="0666"
+
+    # HTC Vive
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="2c87", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2101", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2000", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="1043", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2050", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2011", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2012", MODE="0666"
+
+    # Valve Index
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2102", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2300", MODE="0666"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2301", MODE="0666"
   '';
 
   #---------------------------------------------------------------------
@@ -199,12 +238,124 @@
     openFirewall = true; # This automatically handles ports 9943-9944 TCP/UDP
   };
 
+  # OpenVR/SteamVR udev rules
+  services.udev.packages = with pkgs; [openxr-loader];
+
+  # SteamVR permissions fix and bypass setup
+  systemd.user.services.steamvr-setup-bypass = {
+    description = "Bypass SteamVR setup requirements";
+    wantedBy = ["graphical-session.target"];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = pkgs.writeShellScript "steamvr-setup" ''
+        # Create all necessary directories
+        mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/{bin/linux64,drivers,resources}
+        mkdir -p ~/.local/share/Steam/config
+        mkdir -p ~/.openvr/drivers
+
+        # Create a dummy vrserver executable to bypass checks
+        touch ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrserver
+        chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrserver
+
+        # Create vrpathreg dummy
+        echo '#!/bin/sh' > ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
+        echo 'exit 0' >> ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
+        chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
+
+        # Link system libraries
+        ln -sf ${pkgs.glibc}/lib/libc.so.6 ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/libc.so.6 || true
+        ln -sf ${pkgs.gcc.cc.lib}/lib/libstdc++.so.6 ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/libstdc++.so.6 || true
+
+        # Create SteamVR manifest
+        cat > ~/.local/share/Steam/steamapps/common/SteamVR/steamvr.vrsettings << 'EOF'
+        {
+          "driver_alvr_server": {
+            "enable": true
+          },
+          "steamvr": {
+            "activateMultipleDrivers": true,
+            "requireHmd": false,
+            "forcedDriver": "",
+            "forcedHmd": ""
+          }
+        }
+        EOF
+      '';
+    };
+  };
+
+  # Create SteamVR config directory with proper settings
+  system.userActivationScripts.steamvr-config = ''
+    mkdir -p ~/.local/share/Steam/config
+    mkdir -p ~/.openvr
+    mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/drivers
+    mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64
+
+    # Create symlinks for SteamVR runtime
+    ln -sf ${pkgs.steam}/bin/steam-runtime ~/.local/share/Steam/ubuntu12_32/steam-runtime || true
+
+    # Create default SteamVR settings to bypass setup
+    if [ ! -f ~/.local/share/Steam/config/steamvr.vrsettings ]; then
+      cat > ~/.local/share/Steam/config/steamvr.vrsettings << 'EOF'
+    {
+      "steamvr" : {
+        "requireHmd" : false,
+        "forcedDriver" : "null",
+        "forcedHmd" : "",
+        "displayDebug" : false,
+        "debugProcessPipe" : "",
+        "enableHomeApp" : false,
+        "showMirrorView" : false,
+        "autolaunchSteamVROnButtonPress" : false
+      },
+      "driver_null" : {
+        "enable" : true
+      },
+      "driver_alvr_server" : {
+        "enable" : true,
+        "pathServerFolder" : ""
+      }
+    }
+    EOF
+    fi
+
+    # Create vrpathreg script workaround
+    cat > ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh << 'EOF'
+    #!/bin/sh
+    # Dummy vrpathreg to prevent SteamVR setup errors
+    exit 0
+    EOF
+    chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh || true
+  '';
+
   #---------------------------------------------------------------------
   # Gaming and Steam
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
+    # Enable Steam hardware support
+    gamescopeSession.enable = true;
+  };
+
+  # Hardware support for Steam
+  hardware.steam-hardware.enable = true;
+
+  # Steam-specific packages for runtime compatibility
+  programs.steam.package = pkgs.steam.override {
+    extraPkgs = pkgs:
+      with pkgs; [
+        libgdiplus
+        libusb1
+        libv4l
+        pipewire
+      ];
+    extraLibraries = pkgs:
+      with pkgs; [
+        libusb1
+        libv4l
+      ];
   };
 
   #---------------------------------------------------------------------
@@ -215,6 +366,37 @@
     "electron-27.3.11"
     "electron-33.4.11"
   ];
+
+  #---------------------------------------------------------------------
+  # Environment Variables for VR
+  environment.sessionVariables = {
+    # Help Steam find the correct runtime
+    STEAM_RUNTIME_PREFER_HOST_LIBRARIES = "0";
+    # Use system libraries when possible
+    STEAM_RUNTIME = "1";
+    # OpenXR runtime selection (for Monado)
+    XR_RUNTIME_JSON = "${pkgs.monado}/share/openxr/1/openxr_monado.json";
+    # Disable SteamVR home to reduce overhead
+    STEAMVR_DISABLE_HOMEVR = "1";
+  };
+
+  # ALVR Launch Instructions:
+  # For Steam VR games, add this to launch options:
+  # PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/alvr_comp_ipc %command%
+  #
+  # Alternative for OpenComposite (bypasses SteamVR):
+  # VR_OVERRIDE=/run/current-system/sw/lib/opencomposite %command%
+  #
+  # If SteamVR setup error persists, run this once after rebuild:
+  # ~/.local/share/Steam/steamapps/common/SteamVR/bin/vrpathreg.sh || true
+  #
+  # Manual troubleshooting steps:
+  # 1. Launch ALVR first and ensure it's running
+  # 2. In Steam, right-click on SteamVR > Properties > Betas > Select "beta"
+  # 3. For VR games, use launch options:
+  #    env PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/alvr_comp_ipc %command%
+  # 4. If error persists, try: steam-run steam
+  # 5. Check logs: ~/.local/share/Steam/logs/vrserver.txt
 
   #---------------------------------------------------------------------
   # System Packages
@@ -258,6 +440,10 @@
     libva
     vkBasalt
     sidequest
+    # SteamVR runtime dependencies
+    libusb1
+    libv4l
+    zlib
 
     # Creative Software
     blender

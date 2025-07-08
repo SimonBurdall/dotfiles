@@ -505,8 +505,6 @@
     picom
     playerctl
     polybar
-    pulseaudio
-    pavucontrol
     pywal
     ripgrep
     rofi

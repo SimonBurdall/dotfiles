@@ -153,23 +153,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
-
-    extraConfig.pipewire = {
-      "99-focusrite" = {
-        "context.modules" = [
-          {
-            name = "libpipewire-module-adapter";
-            args = {
-              "factory.name" = "support.null-audio-sink";
-              "node.name" = "Focusrite-input-split";
-              "media.class" = "Audio/Source";
-              "audio.channels" = 2;
-              "audio.position" = ["FL" "FR"];
-            };
-          }
-        ];
-      };
-    };
   };
 
   #---------------------------------------------------------------------
@@ -522,6 +505,8 @@
     picom
     playerctl
     polybar
+    pulseaudio
+    pavucontrol
     pywal
     ripgrep
     rofi

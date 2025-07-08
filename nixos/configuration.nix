@@ -152,6 +152,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
   #---------------------------------------------------------------------
@@ -456,6 +457,9 @@
     orca-slicer
     reaper
     scribus
+    qjackctl
+    jack2
+    carla
 
     # Media and Entertainment
     brave

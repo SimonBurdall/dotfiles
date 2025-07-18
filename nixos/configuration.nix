@@ -11,6 +11,18 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = ["uinput"];
 
+  boot.kernel.sysctl = {
+    "net.ipv4.tcp_fastopen" = 3;
+    "net.ipv4.tcp_congestion_control" = "bbr";
+    "net.core.rmem_max" = 134217728;
+    "net.core.wmem_max" = 134217728;
+    "net.core.netdev_max_backlog" = 5000;
+
+    "net.ipv4.tcp_low_latency" = 1;
+    "net.ipv4.tcp_timestamps" = 1;
+    "net.ipv4.tcp_window_scaling" = 1;
+  };
+
   networking.hostName = "rits";
   # networking.hostName = "mori";
   networking.networkmanager.enable = true;

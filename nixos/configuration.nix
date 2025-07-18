@@ -20,9 +20,26 @@
   system.stateVersion = "25.05";
 
   # ALVR will handle these ports automatically with the module
-  networking.firewall.allowedTCPPorts = [9943 9944];
-  networking.firewall.allowedUDPPorts = [9943 9944];
-  networking.firewall.enable = true;
+  #networking.firewall.allowedTCPPorts = [9943 9944];
+  #networking.firewall.allowedUDPPorts = [9943 9944];
+  #networking.firewall.enable = true;
+
+  # Updated firewall configuration for ALVR + Sunshine
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [9943 9944 47984 47989 47990 48010 8008 8009 8010 8443];
+    allowedUDPPorts = [9943 9944];
+    allowedUDPPortRanges = [
+      {
+        from = 47998;
+        to = 48000;
+      } # Sunshine
+      {
+        from = 32768;
+        to = 61000;
+      } # Chromecast streaming
+    ];
+  };
 
   #---------------------------------------------------------------------
   # Localization

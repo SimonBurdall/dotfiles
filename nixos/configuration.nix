@@ -9,6 +9,7 @@
   # Boot and System
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelModules = ["uinput"];
 
   networking.hostName = "rits";
   # networking.hostName = "mori";
@@ -192,6 +193,13 @@
     };
   };
 
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true;
+    openFirewall = true;
+  };
+
   services.udev.extraRules = ''
     # Meta Quest USB detection
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
@@ -203,29 +211,8 @@
     # Add rules for Android debugging (useful for ADB)
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
 
-    # SteamVR/OpenVR udev rules
-    # Valve HMD
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="2c87", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="0306", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="0309", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030a", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030b", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030c", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="030e", MODE="0666"
-
-    # HTC Vive
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="2c87", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2101", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2000", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="1043", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2050", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2011", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2012", MODE="0666"
-
-    # Valve Index
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2102", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2300", MODE="0666"
-    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="28de", ATTRS{idProduct}=="2301", MODE="0666"
+    # Add Sunshine input device rules
+    KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
   '';
 
   #---------------------------------------------------------------------
@@ -381,24 +368,6 @@
     STEAMVR_DISABLE_HOMEVR = "1";
   };
 
-  # ALVR Launch Instructions:
-  # For Steam VR games, add this to launch options:
-  # PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/alvr_comp_ipc %command%
-  #
-  # Alternative for OpenComposite (bypasses SteamVR):
-  # VR_OVERRIDE=/run/current-system/sw/lib/opencomposite %command%
-  #
-  # If SteamVR setup error persists, run this once after rebuild:
-  # ~/.local/share/Steam/steamapps/common/SteamVR/bin/vrpathreg.sh || true
-  #
-  # Manual troubleshooting steps:
-  # 1. Launch ALVR first and ensure it's running
-  # 2. In Steam, right-click on SteamVR > Properties > Betas > Select "beta"
-  # 3. For VR games, use launch options:
-  #    env PRESSURE_VESSEL_FILESYSTEMS_RW=$XDG_RUNTIME_DIR/alvr_comp_ipc %command%
-  # 4. If error persists, try: steam-run steam
-  # 5. Check logs: ~/.local/share/Steam/logs/vrserver.txt
-
   #---------------------------------------------------------------------
   # System Packages
   environment.systemPackages = with pkgs; [
@@ -484,6 +453,8 @@
 
     # Games
     clonehero
+    moonlight-qt
+    gamemode
 
     # System and Window Manager Utilities
     bash

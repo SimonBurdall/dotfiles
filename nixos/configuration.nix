@@ -404,9 +404,9 @@
     alejandra
     android-studio
     awscli
-    clang
     cargo
-    rustc
+    clang
+    clippy
     deadnix
     docker-compose
     gcc
@@ -415,7 +415,15 @@
     lazygit
     lua-language-server
     neovim
-    nodejs
+    nodePackages.nodejs
+    nodePackages.npm
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    nodePackages.yarn
+    openssl
+    openssl.dev
+    pkg-config
+    postgresql
     pyright
     python312
     python312Packages.black
@@ -423,8 +431,14 @@
     python312Packages.pip
     python312Packages.virtualenv
     ruff
+    rust-analyzer
+    rustc
+    rustfmt
+    rustup
+    sqlite
     statix
     stylua
+    tailwindcss
 
     # VR and Graphics
     android-tools

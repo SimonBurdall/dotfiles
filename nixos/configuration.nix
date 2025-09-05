@@ -439,6 +439,7 @@
     statix
     stylua
     tailwindcss
+    trunk
 
     # VR and Graphics
     android-tools

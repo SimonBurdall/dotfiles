@@ -404,7 +404,7 @@
     alejandra
     android-studio
     awscli
-    cargo
+    #cargo
     clang
     clippy
     deadnix

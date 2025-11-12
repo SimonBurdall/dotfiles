@@ -210,6 +210,7 @@
   # System Services
   services.openssh.enable = true;
   security.polkit.enable = true;
+  services.flatpak.enable = true;
 
   systemd.user.services.solaar = {
     enable = true;
@@ -485,7 +486,6 @@
     maestral
     obsidian
     pocket-casts
-    rpi-imager
     spotify
     steam
     steam-run

@@ -210,7 +210,6 @@
   # System Services
   services.openssh.enable = true;
   security.polkit.enable = true;
-  services.flatpak.enable = true;
 
   systemd.user.services.solaar = {
     enable = true;
@@ -254,6 +253,10 @@
   programs.alvr = {
     enable = true;
     openFirewall = true; # This automatically handles ports 9943-9944 TCP/UDP
+    package = pkgs.alvr.overrideAttrs (oldAttrs: {
+      # Try to fix the mpg123 dependency issue
+      buildInputs = (oldAttrs.buildInputs or []) ++ [pkgs.mpg123];
+    });
   };
 
   # OpenVR/SteamVR udev rules

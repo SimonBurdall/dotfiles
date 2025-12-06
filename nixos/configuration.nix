@@ -5,8 +5,7 @@
 }: {
   imports = [./hardware-configuration.nix];
 
-  #---------------------------------------------------------------------
-  # Boot and System
+  ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = ["uinput"];
@@ -53,8 +52,7 @@
     ];
   };
 
-  #---------------------------------------------------------------------
-  # Localization
+  ## Localization ----
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {
@@ -63,8 +61,7 @@
   };
   console.keyMap = "uk";
 
-  #---------------------------------------------------------------------
-  # User Management
+  ## User Management ----
   users.users.si = {
     isNormalUser = true;
     description = "Simon";
@@ -89,12 +86,9 @@
   users.groups.plugdev = {};
   users.groups.usb = {};
 
-  #---------------------------------------------------------------------
-  # Display, Desktop Environment, and Window Manager
+  ## Display, Desktop Environment, and Window Manager ----
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     windowManager.bspwm.enable = true;
     xkb.layout = "gb";
     xkb.variant = "";
@@ -108,6 +102,8 @@
     '';
   };
 
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.gnome.core-apps.enable = false;
 
   xdg.portal = {
@@ -117,8 +113,7 @@
     ];
   };
 
-  #---------------------------------------------------------------------
-  # Fonts
+  ## Fonts ----
   fonts.packages = with pkgs; [
     nerd-fonts.hack
     nerd-fonts.iosevka
@@ -133,8 +128,7 @@
     proggyfonts
   ];
 
-  #---------------------------------------------------------------------
-  # Hardware and Graphics
+  ## Hardware and Graphics ----
   hardware.nvidia = {
     modesetting.enable = true;
     open = false;
@@ -152,29 +146,19 @@
       intel-media-driver
       libva-vdpau-driver
       libvdpau-va-gl
+      vulkan-loader
+      vulkan-validation-layers
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      vulkan-loader
     ];
   };
-
-  #hardware.opengl = {
-  #  enable = true;
-  #  driSupport32Bit = true;
-  #  extraPackages = with pkgs; [
-  #    vulkan-loader
-  #    vulkan-validation-layers
-  #    libvdpau
-  #  ];
-  #  extraPackages32 = with pkgs.pkgsi686Linux; [
-  #    vulkan-loader
-  #    libvdpau
-  #  ];
-  #};
 
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
   services.monado.enable = true;
 
-  #---------------------------------------------------------------------
-  # Audio
+  ## Audio ----
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -185,12 +169,7 @@
     jack.enable = true;
   };
 
-  #---------------------------------------------------------------------
-  # Printing
-  services.printing.enable = true;
-
-  #---------------------------------------------------------------------
-  # File Systems and Network Shares
+  ## File Systems and Network Shares ----
   fileSystems."/home/si/3-minilla" = {
     device = "truenas.local:/mnt/minilla";
     fsType = "nfs";
@@ -206,8 +185,7 @@
   services.rpcbind.enable = true;
   services.nfs.server.enable = true;
 
-  #---------------------------------------------------------------------
-  # System Services
+  ## System Services ----
   services.openssh.enable = true;
   security.polkit.enable = true;
 
@@ -244,12 +222,10 @@
     KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
   '';
 
-  #---------------------------------------------------------------------
-  # Virtualization and Containerization
+  ## Virtualization and Containerization ----
   virtualisation.docker.enable = true;
 
-  #---------------------------------------------------------------------
-  # VR Configuration - ALVR Module
+  ## VR Configuration - ALVR Module ----
   programs.alvr = {
     enable = true;
     openFirewall = true; # This automatically handles ports 9943-9944 TCP/UDP
@@ -350,8 +326,7 @@
     chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh || true
   '';
 
-  #---------------------------------------------------------------------
-  # Gaming and Steam
+  ## Gaming and Steam ----
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
@@ -379,8 +354,7 @@
       ];
   };
 
-  #---------------------------------------------------------------------
-  # Package Management
+  ## Package Management ----
   nixpkgs.config.allowUnfree = true;
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -389,8 +363,7 @@
     "electron-36.9.5"
   ];
 
-  #---------------------------------------------------------------------
-  # Environment Variables for VR
+  ## Environment Variables for VR ----
   environment.sessionVariables = {
     # Help Steam find the correct runtime
     STEAM_RUNTIME_PREFER_HOST_LIBRARIES = "0";
@@ -402,8 +375,7 @@
     STEAMVR_DISABLE_HOMEVR = "1";
   };
 
-  #---------------------------------------------------------------------
-  # System Packages
+  ## System Packages ----
   environment.systemPackages = with pkgs; [
     # Development Tools
     alejandra
@@ -448,7 +420,6 @@
 
     # VR and Graphics
     android-tools
-    # alvr is now handled by the programs.alvr module
     scrcpy
     monado
     opencomposite
@@ -461,7 +432,6 @@
     libva
     vkbasalt
     sidequest
-    # SteamVR runtime dependencies
     libusb1
     libv4l
     zlib

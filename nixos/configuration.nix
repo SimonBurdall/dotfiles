@@ -456,8 +456,8 @@
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers
-    #lsfg-vk
-    #lsfg-vk-ui
+    lsfg-vk
+    lsfg-vk-ui
     libva
     vkbasalt
     sidequest

@@ -109,6 +109,8 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+    wqy_zenhei
+    source-han-sans
   ];
 
   ## Hardware and Graphics ----

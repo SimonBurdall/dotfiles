@@ -1,41 +1,41 @@
 building the system configuration...
-these 25 derivations will be built:
-  /nix/store/cvbaxzqhrs90qj7r1iv6vz1sh4cz6gkm-steam-1.0.0.85-fhsenv-rootfs.drv
-  /nix/store/vsjyzvqa0044wp8sq78v8c0kx3ripimj-steam-1.0.0.85-bwrap.drv
-  /nix/store/9gjq6xhaxy01b37152d6pls8d522ivim-steam-1.0.0.85.drv
-  /nix/store/4dbflzimxsbijh5rv6mlbb6fxz5xxgiq-steam-run-fhsenv-rootfs.drv
-  /nix/store/j56brxndrpaln6r1bla4j4gv4awa0hw4-steam-run-bwrap.drv
-  /nix/store/arp68ifrzx0cqcmwjy1xr7h3sfl5p846-steam-run.drv
-  /nix/store/cjxj38g453jwqy5cjywh2wyrv0f3m2h0-system-path.drv
-  /nix/store/ijlfaj0bqshp82kc7akqi05fh6hwjn43-dbus-1.drv
-  /nix/store/0qxkw8v643djq5k8xmchm8dcjxvbsirb-X-Restart-Triggers-dbus.drv
-  /nix/store/5j3zqmm0xkyzk0dyfn33375hp8lygllb-exec.drv
-  /nix/store/d6agy8gdjqfj6sd4xrk9dz05x2ha6nbm-fc-cache.drv
-  /nix/store/xfnhhvibqlrzvgzqd6rwpn0ywnk4665j-fc-00-nixos-cache.conf.drv
-  /nix/store/0ymvcpppdvhc6vgrnhidvmmaad6522a2-fontconfig-conf.drv
-  /nix/store/2vwgi8smhm8ddf011mfilavx1nzjlsa8-xserver.conf.drv
-  /nix/store/14sg9i3hgghy2x5lqk5byk7aljddhd1b-unit-display-manager.service.drv
-  /nix/store/fr8c26pc9qf7xx4rlxrnj5pgq0qdzr94-unit-dbus.service.drv
-  /nix/store/33ivds1jxmxwhr4wa116l80f4klxhmpx-user-units.drv
-  /nix/store/40pldz17da1lsq31mmkhdgbmas9nplcv-fontconfig-etc.drv
-  /nix/store/9xkq7a4kjm9r0kwz7m00s66a2fsgdhi3-X-Restart-Triggers-polkit.drv
-  /nix/store/kkiwhq4zk0jncdwhiplm3m2gr1z79pxx-unit-polkit.service.drv
-  /nix/store/s5b7b4a9yyzl8hrdbfd1rhp7pf4xx6b1-unit-dbus.service.drv
-  /nix/store/vb6y6b8g1danvhi2kb7hrqi67kjza7i0-unit-accounts-daemon.service.drv
-  /nix/store/7bdrdr8vnf5fq27qba4mkjc7a108zsr2-system-units.drv
-  /nix/store/6c5zmpjw77dvpfc4ds3rbhwyaai26naz-etc.drv
-  /nix/store/d30nv73dcz0qmb47if4wh1qjcixmn6c5-nixos-system-rits-25.11.941.c97c47f2bac4.drv
-this path will be fetched (18.18 MiB download, 54.83 MiB unpacked):
-  /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003
-copying path '/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003' from 'https://cache.nixos.org'...
-building '/nix/store/5j3zqmm0xkyzk0dyfn33375hp8lygllb-exec.drv'...
-building '/nix/store/d6agy8gdjqfj6sd4xrk9dz05x2ha6nbm-fc-cache.drv'...
-building '/nix/store/cvbaxzqhrs90qj7r1iv6vz1sh4cz6gkm-steam-1.0.0.85-fhsenv-rootfs.drv'...
-building '/nix/store/4dbflzimxsbijh5rv6mlbb6fxz5xxgiq-steam-run-fhsenv-rootfs.drv'...
-building '/nix/store/2vwgi8smhm8ddf011mfilavx1nzjlsa8-xserver.conf.drv'...
+these 24 derivations will be built:
+  /nix/store/f8gd31xynyhza8irxph4gvpig9ncmmlb-steam-run-fhsenv-rootfs.drv
+  /nix/store/y29h8fsfnxymwb597vlw47hk8vhd04ij-steam-run-bwrap.drv
+  /nix/store/8zpq5c1r5a7pxgj2xxp3cdnn9xi29wsr-steam-run.drv
+  /nix/store/kb4qbq7ci7dn3bq99f7cj45m9zvrvryk-steam-1.0.0.85-fhsenv-rootfs.drv
+  /nix/store/6ki9nxdd2ydlick5pc5f9qrv6r3h8lx3-steam-1.0.0.85-bwrap.drv
+  /nix/store/d3gd8b7fcyf0q9f5hj0jbwqi8v1v1f4w-steam-1.0.0.85.drv
+  /nix/store/sxdahw0f4djnl875mcwjn44izk8zbw8a-system-path.drv
+  /nix/store/62hv2m1wfmjc75xf47zr58k62mfssnz7-unit-accounts-daemon.service.drv
+  /nix/store/dlv4hgacfxhl45hjp3glz54hvi03qwh9-xserver.conf.drv
+  /nix/store/7m6k0mgjpp6438rpi6qrcbxdw82ydrv6-unit-display-manager.service.drv
+  /nix/store/pmlrz2l55gf4r23ispjs77mw5jn6k4pm-dbus-1.drv
+  /nix/store/9d0yh4w1nmhcjsdllbqmf7nrmv4i2m4i-X-Restart-Triggers-dbus.drv
+  /nix/store/dvvbww8v5h3wpyad4br4rz3j8hahvl9j-unit-dbus.service.drv
+  /nix/store/gmky9wjii1a30xp7kngiw8jwphnsbrlx-X-Restart-Triggers-polkit.drv
+  /nix/store/w9l83gzisyllh66zda9z7mbmdwrrazf7-unit-polkit.service.drv
+  /nix/store/1p9cbg8541rfgdjx2awcyq63977dwr8s-system-units.drv
+  /nix/store/d35r23nbv8j2b7fg0ar7kh8h6089vs4i-fc-cache.drv
+  /nix/store/z44iawm27z9y35j2ryga6xvxkdg2srz9-fc-00-nixos-cache.conf.drv
+  /nix/store/azafsb9nzhr0k69f599hbwfa59wmkaaw-fontconfig-conf.drv
+  /nix/store/bxgsxpk9k7yavbxdqchcw8bcsglnbmjv-unit-dbus.service.drv
+  /nix/store/h9382cpvk9823vsqvc1i0d5a0v2112c8-fontconfig-etc.drv
+  /nix/store/vxfk3qgxc00qvkv5pixk58niinb9lv0v-user-units.drv
+  /nix/store/m9mcc95qk0wcv76bwqwmk3vj9sg973li-etc.drv
+  /nix/store/cfy570j1hrv4qjkcdn36xi1sq8xda851-nixos-system-rits-25.11.941.c97c47f2bac4.drv
+these 2 paths will be fetched (78.70 MiB download, 127.93 MiB unpacked):
+  /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005
+  /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45
+copying path '/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005' from 'https://cache.nixos.org'...
+copying path '/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45' from 'https://cache.nixos.org'...
+building '/nix/store/d35r23nbv8j2b7fg0ar7kh8h6089vs4i-fc-cache.drv'...
+building '/nix/store/kb4qbq7ci7dn3bq99f7cj45m9zvrvryk-steam-1.0.0.85-fhsenv-rootfs.drv'...
+building '/nix/store/f8gd31xynyhza8irxph4gvpig9ncmmlb-steam-run-fhsenv-rootfs.drv'...
+building '/nix/store/dlv4hgacfxhl45hjp3glz54hvi03qwh9-xserver.conf.drv'...
 structuredAttrs is enabled
 structuredAttrs is enabled
-building '/nix/store/14sg9i3hgghy2x5lqk5byk7aljddhd1b-unit-display-manager.service.drv'...
+building '/nix/store/7m6k0mgjpp6438rpi6qrcbxdw82ydrv6-unit-display-manager.service.drv'...
 Font directories:
         /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37
         /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003
@@ -48,6 +48,8 @@ Font directories:
         /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19
         /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005
         /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0
         /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4
         /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3
@@ -69,6 +71,8 @@ Font directories:
         /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share
         /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share
         /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share
         /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share
         /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share
@@ -91,6 +95,8 @@ Font directories:
         /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts
         /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts
         /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts
         /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts
@@ -116,6 +122,7 @@ Font directories:
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc
         /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype
         /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita
         /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11
         /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11
@@ -134,6 +141,7 @@ Font directories:
         /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk
         /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts
         /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans
         /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc
         /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc
         /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi
@@ -201,6 +209,14 @@ Font directories:
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, existing cache is valid: 0 fonts, 2 dirs
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, existing cache is valid: 20 fonts, 0 dirs
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts: skipping, existing cache is valid: 3 fonts, 0 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans: skipping, existing cache is valid: 45 fonts, 0 dirs
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, existing cache is valid: 0 fonts, 1 dirs
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
@@ -260,6 +276,8 @@ Font directories:
 /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, looped directory detected
 /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share: skipping, looped directory detected
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share: skipping, looped directory detected
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share: skipping, looped directory detected
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, looped directory detected
 /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share: skipping, looped directory detected
 /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share: skipping, looped directory detected
@@ -282,6 +300,8 @@ Font directories:
 /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts: skipping, looped directory detected
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc: skipping, looped directory detected
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, looped directory detected
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts: skipping, looped directory detected
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, looped directory detected
 /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts: skipping, looped directory detected
 /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts: skipping, looped directory detected
@@ -307,6 +327,7 @@ Font directories:
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1: skipping, looped directory detected
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, looped directory detected
 /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype: skipping, looped directory detected
 /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita: skipping, looped directory detected
 /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11: skipping, looped directory detected
 /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11: skipping, looped directory detected
@@ -325,6 +346,7 @@ Font directories:
 /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk: skipping, looped directory detected
 /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts: skipping, looped directory detected
 /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans: skipping, looped directory detected
 /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc: skipping, looped directory detected
 /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc: skipping, looped directory detected
 /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi: skipping, looped directory detected
@@ -335,11 +357,11 @@ Font directories:
 /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka: skipping, looped directory detected
 /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols: skipping, looped directory detected
 /var/cache/fontconfig: not cleaning non-existent cache directory
-/nix/store/swpdjwj3gcdm0pk84ycwkzc6y9iz7i1r-fc-cache: cleaning cache directory
+/nix/store/5v88fy9nijq2b443g2368d0i6icg30si-fc-cache: cleaning cache directory
 /nix/store/sl7wgh3hb00gsicw2w0jfd3vxnsd448s-fontconfig-2.17.1-bin/bin/fc-cache: succeeded
-building '/nix/store/xfnhhvibqlrzvgzqd6rwpn0ywnk4665j-fc-00-nixos-cache.conf.drv'...
-building '/nix/store/0ymvcpppdvhc6vgrnhidvmmaad6522a2-fontconfig-conf.drv'...
-building '/nix/store/40pldz17da1lsq31mmkhdgbmas9nplcv-fontconfig-etc.drv'...
+building '/nix/store/z44iawm27z9y35j2ryga6xvxkdg2srz9-fc-00-nixos-cache.conf.drv'...
+building '/nix/store/azafsb9nzhr0k69f599hbwfa59wmkaaw-fontconfig-conf.drv'...
+building '/nix/store/h9382cpvk9823vsqvc1i0d5a0v2112c8-fontconfig-etc.drv'...
 created 1 symlinks in user environment
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
@@ -347,17 +369,17 @@ Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  P
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-building '/nix/store/vsjyzvqa0044wp8sq78v8c0kx3ripimj-steam-1.0.0.85-bwrap.drv'...
+building '/nix/store/6ki9nxdd2ydlick5pc5f9qrv6r3h8lx3-steam-1.0.0.85-bwrap.drv'...
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-building '/nix/store/j56brxndrpaln6r1bla4j4gv4awa0hw4-steam-run-bwrap.drv'...
-building '/nix/store/9gjq6xhaxy01b37152d6pls8d522ivim-steam-1.0.0.85.drv'...
-building '/nix/store/arp68ifrzx0cqcmwjy1xr7h3sfl5p846-steam-run.drv'...
-building '/nix/store/cjxj38g453jwqy5cjywh2wyrv0f3m2h0-system-path.drv'...
+building '/nix/store/y29h8fsfnxymwb597vlw47hk8vhd04ij-steam-run-bwrap.drv'...
+building '/nix/store/d3gd8b7fcyf0q9f5hj0jbwqi8v1v1f4w-steam-1.0.0.85.drv'...
+building '/nix/store/8zpq5c1r5a7pxgj2xxp3cdnn9xi29wsr-steam-run.drv'...
+building '/nix/store/sxdahw0f4djnl875mcwjn44izk8zbw8a-system-path.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cc' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cc'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cpp' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cpp'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/ld.bfd' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/ld.bfd'
@@ -2766,21 +2788,21 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-fmt' and `/nix/store/vg39s21pcy070xpacc1pizy469vbfpxc-rustfmt-1.91.1/bin/cargo-fmt'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-clippy' and `/nix/store/5y00kqp8qlmjwvm5h607n6jnmqr75dnk-clippy-1.91.1/bin/cargo-clippy'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/rust-analyzer' and `/nix/store/wl97qrpw37jgd4yb8yqh4k9h72r3kw2k-rust-analyzer-2025-10-28/bin/rust-analyzer'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/99a7l089rm7ah9cb8cpxl5xqilf5ivn2-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/ldz244xf9v1g94jacr4z4414vif3f6hh-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/h04ri7bdj7p0j20s4l4vli0bzgj8gykc-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/bmjp993dqfh2iwlw0nm0v4awvr22pj3w-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
 created 25515 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/9xkq7a4kjm9r0kwz7m00s66a2fsgdhi3-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/ijlfaj0bqshp82kc7akqi05fh6hwjn43-dbus-1.drv'...
-building '/nix/store/vb6y6b8g1danvhi2kb7hrqi67kjza7i0-unit-accounts-daemon.service.drv'...
-building '/nix/store/0qxkw8v643djq5k8xmchm8dcjxvbsirb-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/kkiwhq4zk0jncdwhiplm3m2gr1z79pxx-unit-polkit.service.drv'...
-building '/nix/store/fr8c26pc9qf7xx4rlxrnj5pgq0qdzr94-unit-dbus.service.drv'...
-building '/nix/store/s5b7b4a9yyzl8hrdbfd1rhp7pf4xx6b1-unit-dbus.service.drv'...
-building '/nix/store/33ivds1jxmxwhr4wa116l80f4klxhmpx-user-units.drv'...
-building '/nix/store/7bdrdr8vnf5fq27qba4mkjc7a108zsr2-system-units.drv'...
-building '/nix/store/6c5zmpjw77dvpfc4ds3rbhwyaai26naz-etc.drv'...
-building '/nix/store/d30nv73dcz0qmb47if4wh1qjcixmn6c5-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
+building '/nix/store/gmky9wjii1a30xp7kngiw8jwphnsbrlx-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/pmlrz2l55gf4r23ispjs77mw5jn6k4pm-dbus-1.drv'...
+building '/nix/store/62hv2m1wfmjc75xf47zr58k62mfssnz7-unit-accounts-daemon.service.drv'...
+building '/nix/store/9d0yh4w1nmhcjsdllbqmf7nrmv4i2m4i-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/w9l83gzisyllh66zda9z7mbmdwrrazf7-unit-polkit.service.drv'...
+building '/nix/store/bxgsxpk9k7yavbxdqchcw8bcsglnbmjv-unit-dbus.service.drv'...
+building '/nix/store/dvvbww8v5h3wpyad4br4rz3j8hahvl9j-unit-dbus.service.drv'...
+building '/nix/store/vxfk3qgxc00qvkv5pixk58niinb9lv0v-user-units.drv'...
+building '/nix/store/1p9cbg8541rfgdjx2awcyq63977dwr8s-system-units.drv'...
+building '/nix/store/m9mcc95qk0wcv76bwqwmk3vj9sg973li-etc.drv'...
+building '/nix/store/cfy570j1hrv4qjkcdn36xi1sq8xda851-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
 stopping the following units: accounts-daemon.service
 NOT restarting the following changed units: display-manager.service
 activating the configuration...
@@ -2791,4 +2813,4 @@ reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/2g6jndw1472dsb7qz0dqlv6mcxmnyl6m-nixos-system-rits-25.11.941.c97c47f2bac4
+Done. The new configuration is /nix/store/fk7xx2dh641dgcix7g8j39557pinp9y6-nixos-system-rits-25.11.941.c97c47f2bac4

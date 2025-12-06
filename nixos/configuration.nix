@@ -61,7 +61,6 @@
     description = "Simon";
     extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input" "usb"];
     packages = with pkgs; [
-      # User-specific packages can be added here
     ];
   };
 
@@ -102,6 +101,7 @@
     nerd-fonts.iosevka
     nerd-fonts.symbols-only
     noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
     noto-fonts-color-emoji
     liberation_ttf
     fira-code

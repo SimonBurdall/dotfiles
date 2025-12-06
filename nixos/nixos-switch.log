@@ -1,202 +1,363 @@
 building the system configuration...
-these 39 derivations will be built:
-  /nix/store/h6d38a2hlxrbjak55081r9191a9zkkl2-firewall-start.drv
-  /nix/store/1k49xc50xbs0h3c87jsws8yi094d8a34-firewall-reload.drv
-  /nix/store/5gjp47jj2kjmz4fdwm632b8054sjcgrk-steam-1.0.0.85-fhsenv-rootfs.drv
-  /nix/store/dla7nvryhlcpl2pc8fk7rimywj9vn5ms-steam-1.0.0.85-bwrap.drv
-  /nix/store/1yh1l17gl0r4l19cxs0fj4ncc4k4nhjw-steam-1.0.0.85.drv
-  /nix/store/bsmmwq7rypsc4jbaip55abdfzvm0hdx8-extra-udev-rules.drv
-  /nix/store/qvzs33ind8pd3jwm26swx1s93p5v9ww7-udev-rules.drv
-  /nix/store/mvkrifdy0b30nv56wvz8cwllifmwxdqp-X-Restart-Triggers-systemd-udevd.drv
-  /nix/store/21vwxq9s6kz2j3hnjmq95g62q9s9i6f3-unit-systemd-udevd.service.drv
-  /nix/store/4m4xmqwmcd17bjlsm892c53hjhg874vg-graphics-drivers.drv
-  /nix/store/x0wcvajmg0yqhl6ky1hwnmdvdzljgll0-graphics-driver.conf.drv
-  /nix/store/9kryipx494igf08cmzsjs2nvqvf9nc8p-tmpfiles.d.drv
-  /nix/store/xrf4bbnz557pmyppzhi6k86adwgfxgqa-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
-  /nix/store/2dmynda0j6vdr2r8dbmzlblqyfia55j5-unit-systemd-tmpfiles-resetup.service.drv
-  /nix/store/2yq4mx20ifg0jykmjwpmmggqgy1yv4f5-steam-run-fhsenv-rootfs.drv
-  /nix/store/8s8fwjb3ar9kfk253lk2ll6xfq95935k-unit-script-suid-sgid-wrappers-start.drv
-  /nix/store/gf96rqzic20glqia8zgn6b06i9msvx11-unit-suid-sgid-wrappers.service.drv
-  /nix/store/fyfgk2qzxwaf21p18fqx0nk0jqh0lqix-steam-run-bwrap.drv
-  /nix/store/609qfl7k2iqhvmbgmbwy4mlzqwgsq7d5-steam-run.drv
-  /nix/store/5pjfwjfhp0v27b76q1xcr6vb7rj3jm1c-system-path.drv
-  /nix/store/dlrjczngv8ba5i1qhr3xy2q3nm0d49bv-dbus-1.drv
-  /nix/store/afdg63157q16dh6pdr7vhy1hwzkin3k9-X-Restart-Triggers-dbus.drv
-  /nix/store/jbkdgs2328cws95rcj6qq2j0g97rszzy-unit-dbus.service.drv
-  /nix/store/jr9h27b0czkkdqjaxn80af4g8i2z1v03-X-Restart-Triggers-polkit.drv
-  /nix/store/rmsmlmwj0mn313g4vwf0nf87zxhxxdfv-unit-polkit.service.drv
-  /nix/store/s0ax5bpyd9ilpnb0mn9i507959rsh0wj-unit-firewall.service.drv
-  /nix/store/zn90cd2ywwcawlv4bclhdivm92wfbikw-unit-accounts-daemon.service.drv
-  /nix/store/50b45wq4bh1haznr6ngdmmz1f254pl81-system-units.drv
-  /nix/store/ykgnmixfy3032rk7xb02klp32fbpc17y-set-environment.drv
-  /nix/store/dxzazn2amd2y5jva39f18p19p7qql75r-etc-profile.drv
-  /nix/store/9jpmqkyhbiks84krb3hr3fziiqgbn5xz-unit-script-nixos-activation-start.drv
-  /nix/store/j3m5wj0bnh9l27kayk6237jvg90dr9v9-unit-nixos-activation.service.drv
-  /nix/store/pgvi0j53859g8xnq73phm6d9b7bngdjw-unit-dbus.service.drv
-  /nix/store/mv4m9yb9znsf3nb28lgrxyh4zg5bvh5s-user-units.drv
-  /nix/store/wx0rppd3v3g5k106ldb5pxdw5mbrd0h1-etc-pam-environment.drv
-  /nix/store/xyjiymfckjy32b30c06jyaf64yi900vz-hwdb.bin.drv
-  /nix/store/dw48n9bf3d1f0hbk00iqd71giyxqzw1k-etc.drv
-  /nix/store/nvhmnjky43gdmb9ks1cnyafhr5ci6flx-ensure-all-wrappers-paths-exist.drv
-  /nix/store/54i9iac1a4cm46q479l65clzdvw71d6w-nixos-system-rits-25.11.941.c97c47f2bac4.drv
-building '/nix/store/nvhmnjky43gdmb9ks1cnyafhr5ci6flx-ensure-all-wrappers-paths-exist.drv'...
-building '/nix/store/wx0rppd3v3g5k106ldb5pxdw5mbrd0h1-etc-pam-environment.drv'...
-building '/nix/store/ykgnmixfy3032rk7xb02klp32fbpc17y-set-environment.drv'...
-building '/nix/store/bsmmwq7rypsc4jbaip55abdfzvm0hdx8-extra-udev-rules.drv'...
-building '/nix/store/h6d38a2hlxrbjak55081r9191a9zkkl2-firewall-start.drv'...
-building '/nix/store/4m4xmqwmcd17bjlsm892c53hjhg874vg-graphics-drivers.drv'...
-building '/nix/store/9jpmqkyhbiks84krb3hr3fziiqgbn5xz-unit-script-nixos-activation-start.drv'...
-building '/nix/store/8s8fwjb3ar9kfk253lk2ll6xfq95935k-unit-script-suid-sgid-wrappers-start.drv'...
-building '/nix/store/5gjp47jj2kjmz4fdwm632b8054sjcgrk-steam-1.0.0.85-fhsenv-rootfs.drv'...
-building '/nix/store/2yq4mx20ifg0jykmjwpmmggqgy1yv4f5-steam-run-fhsenv-rootfs.drv'...
-Checking that Nix store paths of all wrapped programs exist... OK
-created 260 symlinks in user environment
+these 25 derivations will be built:
+  /nix/store/cvbaxzqhrs90qj7r1iv6vz1sh4cz6gkm-steam-1.0.0.85-fhsenv-rootfs.drv
+  /nix/store/vsjyzvqa0044wp8sq78v8c0kx3ripimj-steam-1.0.0.85-bwrap.drv
+  /nix/store/9gjq6xhaxy01b37152d6pls8d522ivim-steam-1.0.0.85.drv
+  /nix/store/4dbflzimxsbijh5rv6mlbb6fxz5xxgiq-steam-run-fhsenv-rootfs.drv
+  /nix/store/j56brxndrpaln6r1bla4j4gv4awa0hw4-steam-run-bwrap.drv
+  /nix/store/arp68ifrzx0cqcmwjy1xr7h3sfl5p846-steam-run.drv
+  /nix/store/cjxj38g453jwqy5cjywh2wyrv0f3m2h0-system-path.drv
+  /nix/store/ijlfaj0bqshp82kc7akqi05fh6hwjn43-dbus-1.drv
+  /nix/store/0qxkw8v643djq5k8xmchm8dcjxvbsirb-X-Restart-Triggers-dbus.drv
+  /nix/store/5j3zqmm0xkyzk0dyfn33375hp8lygllb-exec.drv
+  /nix/store/d6agy8gdjqfj6sd4xrk9dz05x2ha6nbm-fc-cache.drv
+  /nix/store/xfnhhvibqlrzvgzqd6rwpn0ywnk4665j-fc-00-nixos-cache.conf.drv
+  /nix/store/0ymvcpppdvhc6vgrnhidvmmaad6522a2-fontconfig-conf.drv
+  /nix/store/2vwgi8smhm8ddf011mfilavx1nzjlsa8-xserver.conf.drv
+  /nix/store/14sg9i3hgghy2x5lqk5byk7aljddhd1b-unit-display-manager.service.drv
+  /nix/store/fr8c26pc9qf7xx4rlxrnj5pgq0qdzr94-unit-dbus.service.drv
+  /nix/store/33ivds1jxmxwhr4wa116l80f4klxhmpx-user-units.drv
+  /nix/store/40pldz17da1lsq31mmkhdgbmas9nplcv-fontconfig-etc.drv
+  /nix/store/9xkq7a4kjm9r0kwz7m00s66a2fsgdhi3-X-Restart-Triggers-polkit.drv
+  /nix/store/kkiwhq4zk0jncdwhiplm3m2gr1z79pxx-unit-polkit.service.drv
+  /nix/store/s5b7b4a9yyzl8hrdbfd1rhp7pf4xx6b1-unit-dbus.service.drv
+  /nix/store/vb6y6b8g1danvhi2kb7hrqi67kjza7i0-unit-accounts-daemon.service.drv
+  /nix/store/7bdrdr8vnf5fq27qba4mkjc7a108zsr2-system-units.drv
+  /nix/store/6c5zmpjw77dvpfc4ds3rbhwyaai26naz-etc.drv
+  /nix/store/d30nv73dcz0qmb47if4wh1qjcixmn6c5-nixos-system-rits-25.11.941.c97c47f2bac4.drv
+this path will be fetched (18.18 MiB download, 54.83 MiB unpacked):
+  /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003
+copying path '/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003' from 'https://cache.nixos.org'...
+building '/nix/store/5j3zqmm0xkyzk0dyfn33375hp8lygllb-exec.drv'...
+building '/nix/store/d6agy8gdjqfj6sd4xrk9dz05x2ha6nbm-fc-cache.drv'...
+building '/nix/store/cvbaxzqhrs90qj7r1iv6vz1sh4cz6gkm-steam-1.0.0.85-fhsenv-rootfs.drv'...
+building '/nix/store/4dbflzimxsbijh5rv6mlbb6fxz5xxgiq-steam-run-fhsenv-rootfs.drv'...
+building '/nix/store/2vwgi8smhm8ddf011mfilavx1nzjlsa8-xserver.conf.drv'...
 structuredAttrs is enabled
-building '/nix/store/dxzazn2amd2y5jva39f18p19p7qql75r-etc-profile.drv'...
-building '/nix/store/1k49xc50xbs0h3c87jsws8yi094d8a34-firewall-reload.drv'...
-building '/nix/store/xyjiymfckjy32b30c06jyaf64yi900vz-hwdb.bin.drv'...
-building '/nix/store/qvzs33ind8pd3jwm26swx1s93p5v9ww7-udev-rules.drv'...
-building '/nix/store/j3m5wj0bnh9l27kayk6237jvg90dr9v9-unit-nixos-activation.service.drv'...
-building '/nix/store/gf96rqzic20glqia8zgn6b06i9msvx11-unit-suid-sgid-wrappers.service.drv'...
 structuredAttrs is enabled
-Adding hwdb files for package /nix/store/zf8qy81dsw1vqwgh9p9n2h40s1k0g2l1-systemd-258.2
-Adding hwdb files for package /nix/store/jbp2l5vmbjagvzmrrsfiynb8hnfncm7l-mutter-49.2
-Adding hwdb files for package /nix/store/vpi5mzl9ppxxa487x77f1h88j9607cp9-ipv6-privacy-extensions.rules
-Adding hwdb files for package /nix/store/m1rx3c460xddwiyxzwzi1z8w1fny68j9-ipv6-privacy-extensions.rules
-Adding hwdb files for package /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35
-Adding hwdb files for package /nix/store/x9lmv7hvy51id6mww85m1irgz677fcxr-bcache-tools-1.1
-Adding hwdb files for package /nix/store/yl8andwfwngsn2sp2yh3n2a5wg9jylbg-colord-1.4.6
-Adding hwdb files for package /nix/store/k9jhdv1161c38272l0xqdqhlmvag0cvy-sunshine-2025.924.154138
-Adding hwdb files for package /nix/store/h91szsp5bk28zddrdp3y0bpl7nx9pkj4-networkmanager-1.54.1
-Adding hwdb files for package /nix/store/4g73f11w69rb2lv96k3zwlgi86xlmkgh-wpa_supplicant-2.11
-Adding hwdb files for package /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0
-Adding hwdb files for package /nix/store/2k8ccfm32kb9s0606gfhvv5m0m2rm4b1-upower-1.90.10
-Adding hwdb files for package /nix/store/565dg4vl3lzxsrvqglkhxh02piaa901h-udisks-2.10.2
-Adding hwdb files for package /nix/store/4jxawap01mznfkxcrzmi6smyh40kwlbc-extra-udev-rules
-Adding hwdb files for package /nix/store/nf7ijiakmk6ycahw7725ab2n3rr5r4kn-extra-hwdb-file
-Adding hwdb files for package /nix/store/k5vfnbzc2yb0mh223vawqa7r7vn78638-power-profiles-daemon-0.30
-Adding hwdb files for package /nix/store/zv7jdwm1mk54q39rmnz65kmkh5fb72f6-libinput-1.29.2
-Adding hwdb files for package /nix/store/lb0n0p1x816nd6zwbfmaq25gbx0farll-bolt-0.9.8
-Adding hwdb files for package /nix/store/9xwxjkrwxjsvc5gs1l0syr4wbfvvvvcn-bluez-5.84
-Adding hwdb files for package /nix/store/334afxah19b3hr6ll93pfxlcyhhh2vws-pipewire-1.4.9
-Adding hwdb files for package /nix/store/z86lazw4w2whcybk0n75mb3vlgg0h0bv-libmtp-1.1.22
-Adding hwdb files for package /nix/store/6f0q5lymsq4zv2miyvcrzddv907h4r1i-gnome-settings-daemon-49.1
-Adding hwdb files for package /nix/store/6pdsdfwpvcvsp2saa91jpq43r81d0v0p-steam-devices-udev-rules-1.0.0.61-unstable-2025-10-18
-Adding hwdb files for package /nix/store/vp70b6i8n66ijyfdmdcga924dd2kj1g8-solaar-1.1.16-udev
-Generating hwdb database...
-Adding rules for package /nix/store/jbp2l5vmbjagvzmrrsfiynb8hnfncm7l-mutter-49.2
-Copying /nix/store/jbp2l5vmbjagvzmrrsfiynb8hnfncm7l-mutter-49.2/lib/udev/rules.d/61-mutter.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/61-mutter.rules
-Adding rules for package /nix/store/vpi5mzl9ppxxa487x77f1h88j9607cp9-ipv6-privacy-extensions.rules
-Copying /nix/store/vpi5mzl9ppxxa487x77f1h88j9607cp9-ipv6-privacy-extensions.rules/etc/udev/rules.d/98-ipv6-privacy-extensions.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/98-ipv6-privacy-extensions.rules
-Adding rules for package /nix/store/m1rx3c460xddwiyxzwzi1z8w1fny68j9-ipv6-privacy-extensions.rules
-Copying /nix/store/m1rx3c460xddwiyxzwzi1z8w1fny68j9-ipv6-privacy-extensions.rules/etc/udev/rules.d/99-ipv6-privacy-extensions.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/99-ipv6-privacy-extensions.rules
-Adding rules for package /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35
-Copying /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35/lib/udev/rules.d/10-dm.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/10-dm.rules
-Copying /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35/lib/udev/rules.d/11-dm-lvm.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/11-dm-lvm.rules
-Copying /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35/lib/udev/rules.d/13-dm-disk.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/13-dm-disk.rules
-Copying /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35/lib/udev/rules.d/69-dm-lvm.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/69-dm-lvm.rules
-Copying /nix/store/2n0wdr38w7ibms8l0d9wp7a3axa3zk08-lvm2-2.03.35/lib/udev/rules.d/95-dm-notify.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/95-dm-notify.rules
-Adding rules for package /nix/store/x9lmv7hvy51id6mww85m1irgz677fcxr-bcache-tools-1.1
-Copying /nix/store/x9lmv7hvy51id6mww85m1irgz677fcxr-bcache-tools-1.1/lib/udev/rules.d/69-bcache.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/69-bcache.rules
-Adding rules for package /nix/store/yl8andwfwngsn2sp2yh3n2a5wg9jylbg-colord-1.4.6
-Copying /nix/store/yl8andwfwngsn2sp2yh3n2a5wg9jylbg-colord-1.4.6/lib/udev/rules.d/69-cd-sensors.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/69-cd-sensors.rules
-Copying /nix/store/yl8andwfwngsn2sp2yh3n2a5wg9jylbg-colord-1.4.6/lib/udev/rules.d/95-cd-devices.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/95-cd-devices.rules
-Adding rules for package /nix/store/k9jhdv1161c38272l0xqdqhlmvag0cvy-sunshine-2025.924.154138
-Adding rules for package /nix/store/h91szsp5bk28zddrdp3y0bpl7nx9pkj4-networkmanager-1.54.1
-Copying /nix/store/h91szsp5bk28zddrdp3y0bpl7nx9pkj4-networkmanager-1.54.1/lib/udev/rules.d/84-nm-drivers.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/84-nm-drivers.rules
-Copying /nix/store/h91szsp5bk28zddrdp3y0bpl7nx9pkj4-networkmanager-1.54.1/lib/udev/rules.d/85-nm-unmanaged.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/85-nm-unmanaged.rules
-Copying /nix/store/h91szsp5bk28zddrdp3y0bpl7nx9pkj4-networkmanager-1.54.1/lib/udev/rules.d/90-nm-thunderbolt.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/90-nm-thunderbolt.rules
-Adding rules for package /nix/store/4g73f11w69rb2lv96k3zwlgi86xlmkgh-wpa_supplicant-2.11
-Adding rules for package /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-broadmobi-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-broadmobi-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-cellient.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-cellient.rules
-building '/nix/store/x0wcvajmg0yqhl6ky1hwnmdvdzljgll0-graphics-driver.conf.drv'...
-building '/nix/store/s0ax5bpyd9ilpnb0mn9i507959rsh0wj-unit-firewall.service.drv'...
-
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-cinterion-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-cinterion-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-dell-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-dell-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-dlink-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-dlink-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-ericsson-mbm.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-ericsson-mbm.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-fibocom-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-fibocom-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-foxconn-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-foxconn-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-gosuncn-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-gosuncn-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-haier-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-haier-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-huawei-net-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-huawei-net-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-linktop-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-linktop-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-longcheer-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-longcheer-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-mtk-legacy-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-mtk-legacy-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-netprisma-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-netprisma-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-nokia-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-nokia-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-qcom-soc.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-qcom-soc.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-quectel-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-quectel-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-rolling-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-rolling-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-sierra.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-sierra.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-simtech-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-simtech-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-telit-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-telit-port-types.rules
-building '/nix/store/9kryipx494igf08cmzsjs2nvqvf9nc8p-tmpfiles.d.drv'...
+building '/nix/store/14sg9i3hgghy2x5lqk5byk7aljddhd1b-unit-display-manager.service.drv'...
+Font directories:
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka: skipping, existing cache is valid: 81 fonts, 0 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols: skipping, existing cache is valid: 2 fonts, 0 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk: skipping, existing cache is valid: 60 fonts, 0 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk: skipping, existing cache is valid: 40 fonts, 0 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype: skipping, existing cache is valid: 6 fonts, 0 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts: skipping, existing cache is valid: 53 fonts, 0 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts: skipping, existing cache is valid: 75 fonts, 0 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc: skipping, existing cache is valid: 26 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, existing cache is valid: 20 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita: skipping, existing cache is valid: 24 fonts, 0 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc: skipping, existing cache is valid: 47 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 4 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype: skipping, existing cache is valid: 22 fonts, 0 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype: skipping, existing cache is valid: 33 fonts, 0 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts: skipping, existing cache is valid: 3 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share: skipping, looped directory detected
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts: skipping, looped directory detected
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols: skipping, looped directory detected
+/var/cache/fontconfig: not cleaning non-existent cache directory
+/nix/store/swpdjwj3gcdm0pk84ycwkzc6y9iz7i1r-fc-cache: cleaning cache directory
+/nix/store/sl7wgh3hb00gsicw2w0jfd3vxnsd448s-fontconfig-2.17.1-bin/bin/fc-cache: succeeded
+building '/nix/store/xfnhhvibqlrzvgzqd6rwpn0ywnk4665j-fc-00-nixos-cache.conf.drv'...
+building '/nix/store/0ymvcpppdvhc6vgrnhidvmmaad6522a2-fontconfig-conf.drv'...
+building '/nix/store/40pldz17da1lsq31mmkhdgbmas9nplcv-fontconfig-etc.drv'...
+created 1 symlinks in user environment
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-tplink-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-tplink-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-ublox-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-ublox-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-x22x-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-x22x-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/77-mm-zte-port-types.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/77-mm-zte-port-types.rules
-Copying /nix/store/cpsfxjjh8ar85ka6znkjbjyzmvyf1fk4-modemmanager-1.24.0/lib/udev/rules.d/80-mm-candidate.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/80-mm-candidate.rules
-Adding rules for package /nix/store/2k8ccfm32kb9s0606gfhvv5m0m2rm4b1-upower-1.90.10
-Copying /nix/store/2k8ccfm32kb9s0606gfhvv5m0m2rm4b1-upower-1.90.10/lib/udev/rules.d/60-upower-battery.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/60-upower-battery.rules
-Copying /nix/store/2k8ccfm32kb9s0606gfhvv5m0m2rm4b1-upower-1.90.10/lib/udev/rules.d/95-upower-hid.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/95-upower-hid.rules
-Copying /nix/store/2k8ccfm32kb9s0606gfhvv5m0m2rm4b1-upower-1.90.10/lib/udev/rules.d/95-upower-wup.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/95-upower-wup.rules
-Adding rules for package /nix/store/565dg4vl3lzxsrvqglkhxh02piaa901h-udisks-2.10.2
-Copying /nix/store/565dg4vl3lzxsrvqglkhxh02piaa901h-udisks-2.10.2/lib/udev/rules.d/80-udisks2.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/80-udisks2.rules
-Adding rules for package /nix/store/4jxawap01mznfkxcrzmi6smyh40kwlbc-extra-udev-rules
-Copying /nix/store/4jxawap01mznfkxcrzmi6smyh40kwlbc-extra-udev-rules/etc/udev/rules.d/99-local.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/99-local.rules
-Adding rules for package /nix/store/nf7ijiakmk6ycahw7725ab2n3rr5r4kn-extra-hwdb-file
-Adding rules for package /nix/store/k5vfnbzc2yb0mh223vawqa7r7vn78638-power-profiles-daemon-0.30
-Adding rules for package /nix/store/zv7jdwm1mk54q39rmnz65kmkh5fb72f6-libinput-1.29.2
-Copying /nix/store/zv7jdwm1mk54q39rmnz65kmkh5fb72f6-libinput-1.29.2/lib/udev/rules.d/80-libinput-device-groups.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/80-libinput-device-groups.rules
-Copying /nix/store/zv7jdwm1mk54q39rmnz65kmkh5fb72f6-libinput-1.29.2/lib/udev/rules.d/90-libinput-fuzz-override.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/90-libinput-fuzz-override.rules
-Adding rules for package /nix/store/lb0n0p1x816nd6zwbfmaq25gbx0farll-bolt-0.9.8
-Copying /nix/store/lb0n0p1x816nd6zwbfmaq25gbx0farll-bolt-0.9.8/lib/udev/rules.d/90-bolt.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/90-bolt.rules
-Adding rules for package /nix/store/9xwxjkrwxjsvc5gs1l0syr4wbfvvvvcn-bluez-5.84
-Copying /nix/store/9xwxjkrwxjsvc5gs1l0syr4wbfvvvvcn-bluez-5.84/lib/udev/rules.d/97-hid2hci.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/97-hid2hci.rules
-Adding rules for package /nix/store/334afxah19b3hr6ll93pfxlcyhhh2vws-pipewire-1.4.9
-Copying /nix/store/334afxah19b3hr6ll93pfxlcyhhh2vws-pipewire-1.4.9/lib/udev/rules.d/90-pipewire-alsa.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/90-pipewire-alsa.rules
-Adding rules for package /nix/store/z86lazw4w2whcybk0n75mb3vlgg0h0bv-libmtp-1.1.22
-Copying /nix/store/z86lazw4w2whcybk0n75mb3vlgg0h0bv-libmtp-1.1.22/lib/udev/rules.d/69-libmtp.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/69-libmtp.rules
-Adding rules for package /nix/store/6f0q5lymsq4zv2miyvcrzddv907h4r1i-gnome-settings-daemon-49.1
-Copying /nix/store/6f0q5lymsq4zv2miyvcrzddv907h4r1i-gnome-settings-daemon-49.1/lib/udev/rules.d/61-gnome-settings-daemon-rfkill.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/61-gnome-settings-daemon-rfkill.rules
+building '/nix/store/vsjyzvqa0044wp8sq78v8c0kx3ripimj-steam-1.0.0.85-bwrap.drv'...
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-Adding rules for package /nix/store/6pdsdfwpvcvsp2saa91jpq43r81d0v0p-steam-devices-udev-rules-1.0.0.61-unstable-2025-10-18
-Copying /nix/store/6pdsdfwpvcvsp2saa91jpq43r81d0v0p-steam-devices-udev-rules-1.0.0.61-unstable-2025-10-18/lib/udev/rules.d/60-steam-input.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/60-steam-input.rules
-Copying /nix/store/6pdsdfwpvcvsp2saa91jpq43r81d0v0p-steam-devices-udev-rules-1.0.0.61-unstable-2025-10-18/lib/udev/rules.d/60-steam-vr.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/60-steam-vr.rules
-Adding rules for package /nix/store/vp70b6i8n66ijyfdmdcga924dd2kj1g8-solaar-1.1.16-udev
-Copying /nix/store/vp70b6i8n66ijyfdmdcga924dd2kj1g8-solaar-1.1.16-udev/etc/udev/rules.d/42-logitech-unify-permissions.rules to /nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/42-logitech-unify-permissions.rules
-Checking that all programs called by relative paths in udev rules exist in /nix/store/zf8qy81dsw1vqwgh9p9n2h40s1k0g2l1-systemd-258.2/lib/udev... OK
-Checking that all programs called by absolute paths in udev rules exist... OK
-Verifying udev rules using udevadm verify...
-/nix/store/0fxwqqw7lf6xfq4ksy3x8srdic2kr5wg-udev-rules/60-steam-input.rules:170 style: a comma between tokens is expected.
-
-57 udev rules files have been checked.
-  Success: 57
-  Fail:    0
-OK
-building '/nix/store/xrf4bbnz557pmyppzhi6k86adwgfxgqa-X-Restart-Triggers-systemd-tmpfiles-resetup.drv'...
-building '/nix/store/dla7nvryhlcpl2pc8fk7rimywj9vn5ms-steam-1.0.0.85-bwrap.drv'...
-building '/nix/store/mvkrifdy0b30nv56wvz8cwllifmwxdqp-X-Restart-Triggers-systemd-udevd.drv'...
-building '/nix/store/fyfgk2qzxwaf21p18fqx0nk0jqh0lqix-steam-run-bwrap.drv'...
-building '/nix/store/2dmynda0j6vdr2r8dbmzlblqyfia55j5-unit-systemd-tmpfiles-resetup.service.drv'...
-building '/nix/store/1yh1l17gl0r4l19cxs0fj4ncc4k4nhjw-steam-1.0.0.85.drv'...
-building '/nix/store/609qfl7k2iqhvmbgmbwy4mlzqwgsq7d5-steam-run.drv'...
-building '/nix/store/21vwxq9s6kz2j3hnjmq95g62q9s9i6f3-unit-systemd-udevd.service.drv'...
-building '/nix/store/5pjfwjfhp0v27b76q1xcr6vb7rj3jm1c-system-path.drv'...
+building '/nix/store/j56brxndrpaln6r1bla4j4gv4awa0hw4-steam-run-bwrap.drv'...
+building '/nix/store/9gjq6xhaxy01b37152d6pls8d522ivim-steam-1.0.0.85.drv'...
+building '/nix/store/arp68ifrzx0cqcmwjy1xr7h3sfl5p846-steam-run.drv'...
+building '/nix/store/cjxj38g453jwqy5cjywh2wyrv0f3m2h0-system-path.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cc' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cc'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cpp' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cpp'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/ld.bfd' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/ld.bfd'
@@ -2605,28 +2766,29 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-fmt' and `/nix/store/vg39s21pcy070xpacc1pizy469vbfpxc-rustfmt-1.91.1/bin/cargo-fmt'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-clippy' and `/nix/store/5y00kqp8qlmjwvm5h607n6jnmqr75dnk-clippy-1.91.1/bin/cargo-clippy'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/rust-analyzer' and `/nix/store/wl97qrpw37jgd4yb8yqh4k9h72r3kw2k-rust-analyzer-2025-10-28/bin/rust-analyzer'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/ypfzapa79bb8r9vhvxxi8fxiyfxkkh3x-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/3x333d3b2n8s678j1xsp2zl148wdy259-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/99a7l089rm7ah9cb8cpxl5xqilf5ivn2-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/ldz244xf9v1g94jacr4z4414vif3f6hh-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
 created 25515 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/jr9h27b0czkkdqjaxn80af4g8i2z1v03-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/dlrjczngv8ba5i1qhr3xy2q3nm0d49bv-dbus-1.drv'...
-building '/nix/store/zn90cd2ywwcawlv4bclhdivm92wfbikw-unit-accounts-daemon.service.drv'...
-building '/nix/store/afdg63157q16dh6pdr7vhy1hwzkin3k9-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/rmsmlmwj0mn313g4vwf0nf87zxhxxdfv-unit-polkit.service.drv'...
-building '/nix/store/jbkdgs2328cws95rcj6qq2j0g97rszzy-unit-dbus.service.drv'...
-building '/nix/store/pgvi0j53859g8xnq73phm6d9b7bngdjw-unit-dbus.service.drv'...
-building '/nix/store/50b45wq4bh1haznr6ngdmmz1f254pl81-system-units.drv'...
-building '/nix/store/mv4m9yb9znsf3nb28lgrxyh4zg5bvh5s-user-units.drv'...
-building '/nix/store/dw48n9bf3d1f0hbk00iqd71giyxqzw1k-etc.drv'...
-building '/nix/store/54i9iac1a4cm46q479l65clzdvw71d6w-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
-stopping the following units: accounts-daemon.service, systemd-tmpfiles-resetup.service
+building '/nix/store/9xkq7a4kjm9r0kwz7m00s66a2fsgdhi3-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/ijlfaj0bqshp82kc7akqi05fh6hwjn43-dbus-1.drv'...
+building '/nix/store/vb6y6b8g1danvhi2kb7hrqi67kjza7i0-unit-accounts-daemon.service.drv'...
+building '/nix/store/0qxkw8v643djq5k8xmchm8dcjxvbsirb-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/kkiwhq4zk0jncdwhiplm3m2gr1z79pxx-unit-polkit.service.drv'...
+building '/nix/store/fr8c26pc9qf7xx4rlxrnj5pgq0qdzr94-unit-dbus.service.drv'...
+building '/nix/store/s5b7b4a9yyzl8hrdbfd1rhp7pf4xx6b1-unit-dbus.service.drv'...
+building '/nix/store/33ivds1jxmxwhr4wa116l80f4klxhmpx-user-units.drv'...
+building '/nix/store/7bdrdr8vnf5fq27qba4mkjc7a108zsr2-system-units.drv'...
+building '/nix/store/6c5zmpjw77dvpfc4ds3rbhwyaai26naz-etc.drv'...
+building '/nix/store/d30nv73dcz0qmb47if4wh1qjcixmn6c5-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
+stopping the following units: accounts-daemon.service
+NOT restarting the following changed units: display-manager.service
 activating the configuration...
 setting up /etc...
 reloading user units for si...
 restarting sysinit-reactivation.target
-reloading the following units: dbus.service, firewall.service
-restarting the following units: polkit.service, systemd-udevd.service
-starting the following units: accounts-daemon.service, systemd-tmpfiles-resetup.service
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/51894hdg519afx0nhbhfqicfsjimcn8q-nixos-system-rits-25.11.941.c97c47f2bac4
+Done. The new configuration is /nix/store/2g6jndw1472dsb7qz0dqlv6mcxmnyl6m-nixos-system-rits-25.11.941.c97c47f2bac4

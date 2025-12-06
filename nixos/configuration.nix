@@ -124,7 +124,7 @@
     nerd-fonts.iosevka
     nerd-fonts.symbols-only
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     liberation_ttf
     fira-code
     fira-code-symbols
@@ -150,7 +150,7 @@
     enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
     ];
   };
@@ -459,7 +459,7 @@
     #lsfg-vk
     #lsfg-vk-ui
     libva
-    vkBasalt
+    vkbasalt
     sidequest
     # SteamVR runtime dependencies
     libusb1
@@ -480,7 +480,7 @@
 
     # Media and Entertainment
     brave
-    floorp
+    #floorp-bin
     calibre
     discord
     gpu-screen-recorder
@@ -492,7 +492,7 @@
     maestral
     obsidian
     pocket-casts
-    spotify
+    #spotify
     steam
     steam-run
     strawberry
@@ -531,7 +531,6 @@
     rofi
     solaar
     sxhkd
-    thefuck
     unzip
     wireplumber
     zip

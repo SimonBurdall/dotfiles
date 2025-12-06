@@ -155,19 +155,19 @@
     ];
   };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport32Bit = true;
-    extraPackages = with pkgs; [
-      vulkan-loader
-      vulkan-validation-layers
-      libvdpau
-    ];
-    extraPackages32 = with pkgs.pkgsi686Linux; [
-      vulkan-loader
-      libvdpau
-    ];
-  };
+  #hardware.opengl = {
+  #  enable = true;
+  #  driSupport32Bit = true;
+  #  extraPackages = with pkgs; [
+  #    vulkan-loader
+  #    vulkan-validation-layers
+  #    libvdpau
+  #  ];
+  #  extraPackages32 = with pkgs.pkgsi686Linux; [
+  #    vulkan-loader
+  #    libvdpau
+  #  ];
+  #};
 
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;

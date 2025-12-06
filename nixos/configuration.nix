@@ -30,16 +30,10 @@
   system.autoUpgrade.allowReboot = true;
   system.stateVersion = "25.11";
 
-  # ALVR will handle these ports automatically with the module
-  #networking.firewall.allowedTCPPorts = [9943 9944];
-  #networking.firewall.allowedUDPPorts = [9943 9944];
-  #networking.firewall.enable = true;
-
-  # Updated firewall configuration for ALVR + Sunshine
+  # Firewall configuration for Sunshine
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [9943 9944 47984 47989 47990 48010 8008 8009 8010 8443];
-    allowedUDPPorts = [9943 9944];
+    allowedTCPPorts = [47984 47989 47990 48010 8008 8009 8010 8443];
     allowedUDPPortRanges = [
       {
         from = 47998;
@@ -70,17 +64,6 @@
       # User-specific packages can be added here
     ];
   };
-
-  # OpenComposite configuration to bypass SteamVR
-  system.userActivationScripts.opencomposite = ''
-    mkdir -p ~/.config/openvr
-    cat > ~/.config/openvr/openvrpaths.vrpath << EOF
-    {
-      "runtime" : [ "${pkgs.opencomposite}/lib/opencomposite" ],
-      "version" : 1
-    }
-    EOF
-  '';
 
   # Create groups if they don't exist
   users.groups.plugdev = {};
@@ -156,7 +139,6 @@
 
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
-  services.monado.enable = true;
 
   ## Audio ----
   services.pulseaudio.enable = false;
@@ -208,137 +190,26 @@
   };
 
   services.udev.extraRules = ''
-    # Meta Quest USB detection
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0186", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0082", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0187", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
-    # For the Quest 3 specifically
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ATTR{idProduct}=="0137", MODE="0660", GROUP="plugdev", TAG+="uaccess", SYMLINK+="quest%n"
+    # Meta Quest USB detection (for ADB/sideloading)
+    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev", TAG+="uaccess"
 
-    # Add rules for Android debugging (useful for ADB)
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev"
-
-    # Add Sunshine input device rules
+    # Sunshine input device rules
     KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
   '';
 
   ## Virtualization and Containerization ----
   virtualisation.docker.enable = true;
 
-  ## VR Configuration - ALVR Module ----
-  programs.alvr = {
-    enable = true;
-    openFirewall = true; # This automatically handles ports 9943-9944 TCP/UDP
-    package = pkgs.alvr.overrideAttrs (oldAttrs: {
-      # Try to fix the mpg123 dependency issue
-      buildInputs = (oldAttrs.buildInputs or []) ++ [pkgs.mpg123];
-    });
-  };
-
-  # OpenVR/SteamVR udev rules
-  services.udev.packages = with pkgs; [openxr-loader];
-
-  # SteamVR permissions fix and bypass setup
-  systemd.user.services.steamvr-setup-bypass = {
-    description = "Bypass SteamVR setup requirements";
-    wantedBy = ["graphical-session.target"];
-    serviceConfig = {
-      Type = "oneshot";
-      RemainAfterExit = true;
-      ExecStart = pkgs.writeShellScript "steamvr-setup" ''
-        # Create all necessary directories
-        mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/{bin/linux64,drivers,resources}
-        mkdir -p ~/.local/share/Steam/config
-        mkdir -p ~/.openvr/drivers
-
-        # Create a dummy vrserver executable to bypass checks
-        touch ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrserver
-        chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrserver
-
-        # Create vrpathreg dummy
-        echo '#!/bin/sh' > ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
-        echo 'exit 0' >> ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
-        chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh
-
-        # Link system libraries
-        ln -sf ${pkgs.glibc}/lib/libc.so.6 ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/libc.so.6 || true
-        ln -sf ${pkgs.gcc.cc.lib}/lib/libstdc++.so.6 ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/libstdc++.so.6 || true
-
-        # Create SteamVR manifest
-        cat > ~/.local/share/Steam/steamapps/common/SteamVR/steamvr.vrsettings << 'EOF'
-        {
-          "driver_alvr_server": {
-            "enable": true
-          },
-          "steamvr": {
-            "activateMultipleDrivers": true,
-            "requireHmd": false,
-            "forcedDriver": "",
-            "forcedHmd": ""
-          }
-        }
-        EOF
-      '';
-    };
-  };
-
-  # Create SteamVR config directory with proper settings
-  system.userActivationScripts.steamvr-config = ''
-    mkdir -p ~/.local/share/Steam/config
-    mkdir -p ~/.openvr
-    mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/drivers
-    mkdir -p ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64
-
-    # Create symlinks for SteamVR runtime
-    ln -sf ${pkgs.steam}/bin/steam-runtime ~/.local/share/Steam/ubuntu12_32/steam-runtime || true
-
-    # Create default SteamVR settings to bypass setup
-    if [ ! -f ~/.local/share/Steam/config/steamvr.vrsettings ]; then
-      cat > ~/.local/share/Steam/config/steamvr.vrsettings << 'EOF'
-    {
-      "steamvr" : {
-        "requireHmd" : false,
-        "forcedDriver" : "null",
-        "forcedHmd" : "",
-        "displayDebug" : false,
-        "debugProcessPipe" : "",
-        "enableHomeApp" : false,
-        "showMirrorView" : false,
-        "autolaunchSteamVROnButtonPress" : false
-      },
-      "driver_null" : {
-        "enable" : true
-      },
-      "driver_alvr_server" : {
-        "enable" : true,
-        "pathServerFolder" : ""
-      }
-    }
-    EOF
-    fi
-
-    # Create vrpathreg script workaround
-    cat > ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh << 'EOF'
-    #!/bin/sh
-    # Dummy vrpathreg to prevent SteamVR setup errors
-    exit 0
-    EOF
-    chmod +x ~/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrpathreg.sh || true
-  '';
-
   ## Gaming and Steam ----
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-    # Enable Steam hardware support
     gamescopeSession.enable = true;
   };
 
-  # Hardware support for Steam
   hardware.steam-hardware.enable = true;
 
-  # Steam-specific packages for runtime compatibility
   programs.steam.package = pkgs.steam.override {
     extraPkgs = pkgs:
       with pkgs; [
@@ -363,25 +234,12 @@
     "electron-36.9.5"
   ];
 
-  ## Environment Variables for VR ----
-  environment.sessionVariables = {
-    # Help Steam find the correct runtime
-    STEAM_RUNTIME_PREFER_HOST_LIBRARIES = "0";
-    # Use system libraries when possible
-    STEAM_RUNTIME = "1";
-    # OpenXR runtime selection (for Monado)
-    XR_RUNTIME_JSON = "${pkgs.monado}/share/openxr/1/openxr_monado.json";
-    # Disable SteamVR home to reduce overhead
-    STEAMVR_DISABLE_HOMEVR = "1";
-  };
-
   ## System Packages ----
   environment.systemPackages = with pkgs; [
     # Development Tools
     alejandra
     android-studio
     awscli
-    #cargo
     clang
     clippy
     deadnix
@@ -418,20 +276,13 @@
     tailwindcss
     trunk
 
-    # VR and Graphics
+    # Android and Utilities
     android-tools
     scrcpy
-    monado
-    opencomposite
-    wivrn
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers
-    lsfg-vk
-    lsfg-vk-ui
     libva
-    vkbasalt
-    sidequest
     libusb1
     libv4l
     zlib
@@ -450,7 +301,7 @@
 
     # Media and Entertainment
     brave
-    #floorp-bin
+    # floorp-bin  # Temporarily disabled - hash mismatch
     calibre
     discord
     gpu-screen-recorder
@@ -462,7 +313,7 @@
     maestral
     obsidian
     pocket-casts
-    #spotify
+    # spotify  # Temporarily disabled - snap download failing
     steam
     steam-run
     strawberry
@@ -492,7 +343,6 @@
     mangohud
     networkmanager_dmenu
     nmap
-    openssl
     picom
     playerctl
     polybar

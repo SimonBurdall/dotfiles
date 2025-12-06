@@ -109,8 +109,6 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
-    wqy_zenhei
-    source-han-sans
   ];
 
   fonts.fontconfig.defaultFonts = {
@@ -225,6 +223,8 @@
         libusb1
         libv4l
         pipewire
+        noto-fonts-cjk-sans
+        noto-fonts-cjk-serif
       ];
     extraLibraries = pkgs:
       with pkgs; [

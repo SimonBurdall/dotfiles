@@ -109,11 +109,6 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
-    source-code-pro
-    source-han-mono
-    source-han-sans
-    source-han-serif
-    wqy_zenhei
   ];
 
   fonts.fontDir.enable = true;
@@ -214,6 +209,12 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession.enable = true;
+
+    fontPackages = with pkgs; [
+      wqy_zenhei
+      source-han-sans
+      source-han-serif
+    ];
   };
 
   hardware.steam-hardware.enable = true;

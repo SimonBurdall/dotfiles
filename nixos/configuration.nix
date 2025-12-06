@@ -109,13 +109,15 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+    source-code-pro
+    source-han-mono
+    source-han-sans
+    source-han-serif
+    wqy_zenhei
   ];
 
-  fonts.fontconfig.defaultFonts = {
-    serif = ["Liberation Serif" "Noto Serif CJK JP"];
-    sansSerif = ["Liberation Sans" "Noto Sans CJK JP"];
-    monospace = ["Hack Nerd Font" "Noto Sans Mono CJK JP"];
-  };
+  fonts.fontDir.enable = true;
+  fonts.fontconfig.enable = true;
 
   ## Hardware and Graphics ----
   hardware.nvidia = {
@@ -223,8 +225,6 @@
         libusb1
         libv4l
         pipewire
-        noto-fonts-cjk-sans
-        noto-fonts-cjk-serif
       ];
     extraLibraries = pkgs:
       with pkgs; [

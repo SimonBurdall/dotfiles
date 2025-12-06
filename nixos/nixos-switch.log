@@ -1,31 +1,412 @@
 building the system configuration...
-these 20 derivations will be built:
-  /nix/store/3sf9g26pifjff1q5pvfxclfn8kcxfbkd-fontconfig-conf.drv
-  /nix/store/14vq6idsbk80wjc69rhk7wb0xkiy2gnk-fontconfig-etc.drv
-  /nix/store/jpxjq8lwa6c9fmm3j1plj9ks36nm3pv9-steam-run-fhsenv-rootfs.drv
-  /nix/store/q0xvkhw5byz9d866ylps96lyjpanc41r-steam-run-bwrap.drv
-  /nix/store/8j9jq5z9137005j33wjrkflfyn1159m2-steam-run.drv
-  /nix/store/ahj77gad1avaq0jpdixca5pn8v5dah7s-steam-1.0.0.85-fhsenv-rootfs.drv
-  /nix/store/w2nvs5dbaa4zcn7idcwsa3r3qp539cik-steam-1.0.0.85-bwrap.drv
-  /nix/store/b9wl97lhwdwwxgpsqn3llimrj5chwyyz-steam-1.0.0.85.drv
-  /nix/store/whw80jnbznrlhyi18lchnn4rrhwyd37m-system-path.drv
-  /nix/store/3542hj13f4p71jmrpcd50z36h3cw2gc0-unit-accounts-daemon.service.drv
-  /nix/store/syhrbpw7c288y5jri4m5d2wgq2sg6p6z-dbus-1.drv
-  /nix/store/zvxvhvchv05ra58dl6g8bvp8iipy0fbz-X-Restart-Triggers-dbus.drv
-  /nix/store/h2qqlz88b5fdqns9a2idc9glh9gylirl-unit-dbus.service.drv
-  /nix/store/2j5d0xlymk9mmm08rlkxpsfqc9x8mg8h-X-Restart-Triggers-polkit.drv
-  /nix/store/z5ibm9rafsr8i3bzqfp821fhxxhfris5-unit-polkit.service.drv
-  /nix/store/3gg78f1nbb2k1rfgalzca109ydwhvvh9-system-units.drv
-  /nix/store/x2pri1l4x58xvpbw63l2idy60v62g426-unit-dbus.service.drv
-  /nix/store/fjjdbb6a6w1abxpdily7qfbjabwwf1rk-user-units.drv
-  /nix/store/2j43r7byml7y1m87mh1vf0nqw2wxp6id-etc.drv
-  /nix/store/bl8a9pkjvspfgrdps0qhqfsqs6cxy8hh-nixos-system-rits-25.11.941.c97c47f2bac4.drv
-building '/nix/store/3sf9g26pifjff1q5pvfxclfn8kcxfbkd-fontconfig-conf.drv'...
-building '/nix/store/ahj77gad1avaq0jpdixca5pn8v5dah7s-steam-1.0.0.85-fhsenv-rootfs.drv'...
-building '/nix/store/jpxjq8lwa6c9fmm3j1plj9ks36nm3pv9-steam-run-fhsenv-rootfs.drv'...
+these 25 derivations will be built:
+  /nix/store/dxzlhw6sy9c4njwjlhyxkr17220f795l-steam-1.0.0.85-fhsenv-rootfs.drv
+  /nix/store/15mp11f3105768cjrzy209sfhpbx8q02-steam-1.0.0.85-bwrap.drv
+  /nix/store/va525v0xhlj280ag9ifr3m85cv2a5vcz-steam-run-fhsenv-rootfs.drv
+  /nix/store/vdv9656fmslzmbcbwhgpc7h9z5bmkh0z-steam-run-bwrap.drv
+  /nix/store/blxbsqykkn024410x9kqyck5vr54d1pf-steam-run.drv
+  /nix/store/bzax4lzqfdwdz96v6kawwsvg8hkk47ij-steam-1.0.0.85.drv
+  /nix/store/xgvbvkqlz72dv67jcr2p3wm21awyf2mh-X11-fonts.drv
+  /nix/store/33j9vzqkh8rjx2h0q6rzdzqs41iq7wqk-system-path.drv
+  /nix/store/zbdr6falkzy7z7i6xp3dpmdfrsxlndwr-dbus-1.drv
+  /nix/store/zcbfcsd2fc36sl95fkmvvsrs2ahh0sar-X-Restart-Triggers-dbus.drv
+  /nix/store/55c6993byyakx5na5wgni48fndf4mwbc-unit-dbus.service.drv
+  /nix/store/95xsbgf2gl73l1zcngbvv6w5gjd2qkhd-user-units.drv
+  /nix/store/hcil0cjc2an6clm05dhbi76ix267c89l-fc-cache.drv
+  /nix/store/8s70r32v7a8djb15hr0c5air8xsskfhb-fc-00-nixos-cache.conf.drv
+  /nix/store/qwpf24mckk244scign4xwwwvy4r9mljd-fontconfig-conf.drv
+  /nix/store/gwrgx9wbqs8lz25s5ijf63ayp5m5rlv3-fontconfig-etc.drv
+  /nix/store/hishrys73j16jw5g56rx94p32j825pws-unit-dbus.service.drv
+  /nix/store/rbc888m7pgwdid3jf39gq2xy0fnk6xv9-unit-accounts-daemon.service.drv
+  /nix/store/hj5qndfcnd8mwk4cs4hzfy9ilfgsnp86-X-Restart-Triggers-polkit.drv
+  /nix/store/wwk0nb71x8qxhzc5zx91qsk4j715vycy-unit-polkit.service.drv
+  /nix/store/jqsxg8w5fwn5xkgj8qgqmqqsnqk7wap7-xserver.conf.drv
+  /nix/store/xiw6883r62g2z3y8fwlpz6w92wdd684d-unit-display-manager.service.drv
+  /nix/store/sikrj6gcrmh0wf7d6wjr2j805fhg2qsq-system-units.drv
+  /nix/store/qyzax2gygmv20q8vcxyxpxs654ijkkc8-etc.drv
+  /nix/store/3dap4dghp976xqwh222gzf1bmi4v09li-nixos-system-rits-25.11.941.c97c47f2bac4.drv
+these 4 paths will be fetched (181.44 MiB download, 280.71 MiB unpacked):
+  /nix/store/wdv5w9rakvmlxdncygdpc6rkazk1avg0-mkfontscale-1.2.3
+  /nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042
+  /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002
+  /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003
+copying path '/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042' from 'https://cache.nixos.org'...
+copying path '/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002' from 'https://cache.nixos.org'...
+copying path '/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003' from 'https://cache.nixos.org'...
+copying path '/nix/store/wdv5w9rakvmlxdncygdpc6rkazk1avg0-mkfontscale-1.2.3' from 'https://cache.nixos.org'...
+building '/nix/store/xgvbvkqlz72dv67jcr2p3wm21awyf2mh-X11-fonts.drv'...
+building '/nix/store/hcil0cjc2an6clm05dhbi76ix267c89l-fc-cache.drv'...
+building '/nix/store/dxzlhw6sy9c4njwjlhyxkr17220f795l-steam-1.0.0.85-fhsenv-rootfs.drv'...
+building '/nix/store/va525v0xhlj280ag9ifr3m85cv2a5vcz-steam-run-fhsenv-rootfs.drv'...
 structuredAttrs is enabled
-building '/nix/store/14vq6idsbk80wjc69rhk7wb0xkiy2gnk-fontconfig-etc.drv'...
 structuredAttrs is enabled
+Font directories:
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1
+        /nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042
+        /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005
+        /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share
+        /nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share
+        /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share
+        /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts
+        /nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts
+        /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts
+        /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts
+        /nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts
+        /nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype
+        /nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype
+        /nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype
+        /nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc
+        /nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype
+        /nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts/opentype
+        /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype
+        /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype
+        /nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11
+        /nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype
+        /nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype
+        /nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5
+        /nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype
+        /nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype
+        /nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts
+        /nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk
+        /nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts
+        /nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts
+        /nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype/source-han-mono
+        /nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans
+        /nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype/source-han-serif
+        /nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc
+        /nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic
+        /nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc
+        /nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack
+        /nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka
+        /nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka: skipping, existing cache is valid: 81 fonts, 0 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols: skipping, existing cache is valid: 2 fonts, 0 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk: skipping, existing cache is valid: 60 fonts, 0 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk: skipping, existing cache is valid: 40 fonts, 0 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype: skipping, existing cache is valid: 6 fonts, 0 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts: skipping, existing cache is valid: 53 fonts, 0 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts: skipping, existing cache is valid: 75 fonts, 0 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc: skipping, existing cache is valid: 26 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, existing cache is valid: 20 fonts, 0 dirs
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts/opentype: skipping, existing cache is valid: 14 fonts, 0 dirs
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype/source-han-mono: skipping, existing cache is valid: 70 fonts, 0 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans: skipping, existing cache is valid: 45 fonts, 0 dirs
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype/source-han-serif: skipping, existing cache is valid: 35 fonts, 0 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts: skipping, existing cache is valid: 3 fonts, 0 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita: skipping, existing cache is valid: 24 fonts, 0 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc: skipping, existing cache is valid: 47 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 4 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype: skipping, existing cache is valid: 22 fonts, 0 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype: skipping, existing cache is valid: 33 fonts, 0 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share: skipping, existing cache is valid: 0 fonts, 2 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 0 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts: skipping, existing cache is valid: 3 fonts, 1 dirs
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto: skipping, existing cache is valid: 1 fonts, 0 dirs
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share: skipping, looped directory detected
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share: skipping, looped directory detected
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share: skipping, looped directory detected
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share: skipping, looped directory detected
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share: skipping, looped directory detected
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts: skipping, looped directory detected
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts: skipping, looped directory detected
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts: skipping, looped directory detected
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts: skipping, looped directory detected
+/nix/store/hzx5v746w8wgfilvfq93nk3irvg7v260-wqy-zenhei-0.9.45/share/fonts: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts: skipping, looped directory detected
+/nix/store/n6wcsaw689sdfpn425g194v5nkss2xlb-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype: skipping, looped directory detected
+/nix/store/w4ispjj8wckxwc8adkd1r5j5i8w9h5xv-fira-code-6.2/share/fonts/truetype: skipping, looped directory detected
+/nix/store/gd1x9aajknd2hmzvw1iz7m290h8k04xy-fira-code-symbols-20160811/share/fonts/opentype: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype: skipping, looped directory detected
+/nix/store/3yj104zxpy7qb2xixpiif1dcc8l5f7xl-dina-font-2.92/share/fonts/misc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/doc/proggyfonts-0.1: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/misc: skipping, looped directory detected
+/nix/store/gk27ji5idh3q5dm515lwakzbzmrmjr9i-proggyfonts-0.1/share/fonts/truetype: skipping, looped directory detected
+/nix/store/az9kg92j4a3qijbmg9bbk13xrvl894xz-source-code-pro-2.042/share/fonts/opentype: skipping, looped directory detected
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype: skipping, looped directory detected
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype: skipping, looped directory detected
+/nix/store/xnakrlykx09lzr2ssgf249hm7sskqgwv-adwaita-fonts-49.0/share/fonts/Adwaita: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11: skipping, looped directory detected
+/nix/store/6jw4ddvxyry8xc9fiql4jr1lvdgj9j4l-dejavu-fonts-2.37/share/fonts/truetype: skipping, looped directory detected
+/nix/store/87jbfz30hi740lp322y0z1gbkw307bqb-freefont-ttf-20120503/share/fonts/truetype: skipping, looped directory detected
+/nix/store/vmrvlfg3j46942d7wjp3qa93yvmrslif-gyre-fonts-2.005/share/fonts/truetype: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, looped directory detected
+/nix/store/lmy6lmspjf6qpzh8iz8rz0k29wmqwk7q-liberation-fonts-2.1.5/share/fonts/truetype: skipping, looped directory detected
+/nix/store/7hsh4h4sp340bq9w371lj6zjpg145jw7-unifont-16.0.03/share/fonts/opentype: skipping, looped directory detected
+/nix/store/p1lpix5c5qlh8h72cf7nabh4vn8yl9s2-noto-fonts-color-emoji-2.051/share/fonts/noto: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts: skipping, looped directory detected
+/nix/store/m18d4ilkzahh8bbcx794kqn568asflq4-noto-fonts-cjk-sans-2.004/share/fonts/opentype/noto-cjk: skipping, looped directory detected
+/nix/store/n6zww6m31hm1iay4cd2qc1qr2c0vgpwr-noto-fonts-cjk-serif-2.003/share/fonts/opentype/noto-cjk: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/opentype/mplus-outline-fonts: skipping, looped directory detected
+/nix/store/6wfx7yb7d43rjc6hxngpjsj2kwnv76q7-mplus-outline-fonts-github-unstable-2022-05-19/share/fonts/truetype/mplus-outline-fonts: skipping, looped directory detected
+/nix/store/4360q24qv53f1m9w7by3haigmpbb0cz9-source-han-mono-1.002/share/fonts/opentype/source-han-mono: skipping, looped directory detected
+/nix/store/xrn2vzimrybr5yib0af799bzqj1ywa29-source-han-sans-2.005/share/fonts/opentype/source-han-sans: skipping, looped directory detected
+/nix/store/r4ivxx4j7ais5jsicrx8shrkririmk32-source-han-serif-2.003/share/fonts/opentype/source-han-serif: skipping, looped directory detected
+/nix/store/qgv2ahjz1d4v5dyq499ii99l2h04fk9x-font-cursor-misc-1.0.4/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/hnzl29jyx2vr28sbmxigvc88nvdmjfrd-font-misc-misc-1.1.3/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/100dpi: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/75dpi: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/cyrillic: skipping, looped directory detected
+/nix/store/khmv00h40fwjjnad5rgcmdq9ja8pf7s9-font-alias-1.0.5/share/fonts/X11/misc: skipping, looped directory detected
+/nix/store/kixqgiaymh7g0hfz65ccv3x5ymrzfcg5-nerd-fonts-hack-3.4.0+3.003/share/fonts/truetype/NerdFonts/Hack: skipping, looped directory detected
+/nix/store/wsgx33afcjf3gqk4h3i102ri8nimyvia-nerd-fonts-iosevka-3.4.0+33.2.1/share/fonts/truetype/NerdFonts/Iosevka: skipping, looped directory detected
+/nix/store/hhz5giacncadijlhqc95xwp3skn9kk29-nerd-fonts-symbols-only-3.4.0/share/fonts/truetype/NerdFonts/Symbols: skipping, looped directory detected
+/var/cache/fontconfig: not cleaning non-existent cache directory
+/nix/store/8cr4s1gi9gnm7jr4fmax5fdjmd01h90k-fc-cache: cleaning cache directory
+/nix/store/sl7wgh3hb00gsicw2w0jfd3vxnsd448s-fontconfig-2.17.1-bin/bin/fc-cache: succeeded
+building '/nix/store/8s70r32v7a8djb15hr0c5air8xsskfhb-fc-00-nixos-cache.conf.drv'...
+building '/nix/store/jqsxg8w5fwn5xkgj8qgqmqqsnqk7wap7-xserver.conf.drv'...
+building '/nix/store/qwpf24mckk244scign4xwwwvy4r9mljd-fontconfig-conf.drv'...
+building '/nix/store/xiw6883r62g2z3y8fwlpz6w92wdd684d-unit-display-manager.service.drv'...
+building '/nix/store/gwrgx9wbqs8lz25s5ijf63ayp5m5rlv3-fontconfig-etc.drv'...
 created 1 symlinks in user environment
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
@@ -33,17 +414,17 @@ Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  P
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-building '/nix/store/w2nvs5dbaa4zcn7idcwsa3r3qp539cik-steam-1.0.0.85-bwrap.drv'...
+building '/nix/store/15mp11f3105768cjrzy209sfhpbx8q02-steam-1.0.0.85-bwrap.drv'...
 Warning: Schema ?org.gnome.system.locale? has path ?/system/locale/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy? has path ?/system/proxy/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.http? has path ?/system/proxy/http/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.https? has path ?/system/proxy/https/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.ftp? has path ?/system/proxy/ftp/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
 Warning: Schema ?org.gnome.system.proxy.socks? has path ?/system/proxy/socks/?.  Paths starting with ?/apps/?, ?/desktop/? or ?/system/? are deprecated.
-building '/nix/store/q0xvkhw5byz9d866ylps96lyjpanc41r-steam-run-bwrap.drv'...
-building '/nix/store/b9wl97lhwdwwxgpsqn3llimrj5chwyyz-steam-1.0.0.85.drv'...
-building '/nix/store/8j9jq5z9137005j33wjrkflfyn1159m2-steam-run.drv'...
-building '/nix/store/whw80jnbznrlhyi18lchnn4rrhwyd37m-system-path.drv'...
+building '/nix/store/vdv9656fmslzmbcbwhgpc7h9z5bmkh0z-steam-run-bwrap.drv'...
+building '/nix/store/bzax4lzqfdwdz96v6kawwsvg8hkk47ij-steam-1.0.0.85.drv'...
+building '/nix/store/blxbsqykkn024410x9kqyck5vr54d1pf-steam-run.drv'...
+building '/nix/store/33j9vzqkh8rjx2h0q6rzdzqs41iq7wqk-system-path.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cc' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cc'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/cpp' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/cpp'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/vr15iyyykg9zai6fpgvhcgyw7gckl78w-gcc-wrapper-14.3.0/bin/ld.bfd' and `/nix/store/sqlnjj8c3n3si3sjnadhdbcwgrk97g2w-clang-wrapper-21.1.2/bin/ld.bfd'
@@ -2452,21 +2833,21 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-fmt' and `/nix/store/vg39s21pcy070xpacc1pizy469vbfpxc-rustfmt-1.91.1/bin/cargo-fmt'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/cargo-clippy' and `/nix/store/5y00kqp8qlmjwvm5h607n6jnmqr75dnk-clippy-1.91.1/bin/cargo-clippy'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/9y7hh1r3zysxh3x3khgv7nh8gdjklks8-rustup-1.28.2/bin/rust-analyzer' and `/nix/store/wl97qrpw37jgd4yb8yqh4k9h72r3kw2k-rust-analyzer-2025-10-28/bin/rust-analyzer'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/5c8xc6napibjia5myz2xj9b4phjzdwj3-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/3bg13dzv8yp3959lxmq35gzzbcxvrp1m-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
-created 25515 symlinks in user environment
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/aja2ad04j6n7a360ydvaqmsqb5ivqhqz-steam-1.0.0.85/bin/steam' and `/nix/store/s9xrzplwvcks4gmmads3hsc4va1sckyx-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/23vsc38g8xij1miivq0zsf7c1a1g57dv-steam-run/bin/steam-run' and `/nix/store/9ykssr2f9yspckkc9s0cw11kll9f4rgx-steam-run/bin/steam-run'
+created 26215 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/2j5d0xlymk9mmm08rlkxpsfqc9x8mg8h-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/syhrbpw7c288y5jri4m5d2wgq2sg6p6z-dbus-1.drv'...
-building '/nix/store/3542hj13f4p71jmrpcd50z36h3cw2gc0-unit-accounts-daemon.service.drv'...
-building '/nix/store/zvxvhvchv05ra58dl6g8bvp8iipy0fbz-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/z5ibm9rafsr8i3bzqfp821fhxxhfris5-unit-polkit.service.drv'...
-building '/nix/store/h2qqlz88b5fdqns9a2idc9glh9gylirl-unit-dbus.service.drv'...
-building '/nix/store/x2pri1l4x58xvpbw63l2idy60v62g426-unit-dbus.service.drv'...
-building '/nix/store/3gg78f1nbb2k1rfgalzca109ydwhvvh9-system-units.drv'...
-building '/nix/store/fjjdbb6a6w1abxpdily7qfbjabwwf1rk-user-units.drv'...
-building '/nix/store/2j43r7byml7y1m87mh1vf0nqw2wxp6id-etc.drv'...
-building '/nix/store/bl8a9pkjvspfgrdps0qhqfsqs6cxy8hh-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
+building '/nix/store/hj5qndfcnd8mwk4cs4hzfy9ilfgsnp86-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/zbdr6falkzy7z7i6xp3dpmdfrsxlndwr-dbus-1.drv'...
+building '/nix/store/rbc888m7pgwdid3jf39gq2xy0fnk6xv9-unit-accounts-daemon.service.drv'...
+building '/nix/store/zcbfcsd2fc36sl95fkmvvsrs2ahh0sar-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/wwk0nb71x8qxhzc5zx91qsk4j715vycy-unit-polkit.service.drv'...
+building '/nix/store/55c6993byyakx5na5wgni48fndf4mwbc-unit-dbus.service.drv'...
+building '/nix/store/hishrys73j16jw5g56rx94p32j825pws-unit-dbus.service.drv'...
+building '/nix/store/95xsbgf2gl73l1zcngbvv6w5gjd2qkhd-user-units.drv'...
+building '/nix/store/sikrj6gcrmh0wf7d6wjr2j805fhg2qsq-system-units.drv'...
+building '/nix/store/qyzax2gygmv20q8vcxyxpxs654ijkkc8-etc.drv'...
+building '/nix/store/3dap4dghp976xqwh222gzf1bmi4v09li-nixos-system-rits-25.11.941.c97c47f2bac4.drv'...
 stopping the following units: accounts-daemon.service
 NOT restarting the following changed units: display-manager.service
 activating the configuration...
@@ -2477,4 +2858,4 @@ reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/bajjc59yybc79nc0724xb233sbx0k06c-nixos-system-rits-25.11.941.c97c47f2bac4
+Done. The new configuration is /nix/store/bz8zb2baxk8h7m3x1ljsl3fxb2lnczwm-nixos-system-rits-25.11.941.c97c47f2bac4

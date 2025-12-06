@@ -29,7 +29,7 @@
 
   system.autoUpgrade.enable = true;
   system.autoUpgrade.allowReboot = true;
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   # ALVR will handle these ports automatically with the module
   #networking.firewall.allowedTCPPorts = [9943 9944];
@@ -108,7 +108,7 @@
     '';
   };
 
-  services.gnome.core-utilities.enable = false;
+  services.gnome.core-apps.enable = false;
 
   xdg.portal = {
     enable = true;
@@ -175,7 +175,7 @@
 
   #---------------------------------------------------------------------
   # Audio
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -386,6 +386,7 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-27.3.11"
     "electron-33.4.11"
+    "electron-36.9.5"
   ];
 
   #---------------------------------------------------------------------
@@ -455,6 +456,8 @@
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers
+    #lsfg-vk
+    #lsfg-vk-ui
     libva
     vkBasalt
     sidequest

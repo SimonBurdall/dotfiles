@@ -113,6 +113,12 @@
     source-han-sans
   ];
 
+  fonts.fontconfig.defaultFonts = {
+    serif = ["Liberation Serif" "Noto Serif CJK JP"];
+    sansSerif = ["Liberation Sans" "Noto Sans CJK JP"];
+    monospace = ["Hack Nerd Font" "Noto Sans Mono CJK JP"];
+  };
+
   ## Hardware and Graphics ----
   hardware.nvidia = {
     modesetting.enable = true;

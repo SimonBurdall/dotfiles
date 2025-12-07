@@ -279,8 +279,9 @@
     tailwindcss
     trunk
 
-    # Android and Utilities
+    # Utilities
     android-tools
+    clamav
     scrcpy
     vulkan-tools
     vulkan-loader

@@ -283,6 +283,7 @@
     android-tools
     clamav
     scrcpy
+    tailscale
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers

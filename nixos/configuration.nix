@@ -289,6 +289,8 @@
     libva
     libusb1
     libv4l
+    lsfg-vk
+    lsfg-vk-ui
     zlib
 
     # Creative Software

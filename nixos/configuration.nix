@@ -192,8 +192,6 @@
     openFirewall = true;
   };
 
-  services.tailscale.enable = true;
-
   services.udev.extraRules = ''
     # Meta Quest USB detection (for ADB/sideloading)
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev", TAG+="uaccess"
@@ -285,7 +283,6 @@
     android-tools
     clamav
     scrcpy
-    tailscale
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers

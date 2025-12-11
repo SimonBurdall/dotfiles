@@ -298,6 +298,7 @@
     vulkan-loader
     vulkan-validation-layers
     libva
+    libva-utils
     libusb1
     libv4l
     lsfg-vk

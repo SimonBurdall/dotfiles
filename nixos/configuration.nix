@@ -90,6 +90,7 @@
 
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
     ];
@@ -214,6 +215,10 @@
   hardware.steam-hardware.enable = true;
 
   programs.steam.package = pkgs.steam.override {
+    extraProfile = ''
+      unset TZ
+      export PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1
+    '';
     extraPkgs = pkgs:
       with pkgs; [
         libgdiplus
@@ -226,6 +231,11 @@
         libusb1
         libv4l
       ];
+  };
+
+  programs.alvr = {
+    enable = true;
+    openFirewall = true;
   };
 
   ## Package Management ----

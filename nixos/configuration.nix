@@ -135,6 +135,7 @@
       libvdpau-va-gl
       vulkan-loader
       vulkan-validation-layers
+      nvidia-vaapi-driver
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
       vulkan-loader

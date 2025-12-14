@@ -252,12 +252,14 @@
   ## System Packages ----
   environment.systemPackages = with pkgs; [
     # Development Tools
+    act
     alejandra
     android-studio
     awscli
     clang
     clippy
     deadnix
+    docker
     docker-compose
     gcc
     gh

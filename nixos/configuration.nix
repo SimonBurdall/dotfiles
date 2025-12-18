@@ -345,6 +345,7 @@
 
     # Games
     clonehero
+    prismlauncher
     moonlight-qt
     gamemode
 

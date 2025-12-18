@@ -322,7 +322,7 @@
 
     # Media and Entertainment
     brave
-    # floorp-bin  # Temporarily disabled - hash mismatch
+    floorp-bin # Temporarily disabled - hash mismatch
     calibre
     discord
     gpu-screen-recorder
@@ -334,7 +334,7 @@
     maestral
     obsidian
     pocket-casts
-    # spotify  # Temporarily disabled - snap download failing
+    spotify # Temporarily disabled - snap download failing
     steam
     steam-run
     strawberry

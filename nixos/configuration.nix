@@ -306,7 +306,6 @@
     libv4l
     lsfg-vk
     lsfg-vk-ui
-    lxappearance
     zlib
 
     # Creative Software

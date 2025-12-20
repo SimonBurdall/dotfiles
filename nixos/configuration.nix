@@ -295,6 +295,7 @@
 
     # Utilities
     android-tools
+    dbeaver-bin
     clamav
     scrcpy
     vulkan-tools

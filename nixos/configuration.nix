@@ -305,6 +305,7 @@
     libva-utils
     libusb1
     libv4l
+    lm_sensors
     lsfg-vk
     lsfg-vk-ui
     zlib

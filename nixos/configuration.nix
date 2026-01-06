@@ -296,6 +296,7 @@
     android-tools
     dbeaver-bin
     clamav
+    keymapp
     scrcpy
     vulkan-tools
     vulkan-loader
@@ -304,7 +305,6 @@
     libva-utils
     libusb1
     libv4l
-    lm_sensors
     lsfg-vk
     lsfg-vk-ui
     zlib

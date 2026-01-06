@@ -8,8 +8,10 @@
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput"];
-
+  boot.kernelModules = ["uinput" "nct6775"];
+  boot.extraModprobeConfig = ''
+    options nct6775 force_id=0xd802
+  '';
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";

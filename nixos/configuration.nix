@@ -199,8 +199,15 @@
 
     # Sunshine input device rules
     KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
+
+    # ZSA Moonlander
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="input"
-    SUBSYSTEM=="usb", ATTR{idVendor}=="2833", ENV{ID_MM_DEVICE_IGNORE}="1"
+
+    # ZSA Moonlander keyboard (normal mode)
+    SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+
+    # ZSA Moonlander keyboard (bootloader/DFU mode)
+    SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE="0660", GROUP="plugdev", TAG+="uaccess"
   '';
 
   ## Virtualization and Containerization ----

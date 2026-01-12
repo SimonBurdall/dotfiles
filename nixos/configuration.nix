@@ -199,6 +199,7 @@
 
     # Sunshine input device rules
     KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="input"
   '';
 
   ## Virtualization and Containerization ----

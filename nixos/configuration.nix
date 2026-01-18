@@ -386,7 +386,6 @@
     unzip
     wireplumber
     zip
-    xdotool
     xclip
 
     # Monitoring Tools

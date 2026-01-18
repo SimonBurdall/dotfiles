@@ -319,7 +319,6 @@
     zlib
 
     # Creative Software
-    #blender
     (blender.override {cudaSupport = true;})
     blockbench
     freecad
@@ -387,6 +386,7 @@
     unzip
     wireplumber
     zip
+    xdotool
     xclip
 
     # Monitoring Tools

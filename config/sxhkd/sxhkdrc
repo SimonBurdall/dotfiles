@@ -4,6 +4,9 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
+ctrl + shift + alt + super + r
+	pkill -USR1 -x sxhkd
+
 #---------------------------------------------------------------
 # APPLICATIONS
 # terminal
@@ -11,9 +14,12 @@ super + Return
 	kitty
 
 # browser and common applications
-super + {7,8,9,0,minus,equal}
-	{brave, discord, steam, obsidian, spotify, keepassxc}
+super + {6,7,8,9,0,minus} 
+	{spotify, floorp, discord, steam, obsidian, keepassxc}
 
+ctrl + shift + alt + super + {y,u,i,o,p,#}
+	{spotify, floorp, discord, steam, obsidian, keepassxc}
+	
 # application launcher
 super + @space 
 	rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/scripts/rofi/launcher.rasi
@@ -25,7 +31,7 @@ Print
 #---------------------------------------------------------------
 # SYSTEM CONTROLS
 # powermenu
-super + ctrl + Escape
+super + ctrl + Escape 
 	~/.config/polybar/scripts/powermenu.sh
 
 #---------------------------------------------------------------
@@ -58,7 +64,7 @@ XF86AudioNext
 #---------------------------------------------------------------
 # BSPWM SESSION MANAGEMENT
 # quit/restart bspwm
-super + shift + {Escape,r}
+super + shift + Escape + r
 	bspc {quit,wm -r}
 
 #---------------------------------------------------------------

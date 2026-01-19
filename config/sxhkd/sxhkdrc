@@ -1,23 +1,25 @@
-#---------------------------------------------------------------
-# CONFIGURATION
+# --- CONFIGURATION ---
 # reload sxhkd configuration
+## Nomral
 super + Escape
 	pkill -USR1 -x sxhkd
 
+## Moonlander
 ctrl + shift + alt + super + r
 	pkill -USR1 -x sxhkd
 
-#---------------------------------------------------------------
-# APPLICATIONS
+# --- APPLICATIONS ---
 # terminal
 super + Return 
 	kitty
 
 # browser and common applications
+## Normal
 super + {6,7,8,9,0,minus} 
 	{spotify, floorp, discord, steam, obsidian, keepassxc}
 
-ctrl + shift + alt + super + {y,u,i,o,p,#}
+## Moonlander
+ctrl + shift + alt + super + {h,j,k,l,semicolon,apostrophe}
 	{spotify, floorp, discord, steam, obsidian, keepassxc}
 	
 # application launcher
@@ -28,14 +30,17 @@ super + @space
 Print 
 	flameshot gui
 
-#---------------------------------------------------------------
-# SYSTEM CONTROLS
+# --- SYSTEM CONTROLS ---
 # powermenu
+## Normal
 super + ctrl + Escape 
 	~/.config/polybar/scripts/powermenu.sh
 
-#---------------------------------------------------------------
-# AUDIO CONTROLS
+## Moonlander
+ctrl + shift + alt + super + p
+	~/.config/polybar/scripts/powermenu.sh
+
+# --- AUDIO CONTROLS ---
 # increase volume
 {XF86AudioRaiseVolume, super + shift + equal}
     wpctl set-volume @DEFAULT_SINK@ 5%+
@@ -61,14 +66,13 @@ XF86AudioPrev
 XF86AudioNext
     playerctl next
 
-#---------------------------------------------------------------
-# BSPWM SESSION MANAGEMENT
+# --- BSPWM SESSION MANAGEMENT ---
 # quit/restart bspwm
+## Normal
 super + shift + Escape + r
 	bspc {quit,wm -r}
 
-#---------------------------------------------------------------
-# WINDOW MANAGEMENT
+# --- WINDOW MANAGEMENT ---
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
@@ -81,14 +85,12 @@ super + m
 super + g
 	bspc node -s biggest.local
 
-#---------------------------------------------------------------
-# WINDOW STATE/FLAGS
+# --- WINDOW STATE/FLAGS ---
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-#---------------------------------------------------------------
-# FOCUS AND NAVIGATION
+# --- FOCUS AND NAVIGATION ---
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
@@ -111,11 +113,20 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
+## Normal
 super + {_,shift + }{1-4,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-#---------------------------------------------------------------
-# PRESELECTION
+## Moonlander
+# desktop focus 
+ctrl + shift + alt + super + {a,s,d,f}
+	bspc desktop -f '^{1-4}'
+
+# send desktop
+super + shift + {a,s,d,f}
+	bspc node -d '^{1-4}'
+
+# --- PRESELECTION ---
 # preselect the direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
@@ -128,8 +139,7 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#---------------------------------------------------------------
-# MOVE AND RESIZE
+# --- MOVE AND RESIZE ---
 # expand a window by moving one of its side outward
 ctrl + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}

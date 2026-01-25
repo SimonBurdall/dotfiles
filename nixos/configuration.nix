@@ -344,6 +344,7 @@
     maestral
     obsidian
     pocket-casts
+    protonvpn-gui
     spotify
     steam
     steam-run

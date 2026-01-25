@@ -344,7 +344,7 @@
     maestral
     obsidian
     pocket-casts
-    protonvpn-gui
+    rclone
     spotify
     steam
     steam-run

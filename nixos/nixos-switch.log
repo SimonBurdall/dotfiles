@@ -1,23 +1,26 @@
 building the system configuration...
-these 12 derivations will be built:
-  /nix/store/pj4f1gqzylfdbmmwx59d0s9mvnnw3h46-system-path.drv
-  /nix/store/xhmmdjs2hjkhpql5265ngqka1aagk9cd-X-Restart-Triggers-polkit.drv
-  /nix/store/08fxjnjsnlcr7a21mg0lsgvfxaw2bdaf-unit-polkit.service.drv
-  /nix/store/p5mi849dpj3fl5p902aw5jw5xy26kw7p-dbus-1.drv
-  /nix/store/mm8a3ir0axmm7bjhflzi0wq5x0fpixfi-X-Restart-Triggers-dbus.drv
-  /nix/store/q474xp0ipykc9s3d0psv4f9fhnr34m11-unit-dbus.service.drv
-  /nix/store/gjb2s4w5s2n2p3cpbsnz063z2894dqni-user-units.drv
-  /nix/store/ybx855c6kahz55bf5h14pgwnkk5ch24g-unit-dbus.service.drv
-  /nix/store/zpwxw3py2sgd2kms1gxdfmnvdnjks184-unit-accounts-daemon.service.drv
-  /nix/store/xd4nm83vxji07y5j407s10y3x3n8piaw-system-units.drv
-  /nix/store/rd9v8xz4jqwn7ggkn5vr3zpzbwf3s5bk-etc.drv
-  /nix/store/w924jv5ynmw7hgvzlnv092hhl2jm1hmr-nixos-system-rits-25.11.4506.078d69f03934.drv
-these 2 paths will be fetched (23.99 MiB download, 93.12 MiB unpacked):
-  /nix/store/yhpd1y4b657w5y5hb1q46bc96l11skhd-rclone-1.72.1
-  /nix/store/hqxzz3l62nqp70ckzdzh3mirc2703pk5-rclone-1.72.1-man
-copying path '/nix/store/hqxzz3l62nqp70ckzdzh3mirc2703pk5-rclone-1.72.1-man' from 'https://cache.nixos.org'...
-copying path '/nix/store/yhpd1y4b657w5y5hb1q46bc96l11skhd-rclone-1.72.1' from 'https://cache.nixos.org'...
-building '/nix/store/pj4f1gqzylfdbmmwx59d0s9mvnnw3h46-system-path.drv'...
+these 18 derivations will be built:
+  /nix/store/7gjbqnp3aa7f634hrddf5hwjzbg2nvc9-nixos-generated-dconf-locks.drv
+  /nix/store/far5ipy7y7mdvb73xzxd492fdw8d3kwj-nixos-generated-dconf-keyfiles.drv
+  /nix/store/0jl1gfv80975is8jwhgwnz0jlkf55471-nixos-generated-dconf-keyfiles.drv
+  /nix/store/lcrk58ys3bb5lz6b7hcldzqwf8yyl1p8-dconf-db.drv
+  /nix/store/3xm4lw0jjfn8rn31q2rz4x3iyxjq5fby-gdm.drv
+  /nix/store/4s3g49kkhz8i2ayhcm7hhankmmrhapzj-system-path.drv
+  /nix/store/mfj8lvnrb3lq3h0745p1i4zi79qlvs05-X-Restart-Triggers-polkit.drv
+  /nix/store/5803dl980nrg0i3y4v9w8arbvm2mfc3m-unit-polkit.service.drv
+  /nix/store/n9bzp9yjf36swvn1rgdl7bjsiykgwbr2-dbus-1.drv
+  /nix/store/zmg96di7v9vbsb5gm54m6y1s3h922ml3-X-Restart-Triggers-dbus.drv
+  /nix/store/vfz09lvrj2m9srczr9rdzg6c0y4ngwlc-unit-dbus.service.drv
+  /nix/store/c117ar6ndgxqv0yjbhgha9l3zf5cld8z-user-units.drv
+  /nix/store/9928zyyqdjx4ldl6d8ricr39gnr8iax1-unit-dbus.service.drv
+  /nix/store/wib53zf51i8d1xfgqw72lpdzi2y58mzi-unit-accounts-daemon.service.drv
+  /nix/store/gry7792hxg41z9ikmcxfwjml16iqygj7-system-units.drv
+  /nix/store/h684svib0ak5i94i6rvrs17vc3mlcyz1-dconf-system-config.drv
+  /nix/store/8spqxgzg0nfr8w98hqs3fc7fc8a2pcma-etc.drv
+  /nix/store/a0y66qys952srjkpj8qnhcyh7mrl89xn-nixos-system-rits-25.11.5198.e576e3c9cf9b.drv
+building '/nix/store/4s3g49kkhz8i2ayhcm7hhankmmrhapzj-system-path.drv'...
+building '/nix/store/far5ipy7y7mdvb73xzxd492fdw8d3kwj-nixos-generated-dconf-keyfiles.drv'...
+building '/nix/store/7gjbqnp3aa7f634hrddf5hwjzbg2nvc9-nixos-generated-dconf-locks.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/myvv172x2am72534zgn9wx0qp5amq6a8-gcc-wrapper-14.3.0/bin/cc' and `/nix/store/yng1lcnccgq66i68g4xg8y5qrk30y9s0-clang-wrapper-21.1.7/bin/cc'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/myvv172x2am72534zgn9wx0qp5amq6a8-gcc-wrapper-14.3.0/bin/cpp' and `/nix/store/yng1lcnccgq66i68g4xg8y5qrk30y9s0-clang-wrapper-21.1.7/bin/cpp'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/myvv172x2am72534zgn9wx0qp5amq6a8-gcc-wrapper-14.3.0/bin/ld.bfd' and `/nix/store/yng1lcnccgq66i68g4xg8y5qrk30y9s0-clang-wrapper-21.1.7/bin/ld.bfd'
@@ -195,6 +198,7 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/LICENSE' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/LICENSE'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/package.json' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/package.json'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/lib/index.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/libnpmaccess/lib/index.js'
+building '/nix/store/0jl1gfv80975is8jwhgwnz0jlkf55471-nixos-generated-dconf-keyfiles.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/LICENSE' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/LICENSE'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/src/common.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/src/common.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/src/index.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/debug/src/index.js'
@@ -493,6 +497,7 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/queue.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/queue.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/async.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/async.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/sync.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/sync.js'
+building '/nix/store/lcrk58ys3bb5lz6b7hcldzqwf8yyl1p8-dconf-db.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/group-files.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/group-files.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/walk-directory.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/walk-directory.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/push-file.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/tinyglobby/node_modules/fdir/dist/api/functions/push-file.js'
@@ -783,6 +788,7 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/graceful-fs/package.json' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/graceful-fs/package.json'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/LICENSE.md' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/LICENSE.md'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/package.json' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/package.json'
+building '/nix/store/3xm4lw0jjfn8rn31q2rz4x3iyxjq5fby-gdm.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/json-stream.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/json-stream.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/index.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/index.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/auth.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/npm-registry-fetch/lib/auth.js'
@@ -1021,6 +1027,7 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/unique-slug/lib/index.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/unique-slug/lib/index.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/bench.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/bench.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/LICENSE' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/LICENSE'
+building '/nix/store/h684svib0ak5i94i6rvrs17vc3mlcyz1-dconf-system-config.drv'...
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/examples/twitterfeed.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/examples/twitterfeed.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/jsonparse.js' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/jsonparse.js'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/nrxnqp8dhn3lz9hl5b23x2g838jdi0xv-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/samplejson/basic.json' and `/nix/store/ymxm7yz4gsgnp2r6p92qrscw026094dy-nodejs-22.21.1/lib/node_modules/npm/node_modules/jsonparse/samplejson/basic.json'
@@ -2426,21 +2433,21 @@ pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/zp50236zrxhl4bky
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/zp50236zrxhl4bkycc27bjnivd7lb00f-rustup-1.28.2/bin/cargo-fmt' and `/nix/store/npncn9v3yb14d41lf42cwlimhpkpmfbc-rustfmt-1.91.1/bin/cargo-fmt'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/zp50236zrxhl4bkycc27bjnivd7lb00f-rustup-1.28.2/bin/cargo-clippy' and `/nix/store/hsmy1l4bhr47mbkvksfcnhz9xglsb8ws-clippy-1.91.1/bin/cargo-clippy'
 pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/zp50236zrxhl4bkycc27bjnivd7lb00f-rustup-1.28.2/bin/rust-analyzer' and `/nix/store/5mc9ik4cqh5w8lq6m5ypy8j8cbfzjhjh-rust-analyzer-2025-10-28/bin/rust-analyzer'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/mqrh18zfxh86z88j1j6swpvcc0mgmln8-steam-1.0.0.85/bin/steam' and `/nix/store/adfl3bwpxfs4bfgqxpiv2lqhz0b808nb-steam-1.0.0.85/bin/steam'
-pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/3dg5xnpxdqlvz2wzm1zssjibnsfrchlz-steam-run/bin/steam-run' and `/nix/store/ja6iax654kbyc4b7vjdvs116960pk1yv-steam-run/bin/steam-run'
-created 26489 symlinks in user environment
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/fqz20p50jy6yyvdjiypwclqzsy1cxg8p-steam-1.0.0.85/bin/steam' and `/nix/store/adfl3bwpxfs4bfgqxpiv2lqhz0b808nb-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/5ziwbb1728jpgr7yr43z53xj9v25xqs4-steam-run/bin/steam-run' and `/nix/store/ja6iax654kbyc4b7vjdvs116960pk1yv-steam-run/bin/steam-run'
+created 26487 symlinks in user environment
 gtk-update-icon-cache: Cache file created successfully.
-building '/nix/store/xhmmdjs2hjkhpql5265ngqka1aagk9cd-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/p5mi849dpj3fl5p902aw5jw5xy26kw7p-dbus-1.drv'...
-building '/nix/store/zpwxw3py2sgd2kms1gxdfmnvdnjks184-unit-accounts-daemon.service.drv'...
-building '/nix/store/mm8a3ir0axmm7bjhflzi0wq5x0fpixfi-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/08fxjnjsnlcr7a21mg0lsgvfxaw2bdaf-unit-polkit.service.drv'...
-building '/nix/store/q474xp0ipykc9s3d0psv4f9fhnr34m11-unit-dbus.service.drv'...
-building '/nix/store/ybx855c6kahz55bf5h14pgwnkk5ch24g-unit-dbus.service.drv'...
-building '/nix/store/gjb2s4w5s2n2p3cpbsnz063z2894dqni-user-units.drv'...
-building '/nix/store/xd4nm83vxji07y5j407s10y3x3n8piaw-system-units.drv'...
-building '/nix/store/rd9v8xz4jqwn7ggkn5vr3zpzbwf3s5bk-etc.drv'...
-building '/nix/store/w924jv5ynmw7hgvzlnv092hhl2jm1hmr-nixos-system-rits-25.11.4506.078d69f03934.drv'...
+building '/nix/store/mfj8lvnrb3lq3h0745p1i4zi79qlvs05-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/n9bzp9yjf36swvn1rgdl7bjsiykgwbr2-dbus-1.drv'...
+building '/nix/store/wib53zf51i8d1xfgqw72lpdzi2y58mzi-unit-accounts-daemon.service.drv'...
+building '/nix/store/zmg96di7v9vbsb5gm54m6y1s3h922ml3-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/5803dl980nrg0i3y4v9w8arbvm2mfc3m-unit-polkit.service.drv'...
+building '/nix/store/9928zyyqdjx4ldl6d8ricr39gnr8iax1-unit-dbus.service.drv'...
+building '/nix/store/vfz09lvrj2m9srczr9rdzg6c0y4ngwlc-unit-dbus.service.drv'...
+building '/nix/store/gry7792hxg41z9ikmcxfwjml16iqygj7-system-units.drv'...
+building '/nix/store/c117ar6ndgxqv0yjbhgha9l3zf5cld8z-user-units.drv'...
+building '/nix/store/8spqxgzg0nfr8w98hqs3fc7fc8a2pcma-etc.drv'...
+building '/nix/store/a0y66qys952srjkpj8qnhcyh7mrl89xn-nixos-system-rits-25.11.5198.e576e3c9cf9b.drv'...
 stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
@@ -2450,4 +2457,4 @@ reloading the following units: dbus.service
 restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
 the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/8wj7bhha2pdxrffsb9y4rkx31sz90sjq-nixos-system-rits-25.11.4506.078d69f03934
+Done. The new configuration is /nix/store/r49k16dsckqw2axp4imapmyqyx7mf5df-nixos-system-rits-25.11.5198.e576e3c9cf9b

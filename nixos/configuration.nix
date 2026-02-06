@@ -95,6 +95,16 @@
     ];
   };
 
+  programs.dconf.profiles.gdm.databases = [
+    {
+      settings = {
+        "org/gnome/desktop/background" = {
+          picture-uri-dark = "file:///home/si/1-vault/2-media/1-wallpapers/wpa.png";
+        };
+      };
+    }
+  ];
+
   ## Fonts ----
   fonts.packages = with pkgs; [
     nerd-fonts.hack
@@ -252,7 +262,6 @@
   nixpkgs.config.allowUnfree = true;
 
   nixpkgs.config.permittedInsecurePackages = [
-    "electron-27.3.11"
     "electron-33.4.11"
     "electron-36.9.5"
   ];
@@ -363,7 +372,6 @@
     # System and Window Manager Utilities
     bash
     zsh
-    betterlockscreen
     bspwm
     calc
     feh

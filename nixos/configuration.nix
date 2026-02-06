@@ -99,7 +99,7 @@
     {
       settings = {
         "org/gnome/desktop/background" = {
-          picture-uri-dark = "file:///home/si/1-vault/2-media/1-wallpapers/wpa.png";
+          picture-uri = "file:///home/si/1-vault/2-media/1-wallpapers/wpa.png";
         };
       };
     }

@@ -95,16 +95,6 @@
     ];
   };
 
-  programs.dconf.profiles.gdm.databases = [
-    {
-      settings = {
-        "org/gnome/desktop/background" = {
-          picture-uri = "file:///home/si/1-vault/2-media/1-wallpapers/wpa.png";
-        };
-      };
-    }
-  ];
-
   ## Fonts ----
   fonts.packages = with pkgs; [
     nerd-fonts.hack

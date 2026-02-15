@@ -27,7 +27,7 @@
   system.autoUpgrade = {
     enable = true;
     allowReboot = false;
-    operation = "boot"; # Stage updates for next boot
+    operation = "boot";
   };
 
   system.stateVersion = "25.11";

@@ -22,11 +22,14 @@
   };
 
   networking.hostName = "rits";
-  # networking.hostName = "mori";
   networking.networkmanager.enable = true;
 
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = false;
+    operation = "boot"; # Stage updates for next boot
+  };
+
   system.stateVersion = "25.11";
 
   # Firewall configuration for Sunshine

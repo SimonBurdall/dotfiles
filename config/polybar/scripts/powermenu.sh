@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-## Author  : Aditya Shakya
-## Mail    : adi1090x@gmail.com
-## Github  : @adi1090x
-## Twitter : @adi1090x
-
 dir="~/.config/polybar/scripts/rofi"
 uptime=$(uptime | awk -F'( |,|)+' '{print $4}')
 
@@ -13,7 +8,6 @@ rofi_command="rofi -no-config -theme $dir/powermenu.rasi"
 # Options
 shutdown="󰐥 Shutdown"
 reboot="󰜉 Restart"
-lock="󰌾 Lock"
 logout="󰍃 Logout"
 
 # Confirmation
@@ -32,7 +26,7 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$logout\n$reboot\n$shutdown"
+options="$logout\n$reboot\n$shutdown"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 0)"
 case $chosen in
@@ -55,9 +49,6 @@ case $chosen in
         else
 			msg
         fi
-        ;;
-    $lock)
-			betterlockscreen -l
         ;;
     $logout)
 		ans=$(confirm_exit &)

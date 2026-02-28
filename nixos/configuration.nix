@@ -317,6 +317,7 @@
     libv4l
     lsfg-vk
     lsfg-vk-ui
+    wine
     zlib
 
     # Creative Software

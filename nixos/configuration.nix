@@ -352,7 +352,6 @@
     heroic
     keepassxc
     kitty
-    maestral
     obsidian
     pocket-casts
     rclone

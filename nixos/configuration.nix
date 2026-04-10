@@ -32,10 +32,11 @@
 
   system.stateVersion = "25.11";
 
-  # Firewall configuration for Sunshine
+  # Firewall configuration
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [47984 47989 47990 48010 8008 8009 8010 8443];
+    allowedTCPPorts = [47984 47989 47990 48010 8008 8009 8010 8443 8384 22000];
+    allowedUDPPorts = [22000 21027];
     allowedUDPPortRanges = [
       {
         from = 47998;
@@ -189,6 +190,14 @@
     };
   };
 
+  services.syncthing = {
+    enable = true;
+    user = "si";
+    group = "users";
+    dataDir = "/home/si/2-syncthing";
+    configDir = "/home/si/.config/syncthing";
+  };
+
   services.sunshine = {
     enable = true;
     autoStart = true;
@@ -248,7 +257,7 @@
   services.wivrn = {
     enable = true;
     openFirewall = true;
-    defaultRuntime = true;
+    #defaultRuntime = true;
   };
 
   ## Package Management ----

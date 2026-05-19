@@ -368,6 +368,7 @@
     clonehero
     prismlauncher
     moonlight-qt
+    protonup-qt
     gamemode
 
     # System and Window Manager Utilities

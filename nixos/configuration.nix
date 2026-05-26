@@ -285,11 +285,11 @@
     lazygit
     lua-language-server
     neovim
-    nodePackages.nodejs
-    nodePackages.npm
-    nodePackages.typescript
-    nodePackages.typescript-language-server
-    nodePackages.yarn
+    nodejs
+    #npm
+    typescript
+    typescript-language-server
+    yarn
     openssl
     openssl.dev
     pkg-config

@@ -295,11 +295,11 @@
     pkg-config
     postgresql
     pyright
-    python312
-    python312Packages.black
-    python312Packages.django
-    python312Packages.pip
-    python312Packages.virtualenv
+    python313
+    python313Packages.black
+    python313Packages.django
+    python313Packages.pip
+    python313Packages.virtualenv
     ruff
     rust-analyzer
     rustc

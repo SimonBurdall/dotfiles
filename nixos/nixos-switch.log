@@ -7,5 +7,5 @@ warning: not applying UID change of user ‘gdm-greeter-4’ (60582 -> 60581) in
 setting up /etc...
 reloading user units for si...
 restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service
+the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
 Done. The new configuration is /nix/store/mbjwnmxna9zs0cmw3n7g1jkg71jkx030-nixos-system-rits-26.05.889.b51242d7d436

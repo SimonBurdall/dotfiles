@@ -361,7 +361,7 @@
     # REMOVED: bspwm, sxhkd, picom, polybar, rofi, flameshot, xclip, feh
     waybar # ADDED: replaces polybar
     rofi
-    dunst
+    swaynotificationcenter
     libnotify
     grim # ADDED: native wayland screenshots
     slurp # ADDED: area selection for grim

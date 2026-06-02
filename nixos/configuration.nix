@@ -366,7 +366,6 @@
     grim # ADDED: native wayland screenshots
     slurp # ADDED: area selection for grim
     grimblast # ADDED: grim wrapper, nicer ergonomics
-    hyprpaper # ADDED: wallpaper daemon
     hyprlock # ADDED: lockscreen
     hypridle # ADDED: idle daemon (triggers hyprlock)
     wl-clipboard # ADDED: replaces xclip

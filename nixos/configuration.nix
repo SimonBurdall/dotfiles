@@ -88,6 +88,7 @@
   };
 
   services.displayManager.gdm.enable = true;
+  services.displayManager.defaultSession = "none+bspwm";
   services.desktopManager.gnome.enable = true;
   services.gnome.core-apps.enable = false;
 

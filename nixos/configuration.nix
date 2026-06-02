@@ -8,14 +8,13 @@
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput"];
+  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"]; # ADDED: nvidia kernel modules required for Hyprland
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";
     "net.core.rmem_max" = 134217728;
     "net.core.wmem_max" = 134217728;
     "net.core.netdev_max_backlog" = 5000;
-
     "net.ipv4.tcp_low_latency" = 1;
     "net.ipv4.tcp_timestamps" = 1;
     "net.ipv4.tcp_window_scaling" = 1;
@@ -32,7 +31,6 @@
 
   system.stateVersion = "25.11";
 
-  # Firewall configuration
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [47984 47989 47990 48010 8008 8009 8010 8443 8384 22000];
@@ -41,11 +39,11 @@
       {
         from = 47998;
         to = 48000;
-      } # Sunshine
+      }
       {
         from = 32768;
         to = 61000;
-      } # Chromecast streaming
+      }
     ];
   };
 
@@ -63,22 +61,19 @@
     isNormalUser = true;
     description = "Simon";
     extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input" "usb"];
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [];
   };
 
-  # Create groups if they don't exist
   users.groups.plugdev = {};
   users.groups.usb = {};
 
   ## Display, Desktop Environment, and Window Manager ----
   services.xserver = {
     enable = true;
-    windowManager.bspwm.enable = true;
+    # REMOVED: windowManager.bspwm.enable — replacing with Hyprland
     xkb.layout = "gb";
     xkb.variant = "";
     videoDrivers = ["nvidia"];
-
     serverFlagsSection = ''
       Option "BlankTime" "0"
       Option "StandbyTime" "0"
@@ -87,16 +82,28 @@
     '';
   };
 
-  services.displayManager.gdm.enable = true;
-  services.displayManager.defaultSession = "none+bspwm";
+  # CHANGED: gdm -> sddm, defaultSession -> hyprland, kept GNOME as fallback
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+  services.displayManager.defaultSession = "hyprland";
   services.desktopManager.gnome.enable = true;
   services.gnome.core-apps.enable = false;
 
+  # ADDED: Hyprland
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true; # needed for any X11 apps you still run
+  };
+
+  # CHANGED: added hyprland portal, kept gtk portal for GNOME fallback
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland # ADDED
+      xdg-desktop-portal-gtk # kept for GNOME
     ];
   };
 
@@ -126,7 +133,7 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     powerManagement.enable = true;
-    forceFullCompositionPipeline = true;
+    forceFullCompositionPipeline = true; # NOTE: may cause issues under Wayland, remove if you get flickering
     nvidiaPersistenced = true;
   };
 
@@ -207,19 +214,10 @@
   };
 
   services.udev.extraRules = ''
-    # Meta Quest USB detection (for ADB/sideloading)
     SUBSYSTEM=="usb", ATTR{idVendor}=="2833", MODE="0660", GROUP="plugdev", TAG+="uaccess"
-
-    # Sunshine input device rules
     KERNEL=="uinput", SUBSYSTEM=="misc", OPTIONS+="static_node=uinput", TAG+="uaccess"
-
-    # ZSA Moonlander
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="input"
-
-    # ZSA Moonlander keyboard (normal mode)
     SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", MODE="0660", GROUP="plugdev", TAG+="uaccess"
-
-    # ZSA Moonlander keyboard (bootloader/DFU mode)
     SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE="0660", GROUP="plugdev", TAG+="uaccess"
   '';
 
@@ -241,32 +239,18 @@
       unset TZ
       export PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1
     '';
-    extraPkgs = pkgs:
-      with pkgs; [
-        libgdiplus
-        libusb1
-        libv4l
-        pipewire
-      ];
-    extraLibraries = pkgs:
-      with pkgs; [
-        libusb1
-        libv4l
-      ];
+    extraPkgs = pkgs: with pkgs; [libgdiplus libusb1 libv4l pipewire];
+    extraLibraries = pkgs: with pkgs; [libusb1 libv4l];
   };
 
   services.wivrn = {
     enable = true;
     openFirewall = true;
-    #defaultRuntime = true;
   };
 
   ## Package Management ----
   nixpkgs.config.allowUnfree = true;
-
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-36.9.5"
-  ];
+  nixpkgs.config.permittedInsecurePackages = ["electron-36.9.5"];
 
   ## System Packages ----
   environment.systemPackages = with pkgs; [
@@ -287,7 +271,6 @@
     lua-language-server
     neovim
     nodejs
-    #npm
     typescript
     typescript-language-server
     yarn
@@ -372,14 +355,23 @@
     protonup-qt
     gamemode
 
-    # System and Window Manager Utilities
+    # System and Wayland Utilities
     bash
     zsh
-    bspwm
+    # REMOVED: bspwm, sxhkd, picom, polybar, rofi, flameshot, xclip, feh
+    waybar # ADDED: replaces polybar
+    rofi
+    dunst
+    libnotify
+    grim # ADDED: native wayland screenshots
+    slurp # ADDED: area selection for grim
+    grimblast # ADDED: grim wrapper, nicer ergonomics
+    hyprpaper # ADDED: wallpaper daemon
+    hyprlock # ADDED: lockscreen
+    hypridle # ADDED: idle daemon (triggers hyprlock)
+    wl-clipboard # ADDED: replaces xclip
     calc
-    feh
     fastfetch
-    flameshot
     fzf
     gdu
     killall
@@ -387,18 +379,13 @@
     mangohud
     networkmanager_dmenu
     nmap
-    #picom
     playerctl
-    polybar
     pywal
     ripgrep
-    rofi
     solaar
-    sxhkd
     unzip
     wireplumber
     zip
-    xclip
 
     # Monitoring Tools
     pciutils

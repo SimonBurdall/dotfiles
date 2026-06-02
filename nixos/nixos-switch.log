@@ -1,31 +1,1135 @@
 building the system configuration...
-these 6 derivations will be built:
-  /nix/store/56v0danpa7kc7c2pn7jacgvhwghwdq1p-unit-script-display-manager-pre-start.drv
-  /nix/store/2z8cpgnwpcfraqj2g1fmcv5c48l6idnq-unit-display-manager.service.drv
-  /nix/store/wl1gg61g54byzdv7q8k458k6w3lsa1qz-system-units.drv
-  /nix/store/zz6i6nnh9wy6dddl4p2p357ccbxgpxk9-etc.drv
-  /nix/store/5gic8nzsvm7mg480v4wl43wzm0aiyh53-activate.drv
-  /nix/store/kgw9022rdgj7yqjndk35dl1j9rpjikab-nixos-system-rits-26.05.889.b51242d7d436.drv
-these 2 paths will be fetched (18.3 KiB download, 103.2 KiB unpacked):
-  /nix/store/kdsvcmip5wnvng35vd3qkkwz1c41qvfm-python3.13-ordered-set-4.1.0
-  /nix/store/d3syins4l0myi3fh1mr4lrs7b05p41jy-set-session
-copying path '/nix/store/kdsvcmip5wnvng35vd3qkkwz1c41qvfm-python3.13-ordered-set-4.1.0' from 'https://cache.nixos.org'...
-copying path '/nix/store/d3syins4l0myi3fh1mr4lrs7b05p41jy-set-session' from 'https://cache.nixos.org'...
-building '/nix/store/56v0danpa7kc7c2pn7jacgvhwghwdq1p-unit-script-display-manager-pre-start.drv'...
-building '/nix/store/2z8cpgnwpcfraqj2g1fmcv5c48l6idnq-unit-display-manager.service.drv'...
-building '/nix/store/wl1gg61g54byzdv7q8k458k6w3lsa1qz-system-units.drv'...
-building '/nix/store/zz6i6nnh9wy6dddl4p2p357ccbxgpxk9-etc.drv'...
-building '/nix/store/5gic8nzsvm7mg480v4wl43wzm0aiyh53-activate.drv'...
-building '/nix/store/kgw9022rdgj7yqjndk35dl1j9rpjikab-nixos-system-rits-26.05.889.b51242d7d436.drv'...
+these 56 derivations will be built:
+  /nix/store/0vsgr943fwsr4frn51h0z9liypnz44zz-desktops.drv
+  /nix/store/28r6cccgsdnzcpq0kikfz60vkll3k96b-nixos.conf.drv
+  /nix/store/bvr7ylx3c2dysblvdfxclb0pyjkp1v5v-sddm-wrapped.drv
+  /nix/store/5vjvbpkmpjwnzh3idf2qbahm3qcg301n-dri-pkgconfig-stub.drv
+  /nix/store/bz9gpr1q5qj5yc3r0kf8c84brm3mki7l-xwayland-24.1.11.drv
+  /nix/store/dvx7x4rf8ykakzjhfcwkydm7v4m6s1j2-X11-fonts.drv
+  /nix/store/xwf7gq1rpiyxn8cw1x42aphl1k40hqqk-system-path.drv
+  /nix/store/4z61hnmqqds1fy00rx7a8s3q0nnik2cg-dbus-1.drv
+  /nix/store/9f7i6h3np61x3wx5gic4asmhjs5qsrj7-X-Restart-Triggers-dbus-broker.drv
+  /nix/store/ddxi0v5wpslyxd93s8n8jzs9pzs3p0zj-unit-dbus-broker.service.drv
+  /nix/store/z1p6ckza9gv78qvjiibg4py4y52bradr-unit-xdg-autostart-if-no-desktop-manager.target.drv
+  /nix/store/428r8kcnsk4bg4sjif8m33cylrg1q3ca-user-units.drv
+  /nix/store/4d1hm47ayxqwrphygiqbcdql42vmmcha-unit-dbus-broker.service.drv
+  /nix/store/5mpk0zhr1dzpxx6ck57smlfvw7s7ai2q-ensure-all-wrappers-paths-exist.drv
+  /nix/store/kcg3rxkq9q09s441pnvdymmp2c15gbak-users-groups.json.drv
+  /nix/store/5lvkf53hs7h4x5qadbiwr2apdywsa94b-sddm.pam.drv
+  /nix/store/5x10llqccpn82rnfas179n4y67xqwfv2-sddm-greeter.pam.drv
+  /nix/store/735pjpig9qk1a8n143y21ws8x45cdvp9-sddm-autologin.pam.drv
+  /nix/store/7qpkp47pb3npk45ffa6h2x7h4649clz8-system-generators.drv
+  /nix/store/n0qij7q6z7yib35haf4rcjqp1gjrqw9z-extra-udev-rules.drv
+  /nix/store/8jl1xvza2l2l3afwscvmwh7gmj5q9l2n-udev-rules.drv
+  /nix/store/5clrv29aph9cm02nrpzizv9403qiicsv-X-Restart-Triggers-systemd-udevd.drv
+  /nix/store/590wib0kzmk988l7xn5ql7kafbgnghpg-unit-systemd-udevd.service.drv
+  /nix/store/k2d9lzx0478chkqykzi2gp3yfvff98dc-X-Restart-Triggers-systemd-modules-load.drv
+  /nix/store/5hzi84bvc2jrx9wim6rl2z5a824nvxsx-unit-systemd-modules-load.service.drv
+  /nix/store/r4c0294bm7jygr4952x7lm96jjyccsga-nixos-tmpfiles.d.drv
+  /nix/store/qkc63rwqfzyij9isq0nv6q79ysqxyyyc-tmpfiles.d.drv
+  /nix/store/nggp0czr3wl3a1nbmgihjyxssxfv514i-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
+  /nix/store/db5i582jlca2zv176agkjjd42imqa5ga-unit-systemd-tmpfiles-resetup.service.drv
+  /nix/store/5k8gz7l89days92b1wwn7w8lpr12syr4-security-wrapper-Hyprland-x86_64-unknown-linux-musl.drv
+  /nix/store/snd09dqnyhym2rbydj9a5njdgwymcmms-unit-script-suid-sgid-wrappers-start.drv
+  /nix/store/h66hhx0kgs1s06zqq0w0wki13a4dsz91-unit-suid-sgid-wrappers.service.drv
+  /nix/store/9i9vha6kmnxd2rqpsdjdr5hnxrz7j738-X-Restart-Triggers-polkit.drv
+  /nix/store/x9kr8hr6cbkf2r01hpwsr7nm44lqkcxm-unit-polkit.service.drv
+  /nix/store/746f7zpx1z73w07yc4qpcxxmpy8hplr3-unit-script-display-manager-pre-start.drv
+  /nix/store/i0gfxcxfc86hsw2lir8vgfirfpanphp3-unit-script-display-manager-start.drv
+  /nix/store/xa6r8g8lxahl9fd1fn3m9xb69inx0mrp-unit-display-manager.service.drv
+  /nix/store/zzfcspf2lawifk0qc7w7clnwl2maqvmf-unit-accounts-daemon.service.drv
+  /nix/store/8gppr3z6kqjsv8150wdg0blnva89chq0-system-units.drv
+  /nix/store/jxv66wlh542jm7asbcj34dfj0jl3d21b-system-shutdown.drv
+  /nix/store/l44wv07szm27111dm7wfyg0s7j895gsp-user-generators.drv
+  /nix/store/qayycs1cs8q2535ij81yaxr86wm6bj2d-etc-pam-environment.drv
+  /nix/store/qclc0mvmny6v272dbmfdd4mjnfry56qm-swaylock.pam.drv
+  /nix/store/rwzdxpjr11rxpd2ixip8bsdppdy7ykx7-hwdb.bin.drv
+  /nix/store/xjc08jfv3p0dairx44sjbn5db2xljfxx-set-environment.drv
+  /nix/store/sig5dc38jw00q4cp6y1847wh49h1ly0p-etc-profile.drv
+  /nix/store/99b8w37slwwzdhlvf2znc1hxrwnwp82j-weston.ini.drv
+  /nix/store/gm8i3512fpcw9gq4xn36c4syh6c27qyl-Xstop.drv
+  /nix/store/siasl5r99bw0cddq3bsqc7v4s4fjc229-Xsetup.drv
+  /nix/store/l1xdgdha63jzlclsa03wxlwxp22qg5rq-xserver.conf.drv
+  /nix/store/z1qymssqc2apymiyvh78x0bnz29rdcjc-xserver-wrapper.drv
+  /nix/store/vgqff596h68sdm2n8jwfdycj499w910q-sddm.conf.drv
+  /nix/store/x45b7alkdyka0n7bjwbz0mlkzmyslsrn-etc.drv
+  /nix/store/nz0l07ymaks1qyaqjfijl82lvmbxm9kr-activate.drv
+  /nix/store/y7j9c1vik6fbhv0z16c9bnlmkidwff4y-dry-activate.drv
+  /nix/store/4yxvrjnxjyxi8g3ijbxcrs35zz6vzcwn-nixos-system-rits-26.05.889.b51242d7d436.drv
+these 67 paths will be fetched (65.7 MiB download, 139.2 MiB unpacked):
+  /nix/store/n0k7ghv91q439vysyzgp8wl5rwmjmqc8-aml-0.3.0
+  /nix/store/ad9nhz2iklkjr1pxl6bkdz57n5h9wzfx-aquamarine-0.11.0
+  /nix/store/f09c35fl818c1lfh0djn2vmiz5y9b43n-dmenu-5.4
+  /nix/store/xwps8n4w545idl7n4sgi570qs5y46br2-dunst-1.13.2
+  /nix/store/vpik7i1h87lm0x5cw4j7qsf5rcd3rvyn-dunst-1.13.2-man
+  /nix/store/81sv578s8gzkghq5w6asgpv66rbhz8ry-egl-wayland-1.1.21-dev
+  /nix/store/yki3yn11rvai09n21wpq2bwq190xlw7c-eglexternalplatform-1.2.1
+  /nix/store/qhalw26apy88wpbajfq4qj0ahi1dmam5-gcc-15.2.0-lib
+  /nix/store/r9wihvfzypgsimdqq36vm6qlkvxkiqrc-gcc-15.2.0-libgcc
+  /nix/store/pv7fh28ddxpsgxcwbgxj34fnqkvwa7xv-getopt-util-linux-2.42
+  /nix/store/48xzg4n4h5kdwxl1mn5z1kfld06m4qld-gpsd-3.27.5
+  /nix/store/nzczpvsj8ypkq75hxcal0yyr2821k68s-grimblast-0.1-unstable-2026-03-28
+  /nix/store/km3pyndrz47aibw6knlb9h876c82m65h-gtk-layer-shell-0.10.1
+  /nix/store/75xbrg3pnkw8bhpic581phdpdfywr47d-hyprcursor-0.1.13-lib
+  /nix/store/rimb4bi8rml6c3arz5mlx7gcplfv5j4a-hyprgraphics-0.5.1
+  /nix/store/4b8fs8hf07d3jkvsrdr12fzggy27z5dr-hypridle-0.1.7
+  /nix/store/ndq4688w4wjlip63msnlxld8zwcwr66l-hyprland-0.55.2
+  /nix/store/ir96xndvjmmacaadwvbshv6zv5gkz5f1-hyprland-0.55.2-man
+  /nix/store/dyc7adjk9hvfhwsd897nv3n22jqkfk42-hyprland-qt-support-0.1.0
+  /nix/store/9k1lifnzmiybhh43argn30fb3sandm7a-hyprland-qtutils-0.1.5
+  /nix/store/9amvxfbw3z6fg6ibisacic9fdy6hxf39-hyprlang-0.6.8
+  /nix/store/f8nzh14y4vb89qdfd3vl2c38i2bnxvdq-hyprlock-0.9.5
+  /nix/store/j8z7y8drw9c95zybrn3497d0gcawc9qn-hyprpaper-0.8.4
+  /nix/store/k467qpwx12jqmaksipp7n36jkhfizhq7-hyprpicker-0.4.7
+  /nix/store/c1vb4p1ijvak4s8qhgnnzbcnhjg0vxd8-hyprtoolkit-0.5.4
+  /nix/store/ccsw7fb5m1mhjc0xnd832zpm2hk1mp78-hyprutils-0.13.1
+  /nix/store/dfyna850hbjpvjr6wnlld8x8p6rnzfwm-hyprwire-0.3.1
+  /nix/store/i0iw7zmhf8mamnh2gd0vmdpaz70hfcl3-libdecor-0.2.5-dev
+  /nix/store/3d4dcszv5hxpxq6gx1yld8nfrcsay0r6-libdisplay-info-0.2.0
+  /nix/store/8p1mcqz2r9ms14m148qad566ww79vd7c-libmpdclient-2.24
+  /nix/store/874xnr83bs874bxz26fjnjkm9z3n72d0-libnotify-0.8.8-man
+  /nix/store/386zba5akg9xi4di3p0hcigwzm38abmw-libunwind-1.8.3-dev
+  /nix/store/f8mvvfbh5140q9njn2rhlwxfkphdh4za-libxaw-1.0.16-dev
+  /nix/store/kmlg8mxwz0i4lgpg9gfabj6akrnjkf8b-libxcb-errors-1.0.1
+  /nix/store/8qyll7z3ahflnp5n0ha54l09x8r5vdj0-libxfont_2-2.0.7-dev
+  /nix/store/05il012jfxq6mp6mz68pj854f2isami5-libxmu-1.3.1-dev
+  /nix/store/fsn94y6fx94fazzh8jx1czfiqx1jin7k-libxpm-3.5.19-bin
+  /nix/store/v300rri9cy7s6vym73ajs15rrqxidpjr-libxpm-3.5.19-dev
+  /nix/store/k9ivfg1czxldnmsxvsp8y4m5l6dda3ac-libxres-1.2.3-dev
+  /nix/store/1lk4y9ra3j0mw6y7n7kmdpygwnhlfccn-lua-5.4.7
+  /nix/store/ybkxvh4nr9nifr1rw5jjvjk90zs74g9d-lua-5.5.0
+  /nix/store/yc8g5k7mxs7zii1j4pkfz6pmflg5pdgw-mesa-gl-headers-25.1.0
+  /nix/store/k4h2r2i0f1x7llqk8a0l4f77s97w1rq4-meson-1.10.2
+  /nix/store/pv7bnrqva7pcaszchsf84f4dcpc2c37k-moreutils-0.70
+  /nix/store/lynhf3iys4w91iyckcn5f5c537l9llay-muparser-2.3.5
+  /nix/store/3yxrsb6w5b8kzgrn5vy1zqnw6nisl23s-neatvnc-0.9.6
+  /nix/store/2c3k33kj3rx37ffkzbk3m1z5m6403fy7-perl-5.42.0-env
+  /nix/store/7x3y2cp6147r0z2wsdg8xrdjycdlrys7-perl5.42.0-IO-Tty-1.20
+  /nix/store/6yl9w59fa0ng92f4xfa0zqz0jm8zchjm-perl5.42.0-IPC-Run-20231003.0
+  /nix/store/61f10qrj6acpk1l94x27kjvj26gah0gj-perl5.42.0-Time-Duration-1.21
+  /nix/store/x979xi5m9m27sfczslsg6pj17qgm06bg-pkgconf-2.5.1
+  /nix/store/48zgiq88cpnmmaw53gr1i4jj988g0ywi-pkgconf-2.5.1-lib
+  /nix/store/9c0l37g60k8w570jakcdz518m22dn9k8-pkgconf-wrapper-2.5.1
+  /nix/store/6q6sd0a2dy5i6azh0dvwgypsjnkrldvi-portaudio-190700_20210406
+  /nix/store/zisc9f1m53cfi5qzij1400qyccysiwy1-python3-3.13.13-env
+  /nix/store/3zh1l4pkgzi6s96dmsrz117xk58ysrpj-python3.13-pydbus-0.6.0
+  /nix/store/yk0rxs4rkcj9qmjlgfc7vakw1a4w9c7k-re2-2025-11-05
+  /nix/store/ig71rrpr0rs4j6yypl5ygnzv9xwfq1j0-sdbus-cpp-2.2.1
+  /nix/store/1das5sk6fa208mldfscw04cvlfcwsnqc-sddm-unwrapped-0.21.0
+  /nix/store/h6y6glfl3h1k3f23rqryikvky7ad87xc-sddm-unwrapped-0.21.0-man
+  /nix/store/qg0jcyc6fffnzl7j8ngvfc681jza8si8-slurp-1.5.0
+  /nix/store/7mllqb5aqvmswnawmq7y95abwzdsinv3-uwsm-0.26.4
+  /nix/store/wsw8yw6f2500cvxjh84n80xb1v3hdgib-waybar-0.15.0
+  /nix/store/f5dniafs8bs0zj2r6cs3bsifnd1ggmgj-weston-15.0.0
+  /nix/store/1qvlcifd9v0lr9gfl54npx3bp11a9a01-xdg-desktop-portal-hyprland-1.3.12
+  /nix/store/hsgk7bf3w23ww53nkqmbs2hsas3vhjlp-xtrans-1.6.0
+  /nix/store/302gff6zb1y6ih6nj41wnrw189xc5gca-xwayland-24.1.11.tar.xz
+copying path '/nix/store/vpik7i1h87lm0x5cw4j7qsf5rcd3rvyn-dunst-1.13.2-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/ir96xndvjmmacaadwvbshv6zv5gkz5f1-hyprland-0.55.2-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/874xnr83bs874bxz26fjnjkm9z3n72d0-libnotify-0.8.8-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/xwps8n4w545idl7n4sgi570qs5y46br2-dunst-1.13.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/r9wihvfzypgsimdqq36vm6qlkvxkiqrc-gcc-15.2.0-libgcc' from 'https://cache.nixos.org'...
+copying path '/nix/store/qg0jcyc6fffnzl7j8ngvfc681jza8si8-slurp-1.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/pv7fh28ddxpsgxcwbgxj34fnqkvwa7xv-getopt-util-linux-2.42' from 'https://cache.nixos.org'...
+copying path '/nix/store/48xzg4n4h5kdwxl1mn5z1kfld06m4qld-gpsd-3.27.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/km3pyndrz47aibw6knlb9h876c82m65h-gtk-layer-shell-0.10.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/8p1mcqz2r9ms14m148qad566ww79vd7c-libmpdclient-2.24' from 'https://cache.nixos.org'...
+copying path '/nix/store/kmlg8mxwz0i4lgpg9gfabj6akrnjkf8b-libxcb-errors-1.0.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/ybkxvh4nr9nifr1rw5jjvjk90zs74g9d-lua-5.5.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/lynhf3iys4w91iyckcn5f5c537l9llay-muparser-2.3.5' from 'https://cache.nixos.org'...
+copying path '/nix/store/6q6sd0a2dy5i6azh0dvwgypsjnkrldvi-portaudio-190700_20210406' from 'https://cache.nixos.org'...
+copying path '/nix/store/ig71rrpr0rs4j6yypl5ygnzv9xwfq1j0-sdbus-cpp-2.2.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/yk0rxs4rkcj9qmjlgfc7vakw1a4w9c7k-re2-2025-11-05' from 'https://cache.nixos.org'...
+building '/nix/store/28r6cccgsdnzcpq0kikfz60vkll3k96b-nixos.conf.drv'...
+building '/nix/store/735pjpig9qk1a8n143y21ws8x45cdvp9-sddm-autologin.pam.drv'...
+building '/nix/store/5x10llqccpn82rnfas179n4y67xqwfv2-sddm-greeter.pam.drv'...
+building '/nix/store/5lvkf53hs7h4x5qadbiwr2apdywsa94b-sddm.pam.drv'...
+building '/nix/store/qclc0mvmny6v272dbmfdd4mjnfry56qm-swaylock.pam.drv'...
+building '/nix/store/kcg3rxkq9q09s441pnvdymmp2c15gbak-users-groups.json.drv'...
+building '/nix/store/dvx7x4rf8ykakzjhfcwkydm7v4m6s1j2-X11-fonts.drv'...
+building '/nix/store/siasl5r99bw0cddq3bsqc7v4s4fjc229-Xsetup.drv'...
+building '/nix/store/gm8i3512fpcw9gq4xn36c4syh6c27qyl-Xstop.drv'...
+building '/nix/store/5vjvbpkmpjwnzh3idf2qbahm3qcg301n-dri-pkgconfig-stub.drv'...
+building '/nix/store/n0qij7q6z7yib35haf4rcjqp1gjrqw9z-extra-udev-rules.drv'...
+building '/nix/store/r4c0294bm7jygr4952x7lm96jjyccsga-nixos-tmpfiles.d.drv'...
+building '/nix/store/z1p6ckza9gv78qvjiibg4py4y52bradr-unit-xdg-autostart-if-no-desktop-manager.target.drv'...
+building '/nix/store/99b8w37slwwzdhlvf2znc1hxrwnwp82j-weston.ini.drv'...
+building '/nix/store/746f7zpx1z73w07yc4qpcxxmpy8hplr3-unit-script-display-manager-pre-start.drv'...
+building '/nix/store/i0gfxcxfc86hsw2lir8vgfirfpanphp3-unit-script-display-manager-start.drv'...
+copying path '/nix/store/n0k7ghv91q439vysyzgp8wl5rwmjmqc8-aml-0.3.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/f09c35fl818c1lfh0djn2vmiz5y9b43n-dmenu-5.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/i0iw7zmhf8mamnh2gd0vmdpaz70hfcl3-libdecor-0.2.5-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/3d4dcszv5hxpxq6gx1yld8nfrcsay0r6-libdisplay-info-0.2.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/386zba5akg9xi4di3p0hcigwzm38abmw-libunwind-1.8.3-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/05il012jfxq6mp6mz68pj854f2isami5-libxmu-1.3.1-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/8qyll7z3ahflnp5n0ha54l09x8r5vdj0-libxfont_2-2.0.7-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/1lk4y9ra3j0mw6y7n7kmdpygwnhlfccn-lua-5.4.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/yc8g5k7mxs7zii1j4pkfz6pmflg5pdgw-mesa-gl-headers-25.1.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/k9ivfg1czxldnmsxvsp8y4m5l6dda3ac-libxres-1.2.3-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/k4h2r2i0f1x7llqk8a0l4f77s97w1rq4-meson-1.10.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/7x3y2cp6147r0z2wsdg8xrdjycdlrys7-perl5.42.0-IO-Tty-1.20' from 'https://cache.nixos.org'...
+copying path '/nix/store/61f10qrj6acpk1l94x27kjvj26gah0gj-perl5.42.0-Time-Duration-1.21' from 'https://cache.nixos.org'...
+copying path '/nix/store/fsn94y6fx94fazzh8jx1czfiqx1jin7k-libxpm-3.5.19-bin' from 'https://cache.nixos.org'...
+copying path '/nix/store/48zgiq88cpnmmaw53gr1i4jj988g0ywi-pkgconf-2.5.1-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/3zh1l4pkgzi6s96dmsrz117xk58ysrpj-python3.13-pydbus-0.6.0' from 'https://cache.nixos.org'...
+building '/nix/store/k2d9lzx0478chkqykzi2gp3yfvff98dc-X-Restart-Triggers-systemd-modules-load.drv'...
+building '/nix/store/y7j9c1vik6fbhv0z16c9bnlmkidwff4y-dry-activate.drv'...
+building '/nix/store/rwzdxpjr11rxpd2ixip8bsdppdy7ykx7-hwdb.bin.drv'...
+building '/nix/store/8jl1xvza2l2l3afwscvmwh7gmj5q9l2n-udev-rules.drv'...
+Adding hwdb files for package /nix/store/a8avqfxd649rfgfpqldja6v38ljb8fj5-systemd-260.1
+copying path '/nix/store/qhalw26apy88wpbajfq4qj0ahi1dmam5-gcc-15.2.0-lib' from 'https://cache.nixos.org'...
+copying path '/nix/store/1das5sk6fa208mldfscw04cvlfcwsnqc-sddm-unwrapped-0.21.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/wsw8yw6f2500cvxjh84n80xb1v3hdgib-waybar-0.15.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/h6y6glfl3h1k3f23rqryikvky7ad87xc-sddm-unwrapped-0.21.0-man' from 'https://cache.nixos.org'...
+copying path '/nix/store/hsgk7bf3w23ww53nkqmbs2hsas3vhjlp-xtrans-1.6.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/302gff6zb1y6ih6nj41wnrw189xc5gca-xwayland-24.1.11.tar.xz' from 'https://cache.nixos.org'...
+copying path '/nix/store/f8mvvfbh5140q9njn2rhlwxfkphdh4za-libxaw-1.0.16-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/v300rri9cy7s6vym73ajs15rrqxidpjr-libxpm-3.5.19-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/3yxrsb6w5b8kzgrn5vy1zqnw6nisl23s-neatvnc-0.9.6' from 'https://cache.nixos.org'...
+copying path '/nix/store/6yl9w59fa0ng92f4xfa0zqz0jm8zchjm-perl5.42.0-IPC-Run-20231003.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/x979xi5m9m27sfczslsg6pj17qgm06bg-pkgconf-2.5.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/zisc9f1m53cfi5qzij1400qyccysiwy1-python3-3.13.13-env' from 'https://cache.nixos.org'...
+building '/nix/store/xa6r8g8lxahl9fd1fn3m9xb69inx0mrp-unit-display-manager.service.drv'...
+building '/nix/store/5hzi84bvc2jrx9wim6rl2z5a824nvxsx-unit-systemd-modules-load.service.drv'...
+building '/nix/store/l1xdgdha63jzlclsa03wxlwxp22qg5rq-xserver.conf.drv'...
+Adding hwdb files for package /nix/store/5xm241brxmbmqw0rm1p988q1v3wa1h3n-mutter-50.1
+Adding hwdb files for package /nix/store/x9ifyy9s6ap0f5lwy66z8nhyvbajd3da-ipv6-privacy-extensions.rules
+Adding hwdb files for package /nix/store/vwq7s7xj2rp75gp11xhn5ha8xplphhxq-ipv6-privacy-extensions.rules
+Adding hwdb files for package /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39
+Adding hwdb files for package /nix/store/xci5rszazbdgpvmi52jfm1s02wvjajvr-bcache-tools-1.1
+Adding hwdb files for package /nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8
+Adding hwdb files for package /nix/store/0r23azzqjkalxs3c5z92i9z26q17xcfg-sunshine-2025.924.154138
+Adding hwdb files for package /nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0
+Adding hwdb files for package /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2
+Adding hwdb files for package /nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1
+Adding hwdb files for package /nix/store/n78i97lcyazhsvsxr6bjfgk0p0fmm7bs-udisks-2.11.1
+Adding hwdb files for package /nix/store/i0jxg0xgvsqx11iv67nwqcl6i3q2pk9v-extra-udev-rules
+Adding hwdb files for package /nix/store/cphhvd8mjgfzlw1c12pvs6n1wnhjl8vm-extra-hwdb-file
+Adding hwdb files for package /nix/store/n7dybpimr865c0qqhd4pc7wplzxsr6h9-power-profiles-daemon-0.30
+Adding hwdb files for package /nix/store/i5zci5kqs9pmrikya56kf9awi163ww9q-libinput-1.31.1
+Adding hwdb files for package /nix/store/10m8rdc3qqrdsv9bnsa1ivrrnj0y8lhw-bolt-0.9.8
+Adding hwdb files for package /nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86
+Adding hwdb files for package /nix/store/m2kqwy3rb25dy5zi5sjl4f6raryb67y9-pipewire-1.6.5
+Adding hwdb files for package /nix/store/cawvpggnd4mspb4nyv1llp5985f54p4y-libmtp-1.1.22
+Adding hwdb files for package /nix/store/6jw52bmf68qfpcyxhyh9gb1avir5x7s3-gnome-settings-daemon-50.1
+Adding hwdb files for package /nix/store/qdz52zk6isqw87r5q7svp8sri1gyrfvz-steam-devices-udev-rules-1.0.0.61-unstable-2026-04-16
+Adding hwdb files for package /nix/store/5l7jn4kdfpkxbi0zwlby4xa1ixwckljh-solaar-1.1.19-udev
+Generating hwdb database...
+
+Adding rules for package /nix/store/5xm241brxmbmqw0rm1p988q1v3wa1h3n-mutter-50.1
+Copying /nix/store/5xm241brxmbmqw0rm1p988q1v3wa1h3n-mutter-50.1/lib/udev/rules.d/61-mutter.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/61-mutter.rules
+Adding rules for package /nix/store/x9ifyy9s6ap0f5lwy66z8nhyvbajd3da-ipv6-privacy-extensions.rules
+Copying /nix/store/x9ifyy9s6ap0f5lwy66z8nhyvbajd3da-ipv6-privacy-extensions.rules/etc/udev/rules.d/98-ipv6-privacy-extensions.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/98-ipv6-privacy-extensions.rules
+Adding rules for package /nix/store/vwq7s7xj2rp75gp11xhn5ha8xplphhxq-ipv6-privacy-extensions.rules
+Copying /nix/store/vwq7s7xj2rp75gp11xhn5ha8xplphhxq-ipv6-privacy-extensions.rules/etc/udev/rules.d/99-ipv6-privacy-extensions.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/99-ipv6-privacy-extensions.rules
+Adding rules for package /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39
+Copying /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39/lib/udev/rules.d/10-dm.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/10-dm.rules
+Copying /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39/lib/udev/rules.d/11-dm-lvm.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/11-dm-lvm.rules
+Copying /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39/lib/udev/rules.d/13-dm-disk.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/13-dm-disk.rules
+Copying /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39/lib/udev/rules.d/69-dm-lvm.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/69-dm-lvm.rules
+Copying /nix/store/q83h4nq1ina1a00s01agwsygdy9vac3g-lvm2-2.03.39/lib/udev/rules.d/95-dm-notify.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/95-dm-notify.rules
+Adding rules for package /nix/store/xci5rszazbdgpvmi52jfm1s02wvjajvr-bcache-tools-1.1
+Copying /nix/store/xci5rszazbdgpvmi52jfm1s02wvjajvr-bcache-tools-1.1/lib/udev/rules.d/69-bcache.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/69-bcache.rules
+Adding rules for package /nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8
+Copying /nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8/lib/udev/rules.d/69-cd-sensors.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/69-cd-sensors.rules
+Copying /nix/store/5gndkw05j5j478i74asyfwwkmr4lppxk-colord-1.4.8/lib/udev/rules.d/95-cd-devices.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/95-cd-devices.rules
+Adding rules for package /nix/store/0r23azzqjkalxs3c5z92i9z26q17xcfg-sunshine-2025.924.154138
+Adding rules for package /nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0
+Copying /nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0/lib/udev/rules.d/84-nm-drivers.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/84-nm-drivers.rules
+Copying /nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0/lib/udev/rules.d/85-nm-unmanaged.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/85-nm-unmanaged.rules
+Copying /nix/store/qg9zw2psnziqnl4yyqrrajd7ca0qgvpa-networkmanager-1.56.0/lib/udev/rules.d/90-nm-thunderbolt.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/90-nm-thunderbolt.rules
+Adding rules for package /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-broadmobi-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-broadmobi-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-cellient.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-cellient.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-cinterion-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-cinterion-port-types.rules
+copying path '/nix/store/ccsw7fb5m1mhjc0xnd832zpm2hk1mp78-hyprutils-0.13.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/2c3k33kj3rx37ffkzbk3m1z5m6403fy7-perl-5.42.0-env' from 'https://cache.nixos.org'...
+copying path '/nix/store/7mllqb5aqvmswnawmq7y95abwzdsinv3-uwsm-0.26.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/f5dniafs8bs0zj2r6cs3bsifnd1ggmgj-weston-15.0.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/9c0l37g60k8w570jakcdz518m22dn9k8-pkgconf-wrapper-2.5.1' from 'https://cache.nixos.org'...
+building '/nix/store/bvr7ylx3c2dysblvdfxclb0pyjkp1v5v-sddm-wrapped.drv'...
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-dell-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-dell-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-dlink-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-dlink-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-ericsson-mbm.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-ericsson-mbm.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-fibocom-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-fibocom-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-foxconn-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-foxconn-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-gosuncn-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-gosuncn-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-haier-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-haier-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-huawei-net-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-huawei-net-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-linktop-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-linktop-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-longcheer-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-longcheer-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-mtk-legacy-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-mtk-legacy-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-netprisma-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-netprisma-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-nokia-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-nokia-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-qcom-soc.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-qcom-soc.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-quectel-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-quectel-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-rolling-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-rolling-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-sierra.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-sierra.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-simtech-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-simtech-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-telit-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-telit-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-tplink-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-tplink-port-types.rules
+copying path '/nix/store/ad9nhz2iklkjr1pxl6bkdz57n5h9wzfx-aquamarine-0.11.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/9amvxfbw3z6fg6ibisacic9fdy6hxf39-hyprlang-0.6.8' from 'https://cache.nixos.org'...
+copying path '/nix/store/rimb4bi8rml6c3arz5mlx7gcplfv5j4a-hyprgraphics-0.5.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/k467qpwx12jqmaksipp7n36jkhfizhq7-hyprpicker-0.4.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/dfyna850hbjpvjr6wnlld8x8p6rnzfwm-hyprwire-0.3.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/pv7bnrqva7pcaszchsf84f4dcpc2c37k-moreutils-0.70' from 'https://cache.nixos.org'...
+building '/nix/store/z1qymssqc2apymiyvh78x0bnz29rdcjc-xserver-wrapper.drv'...
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-ublox-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-ublox-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-x22x-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-x22x-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/77-mm-zte-port-types.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/77-mm-zte-port-types.rules
+Copying /nix/store/hfl05la40bahswmwic84xdzc168n6jcs-modemmanager-1.24.2/lib/udev/rules.d/80-mm-candidate.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/80-mm-candidate.rules
+Adding rules for package /nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1
+Copying /nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1/lib/udev/rules.d/60-upower-battery.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/60-upower-battery.rules
+Copying /nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1/lib/udev/rules.d/95-upower-hid.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/95-upower-hid.rules
+Copying /nix/store/9prf5gdap3i1q9i3rwcb6p155nhw5gkx-upower-1.91.1/lib/udev/rules.d/95-upower-wup.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/95-upower-wup.rules
+Adding rules for package /nix/store/n78i97lcyazhsvsxr6bjfgk0p0fmm7bs-udisks-2.11.1
+Copying /nix/store/n78i97lcyazhsvsxr6bjfgk0p0fmm7bs-udisks-2.11.1/lib/udev/rules.d/80-udisks2.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/80-udisks2.rules
+Adding rules for package /nix/store/i0jxg0xgvsqx11iv67nwqcl6i3q2pk9v-extra-udev-rules
+Copying /nix/store/i0jxg0xgvsqx11iv67nwqcl6i3q2pk9v-extra-udev-rules/etc/udev/rules.d/99-local.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/99-local.rules
+Adding rules for package /nix/store/cphhvd8mjgfzlw1c12pvs6n1wnhjl8vm-extra-hwdb-file
+Adding rules for package /nix/store/n7dybpimr865c0qqhd4pc7wplzxsr6h9-power-profiles-daemon-0.30
+Adding rules for package /nix/store/i5zci5kqs9pmrikya56kf9awi163ww9q-libinput-1.31.1
+Copying /nix/store/i5zci5kqs9pmrikya56kf9awi163ww9q-libinput-1.31.1/lib/udev/rules.d/80-libinput-device-groups.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/80-libinput-device-groups.rules
+Copying /nix/store/i5zci5kqs9pmrikya56kf9awi163ww9q-libinput-1.31.1/lib/udev/rules.d/90-libinput-fuzz-override.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/90-libinput-fuzz-override.rules
+Adding rules for package /nix/store/10m8rdc3qqrdsv9bnsa1ivrrnj0y8lhw-bolt-0.9.8
+Copying /nix/store/10m8rdc3qqrdsv9bnsa1ivrrnj0y8lhw-bolt-0.9.8/lib/udev/rules.d/90-bolt.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/90-bolt.rules
+Adding rules for package /nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86
+Copying /nix/store/m3hi0c84kp8way88qhjff5mnzhgfzagy-bluez-5.86/lib/udev/rules.d/97-hid2hci.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/97-hid2hci.rules
+Adding rules for package /nix/store/m2kqwy3rb25dy5zi5sjl4f6raryb67y9-pipewire-1.6.5
+Copying /nix/store/m2kqwy3rb25dy5zi5sjl4f6raryb67y9-pipewire-1.6.5/lib/udev/rules.d/90-pipewire-alsa.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/90-pipewire-alsa.rules
+Adding rules for package /nix/store/cawvpggnd4mspb4nyv1llp5985f54p4y-libmtp-1.1.22
+Copying /nix/store/cawvpggnd4mspb4nyv1llp5985f54p4y-libmtp-1.1.22/lib/udev/rules.d/69-libmtp.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/69-libmtp.rules
+Adding rules for package /nix/store/6jw52bmf68qfpcyxhyh9gb1avir5x7s3-gnome-settings-daemon-50.1
+Copying /nix/store/6jw52bmf68qfpcyxhyh9gb1avir5x7s3-gnome-settings-daemon-50.1/lib/udev/rules.d/61-gnome-settings-daemon-rfkill.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/61-gnome-settings-daemon-rfkill.rules
+Adding rules for package /nix/store/qdz52zk6isqw87r5q7svp8sri1gyrfvz-steam-devices-udev-rules-1.0.0.61-unstable-2026-04-16
+copying path '/nix/store/yki3yn11rvai09n21wpq2bwq190xlw7c-eglexternalplatform-1.2.1' from 'https://cache.nixos.org'...
+copying path '/nix/store/75xbrg3pnkw8bhpic581phdpdfywr47d-hyprcursor-0.1.13-lib' from 'https://cache.nixos.org'...
+Copying /nix/store/qdz52zk6isqw87r5q7svp8sri1gyrfvz-steam-devices-udev-rules-1.0.0.61-unstable-2026-04-16/lib/udev/rules.d/60-steam-input.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/60-steam-input.rules
+Copying /nix/store/qdz52zk6isqw87r5q7svp8sri1gyrfvz-steam-devices-udev-rules-1.0.0.61-unstable-2026-04-16/lib/udev/rules.d/60-steam-vr.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/60-steam-vr.rules
+Adding rules for package /nix/store/5l7jn4kdfpkxbi0zwlby4xa1ixwckljh-solaar-1.1.19-udev
+Copying /nix/store/5l7jn4kdfpkxbi0zwlby4xa1ixwckljh-solaar-1.1.19-udev/etc/udev/rules.d/42-logitech-unify-permissions.rules to /nix/store/7skghhi7dpc6mbg4r08pfcm5lw0z0wbz-udev-rules/42-logitech-unify-permissions.rules
+Checking that all programs called by relative paths in udev rules exist in /nix/store/a8avqfxd649rfgfpqldja6v38ljb8fj5-systemd-260.1/lib/udev... OK
+Checking that all programs called by absolute paths in udev rules exist... OK
+Verifying udev rules using udevadm verify...
+
+57 udev rules files have been checked.
+  Success: 57
+  Fail:    0
+OK
+copying path '/nix/store/dyc7adjk9hvfhwsd897nv3n22jqkfk42-hyprland-qt-support-0.1.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/4b8fs8hf07d3jkvsrdr12fzggy27z5dr-hypridle-0.1.7' from 'https://cache.nixos.org'...
+copying path '/nix/store/c1vb4p1ijvak4s8qhgnnzbcnhjg0vxd8-hyprtoolkit-0.5.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/f8nzh14y4vb89qdfd3vl2c38i2bnxvdq-hyprlock-0.9.5' from 'https://cache.nixos.org'...
+building '/nix/store/5clrv29aph9cm02nrpzizv9403qiicsv-X-Restart-Triggers-systemd-udevd.drv'...
+copying path '/nix/store/81sv578s8gzkghq5w6asgpv66rbhz8ry-egl-wayland-1.1.21-dev' from 'https://cache.nixos.org'...
+copying path '/nix/store/j8z7y8drw9c95zybrn3497d0gcawc9qn-hyprpaper-0.8.4' from 'https://cache.nixos.org'...
+copying path '/nix/store/9k1lifnzmiybhh43argn30fb3sandm7a-hyprland-qtutils-0.1.5' from 'https://cache.nixos.org'...
+building '/nix/store/590wib0kzmk988l7xn5ql7kafbgnghpg-unit-systemd-udevd.service.drv'...
+copying path '/nix/store/ndq4688w4wjlip63msnlxld8zwcwr66l-hyprland-0.55.2' from 'https://cache.nixos.org'...
+building '/nix/store/bz9gpr1q5qj5yc3r0kf8c84brm3mki7l-xwayland-24.1.11.drv'...
+building '/nix/store/qkc63rwqfzyij9isq0nv6q79ysqxyyyc-tmpfiles.d.drv'...
+Running phase: unpackPhase
+unpacking source archive /nix/store/302gff6zb1y6ih6nj41wnrw189xc5gca-xwayland-24.1.11.tar.xz
+building '/nix/store/nggp0czr3wl3a1nbmgihjyxssxfv514i-X-Restart-Triggers-systemd-tmpfiles-resetup.drv'...
+source root is xwayland-24.1.11
+setting SOURCE_DATE_EPOCH to timestamp 1777274748 of file "xwayland-24.1.11/xserver.ent.in"
+Running phase: patchPhase
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: configurePhase
+mesonConfigurePhase flags: --prefix=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11 --libdir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib --libexecdir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/libexec --bindir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/bin --sbindir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/sbin --includedir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/include --mandir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man --infodir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/info --localedir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/locale -Dauto_features=enabled -Dwrap_mode=nodownload --buildtype=plain -Dxcsecurity=true -Ddefault_font_path=/run/current-system/sw/share/X11/fonts -Dxkb_bin_dir=/nix/store/zp4yffmk461cs10pp8sm8y9jk235nwf5-xkbcomp-1.5.0/bin -Dxkb_dir=/nix/store/70naj3m24b7ynbzv211q50hlq4cmsv51-xkeyboard-config-2.47/etc/X11/xkb -Dxkb_output_dir=/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/X11/xkb/compiled -Dlibunwind=true
+The Meson build system
+Version: 1.10.2
+Source dir: /build/xwayland-24.1.11
+Build dir: /build/xwayland-24.1.11/build
+Build type: native build
+building '/nix/store/db5i582jlca2zv176agkjjd42imqa5ga-unit-systemd-tmpfiles-resetup.service.drv'...
+Project name: xwayland
+Project version: 24.1.11
+copying path '/nix/store/nzczpvsj8ypkq75hxcal0yyr2821k68s-grimblast-0.1-unstable-2026-03-28' from 'https://cache.nixos.org'...
+copying path '/nix/store/1qvlcifd9v0lr9gfl54npx3bp11a9a01-xdg-desktop-portal-hyprland-1.3.12' from 'https://cache.nixos.org'...
+building '/nix/store/0vsgr943fwsr4frn51h0z9liypnz44zz-desktops.drv'...
+building '/nix/store/5mpk0zhr1dzpxx6ck57smlfvw7s7ai2q-ensure-all-wrappers-paths-exist.drv'...
+building '/nix/store/5k8gz7l89days92b1wwn7w8lpr12syr4-security-wrapper-Hyprland-x86_64-unknown-linux-musl.drv'...
+Checking that Nix store paths of all wrapped programs exist... OK
+C compiler for the host machine: gcc (gcc 15.2.0 "gcc (GCC) 15.2.0")
+C linker for the host machine: gcc ld.bfd 2.46
+building '/nix/store/qayycs1cs8q2535ij81yaxr86wm6bj2d-etc-pam-environment.drv'...
+building '/nix/store/vgqff596h68sdm2n8jwfdycj499w910q-sddm.conf.drv'...
+building '/nix/store/xjc08jfv3p0dairx44sjbn5db2xljfxx-set-environment.drv'...
+building '/nix/store/7qpkp47pb3npk45ffa6h2x7h4649clz8-system-generators.drv'...
+building '/nix/store/jxv66wlh542jm7asbcj34dfj0jl3d21b-system-shutdown.drv'...
+building '/nix/store/l44wv07szm27111dm7wfyg0s7j895gsp-user-generators.drv'...
+Running phase: patchPhase
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: updateAutotoolsGnuConfigScriptsPhase
+Running phase: configurePhase
+no configure script, doing nothing
+Running phase: buildPhase
+no Makefile or custom buildPhase, doing nothing
+Running phase: installPhase
+/nix/store/chrslx87s23yv28ax9ysb747g22qrkfz-wrapper.c:43:22: warning: 'assert_failure' defined but not used [-Wunused-function]
+   43 | static noreturn void assert_failure(const char *assertion) {
+      |                      ^~~~~~~~~~~~~~
+Running phase: fixupPhase
+shrinking RPATHs of ELF executables and libraries in /nix/store/hsr9y43pkw072h4c57d589c1wcr4n5wa-security-wrapper-Hyprland-x86_64-unknown-linux-musl
+shrinking /nix/store/hsr9y43pkw072h4c57d589c1wcr4n5wa-security-wrapper-Hyprland-x86_64-unknown-linux-musl/bin/security-wrapper
+patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
+checking for references to /build/ in /nix/store/hsr9y43pkw072h4c57d589c1wcr4n5wa-security-wrapper-Hyprland-x86_64-unknown-linux-musl...
+patchelf: cannot find section '.dynamic'. The input file is most likely statically linked
+patching script interpreter paths in /nix/store/hsr9y43pkw072h4c57d589c1wcr4n5wa-security-wrapper-Hyprland-x86_64-unknown-linux-musl
+stripping (with command x86_64-unknown-linux-musl-strip and flags -S -p) in  /nix/store/hsr9y43pkw072h4c57d589c1wcr4n5wa-security-wrapper-Hyprland-x86_64-unknown-linux-musl/bin
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -Wall: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wbad-function-cast: YES 
+Compiler for C supports arguments -Wold-style-definition: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wredundant-decls: YES 
+Compiler for C supports arguments -Werror=implicit: YES 
+Compiler for C supports arguments -Werror=nonnull: YES 
+Compiler for C supports arguments -Werror=init-self: YES 
+Compiler for C supports arguments -Werror=main: YES 
+Compiler for C supports arguments -Werror=missing-braces: YES 
+Compiler for C supports arguments -Werror=sequence-point: YES 
+Compiler for C supports arguments -Werror=return-type: YES 
+Compiler for C supports arguments -Werror=trigraphs: YES 
+Compiler for C supports arguments -Werror=array-bounds: YES 
+Compiler for C supports arguments -Werror=write-strings: YES 
+Compiler for C supports arguments -Werror=address: YES 
+Compiler for C supports arguments -Werror=int-to-pointer-cast: YES 
+Compiler for C supports arguments -Werror=pointer-to-int-cast: YES 
+meson.build:61: WARNING: Consider using the built-in warning_level option instead of using "-Wall".
+Found pkg-config: YES (/nix/store/1m05k7xgfnw6jc21xxk5681ni3ar97wf-pkg-config-wrapper-0.29.2/bin/pkg-config) 0.29.2
+Run-time dependency x11 found: YES 1.8.13
+Run-time dependency xproto found: YES 7.0.34
+Run-time dependency randrproto found: YES 1.6.0
+building '/nix/store/sig5dc38jw00q4cp6y1847wh49h1ly0p-etc-profile.drv'...
+Run-time dependency renderproto found: YES 0.11.1
+Run-time dependency xextproto found: YES 7.3.0
+Run-time dependency inputproto found: YES 2.3.99.2
+Run-time dependency kbproto found: YES 1.0.7
+Run-time dependency fontsproto found: YES 2.1.3
+Run-time dependency fixesproto found: YES 6.1
+Run-time dependency damageproto found: YES 1.2.1
+Run-time dependency xcmiscproto found: YES 1.2.2
+Run-time dependency bigreqsproto found: YES 1.1.2
+Run-time dependency presentproto found: YES 1.4
+Run-time dependency xtrans found: YES 1.6.0
+Run-time dependency videoproto found: YES 2.3.3
+Run-time dependency compositeproto found: YES 0.4.2
+Run-time dependency recordproto found: YES 1.14.2
+Run-time dependency scrnsaverproto found: YES 1.2.3
+Run-time dependency resourceproto found: YES 1.2.0
+Run-time dependency dri3proto found: YES 1.4
+Run-time dependency xineramaproto found: YES 1.2.1
+Run-time dependency xf86bigfontproto found: YES 1.2.0
+Run-time dependency xf86vidmodeproto found: YES 2.3.1
+Run-time dependency xshmfence found: YES 1.3.3
+Run-time dependency xwaylandproto found: YES 1.0
+Run-time dependency dpmsproto found: YES 1.2
+Run-time dependency pixman-1 found: YES 0.46.4
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency libbsd-overlay found: NO (tried pkgconfig and cmake)
+Run-time dependency xkbcomp found: YES 1.5.0
+Run-time dependency xkbfile found: YES 1.1.3
+Run-time dependency xfont2 found: YES 2.0.7
+Run-time dependency libsystemd found: YES 260
+Run-time dependency libxcvt found: YES 0.1.3
+building '/nix/store/snd09dqnyhym2rbydj9a5njdgwymcmms-unit-script-suid-sgid-wrappers-start.drv'...
+Run-time dependency wayland-client found: YES 1.25.0
+Run-time dependency wayland-protocols found: YES 1.48
+Dependency libxcvt found: YES 0.1.3 (cached)
+Dependency xshmfence found: YES 1.3.3 (cached)
+Run-time dependency libdrm found: YES 2.4.133
+Run-time dependency epoxy found: YES 1.5.10
+building '/nix/store/h66hhx0kgs1s06zqq0w0wki13a4dsz91-unit-suid-sgid-wrappers.service.drv'...
+Checking for function "getaddrinfo" : YES 
+Run-time dependency gbm found: YES 26.0.3
+Dependency epoxy found: YES 1.5.10 (cached)
+Run-time dependency libdecor-0 found: YES 0.2.5
+Run-time dependency libei-1.0 found: YES 1.5.0
+Run-time dependency liboeffis-1.0 found: YES 1.5.0
+Checking for function "SHA1Init" : NO 
+Checking for function "CC_SHA1_Init" : NO 
+Has header "wincrypt.h" : NO 
+Library md found: NO
+Run-time dependency libsha1 found: NO (tried pkgconfig and cmake)
+Run-time dependency nettle found: NO (tried pkgconfig and cmake)
+libgcrypt-config found: NO
+Run-time dependency libgcrypt found: NO (tried pkgconfig and config-tool)
+Library crypto found: YES
+Run-time dependency openssl found: YES 3.6.2
+Message: Using libcrypto SHA1 functions
+Run-time dependency xdmcp found: YES 1.1.5
+Dependency libdrm found: YES 2.4.133 (cached)
+Has header "sys/eventfd.h" : YES 
+Has header "sys/shm.h" : YES 
+Library m found: YES
+Library dl found: YES
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency libunwind found: YES 1.8.3
+Configuring Xserver.1 using configuration
+Run-time dependency xorg-sgml-doctools found: NO (tried pkgconfig and cmake)
+Program xmlto found: NO
+Program xsltproc found: NO
+Program fop found: NO
+Run-time dependency dri found: YES 25.0
+Checking if "typeof()" compiles: YES 
+Checking for function "clock_gettime" : YES 
+Checking if "CLOCK_MONOTONIC" compiles: YES 
+Checking for size of "unsigned long" : 8 
+Header "pthread.h" has symbol "PTHREAD_MUTEX_RECURSIVE" : YES 
+Checking if "pthread_setname_np(tid, name)" compiles: YES 
+Has header "dlfcn.h" : YES 
+Has header "execinfo.h" : YES 
+Has header "fnmatch.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "string.h" : YES 
+Has header "strings.h" : YES 
+Has header "sys/ucred.h" : NO 
+Has header "sys/utsname.h" : YES 
+Has header "sys/sysmacros.h" : YES 
+Checking for function "arc4random_buf" with dependency libbsd-overlay: YES 
+Checking for function "backtrace" : YES 
+Checking for function "cbrt" : YES 
+Checking for function "epoll_create1" : YES 
+Checking for function "getuid" : YES 
+Checking for function "geteuid" : YES 
+Checking for function "isastream" : NO 
+Checking for function "issetugid" : NO 
+Checking for function "getifaddrs" : YES 
+Checking for function "getpeereid" : NO 
+Checking for function "getpeerucred" : NO 
+Checking for function "getprogname" : NO 
+Checking for function "getzoneid" : NO 
+Checking for function "memfd_create" : YES 
+Checking for function "mkostemp" : YES 
+Checking for function "mmap" : YES 
+Checking for function "open_device" : NO 
+Checking for function "poll" : YES 
+Checking for function "pollset_create" : NO 
+Checking for function "posix_fallocate" : YES 
+Checking for function "port_create" : NO 
+Checking for function "reallocarray" with dependency libbsd-overlay: YES 
+Checking for function "seteuid" : YES 
+Checking for function "setitimer" : YES 
+Checking for function "shmctl64" : NO 
+Checking for function "sigaction" : YES 
+Checking for function "sigprocmask" : YES 
+Checking for type "socklen_t" : YES 
+Checking for function "strcasecmp" : YES 
+Checking for function "strcasestr" : YES 
+Checking for function "strlcat" with dependency libbsd-overlay: YES 
+Checking for function "strlcpy" with dependency libbsd-overlay: YES 
+Checking for function "strncasecmp" : YES 
+Checking for function "strndup" : YES 
+Header "string.h" has symbol "strndup" : YES 
+Checking for type "struct sockaddr_storage" : YES 
+Checking for function "timingsafe_memcmp" : NO 
+Checking for function "vasprintf" : YES 
+Checking for function "vsnprintf" : YES 
+Checking for function "walkcontext" : NO 
+Checking whether type "struct xucred" has member "cr_pid" : NO 
+Header "sys/socket.h" has symbol "SCM_RIGHTS" : YES 
+Header "sys/socket.h" has symbol "SO_PEERCRED" : YES 
+Configuring dix-config.h using configuration
+Configuring version-config.h using configuration
+Configuring xkb-config.h using configuration
+Configuring xwayland-config.h using configuration
+Run-time dependency glproto found: YES 1.4.17
+Run-time dependency gl found: YES 1.2
+Dependency glproto found: YES 1.4.17 (cached)
+Dependency gl found: YES 1.2 (cached)
+Run-time dependency libtirpc found: YES 1.3.7
+Library pthread found: YES
+Run-time dependency xau found: YES 1.0.12
+Dependency presentproto found: YES 1.4 (cached)
+Dependency epoxy found: YES 1.5.10 (cached)
+Build-time dependency wayland-scanner found: YES 1.25.0
+Program /nix/store/rklfwd61v1scvn1870jv6nkvspqxfigb-wayland-scanner-1.25.0-bin/bin/wayland-scanner found: YES (/nix/store/rklfwd61v1scvn1870jv6nkvspqxfigb-wayland-scanner-1.25.0-bin/bin/wayland-scanner)
+Dependency wayland-protocols found: YES 1.48 (cached)
+hw/xwayland/meson.build:189: WARNING: Project targets '>= 0.56.0' but uses feature introduced in '0.62.0': pkgconfig.generate implicit variable for builtin directories.
+Found pkg-config: YES (/nix/store/1m05k7xgfnw6jc21xxk5681ni3ar97wf-pkg-config-wrapper-0.29.2/bin/pkg-config) 0.29.2
+Configuring Xwayland.1 using configuration
+Configuring org.freedesktop.Xwayland.desktop using configuration
+Program rendercheck found: NO
+Program scripts/xvfb-piglit.sh found: YES (/build/xwayland-24.1.11/test/scripts/xvfb-piglit.sh)
+Program scripts/xwayland-piglit.sh found: YES (/build/xwayland-24.1.11/test/scripts/xwayland-piglit.sh)
+Run-time dependency xcb found: YES 1.17.0
+Run-time dependency xcb-xinput found: YES 1.17.0
+Dependency xcb found: YES 1.17.0 (cached)
+Run-time dependency xcb-damage found: YES 1.17.0
+Dependency xcb found: YES 1.17.0 (cached)
+Run-time dependency xcb-sync found: YES 1.17.0
+Build targets in project: 33
+WARNING: Project specifies a minimum meson_version '>= 0.56.0' but uses features which were added in newer versions:
+ * 0.62.0: {'pkgconfig.generate implicit variable for builtin directories'}
+
+xwayland 24.1.11
+
+  User defined options
+    auto_features    : enabled
+    bindir           : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/bin
+    buildtype        : plain
+    default_font_path: /run/current-system/sw/share/X11/fonts
+    includedir       : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/include
+    infodir          : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/info
+    libdir           : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib
+    libexecdir       : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/libexec
+    libunwind        : true
+    localedir        : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/locale
+    mandir           : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man
+    prefix           : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11
+    sbindir          : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/sbin
+    wrap_mode        : nodownload
+    xcsecurity       : true
+    xkb_bin_dir      : /nix/store/zp4yffmk461cs10pp8sm8y9jk235nwf5-xkbcomp-1.5.0/bin
+    xkb_dir          : /nix/store/70naj3m24b7ynbzv211q50hlq4cmsv51-xkeyboard-config-2.47/etc/X11/xkb
+    xkb_output_dir   : /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/X11/xkb/compiled
+
+Found ninja-1.13.2 at /nix/store/7a235m7crqbb4h49sak20fqxpw3n7hr0-ninja-1.13.2/bin/ninja
+mesonConfigurePhase: enabled\ parallel\ building
+Running phase: buildPhase
+build flags: -j16
+[1/447] Compiling C object dix/liblibxserver_dix.a.p/globals.c.o
+[2/447] Compiling C object dix/liblibxserver_dix.a.p/atom.c.o
+[3/447] Compiling C object dix/liblibxserver_dix.a.p/main.c.o
+[4/447] Compiling C object dix/liblibxserver_dix.a.p/extension.c.o
+[5/447] Compiling C object dix/liblibxserver_dix.a.p/cursor.c.o
+[6/447] Compiling C object dix/liblibxserver_dix.a.p/gestures.c.o
+[7/447] Compiling C object dix/liblibxserver_dix.a.p/dixutils.c.o
+[8/447] Compiling C object dix/liblibxserver_dix.a.p/eventconvert.c.o
+[9/447] Compiling C object dix/liblibxserver_dix.a.p/gc.c.o
+[10/447] Compiling C object dix/liblibxserver_dix.a.p/glyphcurs.c.o
+[11/447] Compiling C object dix/liblibxserver_dix.a.p/initatoms.c.o
+[12/447] Compiling C object dix/liblibxserver_dix.a.p/enterleave.c.o
+[13/447] Compiling C object dix/liblibxserver_dix.a.p/pixmap.c.o
+[14/447] Compiling C object dix/liblibxserver_dix.a.p/grabs.c.o
+[15/447] Compiling C object dix/liblibxserver_dix.a.p/dixfonts.c.o
+[16/447] Compiling C object dix/liblibxserver_dix.a.p/registry.c.o
+[17/447] Compiling C object dix/liblibxserver_dix.a.p/privates.c.o
+[18/447] Compiling C object dix/liblibxserver_dix.a.p/getevents.c.o
+[19/447] Compiling C object dix/liblibxserver_dix.a.p/property.c.o
+[20/447] Compiling C object dix/liblibxserver_main.a.p/stubmain.c.o
+[21/447] Compiling C object dix/liblibxserver_dix.a.p/ptrveloc.c.o
+[22/447] Compiling C object dix/liblibxserver_dix.a.p/inpututils.c.o
+[23/447] Compiling C object dix/liblibxserver_dix.a.p/selection.c.o
+[24/447] Compiling C object dix/liblibxserver_dix.a.p/tables.c.o
+[25/447] Compiling C object dix/liblibxserver_dix.a.p/resource.c.o
+[26/447] Compiling C object dix/liblibxserver_dix.a.p/devices.c.o
+[27/447] Compiling C object dri3/liblibxserver_dri3.a.p/dri3.c.o
+[28/447] Compiling C object dix/liblibxserver_dix.a.p/region.c.o
+[29/447] Compiling C object dix/liblibxserver_dix.a.p/colormap.c.o
+[30/447] Compiling C object dri3/liblibxserver_dri3.a.p/dri3_screen.c.o
+[31/447] Compiling C object dix/liblibxserver_dix.a.p/swaprep.c.o
+[32/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_table.c.o
+[33/447] Compiling C object dix/liblibxserver_dix.a.p/touch.c.o
+[34/447] Compiling C object dix/liblibxserver_dix.a.p/dispatch.c.o
+[35/447] Compiling C object dri3/liblibxserver_dri3.a.p/dri3_request.c.o
+[36/447] Compiling C object glx/liblibxserver_glx.a.p/extension_string.c.o
+[37/447] Compiling C object glx/liblibxserver_glx.a.p/clientinfo.c.o
+[38/447] Compiling C object dix/liblibxserver_dix.a.p/swapreq.c.o
+[39/447] Compiling C object glx/liblibxserver_glx.a.p/createcontext.c.o
+[40/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_size_get.c.o
+[41/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_util.c.o
+[42/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_reqsize.c.o
+[43/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_program.c.o
+[44/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_texture_compression.c.o
+[45/447] Compiling C object glx/liblibxserver_glx.a.p/renderpix.c.o
+[46/447] Compiling C object glx/liblibxserver_glx.a.p/render2.c.o
+[47/447] Compiling C object glx/liblibxserver_glx.a.p/glxdricommon.c.o
+[48/447] Compiling C object glx/liblibxserver_glx.a.p/glxdriswrast.c.o
+[49/447] Compiling C object dix/liblibxserver_dix.a.p/events.c.o
+[50/447] Compiling C object glx/liblibxserver_glx.a.p/glxext.c.o
+[51/447] Compiling C object glx/liblibxserver_glx.a.p/glxscreens.c.o
+[52/447] Compiling C object glx/liblibxserver_glx.a.p/renderpixswap.c.o
+[53/447] Compiling C object glx/liblibxserver_glx.a.p/single2.c.o
+[54/447] Compiling C object glx/liblibxserver_glx.a.p/glxcmdsswap.c.o
+[55/447] Compiling C object glx/liblibxserver_glx.a.p/rensize.c.o
+[56/447] Compiling C object glx/liblibxserver_glx.a.p/render2swap.c.o
+[57/447] Compiling C object glx/liblibxserver_glx.a.p/singlesize.c.o
+[58/447] Compiling C object dix/liblibxserver_dix.a.p/window.c.o
+[59/447] Compiling C object glx/liblibxserver_glx.a.p/single2swap.c.o
+[60/447] Compiling C object glx/liblibxserver_glx.a.p/xfont.c.o
+[61/447] Compiling C object glx/liblibxserver_glx.a.p/swap_interval.c.o
+[62/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_dispatch.c.o
+[63/447] Compiling C object glx/liblibglxvnd.a.p/vndext.c.o
+[64/447] Compiling C object glx/liblibxserver_glx.a.p/singlepix.c.o
+[65/447] Compiling C object glx/liblibglxvnd.a.p/vndservervendor.c.o
+[66/447] Compiling C object glx/liblibxserver_glx.a.p/singlepixswap.c.o
+[67/447] Compiling C object glx/liblibglxvnd.a.p/vndservermapping.c.o
+[68/447] Compiling C object fb/liblibxserver_fb.a.p/fballpriv.c.o
+[69/447] Compiling C object fb/liblibxserver_fb.a.p/fbarc.c.o
+[70/447] Compiling C object glx/liblibxserver_glx.a.p/glxcmds.c.o
+[71/447] Compiling C object glx/liblibglxvnd.a.p/vndcmds.c.o
+[72/447] Compiling C object fb/liblibxserver_fb.a.p/fbfillrect.c.o
+[73/447] Compiling C object fb/liblibxserver_fb.a.p/fbcmap_mi.c.o
+[74/447] Compiling C object fb/liblibxserver_fb.a.p/fbfillsp.c.o
+[75/447] Compiling C object fb/liblibxserver_fb.a.p/fbfill.c.o
+[76/447] Compiling C object fb/liblibxserver_fb.a.p/fbcopy.c.o
+[77/447] Compiling C object fb/liblibxserver_fb.a.p/fbgc.c.o
+[78/447] Compiling C object fb/liblibxserver_fb.a.p/fbblt.c.o
+[79/447] Compiling C object fb/liblibxserver_fb.a.p/fbgetsp.c.o
+[80/447] Compiling C object fb/liblibxserver_fb.a.p/fbbltone.c.o
+[81/447] Compiling C object fb/liblibxserver_fb.a.p/fbglyph.c.o
+[82/447] Compiling C object fb/liblibxserver_fb.a.p/fbline.c.o
+[83/447] Compiling C object fb/liblibxserver_fb.a.p/fbimage.c.o
+[84/447] Compiling C object fb/liblibxserver_fb.a.p/fbpoint.c.o
+[85/447] Compiling C object fb/liblibxserver_fb.a.p/fboverlay.c.o
+[86/447] Compiling C object fb/liblibxserver_fb.a.p/fbpict.c.o
+[87/447] Compiling C object fb/liblibxserver_fb.a.p/fbscreen.c.o
+[88/447] Compiling C object fb/liblibxserver_fb.a.p/fbpixmap.c.o
+[89/447] Compiling C object fb/liblibxserver_fb.a.p/fbpush.c.o
+[90/447] Compiling C object fb/liblibxserver_fb.a.p/fbsetsp.c.o
+[91/447] Compiling C object fb/liblibxserver_fb.a.p/fbsolid.c.o
+[92/447] Compiling C object fb/liblibxserver_fb.a.p/fbutil.c.o
+[93/447] Compiling C object fb/liblibxserver_fb.a.p/fbtrap.c.o
+[94/447] Compiling C object fb/liblibxserver_fb.a.p/fbtile.c.o
+[95/447] Compiling C object fb/liblibxserver_fb.a.p/fbwindow.c.o
+[96/447] Compiling C object glx/liblibxserver_glx.a.p/indirect_dispatch_swap.c.o
+[97/447] Compiling C object fb/liblibxserver_fb.a.p/fbseg.c.o
+[98/447] Compiling C object mi/liblibxserver_mi.a.p/midash.c.o
+[99/447] Compiling C object mi/liblibxserver_mi.a.p/mifillrct.c.o
+[100/447] Compiling C object mi/liblibxserver_mi.a.p/micopy.c.o
+[101/447] Compiling C object mi/liblibxserver_mi.a.p/migc.c.o
+[102/447] Compiling C object mi/liblibxserver_mi.a.p/mieq.c.o
+[103/447] Compiling C object mi/liblibxserver_mi.a.p/miglblt.c.o
+[104/447] Compiling C object mi/liblibxserver_mi.a.p/mibitblt.c.o
+[105/447] Compiling C object mi/liblibxserver_mi.a.p/miexpose.c.o
+[106/447] Compiling C object mi/liblibxserver_mi.a.p/midispcur.c.o
+[107/447] Compiling C object mi/liblibxserver_mi.a.p/micmap.c.o
+[108/447] Compiling C object mi/liblibxserver_mi.a.p/mipolypnt.c.o
+[109/447] Compiling C object mi/liblibxserver_mi.a.p/mipolyseg.c.o
+[110/447] Compiling C object mi/liblibxserver_mi.a.p/mipolyrect.c.o
+[111/447] Compiling C object mi/liblibxserver_mi.a.p/mipolytext.c.o
+[112/447] Compiling C object mi/liblibxserver_mi.a.p/mipointer.c.o
+[113/447] Compiling C object mi/liblibxserver_mi.a.p/mipoly.c.o
+[114/447] Compiling C object mi/liblibxserver_mi.a.p/mipushpxl.c.o
+[115/447] Compiling C object mi/liblibxserver_mi.a.p/mifillarc.c.o
+[116/447] Compiling C object mi/liblibxserver_mi.a.p/miscrinit.c.o
+[117/447] Compiling C object mi/liblibxserver_mi.a.p/mivaltree.c.o
+[118/447] Compiling C object os/liblibxlibc.a.p/timingsafe_memcmp.c.o
+[119/447] Compiling C object mi/liblibxserver_mi.a.p/misprite.c.o
+[120/447] Compiling C object fb/liblibxserver_fb.a.p/fbbits.c.o
+[121/447] Compiling C object os/liblibxserver_os.a.p/alloc.c.o
+[122/447] Compiling C object mi/liblibxserver_mi.a.p/miwindow.c.o
+[123/447] Compiling C object os/liblibxserver_os.a.p/fmt.c.o
+[124/447] Compiling C object os/liblibxserver_os.a.p/backtrace.c.o
+[125/447] Compiling C object mi/liblibxserver_mi.a.p/mizerline.c.o
+[126/447] Compiling C object os/liblibxserver_os.a.p/WaitFor.c.o
+[127/447] Compiling C object os/liblibxserver_os.a.p/auth.c.o
+[128/447] Compiling C object mi/liblibxserver_mi.a.p/mizerclip.c.o
+[129/447] Compiling C object os/liblibxserver_os.a.p/client.c.o
+[130/447] Compiling C object mi/liblibxserver_mi.a.p/mioverlay.c.o
+[131/447] Compiling C object os/liblibxserver_os.a.p/oscolor.c.o
+[132/447] Compiling C object os/liblibxserver_os.a.p/mitauth.c.o
+[133/447] Compiling C object os/liblibxserver_os.a.p/string.c.o
+[134/447] Compiling C object mi/liblibxserver_mi.a.p/mizerarc.c.o
+[135/447] Compiling C object os/liblibxserver_os.a.p/inputthread.c.o
+[136/447] Compiling C object os/liblibxserver_os.a.p/osinit.c.o
+[137/447] Compiling C object os/liblibxserver_os.a.p/access.c.o
+[138/447] Compiling C object os/liblibxserver_os.a.p/ospoll.c.o
+[139/447] Compiling C object os/liblibxserver_os.a.p/xsha1.c.o
+[140/447] Compiling C object os/liblibxserver_os.a.p/connection.c.o
+[141/447] Compiling C object os/liblibxserver_os.a.p/xdmauth.c.o
+[142/447] Compiling C object os/liblibxserver_os.a.p/io.c.o
+[143/447] Compiling C object os/liblibxserver_os.a.p/xprintf.c.o
+[144/447] Compiling C object os/liblibxserver_os.a.p/busfault.c.o
+[145/447] Compiling C object mi/liblibxserver_mi.a.p/miwideline.c.o
+[146/447] Compiling C object os/liblibxserver_os.a.p/rpcauth.c.o
+[147/447] Compiling C object composite/liblibxserver_composite.a.p/compoverlay.c.o
+[148/447] Compiling C object composite/liblibxserver_composite.a.p/compinit.c.o
+[149/447] Compiling C object os/liblibxserver_os.a.p/utils.c.o
+[150/447] Compiling C object composite/liblibxserver_composite.a.p/compalloc.c.o
+[151/447] Compiling C object mi/liblibxserver_mi.a.p/miarc.c.o
+[152/447] Compiling C object composite/liblibxserver_composite.a.p/compext.c.o
+[153/447] Compiling C object miext/sync/liblibxserver_miext_sync.a.p/misync.c.o
+[154/447] Compiling C object os/liblibxserver_os.a.p/log.c.o
+[155/447] Compiling C object miext/sync/liblibxserver_miext_sync.a.p/misyncfd.c.o
+[156/447] Compiling C object dbe/liblibxserver_dbe.a.p/midbe.c.o
+[157/447] Compiling C object composite/liblibxserver_composite.a.p/compwindow.c.o
+[158/447] Compiling C object os/liblibxserver_os.a.p/xdmcp.c.o
+[159/447] Compiling C object damageext/liblibxserver_damageext.a.p/damageext.c.o
+[160/447] Compiling C object miext/sync/liblibxserver_miext_sync.a.p/misyncshm.c.o
+[161/447] Compiling C object dbe/liblibxserver_dbe.a.p/dbe.c.o
+[162/447] Compiling C object present/liblibxserver_present.a.p/present.c.o
+[163/447] Compiling C object os/liblibxserver_os.a.p/xstrans.c.o
+[164/447] Compiling C object present/liblibxserver_present.a.p/present_event.c.o
+[165/447] Compiling C object present/liblibxserver_present.a.p/present_fake.c.o
+[166/447] Compiling C object present/liblibxserver_present.a.p/present_execute.c.o
+[167/447] Compiling C object present/liblibxserver_present.a.p/present_fence.c.o
+[168/447] Compiling C object present/liblibxserver_present.a.p/present_notify.c.o
+[169/447] Compiling C object present/liblibxserver_present.a.p/present_vblank.c.o
+[170/447] Compiling C object present/liblibxserver_present.a.p/present_screen.c.o
+[171/447] Compiling C object randr/liblibxserver_randr.a.p/rrdispatch.c.o
+[172/447] Compiling C object present/liblibxserver_present.a.p/present_request.c.o
+[173/447] Compiling C object randr/liblibxserver_randr.a.p/rrinfo.c.o
+[174/447] Compiling C object present/liblibxserver_present.a.p/present_scmd.c.o
+[175/447] Compiling C object randr/liblibxserver_randr.a.p/rrlease.c.o
+[176/447] Compiling C object randr/liblibxserver_randr.a.p/rrpointer.c.o
+[177/447] Compiling C object randr/liblibxserver_randr.a.p/randr.c.o
+[178/447] Compiling C object randr/liblibxserver_randr.a.p/rrmode.c.o
+[179/447] Compiling C object randr/liblibxserver_randr.a.p/rrtransform.c.o
+[180/447] Compiling C object randr/liblibxserver_randr.a.p/rrprovider.c.o
+[181/447] Compiling C object randr/liblibxserver_randr.a.p/rroutput.c.o
+[182/447] Compiling C object randr/liblibxserver_randr.a.p/rrproperty.c.o
+[183/447] Compiling C object randr/liblibxserver_randr.a.p/rrxinerama.c.o
+[184/447] Compiling C object randr/liblibxserver_randr.a.p/rrproviderproperty.c.o
+[185/447] Compiling C object randr/liblibxserver_randr.a.p/rrmonitor.c.o
+[186/447] Compiling C object randr/liblibxserver_randr.a.p/rrsdispatch.c.o
+[187/447] Compiling C object record/liblibxserver_record.a.p/set.c.o
+[188/447] Compiling C object render/liblibxserver_render.a.p/filter.c.o
+[189/447] Compiling C object render/liblibxserver_render.a.p/animcur.c.o
+[190/447] Compiling C object render/liblibxserver_render.a.p/matrix.c.o
+[191/447] Compiling C object miext/damage/liblibxserver_miext_damage.a.p/damage.c.o
+[192/447] Compiling C object render/liblibxserver_render.a.p/glyph.c.o
+[193/447] Compiling C object randr/liblibxserver_randr.a.p/rrcrtc.c.o
+[194/447] Compiling C object render/liblibxserver_render.a.p/mirect.c.o
+[195/447] Compiling C object randr/liblibxserver_randr.a.p/rrscreen.c.o
+[196/447] Compiling C object render/liblibxserver_render.a.p/mitrap.c.o
+[197/447] Compiling C object render/liblibxserver_render.a.p/miindex.c.o
+[198/447] Compiling C object render/liblibxserver_render.a.p/mitri.c.o
+[199/447] Compiling C object render/liblibxserver_render.a.p/mipict.c.o
+[200/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/disconnect.c.o
+[201/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/saveset.c.o
+[202/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/select.c.o
+[203/447] Compiling C object xkb/liblibxserver_xkb.a.p/ddxLEDs.c.o
+[204/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/xfixes.c.o
+[205/447] Compiling C object xkb/liblibxserver_xkb.a.p/ddxBeep.c.o
+[206/447] Compiling C object xkb/liblibxserver_xkb.a.p/ddxCtrls.c.o
+[207/447] Compiling C object xkb/liblibxserver_xkb.a.p/ddxLoad.c.o
+[208/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/cursor.c.o
+[209/447] Compiling C object xfixes/liblibxserver_xfixes.a.p/region.c.o
+[210/447] Compiling C object record/liblibxserver_record.a.p/record.c.o
+[211/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbfmisc.c.o
+[212/447] Compiling C object xkb/liblibxserver_xkb.a.p/maprules.c.o
+[213/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbSwap.c.o
+[214/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbAccessX.c.o
+[215/447] Compiling C object render/liblibxserver_render.a.p/picture.c.o
+[216/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkmread.c.o
+[217/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbPrKeyEv.c.o
+[218/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbEvents.c.o
+[219/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbout.c.o
+[220/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbtext.c.o
+[221/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbInit.c.o
+[222/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbLEDs.c.o
+[223/447] Compiling C object xkb/liblibxserver_xkb.a.p/XKBAlloc.c.o
+[224/447] Compiling C object xkb/liblibxserver_xkb_stubs.a.p/ddxKillSrv.c.o
+[225/447] Compiling C object xkb/liblibxserver_xkb_stubs.a.p/ddxPrivate.c.o
+[226/447] Compiling C object xkb/liblibxserver_xkb_stubs.a.p/ddxVT.c.o
+[227/447] Compiling C object Xext/liblibxserver_xext.a.p/bigreq.c.o
+[228/447] Compiling C object Xext/liblibxserver_xext.a.p/geext.c.o
+[229/447] Compiling C object Xext/liblibxserver_xext.a.p/sleepuntil.c.o
+[230/447] Compiling C object xkb/liblibxserver_xkb.a.p/XKBGAlloc.c.o
+[231/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbUtils.c.o
+[232/447] Compiling C object xkb/liblibxserver_xkb.a.p/XKBMisc.c.o
+[233/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkbActions.c.o
+[234/447] Compiling C object Xext/liblibxserver_xext.a.p/xcmisc.c.o
+[235/447] Compiling C object Xext/liblibxserver_xext.a.p/shape.c.o
+[236/447] Compiling C object Xext/liblibxserver_xext.a.p/hashtable.c.o
+[237/447] Compiling C object Xext/liblibxserver_xext.a.p/dpms.c.o
+[238/447] Compiling C object render/liblibxserver_render.a.p/render.c.o
+[239/447] Compiling C object xkb/liblibxserver_xkb.a.p/XKBMAlloc.c.o
+[240/447] Compiling C object Xext/liblibxserver_xext.a.p/xtest.c.o
+[241/447] Compiling C object Xext/liblibxserver_xext.a.p/panoramiXSwap.c.o
+[242/447] Compiling C object Xext/liblibxserver_xext.a.p/xace.c.o
+[243/447] Compiling C object Xext/liblibxserver_xext.a.p/xres.c.o
+[244/447] Compiling C object Xi/liblibxserver_xi.a.p/allowev.c.o
+[245/447] Compiling C object Xi/liblibxserver_xi.a.p/chgdctl.c.o
+[246/447] Compiling C object Xext/liblibxserver_xext.a.p/saver.c.o
+[247/447] Compiling C object Xext/liblibxserver_xext.a.p/security.c.o
+[248/447] Compiling C object Xi/liblibxserver_xi.a.p/chgkbd.c.o
+[249/447] Compiling C object Xext/liblibxserver_xext.a.p/xvmc.c.o
+[250/447] Compiling C object Xext/liblibxserver_xext.a.p/sync.c.o
+[251/447] Compiling C object Xi/liblibxserver_xi.a.p/chgfctl.c.o
+[252/447] Compiling C object Xext/liblibxserver_xext.a.p/xvmain.c.o
+[253/447] Compiling C object Xext/liblibxserver_xext.a.p/shm.c.o
+[254/447] Compiling C object Xext/liblibxserver_xext.a.p/panoramiX.c.o
+[255/447] Compiling C object Xi/liblibxserver_xi.a.p/chgprop.c.o
+[256/447] Compiling C object Xi/liblibxserver_xi.a.p/chgkmap.c.o
+[257/447] Compiling C object Xi/liblibxserver_xi.a.p/chgptr.c.o
+[258/447] Compiling C object Xi/liblibxserver_xi.a.p/devbell.c.o
+[259/447] Compiling C object Xi/liblibxserver_xi.a.p/closedev.c.o
+[260/447] Compiling C object Xi/liblibxserver_xi.a.p/getbmap.c.o
+[261/447] Compiling C object Xi/liblibxserver_xi.a.p/getfocus.c.o
+[262/447] Compiling C object Xi/liblibxserver_xi.a.p/getdctl.c.o
+[263/447] Compiling C object Xi/liblibxserver_xi.a.p/getmmap.c.o
+[264/447] Compiling C object Xext/liblibxserver_xext_vidmode.a.p/vidmode.c.o
+[265/447] Compiling C object Xi/liblibxserver_xi.a.p/getfctl.c.o
+[266/447] Compiling C object Xi/liblibxserver_xi.a.p/getkmap.c.o
+[267/447] Compiling C object Xi/liblibxserver_xi.a.p/getprop.c.o
+[268/447] Compiling C object Xext/liblibxserver_xext.a.p/xvdisp.c.o
+[269/447] Compiling C object Xi/liblibxserver_xi.a.p/getselev.c.o
+[270/447] Compiling C object Xi/liblibxserver_xi.a.p/getvers.c.o
+[271/447] Compiling C object Xi/liblibxserver_xi.a.p/grabdevb.c.o
+[272/447] Compiling C object Xi/liblibxserver_xi.a.p/grabdev.c.o
+[273/447] Compiling C object Xi/liblibxserver_xi.a.p/extinit.c.o
+[274/447] Compiling C object Xi/liblibxserver_xi.a.p/grabdevk.c.o
+[275/447] Compiling C object Xi/liblibxserver_xi.a.p/gtmotion.c.o
+[276/447] Compiling C object Xi/liblibxserver_xi.a.p/opendev.c.o
+[277/447] Compiling C object Xi/liblibxserver_xi.a.p/selectev.c.o
+[278/447] Compiling C object Xi/liblibxserver_xi.a.p/sendexev.c.o
+[279/447] Compiling C object Xi/liblibxserver_xi.a.p/setdval.c.o
+[280/447] Compiling C object Xi/liblibxserver_xi.a.p/queryst.c.o
+[281/447] Compiling C object Xi/liblibxserver_xi.a.p/listdev.c.o
+[282/447] Compiling C object Xi/liblibxserver_xi.a.p/setbmap.c.o
+[283/447] Compiling C object Xext/liblibxserver_xext.a.p/panoramiXprocs.c.o
+[284/447] Compiling C object Xi/liblibxserver_xi.a.p/setfocus.c.o
+[285/447] Compiling C object Xi/liblibxserver_xi.a.p/ungrdev.c.o
+[286/447] Compiling C object Xi/liblibxserver_xi.a.p/setmmap.c.o
+[287/447] Compiling C object Xi/liblibxserver_xi.a.p/ungrdevb.c.o
+[288/447] Compiling C object Xi/liblibxserver_xi.a.p/ungrdevk.c.o
+[289/447] Compiling C object Xi/liblibxserver_xi.a.p/setmode.c.o
+[290/447] Compiling C object Xi/liblibxserver_xi.a.p/xiallowev.c.o
+[291/447] Compiling C object Xi/liblibxserver_xi.a.p/xichangecursor.c.o
+[292/447] Compiling C object Xi/liblibxserver_xi.a.p/xigetclientpointer.c.o
+[293/447] Compiling C object Xi/liblibxserver_xi.a.p/xigrabdev.c.o
+[294/447] Compiling C object Xi/liblibxserver_xi.a.p/xipassivegrab.c.o
+[295/447] Compiling C object Xi/liblibxserver_xi.a.p/xichangehierarchy.c.o
+[296/447] Compiling C object Xi/liblibxserver_xi.a.p/xiqueryversion.c.o
+[297/447] Compiling C object Xi/liblibxserver_xi.a.p/xiquerypointer.c.o
+[298/447] Compiling C object Xi/liblibxserver_xi.a.p/xisetclientpointer.c.o
+[299/447] Compiling C object Xi/liblibxserver_xi.a.p/xisetdevfocus.c.o
+[300/447] Compiling C object Xi/liblibxserver_xi.a.p/xibarriers.c.o
+[301/447] Compiling C object Xi/liblibxserver_xi.a.p/xiwarppointer.c.o
+[302/447] Compiling C object Xi/liblibxserver_xi_stubs.a.p/stubs.c.o
+[303/447] Compiling C object Xi/liblibxserver_xi.a.p/exevents.c.o
+[304/447] Compiling C object Xi/liblibxserver_xi.a.p/xiselectev.c.o
+[305/447] Compiling C object Xi/liblibxserver_xi.a.p/xiquerydevice.c.o
+[306/447] Compiling C object Xi/liblibxserver_xi.a.p/xiproperty.c.o
+[307/447] Compiling C object glamor/libglamor.a.p/glamor_core.c.o
+[308/447] Compiling C object glamor/libglamor.a.p/glamor_font.c.o
+[309/447] Compiling C object glamor/libglamor.a.p/glamor_image.c.o
+[310/447] Compiling C object glamor/libglamor.a.p/glamor_lines.c.o
+[311/447] Compiling C object glamor/libglamor.a.p/glamor_dash.c.o
+[312/447] Compiling C object xkb/liblibxserver_xkb.a.p/xkb.c.o
+[313/447] Compiling C object glamor/libglamor.a.p/glamor_segs.c.o
+[314/447] Compiling C object glamor/libglamor.a.p/glamor_composite_glyphs.c.o
+[315/447] Compiling C object glamor/libglamor.a.p/glamor.c.o
+[316/447] Compiling C object glamor/libglamor.a.p/glamor_prepare.c.o
+[317/447] Compiling C object glamor/libglamor.a.p/glamor_rects.c.o
+[318/447] Compiling C object glamor/libglamor.a.p/glamor_copy.c.o
+[319/447] Compiling C object glamor/libglamor.a.p/glamor_program.c.o
+[320/447] Compiling C object glamor/libglamor.a.p/glamor_gradient.c.o
+[321/447] Compiling C object glamor/libglamor.a.p/glamor_spans.c.o
+[322/447] Compiling C object glamor/libglamor.a.p/glamor_addtraps.c.o
+[323/447] Compiling C object glamor/libglamor.a.p/glamor_triangles.c.o
+[324/447] Compiling C object glamor/libglamor.a.p/glamor_text.c.o
+[325/447] Compiling C object glamor/libglamor.a.p/glamor_trapezoid.c.o
+[326/447] Compiling C object glamor/libglamor.a.p/glamor_pixmap.c.o
+[327/447] Generating 'hw/xwayland/Xwayland.p/relative-pointer-unstable-v1-client-protocol.h'
+[328/447] Generating 'hw/xwayland/Xwayland.p/pointer-constraints-unstable-v1-client-protocol.h'
+[329/447] Generating 'hw/xwayland/Xwayland.p/pointer-gestures-unstable-v1-client-protocol.h'
+[330/447] Generating 'hw/xwayland/Xwayland.p/tablet-unstable-v2-client-protocol.h'
+[331/447] Generating 'hw/xwayland/Xwayland.p/xwayland-keyboard-grab-unstable-v1-client-protocol.h'
+[332/447] Generating 'hw/xwayland/Xwayland.p/xdg-output-unstable-v1-client-protocol.h'
+[333/447] Generating 'hw/xwayland/Xwayland.p/linux-dmabuf-unstable-v1-client-protocol.h'
+[334/447] Generating 'hw/xwayland/Xwayland.p/viewporter-client-protocol.h'
+[335/447] Compiling C object glamor/libglamor.a.p/glamor_points.c.o
+[336/447] Generating 'hw/xwayland/Xwayland.p/xdg-shell-client-protocol.h'
+[337/447] Generating 'hw/xwayland/Xwayland.p/drm-lease-v1-client-protocol.h'
+[338/447] Generating 'hw/xwayland/Xwayland.p/keyboard-shortcuts-inhibit-unstable-v1-client-protocol.h'
+[339/447] Compiling C object glamor/libglamor.a.p/glamor_transform.c.o
+[340/447] Generating 'hw/xwayland/Xwayland.p/xwayland-shell-v1-client-protocol.h'
+[341/447] Generating 'hw/xwayland/Xwayland.p/fractional-scale-v1-client-protocol.h'
+[342/447] Generating 'hw/xwayland/Xwayland.p/linux-drm-syncobj-v1-client-protocol.h'
+[343/447] Generating 'hw/xwayland/Xwayland.p/tearing-control-v1-client-protocol.h'
+[344/447] Compiling C object glamor/libglamor.a.p/glamor_transfer.c.o
+[345/447] Generating 'hw/xwayland/Xwayland.p/relative-pointer-unstable-v1-protocol.c'
+[346/447] Generating 'hw/xwayland/Xwayland.p/pointer-gestures-unstable-v1-protocol.c'
+[347/447] Generating 'hw/xwayland/Xwayland.p/pointer-constraints-unstable-v1-protocol.c'
+[348/447] Generating 'hw/xwayland/Xwayland.p/tablet-unstable-v2-protocol.c'
+[349/447] Generating 'hw/xwayland/Xwayland.p/xwayland-keyboard-grab-unstable-v1-protocol.c'
+[350/447] Generating 'hw/xwayland/Xwayland.p/xdg-output-unstable-v1-protocol.c'
+[351/447] Generating 'hw/xwayland/Xwayland.p/linux-dmabuf-unstable-v1-protocol.c'
+[352/447] Generating 'hw/xwayland/Xwayland.p/viewporter-protocol.c'
+[353/447] Generating 'hw/xwayland/Xwayland.p/drm-lease-v1-protocol.c'
+[354/447] Generating 'hw/xwayland/Xwayland.p/xdg-shell-protocol.c'
+[355/447] Generating 'hw/xwayland/Xwayland.p/xwayland-shell-v1-protocol.c'
+[356/447] Generating 'hw/xwayland/Xwayland.p/keyboard-shortcuts-inhibit-unstable-v1-protocol.c'
+[357/447] Generating 'hw/xwayland/Xwayland.p/tearing-control-v1-protocol.c'
+[358/447] Generating 'hw/xwayland/Xwayland.p/fractional-scale-v1-protocol.c'
+[359/447] Generating 'hw/xwayland/Xwayland.p/linux-drm-syncobj-v1-protocol.c'
+[360/447] Compiling C object glamor/libglamor.a.p/glamor_glyphblt.c.o
+[361/447] Generating 'hw/xwayland/Xwayland.p/drm-client-protocol.h'
+[362/447] Generating 'hw/xwayland/Xwayland.p/drm-protocol.c'
+[363/447] Linking static target dix/liblibxserver_main.a
+[364/447] Linking static target dri3/liblibxserver_dri3.a
+[365/447] Linking static target glx/liblibglxvnd.a
+[366/447] Linking static target dix/liblibxserver_dix.a
+[367/447] Linking static target os/liblibxlibc.a
+[368/447] Linking static target glx/liblibxserver_glx.a
+[369/447] Linking static target fb/liblibxserver_fb.a
+[370/447] Linking static target mi/liblibxserver_mi.a
+[371/447] Linking static target composite/liblibxserver_composite.a
+[372/447] Linking static target os/liblibxserver_os.a
+[373/447] Linking static target damageext/liblibxserver_damageext.a
+[374/447] Linking static target dbe/liblibxserver_dbe.a
+[375/447] Linking static target miext/damage/liblibxserver_miext_damage.a
+[376/447] Linking static target miext/sync/liblibxserver_miext_sync.a
+[377/447] Linking static target present/liblibxserver_present.a
+[378/447] Linking static target record/liblibxserver_record.a
+[379/447] Linking static target randr/liblibxserver_randr.a
+[380/447] Linking static target render/liblibxserver_render.a
+[381/447] Linking static target xfixes/liblibxserver_xfixes.a
+[382/447] Linking static target xkb/liblibxserver_xkb_stubs.a
+[383/447] Linking static target xkb/liblibxserver_xkb.a
+[384/447] Linking static target Xext/liblibxserver_xext.a
+[385/447] Linking static target Xext/liblibxserver_xext_vidmode.a
+[386/447] Linking static target Xi/liblibxserver_xi_stubs.a
+[387/447] Linking static target Xi/liblibxserver_xi.a
+[388/447] Compiling C object glamor/libglamor.a.p/glamor_picture.c.o
+[389/447] Compiling C object glamor/libglamor.a.p/glamor_window.c.o
+[390/447] Compiling C object glamor/libglamor.a.p/glamor_vbo.c.o
+[391/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_pointer-constraints-unstable-v1-protocol.c.o
+[392/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_relative-pointer-unstable-v1-protocol.c.o
+[393/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_pointer-gestures-unstable-v1-protocol.c.o
+[394/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_tablet-unstable-v2-protocol.c.o
+[395/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_xwayland-keyboard-grab-unstable-v1-protocol.c.o
+[396/447] Compiling C object glamor/libglamor.a.p/glamor_fbo.c.o
+[397/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_xdg-output-unstable-v1-protocol.c.o
+[398/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_linux-dmabuf-unstable-v1-protocol.c.o
+[399/447] Compiling C object glamor/libglamor.a.p/glamor_compositerects.c.o
+[400/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_viewporter-protocol.c.o
+[401/447] Compiling C object glamor/libglamor.a.p/glamor_sync.c.o
+[402/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_xdg-shell-protocol.c.o
+[403/447] Compiling C object glamor/libglamor.a.p/glamor_utils.c.o
+[404/447] Compiling C object hw/vfb/Xvfb.p/.._.._mi_miinitext.c.o
+[405/447] Compiling C object hw/vfb/Xvfb.p/InitInput.c.o
+[406/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_drm-lease-v1-protocol.c.o
+[407/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_xwayland-shell-v1-protocol.c.o
+[408/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_tearing-control-v1-protocol.c.o
+[409/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_keyboard-shortcuts-inhibit-unstable-v1-protocol.c.o
+[410/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_fractional-scale-v1-protocol.c.o
+[411/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_linux-drm-syncobj-v1-protocol.c.o
+[412/447] Compiling C object hw/xwayland/Xwayland.p/meson-generated_drm-protocol.c.o
+[413/447] Compiling C object glamor/libglamor.a.p/glamor_glx_provider.c.o
+[414/447] Compiling C object glamor/libglamor.a.p/glamor_xv.c.o
+[415/447] Compiling C object glamor/libglamor.a.p/glamor_largepixmap.c.o
+[416/447] Compiling C object glamor/libglamor.a.p/glamor_render.c.o
+[417/447] Compiling C object hw/vfb/Xvfb.p/InitOutput.c.o
+[418/447] Linking static target glamor/libglamor.a
+[419/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-cvt.c.o
+[420/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-pixmap.c.o
+[421/447] Compiling C object hw/xwayland/Xwayland.p/xwayland.c.o
+[422/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-shm.c.o
+[423/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-drm-lease.c.o
+[424/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-cursor.c.o
+[425/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-vidmode.c.o
+[426/447] Compiling C object hw/xwayland/Xwayland.p/.._.._mi_miinitext.c.o
+[427/447] Compiling C object test/bigreq/request-length.p/request-length.c.o
+../test/bigreq/request-length.c: In function 'main':
+../test/bigreq/request-length.c:65:5: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+   65 |     write(fd, &xise_req, sizeof(xise_req));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[428/447] Compiling C object test/simple-xinit.p/simple-xinit.c.o
+../test/simple-xinit.c: In function 'handle_sigchld':
+../test/simple-xinit.c:71:5: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+   71 |     write(server_displayfd, server_dead, strlen(server_dead));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[429/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-window-buffers.c.o
+[430/447] Compiling C object test/damage/damage-primitives.p/primitives.c.o
+[431/447] Compiling C object test/sync/sync.p/sync.c.o
+[432/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-present.c.o
+[433/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-output.c.o
+[434/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-screen.c.o
+[435/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-glamor.c.o
+[436/447] Linking target test/bigreq/request-length
+[437/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-glamor-xv.c.o
+[438/447] Linking target test/simple-xinit
+[439/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-xtest.c.o
+[440/447] Linking target test/damage/damage-primitives
+[441/447] Linking target test/sync/sync
+[442/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-dmabuf.c.o
+[443/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-window.c.o
+[444/447] Linking target hw/vfb/Xvfb
+[445/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-input.c.o
+[446/447] Compiling C object hw/xwayland/Xwayland.p/xwayland-glamor-gbm.c.o
+[447/447] Linking target hw/xwayland/Xwayland
+Running phase: installPhase
+mesonInstallPhase flags: ''
+Installing hw/xwayland/Xwayland to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/bin
+Installing /build/xwayland-24.1.11/build/man/Xserver.1 to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man/man1
+Installing /build/xwayland-24.1.11/build/hw/xwayland/Xwayland.1 to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man/man1
+Installing /build/xwayland-24.1.11/dix/protocol.txt to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib/xorg
+Installing /build/xwayland-24.1.11/build/meson-private/xwayland.pc to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib/pkgconfig
+Installing /build/xwayland-24.1.11/build/hw/xwayland/org.freedesktop.Xwayland.desktop to /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/applications
+Running phase: fixupPhase
+shrinking RPATHs of ELF executables and libraries in /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11
+shrinking /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/bin/Xwayland
+checking for references to /build/ in /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11...
+gzipping man pages under /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man/
+patching script interpreter paths in /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11
+stripping (with command strip and flags -S -p) in  /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib /nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/bin
+building '/nix/store/xwf7gq1rpiyxn8cw1x42aphl1k40hqqk-system-path.drv'...
+structuredAttrs is enabled
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/cc' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/cc'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/cpp' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/cpp'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld.bfd' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld.bfd'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/c++' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/c++'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/strip' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/strip'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld.gold' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld.gold'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/clippy-driver' and `/nix/store/42vpa7gg09gs6x9v4y7aizmxwmrc35ac-clippy-1.95.0/bin/clippy-driver'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/rustfmt' and `/nix/store/1x0ba5x31jqzhhk02qz4lxkznmp6q3nl-rustfmt-1.95.0/bin/rustfmt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/cargo-fmt' and `/nix/store/1x0ba5x31jqzhhk02qz4lxkznmp6q3nl-rustfmt-1.95.0/bin/cargo-fmt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/cargo-clippy' and `/nix/store/42vpa7gg09gs6x9v4y7aizmxwmrc35ac-clippy-1.95.0/bin/cargo-clippy'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/rust-analyzer' and `/nix/store/0dxi831w8wy18086f93m3mj0xj07a6lz-rust-analyzer-2026-04-27/bin/rust-analyzer'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man/man1/Xserver.1.gz' and `/nix/store/7kp2yc8wf3riniyjifcwqsxsh1r2awqy-xorg-server-21.1.22/share/man/man1/Xserver.1.gz'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib/xorg/protocol.txt' and `/nix/store/7kp2yc8wf3riniyjifcwqsxsh1r2awqy-xorg-server-21.1.22/lib/xorg/protocol.txt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/qhm4qm5n7r4i0gv654ffz0akvh6br4wq-steam-1.0.0.85/bin/steam' and `/nix/store/9zp175jryj3l0kpaj1v6rrxdr1x32kr7-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/i07gqrfvlqsffshdvxdg1j9zr47llf4m-steam-run-1.0.0.85/bin/steam-run' and `/nix/store/m27j7162fd5d2w89yiz5264v2hw0fn6v-steam-run-1.0.0.85/bin/steam-run'
+created 24347 symlinks in user environment
+install-info: warning: no info dir entry in `/nix/store/7vj83bxh2r22v16dqx10spi3rgh84gjr-system-path/share/info/notes.info'
+gtk-update-icon-cache: Cache file created successfully.
+building '/nix/store/9i9vha6kmnxd2rqpsdjdr5hnxrz7j738-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/4z61hnmqqds1fy00rx7a8s3q0nnik2cg-dbus-1.drv'...
+building '/nix/store/zzfcspf2lawifk0qc7w7clnwl2maqvmf-unit-accounts-daemon.service.drv'...
+building '/nix/store/9f7i6h3np61x3wx5gic4asmhjs5qsrj7-X-Restart-Triggers-dbus-broker.drv'...
+building '/nix/store/x9kr8hr6cbkf2r01hpwsr7nm44lqkcxm-unit-polkit.service.drv'...
+building '/nix/store/4d1hm47ayxqwrphygiqbcdql42vmmcha-unit-dbus-broker.service.drv'...
+building '/nix/store/ddxi0v5wpslyxd93s8n8jzs9pzs3p0zj-unit-dbus-broker.service.drv'...
+building '/nix/store/8gppr3z6kqjsv8150wdg0blnva89chq0-system-units.drv'...
+building '/nix/store/428r8kcnsk4bg4sjif8m33cylrg1q3ca-user-units.drv'...
+building '/nix/store/x45b7alkdyka0n7bjwbz0mlkzmyslsrn-etc.drv'...
+building '/nix/store/nz0l07ymaks1qyaqjfijl82lvmbxm9kr-activate.drv'...
+building '/nix/store/4yxvrjnxjyxi8g3ijbxcrs35zz6vzcwn-nixos-system-rits-26.05.889.b51242d7d436.drv'...
 structuredAttrs is enabled
 Checking switch inhibitors... done
+stopping the following units: accounts-daemon.service, systemd-modules-load.service, systemd-tmpfiles-resetup.service
 NOT restarting the following changed units: display-manager.service
 activating the configuration...
-warning: not applying UID change of user ‘gdm-greeter-2’ (60580 -> 60579) in /etc/passwd
-warning: not applying UID change of user ‘gdm-greeter-3’ (60581 -> 60580) in /etc/passwd
-warning: not applying UID change of user ‘gdm-greeter-4’ (60582 -> 60581) in /etc/passwd
+removing group ‘gdm’
+removing user ‘gdm-greeter-2’
+removing user ‘gdm-greeter-5’
+removing user ‘gdm-greeter’
+removing user ‘gdm’
+removing user ‘gdm-greeter-3’
+removing user ‘gdm-greeter-4’
 setting up /etc...
+removing obsolete symlink ‘/etc/pam.d/gdm-password’...
+removing obsolete symlink ‘/etc/pam.d/gdm-autologin’...
+removing obsolete symlink ‘/etc/pam.d/gdm-launch-environment’...
+removing obsolete symlink ‘/etc/gdm/custom.conf’...
+removing obsolete symlink ‘/etc/gdm/Xsession’...
 reloading user units for si...
+reloading the following user units: dbus-broker.service
 restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-Done. The new configuration is /nix/store/v9zyq2p4lhy7v7g89ysqljmm0yq1x716-nixos-system-rits-26.05.889.b51242d7d436
+reloading the following units: dbus-broker.service
+restarting the following units: polkit.service, systemd-udevd.service
+starting the following units: accounts-daemon.service, systemd-modules-load.service, systemd-tmpfiles-resetup.service
+the following new units were started: NetworkManager-dispatcher.service
+Done. The new configuration is /nix/store/ic43mvvj9fqmd7n19sv6nvxwhnnliga3-nixos-system-rits-26.05.889.b51242d7d436

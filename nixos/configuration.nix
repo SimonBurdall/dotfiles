@@ -386,7 +386,7 @@
     mangohud
     networkmanager_dmenu
     nmap
-    picom
+    #picom
     playerctl
     polybar
     pywal

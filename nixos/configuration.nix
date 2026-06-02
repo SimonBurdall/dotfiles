@@ -370,6 +370,7 @@
     hyprlock # ADDED: lockscreen
     hypridle # ADDED: idle daemon (triggers hyprlock)
     wl-clipboard # ADDED: replaces xclip
+    swaybg
     calc
     fastfetch
     fzf

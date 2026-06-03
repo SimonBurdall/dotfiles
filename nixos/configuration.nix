@@ -345,7 +345,7 @@
     strawberry
     thunderbird
     vlc
-    vscode
+    zed-editor
     immich-go
 
     # Games

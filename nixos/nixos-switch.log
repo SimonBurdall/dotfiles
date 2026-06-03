@@ -1,22 +1,64 @@
 building the system configuration...
-these 6 derivations will be built:
-  /nix/store/km9p3livgcva2hb4y6vrchm76gl95chh-set-environment.drv
-  /nix/store/sypwvk26zrigb3g56npczi88aws6mlil-etc-pam-environment.drv
-  /nix/store/zq0rv01pdkmh6jxppklqiy0501khjg12-etc-profile.drv
-  /nix/store/yiy8b7j3fpb8v00xlb0jk0q18hd8blq4-etc.drv
-  /nix/store/hxv0xli3pzykjlxrgdhrfvsrlfkig5gs-activate.drv
-  /nix/store/ymlqn0wm7b06jdhbxl4pqpsizlna07h0-nixos-system-rits-26.05.889.b51242d7d436.drv
-building '/nix/store/sypwvk26zrigb3g56npczi88aws6mlil-etc-pam-environment.drv'...
-building '/nix/store/km9p3livgcva2hb4y6vrchm76gl95chh-set-environment.drv'...
-building '/nix/store/zq0rv01pdkmh6jxppklqiy0501khjg12-etc-profile.drv'...
-building '/nix/store/yiy8b7j3fpb8v00xlb0jk0q18hd8blq4-etc.drv'...
-building '/nix/store/hxv0xli3pzykjlxrgdhrfvsrlfkig5gs-activate.drv'...
-building '/nix/store/ymlqn0wm7b06jdhbxl4pqpsizlna07h0-nixos-system-rits-26.05.889.b51242d7d436.drv'...
+these 13 derivations will be built:
+  /nix/store/zlyvnqmbxw9aapwp230n0l2scni79dqd-system-path.drv
+  /nix/store/gnadxgwf002yscjn5al4zhapazyxc1l3-X-Restart-Triggers-polkit.drv
+  /nix/store/035a0g9s6lyiq05ccrivjdiqr31z05jc-unit-polkit.service.drv
+  /nix/store/jdpakrxazsw9bbblzgaymqn5bgkyyhbi-dbus-1.drv
+  /nix/store/kb46j4a0swx03xna36rzgf5m3g5vifn7-X-Restart-Triggers-dbus-broker.drv
+  /nix/store/3vnc0dksqi1f5v447cx3n6x29ynjbyi4-unit-dbus-broker.service.drv
+  /nix/store/45xcav30fsl6n152n26ij1kj7b0f3jik-unit-dbus-broker.service.drv
+  /nix/store/lq018lwifrqhy2ry70h19a3y19gvjjs6-user-units.drv
+  /nix/store/sxpf95sk971yfpvmfqz6n23aylyd1rwd-unit-accounts-daemon.service.drv
+  /nix/store/pz82m9vp5dq3yjjbwhby8mrwibxv1wib-system-units.drv
+  /nix/store/ngkw2cn1az3sj1nk3s20h24kg4ppwsrs-etc.drv
+  /nix/store/i4jr37r83didpfzyrbqs7sjrvjp2zgxr-activate.drv
+  /nix/store/h6hkj84ckpbrmy5y4s5myh3vnj1djslk-nixos-system-rits-26.05.889.b51242d7d436.drv
+this path will be fetched (19.6 MiB download, 322.0 MiB unpacked):
+  /nix/store/32sha0cn1p57vq267x78d5lfvlvxkdp0-bibata-cursors-2.0.7
+copying path '/nix/store/32sha0cn1p57vq267x78d5lfvlvxkdp0-bibata-cursors-2.0.7' from 'https://cache.nixos.org'...
+building '/nix/store/zlyvnqmbxw9aapwp230n0l2scni79dqd-system-path.drv'...
+structuredAttrs is enabled
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/cc' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/cc'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/cpp' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/cpp'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld.bfd' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld.bfd'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/c++' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/c++'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/strip' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/strip'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/788mx070y81zjlg5ipcl0cra3afviw9k-gcc-wrapper-15.2.0/bin/ld.gold' and `/nix/store/874j5xydsj6nr6i1zdrjvhln5gmxvvrr-clang-wrapper-21.1.8/bin/ld.gold'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/clippy-driver' and `/nix/store/42vpa7gg09gs6x9v4y7aizmxwmrc35ac-clippy-1.95.0/bin/clippy-driver'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/rustfmt' and `/nix/store/1x0ba5x31jqzhhk02qz4lxkznmp6q3nl-rustfmt-1.95.0/bin/rustfmt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/cargo-fmt' and `/nix/store/1x0ba5x31jqzhhk02qz4lxkznmp6q3nl-rustfmt-1.95.0/bin/cargo-fmt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/cargo-clippy' and `/nix/store/42vpa7gg09gs6x9v4y7aizmxwmrc35ac-clippy-1.95.0/bin/cargo-clippy'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/dpqx1vygrisrvnnwgym1226x317vqp4a-rustup-1.29.0/bin/rust-analyzer' and `/nix/store/0dxi831w8wy18086f93m3mj0xj07a6lz-rust-analyzer-2026-04-27/bin/rust-analyzer'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/share/man/man1/Xserver.1.gz' and `/nix/store/7kp2yc8wf3riniyjifcwqsxsh1r2awqy-xorg-server-21.1.22/share/man/man1/Xserver.1.gz'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/as2zwri1rz710h0f48nsz5whv971nbpy-xwayland-24.1.11/lib/xorg/protocol.txt' and `/nix/store/7kp2yc8wf3riniyjifcwqsxsh1r2awqy-xorg-server-21.1.22/lib/xorg/protocol.txt'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/qhm4qm5n7r4i0gv654ffz0akvh6br4wq-steam-1.0.0.85/bin/steam' and `/nix/store/9zp175jryj3l0kpaj1v6rrxdr1x32kr7-steam-1.0.0.85/bin/steam'
+pkgs.buildEnv warning: colliding subpath (ignored): `/nix/store/i07gqrfvlqsffshdvxdg1j9zr47llf4m-steam-run-1.0.0.85/bin/steam-run' and `/nix/store/m27j7162fd5d2w89yiz5264v2hw0fn6v-steam-run-1.0.0.85/bin/steam-run'
+created 24535 symlinks in user environment
+install-info: warning: no info dir entry in `/nix/store/2yyl5k1dca6185n54fv86h14g8a9j6wp-system-path/share/info/notes.info'
+gtk-update-icon-cache: Cache file created successfully.
+building '/nix/store/gnadxgwf002yscjn5al4zhapazyxc1l3-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/jdpakrxazsw9bbblzgaymqn5bgkyyhbi-dbus-1.drv'...
+building '/nix/store/sxpf95sk971yfpvmfqz6n23aylyd1rwd-unit-accounts-daemon.service.drv'...
+building '/nix/store/kb46j4a0swx03xna36rzgf5m3g5vifn7-X-Restart-Triggers-dbus-broker.drv'...
+building '/nix/store/035a0g9s6lyiq05ccrivjdiqr31z05jc-unit-polkit.service.drv'...
+building '/nix/store/3vnc0dksqi1f5v447cx3n6x29ynjbyi4-unit-dbus-broker.service.drv'...
+building '/nix/store/45xcav30fsl6n152n26ij1kj7b0f3jik-unit-dbus-broker.service.drv'...
+building '/nix/store/lq018lwifrqhy2ry70h19a3y19gvjjs6-user-units.drv'...
+building '/nix/store/pz82m9vp5dq3yjjbwhby8mrwibxv1wib-system-units.drv'...
+building '/nix/store/ngkw2cn1az3sj1nk3s20h24kg4ppwsrs-etc.drv'...
+building '/nix/store/i4jr37r83didpfzyrbqs7sjrvjp2zgxr-activate.drv'...
+building '/nix/store/h6hkj84ckpbrmy5y4s5myh3vnj1djslk-nixos-system-rits-26.05.889.b51242d7d436.drv'...
 structuredAttrs is enabled
 Checking switch inhibitors... done
+stopping the following units: accounts-daemon.service
 activating the configuration...
 setting up /etc...
 reloading user units for si...
+reloading the following user units: dbus-broker.service
 restarting sysinit-reactivation.target
-the following new units were started: NetworkManager-dispatcher.service
-Done. The new configuration is /nix/store/h5ny9nhs0g5xpsdvxy1kc0i3g6ff6p54-nixos-system-rits-26.05.889.b51242d7d436
+reloading the following units: dbus-broker.service
+restarting the following units: polkit.service
+starting the following units: accounts-daemon.service
+the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+Done. The new configuration is /nix/store/4x4h1cafxb139gsgklq1dwz8jdshcfnm-nixos-system-rits-26.05.889.b51242d7d436

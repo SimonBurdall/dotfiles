@@ -303,6 +303,7 @@
     android-tools
     dbeaver-bin
     clamav
+    bibata-cursors
     keymapp
     scrcpy
     vulkan-tools

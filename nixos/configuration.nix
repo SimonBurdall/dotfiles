@@ -51,7 +51,7 @@
   environment.sessionVariables = {
     HYPRLAND_CONFIG = "/home/si/.config/hypr/hyprland.lua";
     XCURSOR_THEME = "Bibata-Modern-Classic";
-    XCURSOR_SIZE = "20";
+    XCURSOR_SIZE = "16";
   };
 
   programs.dconf.enable = true;

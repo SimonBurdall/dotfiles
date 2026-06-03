@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [./hardware-configuration.nix];
@@ -49,7 +50,21 @@
 
   environment.sessionVariables = {
     HYPRLAND_CONFIG = "/home/si/.config/hypr/hyprland.lua";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_SIZE = "20";
   };
+
+  programs.dconf.enable = true;
+  programs.dconf.profiles.user.databases = [
+    {
+      settings = {
+        "org/gnome/desktop/interface" = {
+          cursor-theme = config.environment.sessionVariables.XCURSOR_THEME;
+          cursor-size = lib.gvariant.mkInt32 (lib.strings.toInt config.environment.sessionVariables.XCURSOR_SIZE);
+        };
+      };
+    }
+  ];
 
   ## Localization ----
   time.timeZone = "Europe/London";

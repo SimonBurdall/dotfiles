@@ -362,6 +362,7 @@
     waybar # ADDED: replaces polybar
     rofi
     swaynotificationcenter
+    kdePackages.dolphin
     libnotify
     grim # ADDED: native wayland screenshots
     slurp # ADDED: area selection for grim

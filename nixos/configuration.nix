@@ -29,7 +29,7 @@
     operation = "boot";
   };
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   networking.firewall = {
     enable = true;
@@ -45,6 +45,10 @@
         to = 61000;
       }
     ];
+  };
+
+  environment.sessionVariables = {
+    HYPRLAND_CONFIG = "/home/si/.config/hypr/hyprland.lua";
   };
 
   ## Localization ----

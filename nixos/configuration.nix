@@ -384,6 +384,10 @@
     swaynotificationcenter
     kdePackages.dolphin
     libnotify
+    blueman # bluetooth manager
+    networkmanagerapplet # provides nm-connection-editor
+    pavucontrol # volume mixer
+    btop # system monitor (you may already have this)
     grim # ADDED: native wayland screenshots
     slurp # ADDED: area selection for grim
     grimblast # ADDED: grim wrapper, nicer ergonomics

@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [./hardware-configuration.nix];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
@@ -115,6 +116,8 @@
     enable = true;
     xwayland.enable = true; # needed for any X11 apps you still run
   };
+
+  programs.nix-ld.enable = true;
 
   # CHANGED: added hyprland portal, kept gtk portal for GNOME fallback
   xdg.portal = {
@@ -321,6 +324,7 @@
     bibata-cursors
     keymapp
     scrcpy
+    nixd
     vulkan-tools
     vulkan-loader
     vulkan-validation-layers

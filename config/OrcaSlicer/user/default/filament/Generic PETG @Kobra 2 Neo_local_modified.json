@@ -1,0 +1,73 @@
+{
+    "fan_cooling_layer_time": [
+        "20"
+    ],
+    "fan_max_speed": [
+        "50"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "1"
+    ],
+    "filament_max_volumetric_speed": [
+        "8"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "40"
+    ],
+    "filament_retract_before_wipe": [
+        "70%"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "25"
+    ],
+    "filament_settings_id": [
+        "Generic PETG @Kobra 2 Neo_local_modified"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "from": "User",
+    "full_fan_speed_layer": [
+        "6"
+    ],
+    "inherits": "Anycubic Generic PETG",
+    "is_custom_defined": "0",
+    "name": "Generic PETG @Kobra 2 Neo_local_modified",
+    "nozzle_temperature": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "overhang_fan_speed": [
+        "60"
+    ],
+    "overhang_fan_threshold": [
+        "95%"
+    ],
+    "pressure_advance": [
+        "0"
+    ],
+    "slow_down_layer_time": [
+        "15"
+    ],
+    "slow_down_min_speed": [
+        "20"
+    ],
+    "version": "2.1.0.0"
+}

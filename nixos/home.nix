@@ -1,19 +1,15 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: let
-  # The one knob that controls portability.
-  # Move the repo? Change this single line. Nothing else references the path.
   dotfiles = "${config.home.homeDirectory}/dotfiles";
+  astalPkgs = inputs.astal.packages.x86_64-linux;
 in {
   home.stateVersion = "26.05"; # HM's own state version, NOT system.stateVersion
+  imports = [inputs.ags.homeManagerModules.default];
   programs.home-manager.enable = true;
-
-  ##############################################################
-  ## Declarative bucket — edit here, then rebuild to apply.    ##
-  ## Good for set-and-forget stuff you rarely touch.           ##
-  ##############################################################
 
   programs.bash = {
     enable = true;
@@ -49,6 +45,24 @@ in {
       res = "hyprctl keyword monitor DP-1,2560x1440@120,0x0,1";
       p = "python3";
     };
+  };
+
+  programs.ags = {
+    enable = true;
+    # configDir unset during development — we edit ~/.config/ags directly
+    # and run `ags run` ourselves, then hand it to HM once stable.
+    extraPackages = [
+      astalPkgs.io
+      astalPkgs.astal4 # GTK4
+      astalPkgs.battery
+      astalPkgs.wireplumber # audio
+      astalPkgs.network
+      astalPkgs.bluetooth
+      astalPkgs.mpris # media
+      astalPkgs.notifd # notifications
+      astalPkgs.tray
+      astalPkgs.hyprland # workspaces / focused window
+    ];
   };
 
   home.sessionVariables = {

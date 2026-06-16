@@ -69,11 +69,17 @@ in {
     EDITOR = "nvim";
     VISUAL = "nvim";
   };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+    size = 16;
+  };
+
   xdg.configFile."kitty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/kitty";
-
-  xdg.configFile."rofi".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/rofi";
 
   xdg.configFile."hypr".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/hypr";
@@ -83,6 +89,9 @@ in {
 
   xdg.configFile."swaync".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/swaync";
+
+  xdg.configFile."rofi".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/rofi";
 
   xdg.configFile."mangohud".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/mangohud";

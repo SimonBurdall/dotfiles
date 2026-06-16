@@ -14,11 +14,7 @@ pkill swaybg 2>/dev/null
 swaybg -i "$1" -m fill &
 disown
 
-# Reload Waybar to pick up new colours
-pkill waybar 2>/dev/null
-sleep 0.5
-waybar &
-disown
+ags run ~/.config/ags
 
 # Reload Hyprland colours
 hyprctl reload

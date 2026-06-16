@@ -10,7 +10,7 @@
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" "v4l2loopback"];
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";
@@ -21,6 +21,10 @@
     "net.ipv4.tcp_timestamps" = 1;
     "net.ipv4.tcp_window_scaling" = 1;
   };
+  boot.extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+  '';
 
   networking.hostName = "rits";
   networking.networkmanager.enable = true;

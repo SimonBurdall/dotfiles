@@ -78,6 +78,9 @@ in {
     size = 16;
   };
 
+  xdg.configFile."ags".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/ags";
+
   xdg.configFile."kitty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/kitty";
 

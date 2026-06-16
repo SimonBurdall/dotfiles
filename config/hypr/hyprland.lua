@@ -1,9 +1,6 @@
 -- ~/.config/hypr/hyprland.lua
--- Hyprland 0.55 config for rits
 
---------------------
 ---- ENVIRONMENT ---
---------------------
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("GBM_BACKEND", "nvidia-drm")
@@ -12,9 +9,7 @@ hl.env("NVD_BACKEND", "direct")
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "16")
 
---------------------
 ---- MONITOR     ---
---------------------
 hl.monitor({
 	output = "DP-3",
 	mode = "5120x1440@239.76",
@@ -22,9 +17,7 @@ hl.monitor({
 	scale = 1,
 })
 
---------------------
 ---- AUTOSTART   ---
---------------------
 hl.on("hyprland.start", function()
 	hl.exec_cmd("ags run ~/.config/ags")
 	hl.exec_cmd("hypridle")
@@ -38,9 +31,7 @@ hl.on("hyprland.start", function()
 	end
 end)
 
---------------------
 ---- PYWAL COLORS --
---------------------
 local colorFile = io.open(os.getenv("HOME") .. "/.cache/wal/colors", "r")
 local colors = {}
 if colorFile then
@@ -56,9 +47,7 @@ local color6 = colors[6] or "#87735C"
 local activeBorder = "rgb(" .. color6:gsub("#", "") .. ")"
 local inactiveBorder = "rgb(" .. color2:gsub("#", "") .. ")"
 
---------------------
 ---- LOOK & FEEL --
---------------------
 hl.config({
 	general = {
 		gaps_in = 5,
@@ -113,9 +102,7 @@ hl.config({
 	},
 })
 
---------------------
 ---- ANIMATIONS  ---
---------------------
 hl.curve("myBezier", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
 hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
@@ -126,9 +113,7 @@ hl.animation({ leaf = "windowsOut", enabled = true, speed = 7, bezier = "myBezie
 hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "almostLinear" })
 hl.animation({ leaf = "workspaces", enabled = true, speed = 6, bezier = "almostLinear" })
 
---------------------
 ---- WINDOW RULES --
---------------------
 hl.window_rule({
 	match = { class = ".*" },
 	suppress_event = "maximize",
@@ -139,9 +124,7 @@ hl.window_rule({
 	opacity = "0.85 0.85",
 })
 
---------------------
 ---- KEYBINDS    ---
---------------------
 local mod = "SUPER"
 local moon = "CTRL + SHIFT + ALT + SUPER"
 

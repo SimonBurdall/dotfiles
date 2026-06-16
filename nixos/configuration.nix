@@ -10,7 +10,7 @@
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"]; # ADDED: nvidia kernel modules required for Hyprland
+  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";
@@ -90,7 +90,6 @@
   ## Display, Desktop Environment, and Window Manager ----
   services.xserver = {
     enable = true;
-    # REMOVED: windowManager.bspwm.enable — replacing with Hyprland
     xkb.layout = "gb";
     xkb.variant = "";
     videoDrivers = ["nvidia"];
@@ -102,7 +101,6 @@
     '';
   };
 
-  # CHANGED: gdm -> sddm, defaultSession -> hyprland, kept GNOME as fallback
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -111,21 +109,19 @@
   services.desktopManager.gnome.enable = true;
   services.gnome.core-apps.enable = false;
 
-  # ADDED: Hyprland
   programs.hyprland = {
     enable = true;
-    xwayland.enable = true; # needed for any X11 apps you still run
+    xwayland.enable = true;
   };
 
   programs.nix-ld.enable = true;
 
-  # CHANGED: added hyprland portal, kept gtk portal for GNOME fallback
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland # ADDED
-      xdg-desktop-portal-gtk # kept for GNOME
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
     ];
   };
 
@@ -155,7 +151,7 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     powerManagement.enable = true;
-    forceFullCompositionPipeline = true; # NOTE: may cause issues under Wayland, remove if you get flickering
+    forceFullCompositionPipeline = true;
     nvidiaPersistenced = true;
   };
 
@@ -272,7 +268,7 @@
 
   ## Package Management ----
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = ["electron-36.9.5"];
+  #nixpkgs.config.permittedInsecurePackages = ["electron-36.9.5"];
 
   ## System Packages ----
   environment.systemPackages = with pkgs; [
@@ -284,7 +280,6 @@
     clang
     clippy
     deadnix
-    docker
     docker-compose
     gcc
     gh
@@ -326,8 +321,6 @@
     scrcpy
     nixd
     vulkan-tools
-    vulkan-loader
-    vulkan-validation-layers
     libva
     libva-utils
     libusb1
@@ -364,7 +357,6 @@
     pocket-casts
     rclone
     spotify
-    steam
     steam-run
     strawberry
     thunderbird
@@ -380,24 +372,21 @@
     gamemode
 
     # System and Wayland Utilities
-    bash
     zsh
-    # REMOVED: bspwm, sxhkd, picom, polybar, rofi, flameshot, xclip, feh
-    waybar # ADDED: replaces polybar
     rofi
     swaynotificationcenter
     nnn
     libnotify
-    blueman # bluetooth manager
-    networkmanagerapplet # provides nm-connection-editor
-    pavucontrol # volume mixer
-    btop # system monitor (you may already have this)
-    grim # ADDED: native wayland screenshots
-    slurp # ADDED: area selection for grim
-    grimblast # ADDED: grim wrapper, nicer ergonomics
-    hyprlock # ADDED: lockscreen
-    hypridle # ADDED: idle daemon (triggers hyprlock)
-    wl-clipboard # ADDED: replaces xclip
+    blueman
+    networkmanagerapplet
+    pavucontrol
+    btop
+    grim
+    slurp
+    grimblast
+    hyprlock
+    hypridle
+    wl-clipboard
     swaybg
     calc
     fastfetch
@@ -411,7 +400,6 @@
     playerctl
     pywal
     ripgrep
-    solaar
     unzip
     wireplumber
     zip

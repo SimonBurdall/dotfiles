@@ -7,7 +7,7 @@
   dotfiles = "${config.home.homeDirectory}/dotfiles";
   astalPkgs = inputs.astal.packages.x86_64-linux;
 in {
-  home.stateVersion = "26.05"; # HM's own state version, NOT system.stateVersion
+  home.stateVersion = "26.05";
   imports = [inputs.ags.homeManagerModules.default];
   programs.home-manager.enable = true;
 
@@ -49,19 +49,17 @@ in {
 
   programs.ags = {
     enable = true;
-    # configDir unset during development — we edit ~/.config/ags directly
-    # and run `ags run` ourselves, then hand it to HM once stable.
     extraPackages = [
       astalPkgs.io
-      astalPkgs.astal4 # GTK4
+      astalPkgs.astal4
       astalPkgs.battery
-      astalPkgs.wireplumber # audio
+      astalPkgs.wireplumber
       astalPkgs.network
       astalPkgs.bluetooth
-      astalPkgs.mpris # media
-      astalPkgs.notifd # notifications
+      astalPkgs.mpris
+      astalPkgs.notifd
       astalPkgs.tray
-      astalPkgs.hyprland # workspaces / focused window
+      astalPkgs.hyprland
     ];
   };
 
@@ -86,9 +84,6 @@ in {
 
   xdg.configFile."hypr".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/hypr";
-
-  xdg.configFile."waybar".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/waybar";
 
   xdg.configFile."swaync".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/swaync";

@@ -268,7 +268,6 @@
 
   ## Package Management ----
   nixpkgs.config.allowUnfree = true;
-  #nixpkgs.config.permittedInsecurePackages = ["electron-36.9.5"];
 
   ## System Packages ----
   environment.systemPackages = with pkgs; [

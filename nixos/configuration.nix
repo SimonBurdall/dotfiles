@@ -386,7 +386,7 @@
     waybar # ADDED: replaces polybar
     rofi
     swaynotificationcenter
-    kdePackages.dolphin
+    thunar
     libnotify
     blueman # bluetooth manager
     networkmanagerapplet # provides nm-connection-editor

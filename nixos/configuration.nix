@@ -340,7 +340,6 @@
     gimp
     godot_4
     inkscape
-    obs-studio
     orca-slicer
     reaper
     scribus
@@ -351,6 +350,7 @@
     calibre
     discord
     gpu-screen-recorder
+    obs-studio
     grayjay
     handbrake
     heroic

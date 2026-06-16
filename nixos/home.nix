@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   inputs,
   ...
@@ -10,6 +11,17 @@ in {
   home.stateVersion = "26.05";
   imports = [inputs.ags.homeManagerModules.default];
   programs.home-manager.enable = true;
+
+  home.activation.scaffoldVault = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    run mkdir -p $VERBOSE_ARG \
+      "$HOME/1-vault/1-code/1-projects" \
+      "$HOME/1-vault/1-code/2-snippets" \
+      "$HOME/1-vault/1-code/3-archive" \
+      "$HOME/1-vault/2-media/1-wallpapers" \
+      "$HOME/1-vault/3-permanent" \
+      "$HOME/1-vault/4-fleeting" \
+      "$HOME/1-vault/5-archive"
+  '';
 
   programs.bash = {
     enable = true;

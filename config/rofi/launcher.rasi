@@ -1,0 +1,100 @@
+/*
+ * rofi launcher theme — layout only.
+ * Colours are injected live from pywal by launch.sh (sources ~/.cache/wal/colors.sh,
+ * the same output the bar's colors.scss comes from). The values in the * block below
+ * are only fallbacks for when rofi is run directly instead of via launch.sh.
+ *
+ * The window is a FULLSCREEN scrim: global Hyprland blur frosts everything behind it,
+ * and the panel (mainbox) is a centred card on top. Tune @scrim alpha for dim amount,
+ * and the window padding to reposition/resize the card.
+ *
+ * launch via:  ~/.config/rofi/launch.sh
+ */
+* {
+    /* fallbacks — launch.sh overrides bg/fg/accent/etc. with live pywal colours */
+    bg:          #111217EB;
+    fg:          #c3c3c5;
+    accent:      #d98a5a;
+    accent-soft: #d98a5a1a;
+    accent-sel:  #d98a5a66;
+    muted:       #6a6f7d;
+
+    /* fullscreen frosted backdrop. alpha (last 2 hex) = how dark the dim is;
+       the blur itself is global (decoration:blur). lower alpha = more desktop
+       shows through the frost, higher = darker. */
+    scrim:       #00000080;
+
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "Hack Nerd Font 11";
+}
+configuration {
+    show-icons:          true;
+    icon-theme:          "Papirus-Dark";
+    drun-display-format: "{name} <span weight='light' size='smaller' alpha='55%'><i>{generic}</i></span>";
+    display-drun:        "";
+}
+window {
+    fullscreen:       true;
+    background-color:  @scrim;
+    /* centres the card. vertical horizontal — nudge these to taste for 5120x1440 */
+    padding:          30% 41%;
+}
+mainbox {
+    background-color: @bg;
+    border:           1px;
+    border-color:     @accent-sel;
+    border-radius:    16px;
+    padding:          16px;
+    spacing:          12px;
+    children:         [ inputbar, listview ];
+}
+inputbar {
+    background-color: @accent-soft;
+    border-radius:    12px;
+    padding:          12px 14px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+prompt {
+    enabled:    true;
+    str:        "󰍉";
+    text-color: @accent;
+    font:       "Hack Nerd Font 13";
+}
+entry {
+    placeholder:       "Search apps…";
+    placeholder-color: @muted;
+    text-color:        @fg;
+    cursor:            text;
+}
+listview {
+    lines:           7;
+    columns:         2;
+    spacing:         4px;
+    scrollbar:       true;
+    fixed-height:    true;
+    fixed-num-lines: true;
+    dynamic:         false;
+}
+element {
+    padding:       10px 12px;
+    spacing:       12px;
+    border-radius: 10px;
+    text-color:    @fg;
+}
+element selected {
+    background-color: @accent-soft;
+    border:           1px;
+    border-color:     @accent-sel;
+    text-color:       @fg;
+}
+element normal active   { text-color: @accent; }
+element selected active  { text-color: @accent; }
+element-icon { size: 28px; vertical-align: 0.5; }
+element-text { vertical-align: 0.5; text-color: inherit; }
+scrollbar {
+    handle-color:  @accent;
+    handle-width:  4px;
+    border-radius: 8px;
+}

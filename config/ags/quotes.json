@@ -1,0 +1,84 @@
+{
+  "quotes": [
+    {
+      "text": "Hey everybody, it's Tuesday!",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "Girl, let me see your turtles.",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "This Quick Look is over!",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "Hit the golf button! Hit the golf button!",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "Oh shit, Bears can swim!",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "I can play Simon Says like a motherfucker.",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "I did not say, 'uh, uh, uh, uh, uh.'",
+      "author": "Ryan Davis"
+    },
+    {
+      "text": "You heard it here third.",
+      "author": "Jeff Gerstmann"
+    },
+    {
+      "text": "Anime is for jerks.",
+      "author": "Jeff Gerstmann"
+    },
+    {
+      "text": "This is a one-to-one loading screen... it loads in real time.",
+      "author": "Vinny Caravella"
+    },
+    {
+      "text": "Fun things are fun!",
+      "author": "Yui Hirasawa"
+    },
+    {
+      "text": "Talk is cheap. Show me the code.",
+      "author": "Linus Torvalds"
+    },
+    {
+      "text": "I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git.",
+      "author": "Linus Torvalds"
+    },
+    {
+      "text": "Theory and practice sometimes clash. And when that happens, theory loses. Every single time.",
+      "author": "Linus Torvalds"
+    },
+    {
+      "text": "Only wimps use tape backup: real men just upload their important stuff on ftp, and let the rest of the world mirror it.",
+      "author": "Linus Torvalds"
+    },
+    {
+      "text": "Given enough eyeballs, all bugs are shallow.",
+      "author": "Linus's Law (Eric S. Raymond)"
+    },
+    {
+      "text": "The unexamined life is not worth living.",
+      "author": "Socrates"
+    },
+    {
+      "text": "Simplicity is the ultimate sophistication.",
+      "author": "Leonardo da Vinci"
+    },
+    {
+      "text": "Premature optimization is the root of all evil.",
+      "author": "Donald Knuth"
+    },
+    {
+      "text": "Make it work, make it right, make it fast.",
+      "author": "Kent Beck"
+    }
+  ]
+}

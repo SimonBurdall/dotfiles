@@ -119,6 +119,11 @@ hl.window_rule({
 	suppress_event = "maximize",
 })
 
+hl.window_rule({
+	match = { class = "kitty" },
+	opacity = "0.85 0.85",
+})
+
 ---- KEYBINDS    ---
 local mod = "SUPER"
 local moon = "CTRL + SHIFT + ALT + SUPER"

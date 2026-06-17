@@ -1,5 +1,5 @@
 # ~/.config/bash/wal-prompt.sh
-export VIRTUAL_ENV_DISABLE_PROMPT=1   # stop venv activate fighting our prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=1 
 
 _walp_rgb() {
     local h=${1#\#}
@@ -45,15 +45,13 @@ __set_wal_prompt() {
     fi
 
     local P=""
-    # venv segment first, if active
+    P+="$(_walp_bg "$c_name")$(_walp_fg "$c_dark") $icon "
+    P+="$(_walp_bg "$c_path")$(_walp_fg "$c_name")$sep"
+    P+="$(_walp_fg "$c_fg") $short "
     if [[ -n $venv ]]; then
         P+="$(_walp_bg "$c_venv")$(_walp_fg "$c_dark") $pyico $venv "
         P+="$(_walp_bg "$c_name")$(_walp_fg "$c_venv")$sep"
     fi
-    # name segment
-    P+="$(_walp_bg "$c_name")$(_walp_fg "$c_dark") $icon "
-    P+="$(_walp_bg "$c_path")$(_walp_fg "$c_name")$sep"
-    P+="$(_walp_fg "$c_fg") $short "
     if [[ -n $gitseg ]]; then
         P+="$(_walp_bg "$c_git")$(_walp_fg "$c_path")$sep"
         P+="$(_walp_fg "$c_dark") $gitseg "

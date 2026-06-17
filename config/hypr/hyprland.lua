@@ -141,6 +141,11 @@ hl.window_rule({
 	opacity = "0.85 0.85",
 })
 
+hl.window_rule({
+	match = { class = "com.gabm.satty" },
+	float = true,
+	center = true,
+})
 ---- KEYBINDS    ---
 local mod = "SUPER"
 local moon = "CTRL + SHIFT + ALT + SUPER"
@@ -173,8 +178,6 @@ hl.bind(mod .. " + n", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Screenshots
 hl.bind("Print", hl.dsp.exec_cmd(' grim -g "$(slurp)" - | satty -f - --copy-command wl-copy'))
-hl.bind("SHIFT + Print", hl.dsp.exec_cmd("grim ~/Pictures/$(date +%Y%m%d_%H%M%S).png"))
-hl.bind(mod .. " + s", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
 
 -- Window management
 hl.bind(mod .. " + c", hl.dsp.window.close())

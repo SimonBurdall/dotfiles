@@ -29,7 +29,7 @@ in {
       source ~/.config/bash/wal-prompt.sh
       n() {
         export NNN_TMPFILE="''${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-        nnn -a "$@"
+        nnn -a -P p "$@"
         [ -f "$NNN_TMPFILE" ] && { . "$NNN_TMPFILE"; rm -f "$NNN_TMPFILE"; }
       }
     '';

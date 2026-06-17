@@ -75,10 +75,14 @@ in {
   programs.nnn = {
     enable = true;
     package = pkgs.nnn.override {withNerdIcons = true;};
-    plugins.mappings = {
-      p = "preview-tui";
-      m = "nmount";
+    plugins = {
+      src = "${pkgs.nnn.src}/plugins";
+      mappings = {
+        p = "preview-tui";
+        m = "nmount";
+      };
     };
+
     extraPackages = with pkgs; [
       ffmpegthumbnailer
       poppler-utils

@@ -1,21 +1,38 @@
 -- ~/.config/hypr/hyprland.lua
 
----- ENVIRONMENT ---
-hl.env("LIBVA_DRIVER_NAME", "nvidia")
+---- HOST ----
+local function get_hostname()
+	local f = io.open("/etc/hostname", "r")
+	if not f then
+		return ""
+	end
+	local h = f:read("l")
+	f:close()
+	return h or ""
+end
+local host = get_hostname()
+
+---- ENVIRONMENT ----
 hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("GBM_BACKEND", "nvidia-drm")
-hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("NVD_BACKEND", "direct")
 hl.env("XCURSOR_THEME", "Bibata-Modern-Classic")
 hl.env("XCURSOR_SIZE", "16")
 
----- MONITOR     ---
-hl.monitor({
-	output = "DP-3",
-	mode = "5120x1440@239.76",
-	position = "0x0",
-	scale = 1,
-})
+if host == "rits" then
+	hl.env("LIBVA_DRIVER_NAME", "nvidia")
+	hl.env("GBM_BACKEND", "nvidia-drm")
+	hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+	hl.env("NVD_BACKEND", "direct")
+end
+
+---- MONITOR ----
+if host == "rits" then
+	hl.monitor({ output = "DP-3", mode = "5120x1440@239.76", position = "0x0", scale = 1 })
+elseif host == "mori" then
+	-- Check the real output name with `hyprctl monitors` and adjust.
+	hl.monitor({ output = "eDP-1", mode = "preferred", position = "0x0", scale = 1 })
+else
+	hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
+end
 
 ---- AUTOSTART   ---
 hl.on("hyprland.start", function()

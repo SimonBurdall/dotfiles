@@ -353,6 +353,7 @@
     grim
     slurp
     grimblast
+    satty
     hyprlock
     hypridle
     wl-clipboard

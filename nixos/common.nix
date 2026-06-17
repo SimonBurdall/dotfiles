@@ -102,8 +102,6 @@
     wayland.enable = true;
   };
   services.displayManager.defaultSession = "hyprland";
-  services.desktopManager.gnome.enable = true;
-  services.gnome.core-apps.enable = false;
 
   programs.hyprland = {
     enable = true;

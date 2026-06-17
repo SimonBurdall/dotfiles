@@ -62,6 +62,11 @@ in {
     };
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
   programs.ags = {
     enable = true;
     extraPackages = [

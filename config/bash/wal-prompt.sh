@@ -1,4 +1,6 @@
 # ~/.config/bash/wal-prompt.sh
+export VIRTUAL_ENV_DISABLE_PROMPT=1   # stop venv activate fighting our prompt
+
 _walp_rgb() {
     local h=${1#\#}
     printf '%d;%d;%d' "$((16#${h:0:2}))" "$((16#${h:2:2}))" "$((16#${h:4:2}))"
@@ -15,15 +17,20 @@ __set_wal_prompt() {
     [[ $code -ne 0 ]] && c_name=${color1:-#cc6666}
     local c_path=${color8:-#373b41}
     local c_git=${color2:-#b5bd68}
+    local c_venv=${color5:-#b294bb}
     local c_dark=${background:-#1d1f21}
     local c_fg=${foreground:-#c5c8c6}
 
-    local sep=$'\ue0b0' gico=$'\ue0a0' icon=$'\uedff'
+    local sep=$'\ue0b0' gico=$'\ue0a0' icon=$'\uedff' pyico=$'\ue73c'
 
-    # path: leading … plus last component, like the Titus one
+    # path: leading … plus last component
     local p=${PWD/#$HOME/\~} short
     if [[ $p == "~" || $p == "/" || $p != */* ]]; then short=$p
     else short="…/${p##*/}"; fi
+
+    # python venv (basename of $VIRTUAL_ENV)
+    local venv=""
+    [[ -n $VIRTUAL_ENV ]] && venv="${VIRTUAL_ENV##*/}"
 
     # git segment
     local branch gitseg=""
@@ -38,6 +45,12 @@ __set_wal_prompt() {
     fi
 
     local P=""
+    # venv segment first, if active
+    if [[ -n $venv ]]; then
+        P+="$(_walp_bg "$c_venv")$(_walp_fg "$c_dark") $pyico $venv "
+        P+="$(_walp_bg "$c_name")$(_walp_fg "$c_venv")$sep"
+    fi
+    # name segment
     P+="$(_walp_bg "$c_name")$(_walp_fg "$c_dark") $icon "
     P+="$(_walp_bg "$c_path")$(_walp_fg "$c_name")$sep"
     P+="$(_walp_fg "$c_fg") $short "

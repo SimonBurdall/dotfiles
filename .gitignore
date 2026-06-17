@@ -1,0 +1,12 @@
+# secrets
+config/ags/todoist-token
+
+# AGS build artefacts
+config/ags/node_modules/
+config/ags/@girs/
+
+# nix / build noise
+result
+result-*
+nixos-switch.log
+*.backup

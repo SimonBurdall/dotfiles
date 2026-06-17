@@ -3,15 +3,15 @@ set -e
 
 cfg=~/dotfiles
 host=$(hostname)
-files=("$cfg/nixos/configuration.nix" "$cfg/nixos/home.nix")
+files=("$cfg/nixos/common.nix" "$cfg/nixos/home.nix" "$cfg/hosts/$host/default.nix")
 
 pushd "$cfg/nixos/" > /dev/null
 
 case "$1" in
-    -e|edit) "${EDITOR:-nvim}" "${files[@]}" ;; 
-    -d|dir)  "${EDITOR:-nvim}" "$cfg" ;;     
-    -n|none) : ;;                              
-    *)       "${EDITOR:-nvim}" configuration.nix ;;
+    -e|edit) "${EDITOR:-nvim}" "${files[@]}" ;;
+    -d|dir)  "${EDITOR:-nvim}" "$cfg" ;;
+    -n|none) : ;;
+    *)       "${EDITOR:-nvim}" common.nix ;;
 esac
 
 alejandra "$cfg" > /dev/null

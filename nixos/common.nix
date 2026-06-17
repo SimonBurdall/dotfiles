@@ -4,13 +4,14 @@
   lib,
   ...
 }: {
-  imports = [./hardware-configuration.nix];
+  # Shared system config for every host. Machine-specific bits
+  # (hostname, GPU, hardware-configuration, VR/streaming) live in hosts/<name>/.
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" "v4l2loopback"];
+  boot.kernelModules = ["uinput" "v4l2loopback"];
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";
@@ -26,7 +27,6 @@
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
 
-  networking.hostName = "rits";
   networking.networkmanager.enable = true;
 
   system.autoUpgrade = {
@@ -92,17 +92,11 @@
   users.groups.usb = {};
 
   ## Display, Desktop Environment, and Window Manager ----
+  # videoDrivers is set per-host (NVIDIA on rits, modesetting on mori).
   services.xserver = {
     enable = true;
     xkb.layout = "gb";
     xkb.variant = "";
-    videoDrivers = ["nvidia"];
-    serverFlagsSection = ''
-      Option "BlankTime" "0"
-      Option "StandbyTime" "0"
-      Option "SuspendTime" "0"
-      Option "OffTime" "0"
-    '';
   };
 
   services.displayManager.sddm = {
@@ -149,32 +143,24 @@
   fonts.fontconfig.enable = true;
 
   ## Hardware and Graphics ----
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
-    powerManagement.enable = true;
-    forceFullCompositionPipeline = true;
-    nvidiaPersistenced = true;
-  };
-
+  # Generic, vendor-neutral graphics stack. Per-host files append their own
+  # VA-API driver (nvidia-vaapi-driver on rits, intel-media-driver on mori, etc).
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
     extraPackages = with pkgs; [
-      intel-media-driver
       libva-vdpau-driver
       libvdpau-va-gl
       vulkan-loader
       vulkan-validation-layers
-      nvidia-vaapi-driver
     ];
     extraPackages32 = with pkgs.pkgsi686Linux; [
       vulkan-loader
     ];
   };
 
+  # Logitech receiver / Solaar. Harmless if the device isn't present, and the
+  # peripherals roam between machines, so this stays shared.
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
 
@@ -190,20 +176,22 @@
   };
 
   ## File Systems and Network Shares ----
+  # Resilient NFS: x-systemd.automount mounts on first access, nofail +
+  # mount-timeout means an off-network machine boots normally and the share
+  # is simply absent until truenas is reachable again.
   fileSystems."/home/si/3-minilla" = {
     device = "truenas.local:/mnt/minilla";
     fsType = "nfs";
-    options = ["defaults" "rw" "nolock"];
+    options = ["nofail" "x-systemd.automount" "x-systemd.mount-timeout=10" "rw" "nolock" "_netdev"];
   };
 
   fileSystems."/home/si/4-spacezilla" = {
     device = "truenas.local:/mnt/spacezilla";
     fsType = "nfs";
-    options = ["defaults" "rw" "nolock"];
+    options = ["nofail" "x-systemd.automount" "x-systemd.mount-timeout=10" "rw" "nolock" "_netdev"];
   };
 
   services.rpcbind.enable = true;
-  services.nfs.server.enable = true;
 
   ## System Services ----
   services.openssh.enable = true;
@@ -226,13 +214,6 @@
     group = "users";
     dataDir = "/home/si/2-syncthing";
     configDir = "/home/si/.config/syncthing";
-  };
-
-  services.sunshine = {
-    enable = true;
-    autoStart = true;
-    capSysAdmin = true;
-    openFirewall = true;
   };
 
   services.udev.extraRules = ''
@@ -263,11 +244,6 @@
     '';
     extraPkgs = pkgs: with pkgs; [libgdiplus libusb1 libv4l pipewire];
     extraLibraries = pkgs: with pkgs; [libusb1 libv4l];
-  };
-
-  services.wivrn = {
-    enable = true;
-    openFirewall = true;
   };
 
   ## Package Management ----

@@ -67,6 +67,30 @@ in {
     enableBashIntegration = true;
   };
 
+  programs.nnn = {
+    enable = true;
+    package = pkgs.nnn.override {withNerdIcons = true;};
+    plugins.mappings = {
+      p = "preview-tui";
+      m = "nmount";
+    };
+    extraPackages = with pkgs; [
+      ffmpegthumbnailer
+      poppler-utils
+      bat
+      mediainfo
+      imagemagick
+      librsvg
+      glow
+      w3m
+    ];
+    bookmarks = {
+      d = "~/dotfiles";
+      v = "~/1-vault";
+      u = "/run/media/si";
+    };
+  };
+
   programs.ags = {
     enable = true;
     extraPackages = [

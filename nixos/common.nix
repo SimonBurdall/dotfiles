@@ -344,7 +344,6 @@
     zsh
     rofi
     swaynotificationcenter
-    nnn
     libnotify
     blueman
     networkmanagerapplet

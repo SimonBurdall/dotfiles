@@ -5,7 +5,6 @@
   ...
 }: {
   # Shared system config for every host. Machine-specific bits
-  # (hostname, GPU, hardware-configuration, VR/streaming) live in hosts/<name>/.
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   ## Boot and System ----
@@ -92,7 +91,6 @@
   users.groups.usb = {};
 
   ## Display, Desktop Environment, and Window Manager ----
-  # videoDrivers is set per-host (NVIDIA on rits, modesetting on mori).
   services.xserver = {
     enable = true;
     xkb.layout = "gb";
@@ -143,8 +141,6 @@
   fonts.fontconfig.enable = true;
 
   ## Hardware and Graphics ----
-  # Generic, vendor-neutral graphics stack. Per-host files append their own
-  # VA-API driver (nvidia-vaapi-driver on rits, intel-media-driver on mori, etc).
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -159,8 +155,7 @@
     ];
   };
 
-  # Logitech receiver / Solaar. Harmless if the device isn't present, and the
-  # peripherals roam between machines, so this stays shared.
+  # Logitech receiver / Solaar
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;
 
@@ -176,9 +171,6 @@
   };
 
   ## File Systems and Network Shares ----
-  # Resilient NFS: x-systemd.automount mounts on first access, nofail +
-  # mount-timeout means an off-network machine boots normally and the share
-  # is simply absent until truenas is reachable again.
   fileSystems."/home/si/3-minilla" = {
     device = "truenas.local:/mnt/minilla";
     fsType = "nfs";

@@ -33,10 +33,8 @@
     nvidiaPersistenced = true;
   };
 
-  # Appended to the generic list in common.nix.
   hardware.graphics.extraPackages = with pkgs; [nvidia-vaapi-driver];
 
-  ## VR and game streaming (desktop host only) ----
   services.sunshine = {
     enable = true;
     autoStart = true;
@@ -48,4 +46,6 @@
     enable = true;
     openFirewall = true;
   };
+
+  environment.systemPackages = [(pkgs.blender.override {cudaSupport = true;})];
 }

@@ -172,7 +172,7 @@ hl.bind(moon .. " + p", hl.dsp.exec_cmd("ags request powermenu"))
 hl.bind(mod .. " + n", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Screenshots
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" ~/Pictures/$(date +%Y%m%d_%H%M%S).png'))
+hl.bind("Print", hl.dsp.exec_cmd(' grim -g "$(slurp)" - | satty -f - --copy-command wl-copy'))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd("grim ~/Pictures/$(date +%Y%m%d_%H%M%S).png"))
 hl.bind(mod .. " + s", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
 

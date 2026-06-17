@@ -25,6 +25,9 @@ in {
 
   programs.bash = {
     enable = true;
+    initExtra = ''
+      source ~/.config/bash/wal-prompt.sh
+    '';
     shellAliases = {
       "1" = "cd ~/1-vault/";
       "11" = "cd ~/1-vault/1-code/";

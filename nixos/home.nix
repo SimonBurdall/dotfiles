@@ -27,6 +27,11 @@ in {
     enable = true;
     initExtra = ''
       source ~/.config/bash/wal-prompt.sh
+      n() {
+        export NNN_TMPFILE="''${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+        nnn -a "$@"
+        [ -f "$NNN_TMPFILE" ] && { . "$NNN_TMPFILE"; rm -f "$NNN_TMPFILE"; }
+      }
     '';
     shellAliases = {
       "1" = "cd ~/1-vault/";

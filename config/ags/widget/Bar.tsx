@@ -15,14 +15,12 @@ import { Network } from "./Network"
 import { Calendar } from "./Calendar"
 import { togglePowerMenu } from "./PowerMenu"
 
-// GTK4 buttons keep the default arrow on hover and there's no CSS cursor property,
-// so set the "pointer" hand on every button by walking the tree.
 function applyHand(w: Gtk.Widget | null) {
   if (!w) return
   if (w instanceof Gtk.Button || w instanceof Gtk.MenuButton) {
     try {
       w.set_cursor_from_name("pointer")
-    } catch (_) {}
+    } catch (_) { }
   }
   let child = w.get_first_child()
   while (child) {
@@ -42,7 +40,7 @@ function handCursors(root: Gtk.Widget | null) {
       applyHand(pop)
       try {
         pop.connect("map", () => applyHand(pop))
-      } catch (_) {}
+      } catch (_) { }
     }
   }
   let child = root.get_first_child()

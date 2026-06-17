@@ -88,8 +88,10 @@ in {
     size = 16;
   };
 
+  xdg.configFile."bash/wal-prompt.sh".source = ../config/bash/wal-prompt.sh;
+
   xdg.configFile."ags".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/ags";
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/ags";
 
   xdg.configFile."kitty".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/kitty";
@@ -101,7 +103,7 @@ in {
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/swaync";
 
   xdg.configFile."rofi".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/config/rofi";
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/rofi";
 
   xdg.configFile."mangohud".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/mangohud";

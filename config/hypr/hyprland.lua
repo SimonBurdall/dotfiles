@@ -183,7 +183,7 @@ hl.bind("Print", hl.dsp.exec_cmd(' grim -g "$(slurp)" - | satty -f - --copy-comm
 -- Window management
 hl.bind(mod .. " + w", hl.dsp.window.close())
 hl.bind(mod .. " + v", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mod .. " + c", hl.exec_cmd("hyprctl dispatch centerwindow"))
+hl.bind(mod .. " + c", hl.dsp.window.center())
 hl.bind(mod .. " + f", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
 -- Focus (hjkl + arrows)
@@ -225,8 +225,8 @@ end
 -- Moonlander workspace focus/move
 local moonWsKeys = { a = 1, s = 2, d = 3, f = 4, g = 5 }
 for key, ws in pairs(moonWsKeys) do
-	hl.bind(moon .. " + " .. key, hl.dsp.focus({ workspace = ws, slient = true }))
-	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws, slient = true }))
+	hl.bind(moon .. " + " .. key, hl.dsp.focus({ workspace = ws }))
+	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws, silent = true }))
 end
 
 -- Cycle workspaces

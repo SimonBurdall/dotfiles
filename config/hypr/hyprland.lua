@@ -219,14 +219,14 @@ hl.bind(mod .. " + ALT + down", hl.dsp.window.resize({ x = 0, y = 50 }))
 -- Workspaces 1-5
 for i = 1, 5 do
 	hl.bind(mod .. " + " .. i, hl.dsp.focus({ workspace = i }))
-	hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i, silent = true }))
+	hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 -- Moonlander workspace focus/move
 local moonWsKeys = { a = 1, s = 2, d = 3, f = 4, g = 5 }
 for key, ws in pairs(moonWsKeys) do
 	hl.bind(moon .. " + " .. key, hl.dsp.focus({ workspace = ws }))
-	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws, silent = true }))
+	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws, follow = false }))
 end
 
 -- Cycle workspaces

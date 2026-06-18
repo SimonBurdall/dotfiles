@@ -41,10 +41,17 @@ if alejandra "$cfg" > /dev/null 2>&1; then good "alejandra clean"
 else printf '  %s⚠%s alejandra reported issues\n' "$warn" "$reset"; fi
 
 step "Changes"
-if git diff --quiet && git diff --cached --quiet; then
+tracked=$(git --no-pager diff --stat HEAD 2>/dev/null || true)
+untracked=$(git ls-files --others --exclude-standard)
+if [ -z "$tracked" ] && [ -z "$untracked" ]; then
   skip "none"
 else
-  git --no-pager diff --stat | sed 's/^/  /'
+  if [ -n "$tracked" ]; then printf '%s\n' "$tracked" | sed 's/^/  /'; fi
+  if [ -n "$untracked" ]; then
+    while IFS= read -r f; do
+      printf '  %s+%s %s %s(new)%s\n' "$ok" "$reset" "$f" "$dim" "$reset"
+    done <<< "$untracked"
+  fi
 fi
 
 step "Rebuild ${host}"
@@ -57,13 +64,15 @@ else
 fi
 
 primed=false
-if ! git diff --quiet || ! git diff --cached --quiet; then
+if [ -n "$(git status --porcelain)" ]; then
   step "Commit"
   read -rp "  Prime a commit? [y/N] " ans
   if [[ "$ans" =~ ^[Yy] ]]; then
-    read -rp "  Message: " msg
-    msg="${msg:-$(date +%Y%m%d)-$(shuf -i 100000-999999 -n 1)-${host}}"
-    git commit -qam "$msg"
+    default="$(date +%Y%m%d)-$(shuf -i 100000-999999 -n 1)-${host}"
+    read -rp "  Message [${default}]: " msg
+    msg="${msg:-$default}"
+    git add -A
+    git commit -qm "$msg"
     good "committed: $msg"
     primed=true
   else

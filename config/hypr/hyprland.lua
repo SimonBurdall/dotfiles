@@ -219,7 +219,7 @@ hl.bind(mod .. " + ALT + down", hl.dsp.window.resize({ x = 0, y = 50 }))
 -- Workspaces 1-5
 for i = 1, 5 do
 	hl.bind(mod .. " + " .. i, hl.dsp.focus({ workspace = i }))
-	--hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+	hl.bind(mod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i, silent = true }))
 end
 
 -- Moonlander workspace focus/move

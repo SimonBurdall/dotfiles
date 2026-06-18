@@ -37,6 +37,7 @@ configuration {
 window {
     fullscreen:       true;
     background-color:  @scrim;
+    width: calc(50% min 800px);
     /* centres the card. vertical horizontal — nudge these to taste for 5120x1440 */
     padding:          30% 41%;
 }

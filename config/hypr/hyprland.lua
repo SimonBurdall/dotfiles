@@ -152,9 +152,9 @@ local moon = "CTRL + SHIFT + ALT + SUPER"
 
 -- Applications
 hl.bind(mod .. " + Return", hl.dsp.exec_cmd("kitty"))
-hl.bind(mod .. " + Tab", hl.dsp.exec_cmd("kitty"))
 hl.bind("CTRL + Tab", hl.dsp.exec_cmd("kitty"))
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd("~/.config/rofi/launch.sh"))
+hl.bind("CTRL + Space", hl.dsp.exec_cmd("~/.config/rofi/launch.sh"))
 
 -- App shortcuts
 hl.bind(mod .. " + 6", hl.dsp.exec_cmd("spotify"))
@@ -183,6 +183,8 @@ hl.bind("Print", hl.dsp.exec_cmd(' grim -g "$(slurp)" - | satty -f - --copy-comm
 -- Window management
 hl.bind(mod .. " + w", hl.dsp.window.close())
 hl.bind(mod .. " + v", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mod .. " + b", hl.exec_cmd("hyprctl dispatch workspaceopt allfloat"))
+hl.bind(mod .. " + c", hl.dsp.window.center({ action = "toggle" }))
 hl.bind(mod .. " + f", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
 -- Focus (hjkl + arrows)
@@ -224,8 +226,8 @@ end
 -- Moonlander workspace focus/move
 local moonWsKeys = { a = 1, s = 2, d = 3, f = 4, g = 5 }
 for key, ws in pairs(moonWsKeys) do
-	hl.bind(moon .. " + " .. key, hl.dsp.focus({ workspace = ws }))
-	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws }))
+	hl.bind(moon .. " + " .. key, hl.dsp.focus({ workspace = ws, slient = true))
+	hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = ws, slient = true }))
 end
 
 -- Cycle workspaces

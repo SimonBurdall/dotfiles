@@ -153,6 +153,7 @@ local moon = "CTRL + SHIFT + ALT + SUPER"
 -- Applications
 hl.bind(mod .. " + Return", hl.dsp.exec_cmd("kitty"))
 hl.bind(mod .. " + Tab", hl.dsp.exec_cmd("kitty"))
+hl.bind("CTRL + Tab", hl.dsp.exec_cmd("kitty"))
 hl.bind(mod .. " + Space", hl.dsp.exec_cmd("~/.config/rofi/launch.sh"))
 
 -- App shortcuts
@@ -172,7 +173,7 @@ hl.bind(moon .. " + semicolon", hl.dsp.exec_cmd("obsidian"))
 hl.bind(moon .. " + apostrophe", hl.dsp.exec_cmd("keepassxc"))
 
 -- System
-hl.bind(mod .. " + CTRL + Escape", hl.dsp.exec_cmd("ags request powermenu"))
+hl.bind(mod .. " + p", hl.dsp.exec_cmd("ags request powermenu"))
 hl.bind(moon .. " + p", hl.dsp.exec_cmd("ags request powermenu"))
 hl.bind(mod .. " + n", hl.dsp.exec_cmd("swaync-client -t"))
 
@@ -180,8 +181,7 @@ hl.bind(mod .. " + n", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind("Print", hl.dsp.exec_cmd(' grim -g "$(slurp)" - | satty -f - --copy-command wl-copy'))
 
 -- Window management
-hl.bind(mod .. " + c", hl.dsp.window.close())
-hl.bind(mod .. " + SHIFT + w", hl.dsp.window.close())
+hl.bind(mod .. " + w", hl.dsp.window.close())
 hl.bind(mod .. " + v", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod .. " + f", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 

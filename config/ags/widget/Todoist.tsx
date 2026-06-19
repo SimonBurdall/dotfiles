@@ -50,9 +50,20 @@ function loadTabs(): { label: string; key: string }[] {
 }
 const TABS = loadTabs()
 
-let token = ""
+// read the token file synchronously; returns "" if it's missing or empty
+function readToken(): string {
+  try {
+    const [ok, bytes] = GLib.file_get_contents(TOKEN_PATH)
+    if (!ok) return ""
+    return new TextDecoder().decode(bytes).trim()
+  } catch (_) {
+    return ""
+  }
+}
+
+let token = readToken()
 async function getToken(): Promise<string> {
-  if (!token) token = (await execAsync(["cat", TOKEN_PATH])).trim()
+  if (!token) token = readToken()
   return token
 }
 
@@ -268,12 +279,15 @@ export function Todoist() {
   const [loading, setLoading] = createState(false)
   const [frogBusy, setFrogBusy] = createState(false)
   const [refreshBusy, setRefreshBusy] = createState(false)
+  // false when the token file is missing or empty -> show the notice instead of the list
+  const [hasToken, setHasToken] = createState(token !== "")
 
   // only push new state when the data actually changed (avoids needless re-renders)
   let lastKey = ""
   let lastJson = ""
 
   async function refresh() {
+    if (!hasToken()) return
     const key = activeTab()
     try {
       let t: Task[]
@@ -299,6 +313,7 @@ export function Todoist() {
   }
 
   async function refreshBadge() {
+    if (!hasToken()) return
     try {
       setBadge((await fetchToday()).length)
     } catch (e) {
@@ -360,15 +375,27 @@ export function Todoist() {
   }
 
   async function init() {
+    if (!hasToken()) return
     await Promise.all([loadProjects(), loadSections()])
     refresh()
   }
   init()
 
+  // re-read the token (used by the Retry button when it was missing at startup)
+  function retryToken() {
+    token = readToken()
+    if (token) {
+      setHasToken(true)
+      init()
+    }
+  }
+
   // reliable periodic refresh; UI only updates if something changed
   GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, REFRESH_SECS, () => {
-    refresh()
-    if (activeTab() !== "__today__") refreshBadge()
+    if (hasToken()) {
+      refresh()
+      if (activeTab() !== "__today__") refreshBadge()
+    }
     return GLib.SOURCE_CONTINUE
   })
 
@@ -425,7 +452,22 @@ export function Todoist() {
       </overlay>
       <popover>
         <box class="popover todoist-popover" orientation={Gtk.Orientation.VERTICAL} spacing={10}>
-          <box class="popover-header" spacing={6}>
+          {/* shown only when the token file is missing or empty */}
+          <box class="td-no-token" orientation={Gtk.Orientation.VERTICAL} spacing={8} visible={hasToken((h) => !h)}>
+            <label class="td-no-token-title" label={"\uf0ae  No Todoist token"} />
+            <label
+              class="td-no-token-hint"
+              label="Add your API token to ~/.config/ags/todoist-token, then hit Retry."
+              wrap
+              xalign={0}
+              maxWidthChars={32}
+            />
+            <button class="td-no-token-retry" halign={Gtk.Align.START} onClicked={retryToken}>
+              <label label="Retry" />
+            </button>
+          </box>
+
+          <box class="popover-header" spacing={6} visible={hasToken}>
             <label class="popover-title" label={headerLabel} hexpand xalign={0} />
             <button
               class={frogBusy((b) => (b ? "dd-btn icon frog-btn busy" : "dd-btn icon frog-btn"))}
@@ -439,7 +481,7 @@ export function Todoist() {
             </button>
           </box>
 
-          <box class="td-tabs" spacing={4}>
+          <box class="td-tabs" spacing={4} visible={hasToken}>
             {TABS.map((tab) => (
               <button
                 class={activeTab((a) => (a === tab.key ? "td-tab active" : "td-tab"))}
@@ -450,7 +492,12 @@ export function Todoist() {
             ))}
           </box>
 
-          <box class={loading((l) => (l ? "td-list loading" : "td-list"))} orientation={Gtk.Orientation.VERTICAL} spacing={2}>
+          <box
+            class={loading((l) => (l ? "td-list loading" : "td-list"))}
+            orientation={Gtk.Orientation.VERTICAL}
+            spacing={2}
+            visible={hasToken}
+          >
             <label class="td-empty" label="Nothing here" visible={isEmpty} />
 
             <box orientation={Gtk.Orientation.VERTICAL} spacing={2} visible={overdueVisible}>
@@ -473,7 +520,7 @@ export function Todoist() {
             </For>
           </box>
 
-          <box class="td-add" spacing={6}>
+          <box class="td-add" spacing={6} visible={hasToken}>
             <entry
               class="td-entry"
               hexpand

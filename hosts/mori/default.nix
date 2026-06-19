@@ -11,6 +11,7 @@
 
   networking.hostName = "mori";
 
+  services.upower.enable = true;
   ## GPU ----
   # modesetting + mesa (already provided by common.nix) covers most Intel/AMD
   # laptops out of the box. Adjust to match the actual laptop:

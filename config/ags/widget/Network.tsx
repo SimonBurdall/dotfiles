@@ -4,6 +4,7 @@ import { execAsync } from "ags/process"
 import { notifyError } from "../lib/notify"
 import { spinner } from "./anim"
 import AstalNetwork from "gi://AstalNetwork"
+import Nm from "gi://NM"
 
 function wifiGlyph(s: number): string {
   if (s >= 75) return "󰤨"
@@ -28,7 +29,10 @@ export function Network() {
   const scanning = hasWifi ? createBinding(wifi!, "scanning") : () => false
   const accessPoints = hasWifi ? createBinding(wifi!, "accessPoints") : () => []
   const activeAp = hasWifi ? createBinding(wifi!, "activeAccessPoint") : () => null
-  const wiredInternet = hasWired ? createBinding(wired!, "internet") : () => null
+  // bind to device state, not the derived `internet`/`activeAccessPoint`, which can
+  // go stale and never refresh. `state` is a core NM property that reliably notifies.
+  const wiredState = hasWired ? createBinding(wired!, "state") : () => 0
+  const wifiState = hasWifi ? createBinding(wifi!, "state") : () => 0
 
   const [selected, setSelected] = createState("") // ssid whose block is open
   const [pw, setPw] = createState("")
@@ -37,6 +41,9 @@ export function Network() {
   const [hiddenSsid, setHiddenSsid] = createState("")
   const [hiddenPw, setHiddenPw] = createState("")
 
+  const wiredUp = createComputed(() => wiredState() === Nm.DeviceState.ACTIVATED)
+  const wifiUp = createComputed(() => wifiState() === Nm.DeviceState.ACTIVATED)
+
   const islandGlyph = createComputed(() => {
     const p = primary()
     if (p === AstalNetwork.Primary.WIRED) return "󰈀"
@@ -44,7 +51,12 @@ export function Network() {
     return "󰤮"
   })
 
-  const activeSsid = createComputed(() => (activeAp() as any)?.ssid ?? "")
+  // only report an active SSID when the wifi device is actually associated;
+  // otherwise activeAccessPoint can linger on the last network after disconnect.
+  const activeSsid = createComputed(() => {
+    if (wifiState() !== Nm.DeviceState.ACTIVATED) return ""
+    return (activeAp() as any)?.ssid ?? ""
+  })
 
   // strongest AP per SSID, sorted by signal
   const aps = createComputed(() => {
@@ -107,6 +119,7 @@ export function Network() {
   function ApRow(ap: any) {
     const ssid = ap.ssid as string
     const isSel = selected((s) => s === ssid)
+    const isActive = activeSsid((s) => s === ssid)
     const connectIcon = createComputed(() => (working() === ssid && ssid ? spinner() : "󰁝"))
 
     return (
@@ -121,8 +134,8 @@ export function Network() {
         >
           <box spacing={10}>
             <label class="net-strength" label={wifiGlyph(ap.strength)} />
-            <label class="net-ssid" label={ssid} xalign={0} hexpand />
-            <label class="net-active" label={activeSsid((s) => (s === ssid ? "󰄬" : ""))} />
+            <label class="net-ssid" label={ssid} xalign={0} hexpand ellipsize={3} maxWidthChars={18} />
+            <label class="net-active" label={isActive((a) => (a ? "󰄬" : ""))} />
           </box>
         </button>
 
@@ -132,7 +145,7 @@ export function Network() {
               class="net-pw-entry"
               hexpand
               visibility={false}
-              placeholderText="Password (blank if open / saved)"
+              placeholderText="Password (blank if saved)"
               text={pw}
               onNotifyText={(self) => setPw(self.get_text())}
               onActivate={() => doConnect(ssid, pw())}
@@ -141,14 +154,16 @@ export function Network() {
               <label label={connectIcon} />
             </button>
           </box>
-          <box class="net-ap-actions" spacing={6} halign={Gtk.Align.END}>
-            <button class="net-mini" visible={activeSsid((s) => s === ssid)} onClicked={() => disconnect(ssid)}>
+          {/* homogeneous + hexpand -> visible buttons split the row evenly.
+              Disconnect only shows on the active network, so Forget/Cancel are 50/50. */}
+          <box class="net-ap-actions" homogeneous spacing={6}>
+            <button class="net-mini" hexpand visible={isActive} onClicked={() => disconnect(ssid)}>
               <label label="Disconnect" />
             </button>
-            <button class="net-mini" onClicked={() => forget(ssid)}>
+            <button class="net-mini" hexpand onClicked={() => forget(ssid)}>
               <label label="Forget" />
             </button>
-            <button class="net-mini" onClicked={() => setSelected("")}>
+            <button class="net-mini" hexpand onClicked={() => setSelected("")}>
               <label label="Cancel" />
             </button>
           </box>
@@ -165,7 +180,7 @@ export function Network() {
     <menubutton class="island net-island">
       <label label={islandGlyph} />
       <popover>
-        <box class="popover net-popover" orientation={Gtk.Orientation.VERTICAL} spacing={8}>
+        <box class="popover net-popover" orientation={Gtk.Orientation.VERTICAL} spacing={8} widthRequest={300}>
           <box class="popover-header">
             <label class="popover-title" label="Network" hexpand xalign={0} />
           </box>
@@ -178,9 +193,7 @@ export function Network() {
                 <label class="net-ssid" label="Ethernet" xalign={0} hexpand />
                 <label
                   class="net-wired-state"
-                  label={wiredInternet((i) =>
-                    i === AstalNetwork.Internet.CONNECTED ? "Connected" : "Disconnected",
-                  )}
+                  label={wiredUp((up) => (up ? "Connected" : "Disconnected"))}
                 />
               </box>
             </box>

@@ -20,7 +20,8 @@ in {
       "$HOME/1-vault/2-media/1-wallpapers" \
       "$HOME/1-vault/3-permanent" \
       "$HOME/1-vault/4-fleeting" \
-      "$HOME/1-vault/5-archive"
+      "$HOME/1-vault/5-archive" \
+      "$HOME/2-syncthing"
   '';
 
   programs.bash = {

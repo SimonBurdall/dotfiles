@@ -171,6 +171,8 @@
     jack.enable = true;
   };
 
+  services.gvfs.enable = true;
+
   ## File Systems and Network Shares ----
   fileSystems."/home/si/3-minilla" = {
     device = "truenas.local:/mnt/minilla";

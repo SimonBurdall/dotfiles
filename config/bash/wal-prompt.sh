@@ -1,5 +1,13 @@
 # ~/.config/bash/wal-prompt.sh
 export VIRTUAL_ENV_DISABLE_PROMPT=1   # stop venv activate fighting our prompt
+
+# host glyph, chosen once at load (hostname can't change mid-session)
+case "${HOSTNAME%%.*}" in
+    rits) _walp_icon=$'\uedff'     ;;   # existing rits glyph
+    mori) _walp_icon=$'\U000F0DA1' ;;   # \udb83\udfa1 -> U+F0DA1
+    *)    _walp_icon=$'\uE3BE'     ;;   # generic fallback
+esac
+
 _walp_rgb() {
     local h=${1#\#}
     printf '%d;%d;%d' "$((16#${h:0:2}))" "$((16#${h:2:2}))" "$((16#${h:4:2}))"
@@ -17,7 +25,7 @@ __set_wal_prompt() {
     local c_venv=${color5:-#b294bb}
     local c_dark=${background:-#1d1f21}
     local c_fg=${foreground:-#c5c8c6}
-    local sep=$'\ue0b0' gico=$'\ue0a0' icon=$'\uedff' pyico=$'\ue73c'
+    local sep=$'\ue0b0' gico=$'\ue0a0' icon=$_walp_icon pyico=$'\ue73c'
     # path: leading … plus last component
     local p=${PWD/#$HOME/\~} short
     if [[ $p == "~" || $p == "/" || $p != */* ]]; then short=$p
@@ -37,7 +45,7 @@ __set_wal_prompt() {
         gitseg="$gico $branch${f:+ $f}"
     fi
     local P="" last
-    # user segment (always first now)
+    # user segment 
     P+="$(_walp_bg "$c_name")$(_walp_fg "$c_dark") $icon "
     P+="$(_walp_bg "$c_path")$(_walp_fg "$c_name")$sep"
     # path segment

@@ -153,6 +153,9 @@
     ];
   };
 
+  ## ZSA Moonlander
+  hardware.keyboard.zsa.enable = true;
+
   # Logitech receiver / Solaar
   hardware.logitech.wireless.enable = true;
   hardware.logitech.wireless.enableGraphical = true;

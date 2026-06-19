@@ -37,10 +37,9 @@ configuration {
 window {
     fullscreen:       true;
     background-color:  @scrim;
-    width: 800px;
-    /* centres the card. vertical horizontal — nudge these to taste for 5120x1440 */
-    padding:          30% 41%;
-}
+    /* fixed 800px card, centred: each side = half the screen minus half the card */
+    padding:          30% calc(50% - 600px);
+}    
 mainbox {
     background-color: @bg;
     border:           1px;
@@ -71,7 +70,7 @@ entry {
 }
 listview {
     lines:           7;
-    columns:         2;
+    columns:         3;
     spacing:         4px;
     scrollbar:       true;
     fixed-height:    true;

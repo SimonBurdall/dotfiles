@@ -454,16 +454,21 @@ export function Todoist() {
         <box class="popover todoist-popover" orientation={Gtk.Orientation.VERTICAL} spacing={10}>
           {/* shown only when the token file is missing or empty */}
           <box class="td-no-token" orientation={Gtk.Orientation.VERTICAL} spacing={8} visible={hasToken((h) => !h)}>
-            <label class="td-no-token-title" label={"\uf0ae  No Todoist token"} />
+            <box class="popover-header">
+              <label class="popover-title" label="Todoist" hexpand xalign={0} />
+            </box>
             <label
               class="td-no-token-hint"
-              label="Add your API token to ~/.config/ags/todoist-token, then hit Retry."
+              label="No API token found. Add it to ~/.config/ags/todoist-token."
               wrap
               xalign={0}
               maxWidthChars={32}
             />
-            <button class="td-no-token-retry" halign={Gtk.Align.START} onClicked={retryToken}>
-              <label label="Retry" />
+            <button class="dd-action td-retry" onClicked={retryToken}>
+              <box spacing={8} halign={Gtk.Align.CENTER}>
+                <label label="󰑐" />
+                <label label="Retry" />
+              </box>
             </button>
           </box>
 

@@ -300,7 +300,6 @@
     zlib
 
     # Creative Software
-    (blender.override {cudaSupport = true;})
     blockbench
     freecad
     gimp

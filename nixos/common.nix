@@ -99,8 +99,9 @@
 
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
     package = pkgs.kdePackages.sddm;
+    wayland.enable = true;
+    wayland.compositor = "kwin";
     extraPackages = with pkgs.kdePackages; [qtmultimedia qtsvg qtvirtualkeyboard];
     settings.Theme = {
       ThemeDir = "/var/lib/sddm/themes";

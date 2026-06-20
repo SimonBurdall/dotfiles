@@ -1,40 +1,23 @@
 #!/usr/bin/env bash
-# sddm-wal — sync pywal colours + wallpaper into a writable copy of the
-# sddm-astronaut theme.
-#
-# SDDM runs as the `sddm` user before login and can't read your home or
-# ~/.cache/wal, so this copies everything it needs into
-# /var/lib/sddm/themes/astronaut-wal (root-owned, world-readable).
-#
-# Run it WITH SUDO after changing your wallpaper / pywal theme:
-#     sudo sddm-wal
-#
 set -euo pipefail
 
 user="${SUDO_USER:-si}"
 wal="/home/$user/.cache/wal"
 store="/run/current-system/sw/share/sddm/themes/sddm-astronaut-theme"
 dest="/var/lib/sddm/themes/astronaut-wal"
-base="Themes/astronaut.conf"          # which embedded theme to build on
+base="Themes/astronaut.conf"          
 conf="$dest/Themes/wal.conf"
 
 [ "$(id -u)" -eq 0 ] || { echo "run me with sudo"; exit 1; }
 [ -d "$store" ]      || { echo "sddm-astronaut not installed (no $store)"; exit 1; }
 [ -r "$wal/colors.sh" ] || { echo "no pywal colours at $wal"; exit 1; }
 
-# pull in $color0..$color15, $background, $foreground.
-# pywal's colors.sh touches things like $FZF_DEFAULT_OPTS that are unset under
-# sudo, so relax nounset just for the source.
 set +u
-# shellcheck disable=SC1090
 . "$wal/colors.sh"
 set -u
 wallpaper="$(cat "$wal/wal")"
 ext="${wallpaper##*.}"
 
-# 1. fresh seed from the store. Resolve the /run symlink to the real store dir
-#    first, and let cp create $dest (don't pre-mkdir it, or cp -T trips on the
-#    symlink-vs-directory mismatch).
 src="$(readlink -f "$store")"
 rm -rf "$dest"
 mkdir -p "$(dirname "$dest")"

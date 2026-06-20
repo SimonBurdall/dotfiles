@@ -26,7 +26,12 @@ end
 
 ---- MONITOR ----
 if host == "rits" then
-	hl.monitor({ output = "DP-3", mode = "5120x1440@239.76", position = "0x0", scale = 1 })
+	hl.monitor({
+		output = "desc:Samsung Electric Company LC49G95T H1AK500000",
+		mode = "5120x1440@239.76",
+		position = "0x0",
+		scale = 1,
+	})
 elseif host == "mori" then
 	-- Check the real output name with `hyprctl monitors` and adjust.
 	hl.monitor({ output = "eDP-1", mode = "preferred", position = "0x0", scale = 1 })

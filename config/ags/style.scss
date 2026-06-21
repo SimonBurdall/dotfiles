@@ -659,6 +659,11 @@ scale > trough > slider,
   background: transparent;
   margin: 10px 12px 0 0;
 }
+
+window {
+  background: transparent;
+}
+
 .notif-card.popup {
   background: $ink;
   border: 1px solid rgba($accent, 0.34);

@@ -35,19 +35,19 @@ in {
       }
     '';
     shellAliases = {
-      "1" = "cd ~/1-vault/";
-      "11" = "cd ~/1-vault/1-code/";
-      "111" = "cd ~/1-vault/1-code/1-projects/";
-      "112" = "cd ~/1-vault/1-code/2-snippets/";
-      "113" = "cd ~/1-vault/1-code/3-archive/";
-      "12" = "cd ~/1-vault/2-media/";
-      "121" = "cd ~/1-vault/2-media/1-wallpapers/";
-      "13" = "cd ~/1-vault/3-permanent/";
-      "14" = "cd ~/1-vault/4-fleeting/";
-      "15" = "cd ~/1-vault/5-archive/";
-      "2" = "cd ~/2-syncthing/";
-      con = "cd ~/.config";
-      dot = "cd ~/dotfiles";
+      "1" = "z ~/1-vault/";
+      "11" = "z ~/1-vault/1-code/";
+      "111" = "z ~/1-vault/1-code/1-projects/";
+      "112" = "z ~/1-vault/1-code/2-snippets/";
+      "113" = "z ~/1-vault/1-code/3-archive/";
+      "12" = "z ~/1-vault/2-media/";
+      "121" = "z ~/1-vault/2-media/1-wallpapers/";
+      "13" = "z ~/1-vault/3-permanent/";
+      "14" = "z ~/1-vault/4-fleeting/";
+      "15" = "z ~/1-vault/5-archive/";
+      "2" = "z ~/2-syncthing/";
+      con = "z ~/.config";
+      dot = "z ~/dotfiles";
       ang = "ssh anguirus";
       cyd = "ssh cyndaquil";
       kin = "ssh kingghidorah";
@@ -62,8 +62,8 @@ in {
       alr = "source ~/.bashrc";
       reb = "~/dotfiles/scripts/rebuild.ksh";
       sdg = "sudo nix-collect-garbage -d";
-      reh = "hyprctl keyword monitor DP-1,5120x1440@239.76,0x0,1";
-      res = "hyprctl keyword monitor DP-1,2560x1440@120,0x0,1";
+      reh = "hyprctl eval 'hl.monitor({ output = \"desc:Samsung Electric Company LC49G95T H1AK500000\", mode = \"5120x1440@239.76\", position = \"0x0\", scale = 1 })'";
+      res = "hyprctl eval 'hl.monitor({ output = \"desc:Samsung Electric Company LC49G95T H1AK500000\", mode = \"2560x1440@120\", position = \"0x0\", scale = 1 })'";
       p = "python3";
     };
   };

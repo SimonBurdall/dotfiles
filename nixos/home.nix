@@ -33,6 +33,24 @@ in {
         nnn -a -P p "$@"
         [ -f "$NNN_TMPFILE" ] && { . "$NNN_TMPFILE"; rm -f "$NNN_TMPFILE"; }
       }
+      va() {
+        local d="$PWD" a=""
+        while :; do
+          for v in "$d"/.venv "$d"/*env; do
+            [ -f "$v/bin/activate" ] && { a="$v/bin/activate"; break 2; }
+        done
+          [ "$d" = / ] && break
+          d=$(dirname "$d")
+        done
+        if [ -n "$a" ]; then
+          [ -n "''${VIRTUAL_ENV:-}" ] && deactivate 2>/dev/null
+          source "$a"
+          echo "activated ''${a%/bin/activate}"
+        else
+            echo "no venv found here or above" >&2
+          return 1
+        fi
+      }
     '';
     shellAliases = {
       "1" = "z ~/1-vault/";

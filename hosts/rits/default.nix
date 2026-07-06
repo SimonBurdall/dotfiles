@@ -12,6 +12,7 @@
 
   ## NVIDIA (RTX 4070 Ti Super) ----
   boot.kernelModules = ["nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+  boot.kernelParams = ["nvidia_drm.fbdev=1"];
 
   services.xserver.videoDrivers = ["nvidia"];
 
@@ -37,13 +38,29 @@
 
   services.sunshine = {
     enable = true;
-    autoStart = true;
-    capSysAdmin = true;
     openFirewall = true;
-    package = pkgs.sunshine.override {
-      cudaSupport = true;
-      cudaPackages = pkgs.cudaPackages;
+    capSysAdmin = true;
+    settings = {
+      capture = "kms";
+      encoder = "nvenc";
     };
+    package = with pkgs;
+      (sunshine.override {
+        cudaSupport = true;
+        cudaPackages = cudaPackages;
+      }).overrideAttrs (old: {
+        nativeBuildInputs =
+          old.nativeBuildInputs
+          ++ [
+            cudaPackages.cuda_nvcc
+            (lib.getDev cudaPackages.cuda_cudart)
+          ];
+        cmakeFlags =
+          old.cmakeFlags
+          ++ [
+            "-DCMAKE_CUDA_COMPILER=${lib.getExe cudaPackages.cuda_nvcc}"
+          ];
+      });
   };
 
   services.wivrn = {

@@ -302,6 +302,7 @@
     keymapp
     scrcpy
     nixd
+    protonvpn-gui
     vulkan-tools
     libva
     libva-utils

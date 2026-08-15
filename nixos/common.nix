@@ -310,6 +310,7 @@
     libv4l
     lsfg-vk
     lsfg-vk-ui
+    qbittorrent
     wine
     zlib
 

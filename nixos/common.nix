@@ -83,7 +83,7 @@
   users.users.si = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input" "usb"];
+    extraGroups = ["networkmanager" "wheel" "video" "plugdev" "input" "usb" "cdrom"];
     packages = with pkgs; [];
   };
 
@@ -225,6 +225,7 @@
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="input"
     SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", MODE="0660", GROUP="plugdev", TAG+="uaccess"
     SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+    SUBSYSTEM=="block", KERNEL=="sr[0-9]*", ENV{UDISKS_AUTO}="0"
   '';
 
   ## Virtualization and Containerization ----

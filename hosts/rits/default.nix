@@ -68,5 +68,8 @@
     openFirewall = true;
   };
 
-  environment.systemPackages = [(pkgs.blender.override {cudaSupport = true;})];
+  environment.systemPackages = with pkgs; [
+    (blender.override {cudaSupport = true;})
+    makemkv
+  ];
 }

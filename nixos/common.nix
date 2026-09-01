@@ -10,7 +10,7 @@
   ## Boot and System ----
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelModules = ["uinput" "v4l2loopback"];
+  boot.kernelModules = ["uinput" "v4l2loopback" "sg"];
   boot.kernel.sysctl = {
     "net.ipv4.tcp_fastopen" = 3;
     "net.ipv4.tcp_congestion_control" = "bbr";

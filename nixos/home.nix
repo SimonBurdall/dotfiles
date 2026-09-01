@@ -70,6 +70,8 @@ in {
       cyd = "ssh cyndaquil";
       kin = "ssh kingghidorah";
       mot = "ssh mothra";
+      yel = "ssh rpi-yellow";
+      gre = "ssh rpi-green";
       tan = "ssh -i ~/.ssh/si_personal_vps root@rualmid.xyz";
       l = "ls -alh";
       ll = "ls -l";
@@ -164,6 +166,9 @@ in {
 
   xdg.configFile."rofi".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/rofi";
+
+  home.file.".MakeMKV".source =
+    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/makemkv";
 
   xdg.configFile."mangohud".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/mangohud";

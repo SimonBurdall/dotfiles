@@ -41,6 +41,9 @@ end
 
 ---- AUTOSTART   ---
 hl.on("hyprland.start", function()
+	hl.exec_cmd(
+		"for i in $(seq 1 300); do busctl --user call org.freedesktop.Notifications /org/freedesktop/Notifications org.freedesktop.Notifications CloseNotification u $i 2>/dev/null; done"
+	)
 	hl.exec_cmd("ags run ~/.config/ags")
 	hl.exec_cmd("hypridle")
 	local walFile = io.open(os.getenv("HOME") .. "/.cache/wal/wal", "r")

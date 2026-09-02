@@ -115,6 +115,7 @@ export function NotifCenter() {
           valign={Gtk.Align.START}
           xalign={0.5}
           yalign={0.5}
+          canTarget={false}
         />
       </overlay>
       <popover>

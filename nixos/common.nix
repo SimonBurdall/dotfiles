@@ -358,7 +358,6 @@
     # System and Wayland Utilities
     zsh
     rofi
-    swaynotificationcenter
     libnotify
     blueman
     networkmanagerapplet

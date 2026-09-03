@@ -161,9 +161,6 @@ in {
   xdg.configFile."hypr".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/hypr";
 
-  xdg.configFile."swaync".source =
-    config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/swaync";
-
   xdg.configFile."rofi".source =
     config.lib.file.mkOutOfStoreSymlink "${dotfiles}/config/rofi";
 

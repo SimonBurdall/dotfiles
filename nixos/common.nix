@@ -188,7 +188,13 @@
     options = ["nofail" "x-systemd.automount" "x-systemd.mount-timeout=10" "rw" "nolock" "_netdev"];
   };
 
-  fileSystems."/home/si/4-spacezilla" = {
+  fileSystems."/home/si/4-godzilla" = {
+    device = "truenas.local:/mnt/godzilla";
+    fsType = "nfs";
+    options = ["nofail" "x-systemd.automount" "x-systemd.mount-timeout=10" "rw" "nolock" "_netdev"];
+  };
+
+  fileSystems."/home/si/5-spacezilla" = {
     device = "truenas.local:/mnt/spacezilla";
     fsType = "nfs";
     options = ["nofail" "x-systemd.automount" "x-systemd.mount-timeout=10" "rw" "nolock" "_netdev"];

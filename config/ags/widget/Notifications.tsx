@@ -136,7 +136,7 @@ export function NotifCenter() {
 
           <box class="notif-list" orientation={Gtk.Orientation.VERTICAL} spacing={6}>
             <label class="td-empty" label="No notifications" visible={notifs((n) => n.length === 0)} />
-            <For each={notifs}>{(n: AstalNotifd.Notification) => <NotifCard n={n} />}</For>
+            <For each={notifs((n) => n.slice(0, 20))}>{(n: AstalNotifd.Notification) => <NotifCard n={n} />}</For>
           </box>
         </box>
       </popover>
@@ -152,8 +152,12 @@ export function NotifPopups(gdkmonitor: Gdk.Monitor) {
   notifd.connect("notified", (_src: any, id: number) => {
     const n = notifd.get_notification(id)
     if (!n) return
+    const isSatty = (n.appName || "").toLowerCase().includes("satty")
     setPopups([n, ...popups().filter((x) => x.id !== id)])
-    timeout(5000, () => setPopups(popups().filter((x) => x.id !== id)))
+    timeout(5000, () => {
+      setPopups(popups().filter((x) => x.id !== id))
+      if (isSatty) notifd.get_notification(id)?.dismiss()
+    })
   })
   notifd.connect("resolved", (_src: any, id: number) => {
     setPopups(popups().filter((x) => x.id !== id))
